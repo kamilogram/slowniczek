@@ -39,16 +39,16 @@
     <h2 id="hint">Ładowanie...</h2>
     <p id="answer" style="visibility: hidden;"></p>
     <div class="buttons">
-      <button onclick="nextWord()">Dalej</button>
-      <button onclick="skipWord()">Pomiń</button>
+      <button onclick="skipWord()">Pokaż</button>
+      <button onclick="nextWord()">Wiem</button>
       <button onclick="restart()" id="restart-btn">Jeszcze raz</button>
       <button onclick="toggleListening()">🎤 Głosowo</button>
     </div>
-    <p style="font-size: 0.8em; color: #888;">Powiedz hasło na głos lub użyj przycisków 👆</p>
+    <p style="font-size: 0.8em; color: #888;">Wypowiedz hasło lub użyj przycisków 👆</p>
   </div>
 
   <script>
-   const allWords = [
+       const allWords = [
       { answer: "absurdalny", hint: "niedorzeczny, niemieszczący się w głowie"},
       { answer: "adekwatny", hint: "odpowiedni do sytuacji"},
       { answer: "adwersarz", hint: "przeciwnik w dyskusji lub sporze"},
@@ -405,6 +405,7 @@
     let current = null;
     let previous = null;
     let isListening = false;
+    let wasSkipped = false;
 
     function updateProgress() {
       document.getElementById("progress").textContent = `Słówko ${used.length + 1} z ${allWords.length}`;
@@ -422,6 +423,7 @@
       }
       const index = Math.floor(Math.random() * pool.length);
       current = pool[index];
+      wasSkipped = false;
       document.getElementById("hint").textContent = current.hint;
       document.getElementById("answer").textContent = current.answer;
       document.getElementById("answer").style.visibility = "hidden";
@@ -429,21 +431,19 @@
     }
 
     function nextWord() {
-      previous = current;
-      if (previous) {
+      if (!wasSkipped) {
+        previous = current;
         document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
         pool = pool.filter(w => w !== current);
         used.push(current);
       }
+      wasSkipped = false;
       showWord();
     }
 
     function skipWord() {
-      previous = current;
-      if (previous) {
-        document.getElementById("last-word").textContent = `Pominięte hasło: ${previous.answer}`;
-      }
-      showWord(); // nie usuwamy z puli
+      wasSkipped = true;
+      document.getElementById("answer").style.visibility = "visible";
     }
 
     function restart() {
@@ -451,13 +451,14 @@
       used = [];
       previous = null;
       isListening = false;
+      wasSkipped = false;
       document.getElementById("restart-btn").style.display = "none";
       document.getElementById("progress").textContent = "";
       document.getElementById("last-word").textContent = "";
+      document.getElementById("answer").style.visibility = "hidden";
       showWord();
     }
 
-    // Głos
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
     recognition.lang = 'pl-PL';
     recognition.interimResults = false;
@@ -485,6 +486,7 @@
         document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
         pool = pool.filter(w => w !== current);
         used.push(current);
+        wasSkipped = false;
         showWord();
       } else {
         alert(`❌ Niepoprawnie: "${spoken}"`);
@@ -498,20 +500,14 @@
       isListening = false;
     };
 
-    // Swipe
     let touchStartX = 0;
     document.addEventListener("touchstart", e => {
       touchStartX = e.changedTouches[0].screenX;
     });
     document.addEventListener("touchend", e => {
-      const touchEndX = e.changedTouches[0].screenX;
-      const deltaX = touchEndX - touchStartX;
+      const deltaX = e.changedTouches[0].screenX - touchStartX;
       if (Math.abs(deltaX) > 50) {
-        if (deltaX > 0) {
-          // gest w prawo — zignorowany
-        } else {
-          nextWord(); // gest w lewo = „Dalej”
-        }
+        if (deltaX < 0) nextWord();
       }
     });
 
