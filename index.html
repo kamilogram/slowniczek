@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Słówka</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2em;
+      background: #f4f4f4;
+      max-width: 400px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 1.5em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .buttons {
+      margin-top: 1em;
+    }
+    button {
+      padding: 0.5em 1.2em;
+      margin: 0.5em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    #restart-btn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p id="last-word" style="font-size: 0.8em; color: #888;"></p>
+    <p id="progress"></p>
+    <h2 id="hint">Ładowanie...</h2>
+    <p id="answer" style="visibility: hidden;"></p>
+    <div class="buttons">
+      <button onclick="showAnswer()">Sprawdź</button>
+      <button onclick="nextWord()">Dalej</button>
+      <button id="restart-btn" onclick="restart()">Jeszcze raz</button>
+    </div>
+    <p style="font-size: 0.8em; color: #888;">Swipe ⬅️ (dalej) lub ➡️ (sprawdź)</p>
+  </div>
+
+  <script>
+    const allWords = [
+      { hint: "Mówi do ludzi na konferencji", answer: "prelegent" },
+      { hint: "Pomaga innym bez oczekiwań", answer: "filantrop" },
+      { hint: "Unika konfliktów, kocha pokój", answer: "pacyfista" },
+      { hint: "Odmieniec, dziwak to też...", answer: "ekscentryk" },
+      { hint: "Ucieka przed innymi ludźmi", answer: "mizantrop" },
+      { hint: "Stawia siebie na piedestale", answer: "narcyz" },
+      { hint: "Manipulator i mistrz obłudy", answer: "hipokryta" },
+      { hint: "Wszystkiego się boi", answer: "fobik" },
+      { hint: "Porywczy, energiczny, pełen siły", answer: "żywiołowy" },
+      { hint: "Ma urok, wpływa na tłumy", answer: "charyzma" },
+      { hint: "Żyje chwilą, szuka przyjemności", answer: "hedonista" },
+      { hint: "Nie ufa innym, podejrzliwy", answer: "paranoik" },
+      { hint: "Brak emocji i uczuć", answer: "apatia" },
+      { hint: "Silne przeżycie emocjonalne", answer: "ekstaza" },
+      { hint: "Odrzuca społeczne normy", answer: "psychopata" },
+      { hint: "Cierpi psychicznie, odizolowany", answer: "neurotyk" },
+      { hint: "Zawodowy czarodziej sceniczny", answer: "iluzjonista" },
+      { hint: "Lubi być sam", answer: "introwertyk" },
+      { hint: "Lubi być wśród ludzi", answer: "ekstrawertyk" },
+      { hint: "Zmienia tożsamość i osobowość", answer: "schizofrenik" },
+      { hint: "Wierzy, że wszystko ma sens duchowy", answer: "mistyk" },
+      { hint: "Uwielbia dyskutować i mieć rację", answer: "demagog" },
+      { hint: "Chce pomagać całemu światu", answer: "idealista" }
+    ];
+
+    let pool = [...allWords];
+    let used = [];
+    let current = null;
+    let previous = null;
+    let wasRevealed = false;
+
+    function updateProgress() {
+      const total = allWords.length;
+      const done = used.length;
+      document.getElementById("progress").textContent = `Słówko ${done + 1} z ${total}`;
+    }
+
+    function showWord() {
+      if (pool.length === 0) {
+        document.getElementById("hint").textContent = "🎉 Ukończyłeś wszystkie słówka!";
+        document.getElementById("answer").textContent = "";
+        document.getElementById("answer").style.visibility = "hidden";
+        document.getElementById("progress").textContent = "";
+        document.getElementById("last-word").textContent = "";
+        document.getElementById("restart-btn").style.display = "inline-block";
+        return;
+      }
+      const index = Math.floor(Math.random() * pool.length);
+      current = pool[index];
+      document.getElementById("hint").textContent = current.hint;
+      document.getElementById("answer").textContent = current.answer;
+      document.getElementById("answer").style.visibility = "hidden";
+      wasRevealed = false;
+      updateProgress();
+    }
+
+    function showAnswer() {
+      wasRevealed = true;
+      document.getElementById("answer").style.visibility = "visible";
+    }
+
+    function nextWord() {
+      if (current) {
+        previous = current;
+        document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
+        if (!wasRevealed) {
+          pool = pool.filter(w => w !== current);
+          used.push(current);
+        }
+      }
+      showWord();
+    }
+
+    function restart() {
+      pool = [...allWords];
+      used = [];
+      previous = null;
+      wasRevealed = false;
+      document.getElementById("restart-btn").style.display = "none";
+      document.getElementById("progress").textContent = "";
+      document.getElementById("last-word").textContent = "";
+      showWord();
+    }
+
+    // Swipe obsługa
+    let touchStartX = 0;
+
+    document.addEventListener("touchstart", e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener("touchend", e => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const deltaX = touchEndX - touchStartX;
+
+      if (Math.abs(deltaX) > 50) {
+        if (deltaX > 0) {
+          showAnswer(); // w prawo
+        } else {
+          nextWord();   // w lewo
+        }
+      }
+    });
+
+    showWord();
+  </script>
+</body>
+</html>
