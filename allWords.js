@@ -346,4 +346,11 @@ window.allWords = [
       { answer: "żargon, slang", hint: "język grupy społecznej (ale nie terytorialnej) różniący się od języka narodowego"},
       { answer: "żyroskop", hint: "urządzenie zachowujące stały kierunek osi obrotu (może być człowiek w środku kręcący się do góry nogami)"},
       { answer: "żywiołowy", hint: "kierujący się emocjami, ekspresywny, ekstrawertyczny"},
+      { answer: "demagog", hint: "manipuluje opinią publiczną, wykorzystując jej emocje i uprzedzenia, często w celu zdobycia władzy"},
+      { answer: "ekscentryk", hint: "osoba o dziwacznym, nietypowym zachowaniu lub wyglądzie"},
+      { answer: "charyzma", hint: "osobista siła przyciągająca innych, zdolność do inspirowania"},
+      { answer: "psychopata", hint: "osoba z zaburzeniami osobowości, charakteryzująca się brakiem empatii i agresją"},
+      { answer: "schizofrenik", hint: "osoba cierpiąca na zaburzenie psychiczne, które wpływa zachowanie"},
+      { answer: "ekstaza", hint: "stan intensywnego uniesienia emocjonalnego, często związany z głębokim przeżyciem artystycznym"},
+      { answer: "idealista", hint: "osoba wierząca w doskonałość, często wbrew rzeczywistości"}
     ];
