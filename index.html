@@ -112,15 +112,14 @@
       pool = [...allWords];
       used = [];
       previous = null;
-      isListening = false;
       wasSkipped = false;
       document.getElementById("restart-btn").style.display = "none";
       document.getElementById("progress").textContent = "";
       document.getElementById("last-word").textContent = "";
       document.getElementById("answer").style.visibility = "hidden";
-      // Przywróć tekst przycisku na "Wiem"
       document.querySelector('button[onclick="nextWord()"]').textContent = "Wiem";
       showWord();
+      if (isListening) recognition.start(); // <-- dodaj to, jeśli chcesz nasłuch po restarcie
     }
 
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
