@@ -30,11 +30,16 @@
     #restart-btn {
       display: none;
     }
+    #last-word {
+      font-size: 1.1em;
+      color: #888;
+      margin-bottom: 0.5em;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <p id="last-word" style="font-size: 0.8em; color: #888;"></p>
+    <p id="last-word"></p>
     <p id="progress"></p>
     <h2 id="hint">Ładowanie...</h2>
     <p id="answer" style="visibility: hidden;"></p>
@@ -47,360 +52,10 @@
     <p style="font-size: 0.8em; color: #888;">Wypowiedz hasło lub użyj przycisków 👆</p>
   </div>
 
+  <script src="allWords.js"></script>
   <script>
-       const allWords = [
-      { answer: "absurdalny", hint: "niedorzeczny, niemieszczący się w głowie"},
-      { answer: "adekwatny", hint: "odpowiedni do sytuacji"},
-      { answer: "adwersarz", hint: "przeciwnik w dyskusji lub sporze"},
-      { answer: "agroturystyka", hint: "miejsce na wsi gdzie można spędzić urlop"},
-      { answer: "akcelerator", hint: "urządzenie do przyspieszania (głównie cząstek)"},
-      { answer: "akcyza", hint: "podatek nakładany na niektóre wyroby konsumpcyjne (używki, paliwa)"},
-      { answer: "aklimatyzacja", hint: "proces dostosowywania się do nowych warunków, np. po zmianie czasu"},
-      { answer: "akredytacja", hint: "potwierdzenie do działań jako przedstawiciel na przykład z radia"},
-      { answer: "aktywista", hint: "ktoś kto walczy w organizacjach np. proekologicznych"},
-      { answer: "akumulować", hint: "ładniej: gromadzić coś"},
-      { answer: "alias", hint: "w progr. nakładka na funkcję w celu uproszczenia zapisu, może być też w adresie internetowym"},
-      { answer: "alkowa", hint: "dawniej wnęka sypialna bez okna przylegająca do pokoju"},
-      { answer: "alokować", hint: "rozdzielać środki na różne cele, rozdysponować"},
-      { answer: "alpaki", hint: "modne ostatnio zwierzę podobne do lamy i owcy"},
-      { answer: "ambiwalentny", hint: "zawierający sprzeczne chęci i uczucia (jednocześnie się lubi i nie)"},
-      { answer: "amputować", hint: "odcinać komuś kończynę lub narząd"},
-      { answer: "anarchia", hint: "bezkrólewie, brak oficjalnej władzy"},
-      { answer: "anihilować", hint: "unicestwiać (się), dematerializować się"},
-      { answer: "antysemityzm", hint: "niechęć do Żydów"},
-      { answer: "apatia", hint: "stan psychiczny ze zmniejszoną zdolnością do emocji i bodżców fizycznych"},
-      { answer: "archaiczny", hint: "inaczej przestarzały"},
-      { answer: "arogancja", hint: "zuchwalstwo połączone z lekceważeniem innych "},
-      { answer: "arteria", hint: "ważny ruchliwy szlak komunikacyjny lub tętnica"},
-      { answer: "artykułować", hint: "wypowiadać swoje poglądy lub wyrażnie coś mówić"},
-      { answer: "artyleria", hint: "ciężkie wojsko z m. in. działami i wyrzutniami"},
-      { answer: "aryjskie", hint: "określenie na rasę którą chciał stworzyć Hitler"},
-      { answer: "aspekt", hint: "cecha danej sytuacji albo rzeczy, punkt widzenia"},
-      { answer: "aspiracje", hint: "dążenia do osiągnięcia czegoś"},
-      { answer: "asymptota", hint: "linia do której zbliża się funkcja ale nigdy jej nie osiąga"},
-      { answer: "awersja", hint: "niechęć do czegoś, może być nieracjonalna"},
-      { answer: "balast", hint: "dodatkowy ładunek, niepotrzebny ciężar"},
-      { answer: "balistyczny", hint: "taki który definiuje ruch pocisku, rakiety itp"},
-      { answer: "banderola", hint: "papierowa opaska na papierosach lub alkoholu"},
-      { answer: "banicja", hint: "wygnanie z ojczyzny"},
-      { answer: "bezprecedensowe", hint: "tak niesamowite, że nigdy wcześniej nie istniało "},
-      { answer: "bidet", hint: "urządzenie z ceramiki samitarnej do podmywania się"},
-      { answer: "bisekcja", hint: "w progr. metda połowienia przedziału"},
-      { answer: "biszkopt", hint: "ciasto stanowiące podstawę do tortów, ciast z galaretą i tiramisu "},
-      { answer: "boazeria", hint: "drewniana okładzina ścian lub sufitów"},
-      { answer: "burzliwy", hint: "mający gwałtowny przebieg, pełen zamętu"},
-      { answer: "busola", hint: "urządzenie nawigacyjne do wyznaczania północy ale z przyrządami celowiczymi"},
-      { answer: "chimera", hint: "mitologiczny potwór z głową lwa, skrzydłami i częściami ciała innych zwierząt"},
-      { answer: "Chłopickiego", hint: "ulica na której jest pętla autobusowa 523 i dochodzi do Placu Szembeka"},
-      { answer: "cholesterol", hint: "związek chemiczny w ciele, może być 'dobry' lub 'zły'"},
-      { answer: "cyniczny", hint: "odnoszący się lekceważąco do ogólnie uznawanych autorytetów i zasad etycznych"},
-      { answer: "defraudacja", hint: "przywłaszczenie sobie powierzonych pieniędzy"},
-      { answer: "degrengolada", hint: "zupełny rozpad wartości, zepsucie się"},
-      { answer: "dekonstrukcja", hint: "jeden z formatów impro lub rozłożenie sytuacji lub tekstu na czynniki pierwsze"},
-      { answer: "delikwent", hint: "człowiek sądzony za przestępstwo lub osoba nietrzeżwa"},
-      { answer: "demagogia, populizm", hint: "głoszenie nierealnych haseł politycznych do zdobycia łatwego poklasku  (2 znaczenia)"},
-      { answer: "demonizować", hint: "mocno wyolbrzymiać negatywne zjawiska lub czyjeś cechy"},
-      { answer: "deployować", hint: "uruchamiać projekt na serwerze aby był dostępny dla klientów"},
-      { answer: "deprecjonować", hint: "pomniejszać czyjeś zasługi lub uznać coś za już nieaktualne"},
-      { answer: "dewiza", hint: "zwięzła zasada, którą ktoś kieruje się w życiu, motto, sentencja, myśl przewodnia"},
-      { answer: "diagram", hint: "uproszczona reprezentacja graficzna pomysłów albo algorytmów"},
-      { answer: "dobrać", hint: "znależć dla czegoś lub kogoś pasujący element"},
-      { answer: "dogmaty", hint: "opinie w wierze przyjęte na ślepo jako prawda"},
-      { answer: "dogodzić", hint: "spełnić czyjeś wymagania lub zachcianki, sprawić żeby się czymś nasycił"},
-      { answer: "doktryna", hint: "zespół założeń i twierdzeń z określonej dziedziny wiedzy, teoria, koncepcja"},
-      { answer: "doniosły", hint: "cecha komunikatu, któy ma wielkie i istotne znaczenie"},
-      { answer: "dostojnie", hint: "z godnością, z poważaniem"},
-      { answer: "dotkliwy", hint: "trudny do zniesienia, bolesny, na przykład przegrana"},
-      { answer: "dramaturgia", hint: "ciekawy przebieg wydarzeń, który mógłby się nadawać na ekranizację"},
-      { answer: "drogowskaz", hint: "znak wskazujący kierunek do miejscowości lub obiektu na drodze"},
-      { answer: "Dwernickiego", hint: "ulica, przedłużenie Szaserów, przystanek 523 na żądanie ma jej nazwę"},
-      { answer: "dyfuzja", hint: "samorzutne rozprzestrzenianie się cząstek będące konsekwencją ich zderzeń"},
-      { answer: "dyktatura", hint: "rodzaj władzy sprawowanej przez jedną osobę opartej na przemocy"},
-      { answer: "dyletant", hint: "ktoś wypowiadający się na jakiś temat niemający wiedzy ani przygotowania"},
-      { answer: "dyskredytować", hint: "podważać czyjś autorytet lub wiarygodność w oczach innych"},
-      { answer: "dyskurs", hint: "debata na tematy naukowe, lub wywód logicznego wnioskowania"},
-      { answer: "dyspozycja", hint: "wydane komuś polecenie lub czyjś stopień przygotowania do wysiłku"},
-      { answer: "dyspozytornia", hint: "pomieszczenie z monitoringiem"},
-      { answer: "dziedziniec", hint: "niezadaszona przestrzeń w budynku, miejsce otoczone z czterech stron ścianami"},
-      { answer: "egalitarny", hint: "ładnie zgodny z poglądem całkowitej równości między ludżmi"},
-      { answer: "ekspansja", hint: "rozprzestrzenianie się na jakimś obszarze, np. przez państwo"},
-      { answer: "ekspansywny", hint: "zwiększający swój zasięg lub przesadzający w okazywaniu swoich uczuć"},
-      { answer: "eksploatować", hint: "wydobywać bogactwa, użytkować maszyny lub wykorzystywać kogoś / coś"},
-      { answer: "ekstraktować", hint: "wyodrębniać składniki za pomocą rozpuszczalników"},
-      { answer: "ekwiwalent", hint: "zwrot pieniężny za np. niewykorzystany urlop"},
-      { answer: "elektorat", hint: "ogół osób posiadających prawo do głosowania"},
-      { answer: "elementarny", hint: "najprostszy, podstawowy, konieczny jako podstawa w danej dziedzinie"},
-      { answer: "embrionalna", hint: "pozycja leżąca przypominająca tę w brzuchu matki"},
-      { answer: "emanować", hint: "zalewać otoczenie jakąś pozytywną cechą, wyrażając ją na przykład na twarzy"},
-      { answer: "emulator", hint: "program komputerowy symulujący (duplikujący) działanie innego programu"},
-      { answer: "entropia", hint: "miara chaosu, nieuporządkowania"},
-      { answer: "entuzjazm", hint: "stan zaangażowania się w coś, odczucie radości związane z tą czynnością"},
-      { answer: "epatować", hint: "zadziwiać kogoś, zadziwiać czymś, wywoływać wrażenie na odbiorcach"},
-      { answer: "erozja", hint: "proces niszczenia powierzchni terenu przez wiatr, słońce, wodę, grawitację itp."},
-      { answer: "eskalować", hint: "zwiększać konflitk"},
-      { answer: "esperal", hint: "wszywka antyalkoholowa"},
-      { answer: "ewidencja", hint: "wykaz, spis dotyczący zatrudnienia lub obrotów"},
-      { answer: "fakultet", hint: "zajęcia w szkole nieobowiązkowe lub wybierane"},
-      { answer: "fantom", hint: "odczuwanie bólu w amputowanej kończynie lub zjawa"},
-      { answer: "fason", hint: "kształt nadany obuwiu lub ubiorowi, można też go trzymać jeśli się jest porządnym"},
-      { answer: "flota", hint: "zespół statków (też powietrznych) jednego przewożnika lub państwa"},
-      { answer: "formalność", hint: "procedura, którą trzeba wykonać mimo że wiadomo jaki będzie rezultat"},
-      { answer: "fluktuacje", hint: "niedająca się przewidzieć zmienność odchyleń od normy"},
-      { answer: "frapujący, intrygujący", hint: "bardzo interesujący, niepozwalający przestać o sobie myśleć ani zapomnieć (2 znaczenia)"},
-      { answer: "frekwencja", hint: "ilość osób na przykład na wydarzeniu"},
-      { answer: "fusion", hint: "kuchnia, w której się miesza potrawy z różnych zakątków świata"},
-      { answer: "fuszerka", hint: "słabo wykonana praca, na odwal"},
-      { answer: "futerał", hint: "pojemnik do przechowywania delikatnych rzeczy jak okulary czy skrzypce"},
-      { answer: "gablota", hint: "oszklona szafka do wystawiania eksponatów lub wieszania ogłoszeń"},
-      { answer: "galimatias", hint: "ogólny nieład lub zamęt, nieporządek, pomieszane ze sobą rzeczy"},
-      { answer: "Garwolińska", hint: "ulica, prostopadła do Szaserów, przy parku Polińskiego i szpitalu, następny przystanek za moim"},
-      { answer: "Giewont", hint: "szczyt w Tatrach przy Zakopanem, śpiący rycerz"},
-      { answer: "gorgonzola", hint: "rodzaj sera pleśniowego, niegotowany, biały"},
-      { answer: "grafomania", hint: "bezwartościowe 'utwory' literackie, świadczące o braku talentu"},
-      { answer: "gratyfikacja", hint: "dodatkowe wynagrodzenie wypłacane np. przy jubileuszu"},
-      { answer: "grupowanie", hint: "łączenie elementów podobnych ze sobą, np. w excelu"},
-      { answer: "gwałtownie", hint: "niespodziewanie, natychmiast, też: agresywnie"},
-      { answer: "hipochondria", hint: "zaburzenie polegające na wmawianiu sobie posiadania wielu chorób"},
-      { answer: "hydrauliczne", hint: "urządzenie sterowane za pomocą cieczy pod ciśnieniem"},
-      { answer: "hydraulik", hint: "osoba pracująca jako ktoś kto naprawia zlewy lub przetyka toalety"},
-      { answer: "impas", hint: "sytuacja bez wyjścia dla obu stron"},
-      { answer: "imperatyw", hint: "naczelna, bezwarunkowa, powszechna norma moralna, reguła, nakaz"},
-      { answer: "impulsywny", hint: "często działający nieprzemyślanie pod wpływem bodżca"},
-      { answer: "industrialny", hint: "związany z przemysłem, np. styl dekoracji wnętrza"},
-      { answer: "ingerencja", hint: "mieszanie się do czyichś spraw, naruszanie stanu przez wpływanie na niego"},
-      { answer: "inkwizycja", hint: "instytucja kościoła ze średniowiecza do karania heretyków"},
-      { answer: "instrumentalny", hint: "sposób traktowania osoby jako rzeczy lub coś wykonywane za pomocą instrumentów muzycznych"},
-      { answer: "instytucjonalny", hint: "odnoszący się do zakładu państwowego gdzie realizuje się cele, np płacenie podatków"},
-      { answer: "insynuacje", hint: "postępki, myśli lub zachowanie przypisywane komuś niezgodnie z prawdą"},
-      { answer: "insynuować", hint: "przypisywać komuś postępki, myśli lub zachowanie niezgodnie z prawdą"},
-      { answer: "intelektualnie", hint: "sposób podchodzenia do czegoś za bardzo 'z głowy'"},
-      { answer: "inwencja", hint: "pomysłowość, chętne wprowadzanie swojego pomysłu w życie"},
-      { answer: "jeńcy", hint: "osoby porwane i przetrzymywane w trakcie wojny"},
-      { answer: "kamuflaż", hint: "maskowanie się, upodabnianie do otoczenia"},
-      { answer: "kanon", hint: "wzór, zasada, reguła albo zbiór ksiąg lub innych dzieł połączonych razem"},
-      { answer: "karczoch", hint: "gatunek jadalnej rośliny, wyglądający jak zielona szyszka"},
-      { answer: "kasetony", hint: "w architekturze zagłębienie w konstrukcji stropu lub lekkie kwadratowe płyty pod sufitem"},
-      { answer: "kaskadowe", hint: "rzeczy spadające na siebie lub zawieszone na kilku stopniach"},
-      { answer: "kategorycznie", hint: "odradzanie czegoś niedopuszczając sprzeciwu"},
-      { answer: "kefir", hint: "napój z mleka fermetowanego, naturalny probiotyk"},
-      { answer: "kipisz", hint: "bałagan, miszmasz zrobiony specjalnie, albo rewizja, przeszukanie"},
-      { answer: "klasyfikacja", hint: "podział zjawisk na kategorie lub dostanie się np. sportowca do np. mistrzostw"},
-      { answer: "klepsydra", hint: "zegar wodny lub piaskowy z dwóch szklanych baniek"},
-      { answer: "knebel", hint: "przedmiot wkładany do ust żeby uniemożliwić wydawanie dżwięków"},
-      { answer: "knuć", hint: "planować niecny spisek przeciwko komuś"},
-      { answer: "kognitywny", hint: "taki, który zajmuje się poznaniem świata lub badaniem procesów poznawczych "},
-      { answer: "kolonizować", hint: "przekształcanie podbitych terenów na część państwa które tego dokonuje"},
-      { answer: "komisarz", hint: "urzędnik powołany do pełnienia określonej funkcji, np. oficer w policji"},
-      { answer: "kompensować", hint: "zastępować coś w zamian za wywołany brak, wyrównywać"},
-      { answer: "kompetencje", hint: "zakres czyjejś wiedzy, umiejętności i doświadczenia, mogą być miękkie lub twarde"},
-      { answer: "kompilować", hint: "w progr. zmieniać kod źródłowy programu na kod wyjściowy "},
-      { answer: "koncepcja", hint: "ogólny pomysł na plan działania, rozwiązania jakiegoś problemu"},
-      { answer: "koncept", hint: "trafny, sprytny pomysł, projekt, samonasuwający się"},
-      { answer: "konfrontacja", hint: "zestawienie czegoś / kogoś i wywołanie między tym sporu"},
-      { answer: "koniunktura", hint: "sytuacja stwarzająca warunki, zwykle korzystne, do rozwoju jakiejś działalności"},
-      { answer: "konstelacje", hint: "inaczej: gwiazdozbiory"},
-      { answer: "konstrukt", hint: "abstrakcyjna, logiczna struktura w czyimś umyśle"},
-      { answer: "kontuar", hint: "blat oddzielający osobą obsługującą od klienta w skepie lub barze"},
-      { answer: "konwenanse", hint: "normy zachowania w danej sytuacji obowiązujące w jakimś środowisku"},
-      { answer: "kopuła", hint: "sklepienie w architekturze w kształcie czaszy"},
-      { answer: "kordon", hint: "ciasny szereg lub kilka szeregów żołnierzy lub policjantów blokujących przejście"},
-      { answer: "korelacja", hint: "współzależność dwóch rzeczy, współwystępowanie"},
-      { answer: "kreatywne CV", hint: "CV które wyróżnia się designem"},
-      { answer: "kreatywność", hint: "proces umysłowy pociągający za sobą powstanie nowych idei, koncepcji, pożądana cecha charakteru"},
-      { answer: "krytyczny", hint: "surowo i negatywnie oceniający (oceniany) lub oparty na sumiennej ocenie"},
-      { answer: "kuriozalny", hint: "rzecz (np. przepis prawny) budzący zdumienie swą dziwacznością lub niezwykłością"},
-      { answer: "kurtuazyjny", hint: "wyszukanie uprzejmy, zachowujący takt w swoim zachowaniu"},
-      { answer: "kwatera", hint: "pomieszczenie wynajmowane na pobyt czasowy, też np. przez wojsko"},
-      { answer: "lakier", hint: "roztwór lub zawiesina do pokrywania powierzchni lub np. włosów"},
-      { answer: "lakonicznie", hint: "krótko, oszczędnie w słowach, bez emocji"},
-      { answer: "laryngolog", hint: "lekarz od ucha, nosa, krtani,  gardła itp"},
-      { answer: "letarg", hint: "stan głębokiego snu, gdzie jedyną czynnością jest bicie serca"},
-      { answer: "likwidować", hint: "usuwać coś / kogoś, rozwiązywać, pozbawiać życia"},
-      { answer: "lingwistyczny", hint: "związany z językoznawstwem"},
-      { answer: "local storage", hint: "obszar w pamięci przeglądarki do przechowywania danych o stronie"},
-      { answer: "Mariah Carey", hint: "wokalistka popowa posiadająca zdolność śpiewania w 6 oktawach"},
-      { answer: "marionetka", hint: "lalka teatralna poruszana za pomocą nitek zawieszonych na krzyżaku"},
-      { answer: "marketing", hint: "proces związany z reklamą, pracowaliśmy nad nim w Shedulu"},
-      { answer: "maszt (komórkowy)", hint: "stacja z anteną w cyfrowej sieci telekomunikacyjnej"},
-      { answer: "mentor", hint: "nauczyciel, doradca, wychowawca, pokazujący ścieżkę rozwoju"},
-      { answer: "meritum", hint: "istota sprawy, sedno"},
-      { answer: "metabolizm", hint: "ogół reakcji chemicznych zachodzących w organizmie"},
-      { answer: "metodologia", hint: "nauka o badaniach naukowych, system reguł i procedur"},
-      { answer: "metronom", hint: "urządzenie do podawania tempa utworu"},
-      { answer: "modelowy", hint: "stanowiący najlepszy przykład, wzorcowy"},
-      { answer: "moduł", hint: "w progr. oddzielny twór, najczęściej w postaci osobnego pliku"},
-      { answer: "montessori", hint: "system wychowawczy który pomaga w osiągnięciu jego potencjału poprzez zabawę"},
-      { answer: "mozolny", hint: "wymagający wysiłku i czasu, dłużący się"},
-      { answer: "biegle", hint: "sposób w jaki można znać język, gdy się bardzo dobrze nim posuługuje"},
-      { answer: "brytfanna", hint: "płaskie naczynie do wypieków i pieczeni, może być z przykrywką"},
-      { answer: "celuloza", hint: "inaczej błonnik w żywności roślinnej odporny na działanie enzymów trawiennych"},
-      { answer: "determinacja", hint: "zdolność do podejmowania konkretnych decyzji dzieki mocnemu wewnętrznemu przekonaniu"},
-      { answer: "etykieta", hint: "nalepka na towarze np. spożywczym z informacją o nim"},
-      { answer: "fartuch", hint: "rodzaj odzieży do zakładania np. podczas gotowania żeby się nie poplamić"},
-      { answer: "filantrop", hint: "osoba udzielająca oficjalnie bezinteresownej pomocy np. ubogim"},
-      { answer: "kolportować", hint: "roznosić np. ulotki lub gazety do kiosków"},
-      { answer: "kunszt", hint: "umiejętność wykonywania czegoś lub posługiwania się, doprowadzona do perfekcji"},
-      { answer: "lutować", hint: "łączyć metalowe elementy przy pomocy małego palnika"},
-      { answer: "mikrofibra", hint: "materiał z którego może być zrobiona szmatka"},
-      { answer: "nadprzyrodzony", hint: "inny niż wywołany przez działanie praw natury"},
-      { answer: "namiestnik", hint: "osoba zastępująca panującego władzę, jej tymczasowy pełnomocnik"},
-      { answer: "narracja", hint: "tok myślowy wypowiedzi, politycy mogą mieć swoją w zależności od partii"},
-      { answer: "niefrasobliwy", hint: "nieskłonny do martwienia się, bagatelizujący problemy, nieroztropny"},
-      { answer: "nieokiełznany", hint: "osoba, której nie da się postrzymać, opanować, może też być o namiętności "},
-      { answer: "nieujawniony", hint: "coś, co zostało ukryte przed opinią publiczną, np. majątek"},
-      { answer: "niewątpliwie", hint: "na pewno, bez cienia podejrzeń czy kwestionowania"},
-      { answer: "nonszalancja", hint: "niedbały, swobodny sposób zachowywania się, lekceważenie norm otoczenia"},
-      { answer: "notabene", hint: "wyraz wtrącony w zdanie do podkreślenia dodatkowej ale ważnej informacji"},
-      { answer: "notorycznie", hint: "określenie na zachowywanie się wielokrotnie w niewłaściwy sposób"},
-      { answer: "nurtować", hint: "odczucie spowodowane zaprzątaniem sobie czymś bez przerwy głowy, niepokojeniem się"},
-      { answer: "obelżywe", hint: "agresywne negatywne wyzwisko lub plotki"},
-      { answer: "obfity", hint: "występujący w dużej liczbie lub natężeniu"},
-      { answer: "obsadzić", hint: "powierzyć komuś stanowisko lub funkcję lub w rolę w filmie"},
-      { answer: "obsesja, mania", hint: "nieustannie powracająca i uporczywa myśl (2 znaczenia)"},
-      { answer: "obsesyjny", hint: "coś co powoduje nieustannie powracającą i uporczywą myśl"},
-      { answer: "obyczaj", hint: "forma zachowania w zbiorowoąci społecznej, przekazywana z pokolenia na pokolenie"},
-      { answer: "odmęty", hint: "coś skłębionego, głębokiego, np. absurdu"},
-      { answer: "odsetek", hint: "ilość czegoś stanowiąca mały procent, np populacji "},
-      { answer: "oprogramować", hint: "opracować aplikację komputerową aby dodać jej funkcjonalność"},
-      { answer: "orbitrek", hint: "urządzenie do ćwiczenia chodzenia podobne do bieżni"},
-      { answer: "organiczny", hint: "sposób reagowania na siebie w grupie np podczas występu"},
-      { answer: "orzeczenie o niepełnosprawności", hint: "coś co przysługuje osobom mającym utrudnione życie z powodu choroby"},
-      { answer: "ostracyzm", hint: "wykluczenie z towarzystwa osoby która się naraziła lub atmosfera niechęci wobec kogoś"},
-      { answer: "pacyfikacja", hint: "tłumienie za pomocą przymusu bezpośredniego np. manifestacji lub buntu"},
-      { answer: "pacyfista", hint: "ruch społeczno polityczny potępiający wojny i przygotowywania się do nich"},
-      { answer: "partykularny", hint: "preferujący załatwianie spraw jednej grupy społecznej kosztem innych"},
-      { answer: "patchwork", hint: "coś uszyte ze zszytych kawałków różnego materiału"},
-      { answer: "patera", hint: "naczynie do podawania ciast i tortów w formie talerza na nóżce"},
-      { answer: "patriotyczny", hint: "coś, co cechuje się postawą miłości do ojczyzny"},
-      { answer: "perforacja", hint: "otwory w materiale np ułatwiające odrywanie lub wpinanie do segregatora"},
-      { answer: "plagiat", hint: "skopiowanie czyjegoś pomysłu i uznawanie go jako swój"},
-      { answer: "plandeka", hint: "duży materiał chroniący towar przed przemoknięciem lub podczas transportu"},
-      { answer: "pneumatyczny", hint: "zawierający sprzężony gaz lub poruszany za jego pomocą"},
-      { answer: "pogarda", hint: "stan uczuciowy będący mieszaniną braku szacunku i niechęci do kogoś"},
-      { answer: "polemika", hint: "dyskusja na sporny temat, może być emocjonalna"},
-      { answer: "poligon", hint: "zamknięty teren wojskowy do manewrów lub wielokąt w grafice komputerowej"},
-      { answer: "porywczy", hint: "skłonny do gwałtownych reakcji i łatwo wybuchający gniewem"},
-      { answer: "powierzchowny", hint: "mało dokładny, mało wnikliwy, na przykład przy sprzątaniu"},
-      { answer: "precedens", hint: "wydarzenie stanowiące punkt odniesienia do podobnych póżniejszych wydarzeń"},
-      { answer: "predykcja", hint: "inaczej: przewidywanie (w nauce, np w statystyce)"},
-      { answer: "prelegent", hint: "osoba wygłaszająca wykład lub prezentację"},
-      { answer: "prestiżowe", hint: "autorytet, szacunek jakim ktoś lub coś cieszy się w swoim otoczeniu, np nagroda"},
-      { answer: "prewencyjnie", hint: "inaczej: zapobiegawczo (w sprawach np. służb)"},
-      { answer: "prężnie", hint: "inaczej: energicznie rozwijający się, lub swoją działalność"},
-      { answer: "proceder", hint: "niezgodne z prawem działanie będące często źródłem utrzymania"},
-      { answer: "profanacja", hint: "znieważenie strefy sakrum"},
-      { answer: "profilaktycznie", hint: "inaczej: zapobiegawczo (najczęściej w medycynie)"},
-      { answer: "projektować", hint: "układać plany, tworzyć np. grafikę albo mieszkanie albo plan budynku"},
-      { answer: "propagować", hint: "rozpowszechniać jakieś poglądy, idee lub wiedzę"},
-      { answer: "proporcjonalnie", hint: "obliczony za pomocą stosunku części do całości"},
-      { answer: "protekcjonalnie", hint: "inaczej: traktowanie pogardliwie, z wyższością i pobłażaniem "},
-      { answer: "protektorat", hint: "forma polityczna, gdzie jedno z własnym ustrojem jest zależne od silniejszego"},
-      { answer: "prozaiczny", hint: "zwyczajny, niewyszukany, mało interesujący, np. powód"},
-      { answer: "przedsięwzięcie", hint: "projekt, działanie podjęte w jakimś celu, wymagające sporego przygotowania"},
-      { answer: "przenikliwy", hint: "drażniący swoją intensywnością, np. dżwięk lub spojrzenie"},
-      { answer: "przesłanki", hint: "okoliczności sprzyjające realizacji pewnych zamiarów lub skutecznych domysłów"},
-      { answer: "przychylny", hint: "życzliwie usposobiony do kogoś lub zgodny z życzeniami, pomocny"},
-      { answer: "ptasie mleczko", hint: "produkt cukierniczy w postaci mlecznych pianek, najczęściej wedla"},
-      { answer: "publicystyka", hint: "wypowiedzi lub artykuły na aktualne tematy, przedstawiające poglądy, polemiczne"},
-      { answer: "radykalny", hint: "będący skutkiem bezkompromisowych działań dążący do zdecydowanych zmian"},
-      { answer: "radykalnie", hint: "inaczej: skrajnie, nagle, zdecydowanie, bezkompromisowo"},
-      { answer: "refleksja", hint: "głębsze zastanowienie się nad czymś, wywałane silnym przeżyciem"},
-      { answer: "refleksyjny", hint: "dający do myślenia, prowokujący wysiłek intelektualny"},
-      { answer: "rejestr", hint: "w progr. pamięć służąca do przechowywania tymczasowych wyników obliczeń"},
-      { answer: "rekomendacje", hint: "pisemna lub ustna pozytywna opinia wydana np o pracowniku"},
-      { answer: "rekonwalescencja", hint: "długi okres powrotu do zdrowia, np za pomocą rehabilitacji"},
-      { answer: "remedium", hint: "lekarstwo, środek zaradczy na problem lub chorobę"},
-      { answer: "Renata", hint: "imię koleżanki A. które ciężko zapamiętać"},
-      { answer: "repozytorium", hint: "miejsce uporządkowanego przechowywania dokumentów lub wiedzy do udostępniania"},
-      { answer: "reputacja", hint: "opinia jaką cieszy się (lub wręcz przeciwnie) dana osoba wśród innych ludzi"},
-      { answer: "restrykcyjne", hint: "inaczej: ograniczające, surowe, drastyczne, stawiające wymogi"},
-      { answer: "retrospekcja", hint: "spojrzenie w przeszłość, w teatrze lub filmie scena z przeszłości"},
-      { answer: "rewidować", hint: "poddawać krytycznej analizie swoje poglądy"},
-      { answer: "rezonans", hint: "wzrost amlitudy fali przez małe drgania ale o tej samej częstotliwości"},
-      { answer: "rezonans magnetyczny", hint: "nieinwazyjna metoda uzyskiwania obrazów wnętrza obiektów, np. mózgu"},
-      { answer: "rezonować", hint: "wzmacniać dżwięki lub potocznie nadawać z czymś na jednej fali"},
-      { answer: "rocket science", hint: "coś skomplikowanego z ang."},
-      { answer: "rotacja", hint: "ruch obrotowy lub krążenie czegoś w systemie lub częste zmiany kadrowe w firmie"},
-      { answer: "rozgardiasz", hint: "zamęt, hałas, biegjące dzieciaki"},
-      { answer: "rozgraniczony", hint: "oddzielony od siebie nawzajem przez kogoś"},
-      { answer: "rozprzestrzeniać się", hint: "pojawiać się na coraz większym obszarze"},
-      { answer: "rozterki", hint: "wewnętrzne rozdarcie wynikłe z konieczności podjęcia trudnej decyzji"},
-      { answer: "rykoszet", hint: "niezamierzona zmiana kierunku ruchu piłki albo pocisku po odbiciu się"},
-      { answer: "rzekomo", hint: "nieprawdziwie albo prawdopodobnie, być może"},
-      { answer: "satyna", hint: "materiał sztuczny z którego robiona jest pościel"},
-      { answer: "segment", hint: "jeden z mebli lub budynków stojących w rzędzie i połączonych ze sobą"},
-      { answer: "sekator", hint: "narzędzie ogrodnicze służące do przycinania gałęzi różnej grubości"},
-      { answer: "selekcjoner", hint: "trener reprezentacji"},
-      { answer: "semafor", hint: "sygnalizator kolejowy"},
-      { answer: "serializować", hint: "w progr. konwertować obiekty na strumień bajtów do zapisu lub przesłania do bazie danych"},
-      { answer: "serpentyny", hint: "papierowe, kolorowe wstążki na balach karnawałowych lub kręte drogi w górach"},
-      { answer: "sierota", hint: "dziecko które nie ma rodziców"},
-      { answer: "silikon", hint: "substancja chemiczna do powiększania biustu albo do smarów, żywic, lakierów"},
-      { answer: "skleroza", hint: "zaburzenia pamięci występujące na skutek chorobowych zmian miażdżycowych"},
-      { answer: "skłonić kogoś", hint: "wpłynąć na czyjąś decyzję, namówić do czegoś"},
-      { answer: "skrupuły", hint: "wątpliwości moralne dotyczące własnego postępowania, ich brak prowadzi do czynów nieetycznych"},
-      { answer: "skrypt", hint: "program komp. który nie wymaga fazy przekształcenia z tekstu do postaci wykonywalnej"},
-      { answer: "SkyNet", hint: "sztuczna inteligencja z Terminatora"},
-      { answer: "sonar", hint: "urządzenie używające fal dźwiękowych do śledzenia obiektów zanurzonych w wodzie lub w powietrzu"},
-      { answer: "spektrum", hint: "szeroki zakres lub zasięg jakiegoś zjawiska, na przykład fal światła "},
-      { answer: "spowinowacony", hint: "połączeni w związki rodzinne np. poprzez małżeństwo"},
-      { answer: "spuścizna", hint: "to, co zostaje w spadku po kimś, np. utwory, dzieła autora"},
-      { answer: "stabilizacja", hint: "stan trwałości lub przywrócenie równowagi w przebiegu procesów w jakiejś dziedzinie życia"},
-      { answer: "stabilizować", hint: "przywracać równowagę lub stan trwałości w przebiegu procesów w jakiejś dziedzinie życia"},
-      { answer: "stażysta", hint: "młoda osoba ucząca się zawodu w miejscu pracy płatnie lub bezpłatnie"},
-      { answer: "strop", hint: "poziomy układ konstrukcyjny oddzielający poszczególne kondygnacje budynku"},
-      { answer: "struktura", hint: "rozmieszczenie elememtów układu i relacje między nimi"},
-      { answer: "strukturyzować", hint: "ujmować coś w układ wzajemnie powiązanych elementów"},
-      { answer: "stymulacja", hint: "zachęcanie do jakiejś aktywności; bodziec, pobudzenie organizmu"},
-      { answer: "subtelny", hint: "odznaczający się taktownym sposobem bycia, umiejętnością nieurażania ludzi; wrażliwy, czuły, tkliwy"},
-      { answer: "sukcesywnie", hint: "dokonywane etapami, konsekwentnie, jeden po drugim lub fazami"},
-      { answer: "surowce", hint: "materiały podstawowe przeznaczone do dalszej przeróbki, wydobywane np. z ziemi"},
-      { answer: "sygnet", hint: "ozdobny pierścień przeznaczony głównie jako element męskiej biżuterii"},
-      { answer: "szablon", hint: "przedmiot będący pierwowzorem wykonania jakiegoś przedmiotu lub obrazu"},
-      { answer: "Szklanych Domów", hint: "ulica z aktualnym blokiem"},
-      { answer: "szowinistyczny", hint: "uznający że na przykład kobiety są gorsze"},
-      { answer: "sztyft", hint: "forma kosmetyku z kulką, np. pod pachy"},
-      { answer: "temperament", hint: "wrodzone cechy osobowości, odziedziczone po przodkach, decydujace np. o ekstrawertyczności"},
-      { answer: "tendencja", hint: "skłonność do czegoś lub prawidłowość zarysowująca się w rozwoju czegoś lub trend, moda"},
-      { answer: "tiramisu", hint: "ciasto z biszkoptu nasączona kawą"},
-      { answer: "toksyczny (związek)", hint: "związek międzyludzki, który nie jest zdrowy i utrudnia codzienne życie"},
-      { answer: "torsje", hint: "odruchy polegające na wyrzucaniu zawartości żołądka przez przełyk i jamę ustną"},
-      { answer: "tortilla", hint: "okrągły placek w który się otacza jedzenie (kuchnia meksykańska)"},
-      { answer: "transcendentalne", hint: "coś co wykracza poza doświadczenie zmysłowe niedające się weryfikować za sprawą logiki czy matematyki"},
-      { answer: "tylda", hint: "znak falki ~"},
-      { answer: "ugruntowany", hint: "tki co stał się mocny, trwały, odporny na zmiany i wpływy, pewny na danym miejscu"},
-      { answer: "uosobienie", hint: "przedstawienie w postaci ludzkiej przedmiotów, zjawisk natury, roślin i zwierząt oraz pojęć abstrakcyjnych"},
-      { answer: "utylitaryzm", hint: "filozofia zdrowego rozsądku według zasady użyteczności"},
-      { answer: "utylizować", hint: "wykorzystywać odpady i produkty procesu przemysłowego jako surowce wtórne do dalszej produkcji"},
-      { answer: "uzbrojenie", hint: "sprzęt bojowy, w który wyposażone jest wojsko"},
-      { answer: "walory", hint: "dodatnie cechy, na przykład fizyczno-wizualne u kobiety"},
-      { answer: "wałówka", hint: "pot. jedzenie zabierane w podróż, na wycieczkę itp."},
-      { answer: "wolne rodniki", hint: "niesparowane atomy, np. w tlenie, które źle wpływają na organizm"},
-      { answer: "WordPress", hint: "system zarządzania treścią (CMS) głównie do obsługi blogów"},
-      { answer: "Wspólna Droga", hint: "ulica z której nazwę wziął przystanek i pierwszy pankowy kilometr"},
-      { answer: "wymóc", hint: "skłonić kogoś do czegoś stosując rożne środki nacisku i perswazji"},
-      { answer: "wypaczenie", hint: "zniekształcenie czegoś, odchylenie od jakiejś normy, np. czyjegoś charakteru"},
-      { answer: "wyspecjalizowany", hint: "dobrze nauczony w danej dziedzinie "},
-      { answer: "zapalczywy", hint: "łatwo unoszący się gniewem, emocjonalny, kłótliwy, krewki"},
-      { answer: "zarekomendować, polecić", hint: "przedstawić kogoś lub coś, na przykład jako nadającego się do zatrudnienia, 2 znaczenia"},
-      { answer: "zdeprecjonowany", hint: "coś czego warość jest obniżona, lub w progr. nieaktualny"},
-      { answer: "zdumiewający", hint: "rzadko spotykany, niezwykły, nadzwyczajny, wpływający na innych zaskakująco"},
-      { answer: "zgiełk", hint: "mieszanina wielu rozmów i różnych odgłosów, pośpiech i ruch panujący w wielkich skupiskach ludzkich"},
-      { answer: "zmaterializować się", hint: "stać się widzialnym, pojawić się znikąd"},
-      { answer: "zneutralizować", hint: "usunąć negatywne skutki czegoś, wyeliminować szkodliwe działanie czegoś, obezwładnić kogoś"},
-      { answer: "zobligowany", hint: "muszący coś zrobić, bo ktoś nakazał jakiś obowiązek"},
-      { answer: "zróżnicowanie", hint: "wyodrębnić z całości elementy będace inne od pozostałych lub rozdzielenie biologiczne gatunków"},
-      { answer: "zwiastun", hint: "zajawska filmowa (polska nazwa)"},
-      { answer: "zwięzły", hint: "zawierający wiele treści w niewielu słowach, mający zwartą strukturę, konsystencję"},
-      { answer: "zwolennik", hint: "osoba, która popiera coś, darzy coś sympatią, oddaje swoje poparcie komuś lub czemuś"},
-      { answer: "żargon, slang", hint: "język grupy społecznej (ale nie terytorialnej) różniący się od języka narodowego"},
-      { answer: "żyroskop", hint: "urządzenie zachowujące stały kierunek osi obrotu (może być człowiek w środku kręcący się do góry nogami)"},
-      { answer: "żywiołowy", hint: "kierujący się emocjami, ekspresywny, ekstrawertyczny"},
-    ];
-
-   
-
-    let pool = [...allWords];
+    // teraz możesz używać window.allWords
+    let pool = [...window.allWords];
     let used = [];
     let current = null;
     let previous = null;
@@ -430,20 +85,27 @@
       updateProgress();
     }
 
+    function skipWord() {
+      wasSkipped = true;
+      document.getElementById("answer").style.visibility = "visible";
+      document.querySelector('button[onclick="nextWord()"]').textContent = "Dalej";
+    }
+
     function nextWord() {
       if (!wasSkipped) {
         previous = current;
         document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
         pool = pool.filter(w => w !== current);
         used.push(current);
+      } else {
+        // Dodaj tę część, by po "Dalej" też aktualizowało się last-word
+        previous = current;
+        document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
       }
       wasSkipped = false;
+      // Przywróć tekst przycisku na "Wiem"
+      document.querySelector('button[onclick="nextWord()"]').textContent = "Wiem";
       showWord();
-    }
-
-    function skipWord() {
-      wasSkipped = true;
-      document.getElementById("answer").style.visibility = "visible";
     }
 
     function restart() {
@@ -456,6 +118,8 @@
       document.getElementById("progress").textContent = "";
       document.getElementById("last-word").textContent = "";
       document.getElementById("answer").style.visibility = "hidden";
+      // Przywróć tekst przycisku na "Wiem"
+      document.querySelector('button[onclick="nextWord()"]').textContent = "Wiem";
       showWord();
     }
 
@@ -472,7 +136,6 @@
       } else {
         isListening = true;
         recognition.start();
-        alert("🎤 Nasłuchiwanie aktywne — powiedz odpowiedź");
       }
     }
 
@@ -501,15 +164,19 @@
     };
 
     let touchStartX = 0;
-    document.addEventListener("touchstart", e => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-    document.addEventListener("touchend", e => {
-      const deltaX = e.changedTouches[0].screenX - touchStartX;
-      if (Math.abs(deltaX) > 50) {
-        if (deltaX < 0) nextWord();
-      }
-    });
+document.addEventListener("touchstart", e => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+document.addEventListener("touchend", e => {
+  const deltaX = e.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(deltaX) > 50) {
+    if (deltaX < 0) {
+      nextWord(); // przesunięcie w lewo
+    } else {
+      skipWord(); // przesunięcie w prawo
+    }
+  }
+});
 
     showWord();
   </script>
