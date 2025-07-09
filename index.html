@@ -35,6 +35,30 @@
       color: #888;
       margin-bottom: 0.5em;
     }
+    .memory-buttons {
+      margin-top: 1em;
+    }
+    #memory-list {
+      display: none;
+      margin-top: 1em;
+    }
+    .memory-item {
+      background: #fff3f3;
+      border: 1px solid #fabbbb;
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+      border-radius: 6px;
+      text-align: left;
+    }
+    .memory-item button {
+      float: right;
+      background: #ffb3b3;
+      color: #900;
+      border: none;
+      padding: 0.2em 0.7em;
+      border-radius: 4px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -49,6 +73,11 @@
       <button onclick="restart()" id="restart-btn">Jeszcze raz</button>
       <button onclick="toggleListening()">🎤 Głosowo</button>
     </div>
+    <div class="memory-buttons">
+      <button id="save-word-btn" style="background:#ffb3b3;color:#900;margin-top:1em;">Dodaj poprzednie do pamięci</button>
+      <button id="show-memory-btn" style="background:#ffe0e0;color:#900;margin-top:1em;">Pokaż zapamiętane</button>
+    </div>
+    <div id="memory-list" style="display:none;margin-top:1em;"></div>
     <p style="font-size: 0.8em; color: #888;">Wypowiedz hasło lub użyj przycisków 👆</p>
   </div>
 
@@ -176,6 +205,50 @@ document.addEventListener("touchend", e => {
     }
   }
 });
+
+    // --- Pamięć słówek ---
+    function getMemory() {
+      return JSON.parse(localStorage.getItem('slowkaMemory') || '[]');
+    }
+    function setMemory(arr) {
+      localStorage.setItem('slowkaMemory', JSON.stringify(arr));
+    }
+    function renderMemory() {
+      const mem = getMemory();
+      const list = document.getElementById('memory-list');
+      if (!mem.length) {
+        list.innerHTML = '<em>Brak zapamiętanych słówek.</em>';
+        return;
+      }
+      list.innerHTML = mem.map((w,i) =>
+        `<div class='memory-item'>
+          <b>${w.answer}</b><br><span style='color:#888;'>${w.hint}</span>
+          <button onclick='removeMemory(${i})'>Usuń</button>
+        </div>`
+      ).join('');
+    }
+    function removeMemory(idx) {
+      const mem = getMemory();
+      mem.splice(idx,1);
+      setMemory(mem);
+      renderMemory();
+    }
+    document.getElementById('save-word-btn').onclick = function() {
+      if (!previous) return alert('Brak poprzedniego słowa!');
+      const mem = getMemory();
+      if (!mem.some(w => w.answer === previous.answer && w.hint === previous.hint)) {
+        mem.push({answer: previous.answer, hint: previous.hint});
+        setMemory(mem);
+      } else {
+        alert('To słowo już jest w pamięci.');
+      }
+    };
+    let memoryVisible = false;
+    document.getElementById('show-memory-btn').onclick = function() {
+      memoryVisible = !memoryVisible;
+      document.getElementById('memory-list').style.display = memoryVisible ? 'block' : 'none';
+      if (memoryVisible) renderMemory();
+    };
 
     showWord();
   </script>
