@@ -125,14 +125,12 @@
     }
 
     function skipWord() {
-      stopAutoMode(); // wyłącz auto przy ręcznym kliknięciu
       wasSkipped = true;
       document.getElementById("answer").style.visibility = "visible";
       document.querySelector('button[onclick="nextWord()"]') .textContent = "Dalej";
     }
 
     function nextWord() {
-      stopAutoMode(); // wyłącz auto przy ręcznym kliknięciu
       if (!wasSkipped) {
         previous = current;
         document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
