@@ -62,6 +62,22 @@
       border-radius: 4px;
       cursor: pointer;
     }
+    /* Dodane style dla trybu nocnego */
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .dark-mode .card {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+    .dark-mode button {
+      background-color: #333;
+      color: #e0e0e0;
+    }
+    .dark-mode #auto-timer {
+      color: #b3e0ff;
+    }
   </style>
 </head>
 <body>
@@ -85,8 +101,10 @@
     <div id="auto-timer" style="position:fixed;top:10px;right:20px;font-size:1.3em;color:#005a9e;display:none;z-index:1000;"></div>
     <p style="font-size: 0.8em; color: #888;">Wypowiedz hasło lub użyj przycisków 👆</p>
   </div>
-
+  <button id="switch-word-set-btn" style="background:#e0e0ff;color:#222;margin:1em auto 0 auto;display:block;">Przełącz na zaawansowane słówka</button>
+  <button id="toggle-dark-mode-btn" style="background:#222;color:#fff;margin:1em auto 0 auto;display:block;">Tryb nocny</button>
   <script src="allWords.js"></script>
+  <script src="allWordsTopEnAdvanced.js"></script>
   <script>
     // teraz możesz używać window.allWords
     let pool = [...window.allWords];
@@ -295,6 +313,31 @@ document.addEventListener("touchend", e => {
         startAutoMode();
       } else {
         stopAutoMode();
+      }
+    };
+
+    document.getElementById('toggle-dark-mode-btn').onclick = function() {
+      const body = document.body;
+      if (!body.classList.contains('dark-mode')) {
+        body.classList.add('dark-mode');
+        this.textContent = 'Tryb dzienny';
+        document.querySelector('.card').style.background = '#222';
+        document.querySelector('.card').style.color = '#eee';
+        document.querySelectorAll('button').forEach(btn => {
+          btn.style.background = '#444';
+          btn.style.color = '#eee';
+        });
+        document.getElementById('auto-timer').style.color = '#b3e0ff';
+      } else {
+        body.classList.remove('dark-mode');
+        this.textContent = 'Tryb nocny';
+        document.querySelector('.card').style.background = 'white';
+        document.querySelector('.card').style.color = 'black';
+        document.querySelectorAll('button').forEach(btn => {
+          btn.style.background = '';
+          btn.style.color = '';
+        });
+        document.getElementById('auto-timer').style.color = '#005a9e';
       }
     };
 
