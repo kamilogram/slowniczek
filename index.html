@@ -22,45 +22,120 @@
       margin-top: 1em;
     }
     button {
-      padding: 0.5em 1.2em;
+      padding: 0.7em 1.7em;
       margin: 0.4em;
-      font-size: 1em;
+      font-size: 1.12em;
       cursor: pointer;
-      min-width: 83px;
-      min-height: 40px;
+      min-width: 100px;
+      min-height: 48px;
       box-sizing: border-box;
+      border: none;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.18);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.07);
+      backdrop-filter: blur(2px);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: background 0.25s, color 0.2s, box-shadow 0.2s, transform 0.18s;
+      position: relative;
+      overflow: hidden;
+    }
+    button::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      border-radius: 30px;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+    button:hover, button:focus {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+      transform: scale(1.06);
+      outline: none;
+      filter: brightness(1.10);
+      background: linear-gradient(90deg, #f7f7fa 0%, #e3e3f7 100%);
+    }
+    button:active {
+      transform: scale(0.97);
+      filter: brightness(0.96);
     }
     #restart-btn {
-      display: none;
+      background: linear-gradient(90deg, #f7e7ff 0%, #e3e3f7 100%);
+      color: #6c2eb7;
+      box-shadow: 0 2px 12px rgba(108,46,183,0.08);
     }
-    #last-word {
-      font-size: 1.1em;
-      color: #888;
-      margin-bottom: 0.5em;
+    #save-word-btn, #save-current-btn {
+      background: linear-gradient(90deg, #ffe0e0 0%, #ffb3b3 100%);
+      color: #900;
+      box-shadow: 0 2px 12px rgba(255,179,179,0.10);
     }
-    .memory-buttons {
-      margin-top: 1em;
+    #show-memory-btn {
+      background: linear-gradient(90deg, #fff3f3 0%, #ffe0e0 100%);
+      color: #900;
+      box-shadow: 0 2px 12px rgba(255,224,224,0.10);
     }
-    #memory-list {
-      display: none;
-      margin-top: 1em;
+    #auto-mode-btn {
+      background: linear-gradient(90deg, #b3e0ff 0%, #e0f7ff 100%);
+      color: #005a9e;
+      box-shadow: 0 2px 12px rgba(179,224,255,0.10);
+    }
+    #toggle-dark-mode-btn {
+      background: linear-gradient(90deg, #222 0%, #444 100%);
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(34,34,34,0.10);
+    }
+    #undo-known-btn {
+      background: linear-gradient(90deg, #e0e0e0 0%, #f7f7fa 100%);
+      color: #222;
+      box-shadow: 0 2px 12px rgba(224,224,224,0.10);
     }
     .memory-item {
       background: #fff3f3;
       border: 1px solid #fabbbb;
-      padding: 0.5em;
-      margin-bottom: 0.5em;
-      border-radius: 6px;
+      padding: 0.7em 1em 0.7em 1em;
+      margin-bottom: 0.7em;
+      border-radius: 16px;
+      position: relative;
+      min-width: 0;
+      word-break: break-word;
+      overflow: hidden;
       text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .memory-item-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .memory-item b {
+      font-size: 1.08em;
+      display: block;
+      margin-bottom: 0.2em;
+    }
+    .memory-item span {
+      color: #888;
+      font-size: 0.98em;
+      display: block;
+      margin-bottom: 0.5em;
+      word-break: break-word;
     }
     .memory-item button {
-      float: right;
-      background: #ffb3b3;
+      display: block;
+      position: static;
+      margin: 0 0 0 1em;
+      border-radius: 12px;
+      font-size: 0.88em;
+      padding: 0.25em 1em;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.09);
+      background: linear-gradient(90deg, #ffb3b3 0%, #ffe0e0 100%);
       color: #900;
       border: none;
-      padding: 0.2em 0.7em;
-      border-radius: 4px;
-      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+      text-align: center;
+      min-width: 0;
+      width: fit-content;
     }
     /* Dodane style dla trybu nocnego */
     .dark-mode {
@@ -72,23 +147,37 @@
       color: #e0e0e0;
     }
     .dark-mode button {
-      background-color: #333;
+      background: linear-gradient(90deg, #222 0%, #333 100%);
       color: #e0e0e0;
+      box-shadow: 0 2px 12px rgba(34,34,34,0.10);
     }
-    .dark-mode #auto-timer {
-      color: #b3e0ff;
+    .dark-mode #auto-mode-btn {
+      background: linear-gradient(90deg, #444 0%, #222 100%) !important;
+      color: #eee !important;
+    }
+    .dark-mode #toggle-dark-mode-btn {
+      background: linear-gradient(90deg, #444 0%, #222 100%) !important;
+      color: #eee !important;
     }
     .dark-mode #save-word-btn,
     .dark-mode #save-current-btn {
-      background-color: #5a2323 !important;
+      background: linear-gradient(90deg, #5a2323 0%, #7a3a3a 100%) !important;
       color: #ffb3b3 !important;
     }
     .dark-mode #show-memory-btn {
-      background-color: #7a3a3a !important;
+      background: linear-gradient(90deg, #7a3a3a 0%, #5a2323 100%) !important;
       color: #ffe0e0 !important;
     }
+    .dark-mode #undo-known-btn {
+      background: linear-gradient(90deg, #444 0%, #222 100%) !important;
+      color: #e0e0e0 !important;
+    }
+    .dark-mode .memory-item {
+      background: #1e1e1e;
+      border: 1px solid #7a3a3a;
+    }
     .dark-mode .memory-item button {
-      background: #7a3a3a !important;
+      background: linear-gradient(90deg, #7a3a3a 0%, #5a2323 100%) !important;
       color: #ffb3b3 !important;
     }
     /* Dodane style dla podświetlenia na zielono, działa w obu trybach */
@@ -122,6 +211,9 @@
     <div style="display: flex; justify-content: center; gap: 1em; margin-top: 1em;">
       <button id="auto-mode-btn" style="background:#b3e0ff;color:#005a9e;">Auto tryb</button>
       <button id="toggle-dark-mode-btn" style="background:#222;color:#fff;">Tryb nocny</button>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 1em;">
+      <button id="undo-known-btn" style="background:#e0e0e0;color:#222;">Jednak nie wiedziałem</button>
     </div>
     <div id="auto-timer" style="position:fixed;top:10px;right:20px;font-size:1.3em;color:#005a9e;display:none;z-index:1000;"></div>
   </div>
@@ -247,7 +339,10 @@ document.addEventListener("touchend", e => {
       }
       list.innerHTML = mem.map((w,i) =>
         `<div class='memory-item'>
-          <b>${w.answer}</b><br><span style='color:#888;'>${w.hint}</span>
+          <div class='memory-item-content'>
+            <b>${w.answer}</b>
+            <span>${w.hint}</span>
+          </div>
           <button onclick='removeMemory(${i})'>Usuń</button>
         </div>`
       ).join('');
@@ -414,6 +509,21 @@ document.addEventListener("touchend", e => {
         });
         document.getElementById('auto-timer').style.color = '#005a9e';
       }
+    };
+
+    document.getElementById('undo-known-btn').onclick = function() {
+      if (!previous) return alert('Brak poprzedniego słowa do cofnięcia!');
+      // Sprawdź czy previous jest w used
+      const idx = used.findIndex(w => w.answer === previous.answer && w.hint === previous.hint);
+      if (idx === -1) return alert('Poprzednie słowo nie było oznaczone jako znane.');
+      used.splice(idx, 1);
+      setUsedWords(used);
+      // Dodaj z powrotem do pool jeśli nie ma
+      if (!pool.some(w => w.answer === previous.answer && w.hint === previous.hint)) {
+        pool.push(previous);
+      }
+      showWord();
+      document.getElementById('last-word').textContent = 'Poprzednie cofnięte.';
     };
 
     showWord();
