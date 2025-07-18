@@ -140,7 +140,7 @@
     let autoTimeLeft = 0;
 
     function updateProgress() {
-      document.getElementById("progress").textContent = `Słówko ${used.length + 1} z ${allWords.length}`;
+      document.getElementById("progress").textContent = `Słówko ${used.length + 1} z ${window.allWords.length}`;
     }
 
     function showWord() {
@@ -175,20 +175,21 @@
         document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
         pool = pool.filter(w => w !== current);
         used.push(current);
+        setUsedWords(used);
       } else {
-        // Dodaj tę część, by po "Dalej" też aktualizowało się last-word
         previous = current;
         document.getElementById("last-word").textContent = `Poprzednie hasło: ${previous.answer}`;
       }
       wasSkipped = false;
-      // Przywróć tekst przycisku na "Wiem"
       document.querySelector('button[onclick="nextWord()"]').textContent = "Wiem";
       showWord();
     }
 
     function restart() {
+      setUsedWords([]); // Wyczyść historię odgadniętych słówek
       pool = [...allWords];
       used = [];
+      pool = window.allWords.filter(w => !used.some(u => u.answer === w.answer && u.hint === w.hint));
       previous = null;
       wasSkipped = false;
       document.getElementById("restart-btn").style.display = "none";
@@ -197,7 +198,7 @@
       document.getElementById("answer").style.visibility = "hidden";
       document.querySelector('button[onclick="nextWord()"]').textContent = "Wiem";
       showWord();
-      if (isListening) recognition.start(); // <-- dodaj to, jeśli chcesz nasłuch po restarcie
+      if (isListening) recognition.start();
     }
 
     let touchStartX = 0;
@@ -222,6 +223,21 @@ document.addEventListener("touchend", e => {
     function setMemory(arr) {
       localStorage.setItem('slowkaMemory', JSON.stringify(arr));
     }
+
+    // --- Zapamiętywanie odgadniętych słówek ---
+    function getUsedWords() {
+      return JSON.parse(localStorage.getItem('slowkaUsed') || '[]');
+    }
+    function setUsedWords(arr) {
+      localStorage.setItem('slowkaUsed', JSON.stringify(arr));
+    }
+
+    // --- Inicjalizacja puli i statystyki na starcie ---
+    used = getUsedWords();
+    pool = window.allWords.filter(w => !used.some(u => u.answer === w.answer && u.hint === w.hint));
+
+    showWord();
+
     function renderMemory() {
       const mem = getMemory();
       const list = document.getElementById('memory-list');
@@ -288,16 +304,22 @@ document.addEventListener("touchend", e => {
       document.getElementById('auto-timer').style.display = 'none';
     }
 
+    function setButtonsVisible(visible) {
+      document.querySelector('.buttons').style.display = visible ? '' : 'none';
+    }
+
     function startAutoMode() {
       if (autoMode) return;
       autoMode = true;
       document.getElementById('auto-mode-btn').textContent = 'Wyłącz auto';
+      setButtonsVisible(false);
       autoStep = 0;
       autoNextStep();
     }
     function stopAutoMode() {
       autoMode = false;
       document.getElementById('auto-mode-btn').textContent = 'Auto tryb';
+      setButtonsVisible(true);
       hideAutoTimer();
       if (autoTimer) clearTimeout(autoTimer);
     }
