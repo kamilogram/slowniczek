@@ -78,6 +78,28 @@
     .dark-mode #auto-timer {
       color: #b3e0ff;
     }
+    .dark-mode #save-word-btn,
+    .dark-mode #save-current-btn {
+      background-color: #5a2323 !important;
+      color: #ffb3b3 !important;
+    }
+    .dark-mode #show-memory-btn {
+      background-color: #7a3a3a !important;
+      color: #ffe0e0 !important;
+    }
+    .dark-mode .memory-item button {
+      background: #7a3a3a !important;
+      color: #ffb3b3 !important;
+    }
+    /* Dodane style dla podświetlenia na zielono, działa w obu trybach */
+.highlight-green {
+  background-color: #7be87b !important;
+  color: #222 !important;
+}
+.dark-mode .highlight-green {
+  background-color: #7be87b !important;
+  color: #222 !important;
+}
   </style>
 </head>
 <body>
@@ -97,14 +119,13 @@
       <button id="show-memory-btn" style="background:#ffe0e0;color:#900;margin-top:1em;">Pokaż zapamiętane</button>
     </div>
     <div id="memory-list" style="display:none;margin-top:1em;"></div>
-    <button id="auto-mode-btn" style="background:#b3e0ff;color:#005a9e;margin-top:1em;float:right;">Auto tryb</button>
+    <div style="display: flex; justify-content: center; gap: 1em; margin-top: 1em;">
+      <button id="auto-mode-btn" style="background:#b3e0ff;color:#005a9e;">Auto tryb</button>
+      <button id="toggle-dark-mode-btn" style="background:#222;color:#fff;">Tryb nocny</button>
+    </div>
     <div id="auto-timer" style="position:fixed;top:10px;right:20px;font-size:1.3em;color:#005a9e;display:none;z-index:1000;"></div>
-    <p style="font-size: 0.8em; color: #888;">Wypowiedz hasło lub użyj przycisków 👆</p>
   </div>
-  <button id="switch-word-set-btn" style="background:#e0e0ff;color:#222;margin:1em auto 0 auto;display:block;">Przełącz na zaawansowane słówka</button>
-  <button id="toggle-dark-mode-btn" style="background:#222;color:#fff;margin:1em auto 0 auto;display:block;">Tryb nocny</button>
   <script src="allWords.js"></script>
-  <script src="allWordsTopEnAdvanced.js"></script>
   <script>
     // teraz możesz używać window.allWords
     let pool = [...window.allWords];
@@ -228,9 +249,10 @@ document.addEventListener("touchend", e => {
         mem.push({answer: previous.answer, hint: previous.hint});
         setMemory(mem);
         const btn = this;
-        const oldBg = btn.style.backgroundColor;
-        btn.style.backgroundColor = '#7be87b';
-        setTimeout(() => { btn.style.backgroundColor = oldBg; }, 2000);
+        btn.classList.add('highlight-green');
+        setTimeout(() => {
+          btn.classList.remove('highlight-green');
+        }, 2000);
       } else {
         alert('To słowo już jest w pamięci.');
       }
@@ -242,9 +264,10 @@ document.addEventListener("touchend", e => {
         mem.push({answer: current.answer, hint: current.hint});
         setMemory(mem);
         const btn = this;
-        const oldBg = btn.style.backgroundColor;
-        btn.style.backgroundColor = '#7be87b';
-        setTimeout(() => { btn.style.backgroundColor = oldBg; }, 2000);
+        btn.classList.add('highlight-green');
+        setTimeout(() => {
+          btn.classList.remove('highlight-green');
+        }, 2000);
       } else {
         alert('To słowo już jest w pamięci.');
       }
@@ -327,6 +350,16 @@ document.addEventListener("touchend", e => {
           btn.style.background = '#444';
           btn.style.color = '#eee';
         });
+        document.getElementById('save-word-btn').style.background = '#5a2323';
+        document.getElementById('save-word-btn').style.color = '#ffb3b3';
+        document.getElementById('save-current-btn').style.background = '#5a2323';
+        document.getElementById('save-current-btn').style.color = '#ffb3b3';
+        document.getElementById('show-memory-btn').style.background = '#7a3a3a';
+        document.getElementById('show-memory-btn').style.color = '#ffe0e0';
+        document.querySelectorAll('.memory-item button').forEach(btn => {
+          btn.style.background = '#7a3a3a';
+          btn.style.color = '#ffb3b3';
+        });
         document.getElementById('auto-timer').style.color = '#b3e0ff';
       } else {
         body.classList.remove('dark-mode');
@@ -336,6 +369,16 @@ document.addEventListener("touchend", e => {
         document.querySelectorAll('button').forEach(btn => {
           btn.style.background = '';
           btn.style.color = '';
+        });
+        document.getElementById('save-word-btn').style.background = '#ffb3b3';
+        document.getElementById('save-word-btn').style.color = '#900';
+        document.getElementById('save-current-btn').style.background = '#ffb3b3';
+        document.getElementById('save-current-btn').style.color = '#900';
+        document.getElementById('show-memory-btn').style.background = '#ffe0e0';
+        document.getElementById('show-memory-btn').style.color = '#900';
+        document.querySelectorAll('.memory-item button').forEach(btn => {
+          btn.style.background = '#ffb3b3';
+          btn.style.color = '#900';
         });
         document.getElementById('auto-timer').style.color = '#005a9e';
       }
