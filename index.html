@@ -389,11 +389,12 @@ document.addEventListener("touchend", e => {
       }
     };
     let memoryVisible = false;
-    document.getElementById('show-memory-btn').onclick = function() {
-      memoryVisible = !memoryVisible;
-      document.getElementById('memory-list').style.display = memoryVisible ? 'block' : 'none';
-      if (memoryVisible) renderMemory();
-    };
+document.getElementById('show-memory-btn').onclick = function() {
+  memoryVisible = !memoryVisible;
+  document.getElementById('memory-list').style.display = memoryVisible ? 'block' : 'none';
+  this.textContent = memoryVisible ? 'Ukryj zapamiętane' : 'Pokaż zapamiętane';
+  if (memoryVisible) renderMemory();
+};
 
     function showAutoTimer(sec) {
       const timerDiv = document.getElementById('auto-timer');
