@@ -220,6 +220,13 @@
       <button id="undo-known-btn" style="background:#e0e0e0;color:#222;">Jednak nie wiedziałem</button>
     </div>
     <div id="auto-timer" style="position:fixed;top:10px;right:20px;font-size:1.3em;color:#005a9e;display:none;z-index:1000;"></div>
+    <div style="margin-top: 1em;">
+      <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko..." style="padding: 0.7em; width: calc(100% - 2em); border: 1px solid #ccc; border-radius: 8px; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <button onclick="searchWord()" style="margin-top: 0.5em; padding: 0.7em 1.5em; border-radius: 8px; background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; font-size: 1.1em; font-weight: bold; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">Szukaj</button>
+    </div>
+    <div id="search-results" style="margin-top: 1em; padding: 1em; background: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <p style="text-align: center; color: #888; font-style: italic;">Wyniki wyszukiwania pojawią się tutaj...</p>
+    </div>
   </div>
   <script src="allWords.js"></script>
   <script>
@@ -533,6 +540,26 @@ document.getElementById('show-memory-btn').onclick = function() {
     };
 
     showWord();
+
+    function searchWord() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      const results = window.allWords.filter(word => 
+        word.answer.toLowerCase().includes(query) || word.hint.toLowerCase().includes(query)
+      );
+
+      const resultsDiv = document.getElementById('search-results');
+      if (results.length === 0) {
+        resultsDiv.innerHTML = '<p style="text-align: center; color: #888; font-style: italic;">Brak wyników.</p>';
+        return;
+      }
+
+      resultsDiv.innerHTML = results.map(word => 
+        `<div style='padding: 1em; margin-bottom: 0.5em; background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);'>
+          <b style='font-size: 1.2em; color: #0d47a1;'>${word.answer}</b>
+          <p style='margin: 0; color: #555;'>${word.hint}</p>
+        </div>`
+      ).join('');
+    }
   </script>
 </body>
 </html>
