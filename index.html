@@ -200,8 +200,8 @@
   margin-top: 1.1em;
 }
 #hint {
-  font-size: 1.05em;
-  font-weight: 400;
+  font-size: 1.18em;
+  font-weight: 600;
   color: #444;
   margin-bottom: 0.2em;
 }
@@ -239,13 +239,16 @@
     </div>
     <div id="auto-timer" style="position:fixed;top:10px;right:20px;font-size:1.3em;color:#005a9e;display:none;z-index:1000;"></div>
     <div style="margin-top: 1em; display: flex; align-items: center; gap: 0.5em;">
-      <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko..." style="padding: 0.7em; flex: 1; border: 1px solid #ccc; border-radius: 8px; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); height: 44px;">
-      <button onclick="searchWord()" style="height: 44px; width: 44px; min-width: 0; padding: 0; border-radius: 8px; background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; font-size: 1.3em; font-weight: bold; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 1.3em; line-height: 1;">🔍</span>
+      <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko..." style="padding: 0.7em; flex: 1; border: 1px solid #ccc; border-radius: 8px; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); height: 44px; min-width: 0;">
+      <button onclick="searchWord()" style="height: 44px; width: 44px; min-width: 44px; padding: 0; border-radius: 8px; background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; font-size: 1.3em; font-weight: bold; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; justify-content: center; box-sizing: border-box; overflow: hidden;">
+        <span style="font-size: 1.3em; line-height: 1; width: 100%; text-align: center;">🔍</span>
       </button>
     </div>
     <div id="search-results" style="margin-top: 1em; padding: 1em; background: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
       <p style="text-align: center; color: #888; font-style: italic;">Wyniki wyszukiwania pojawią się tutaj...</p>
+    </div>
+    <div style="margin-top: 0.7em; display: flex; justify-content: center;">
+      <button id="clear-used-btn" style="background: linear-gradient(90deg, #ffe0e0 0%, #ffb3b3 100%); color: #900; border-radius: 8px; font-size: 1em; font-weight: 600; border: none; box-shadow: 0 2px 8px rgba(255,179,179,0.10); padding: 0.7em 1.5em; cursor: pointer; transition: background 0.2s, color 0.2s;">Wyczyść odgadnięte słówka</button>
     </div>
   </div>
   <script src="allWords.js"></script>
@@ -434,6 +437,8 @@ document.getElementById('show-memory-btn').onclick = function() {
 
     function setButtonsVisible(visible) {
       document.querySelector('.buttons').style.display = visible ? '' : 'none';
+      document.getElementById('undo-known-btn').style.display = visible ? '' : 'none';
+      document.getElementById('show-memory-btn').style.display = visible ? '' : 'none';
     }
 
     function startAutoMode() {
@@ -611,6 +616,16 @@ window.addEventListener('visibilitychange', () => {
 });
 // Aktywuj Wake Lock na starcie
 requestWakeLock();
+
+document.getElementById('clear-used-btn').onclick = function() {
+      if (confirm('Czy na pewno chcesz wyczyścić wszystkie odgadnięte słówka?')) {
+        localStorage.removeItem('slowkaUsed');
+        used = [];
+        pool = [...window.allWords];
+        showWord();
+        alert('Odgadnięte słówka zostały wyczyszczone.');
+      }
+    };
   </script>
 </body>
 </html>
