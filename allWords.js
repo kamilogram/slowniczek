@@ -220,7 +220,7 @@ window.allWords = [
   { answer: "krytyczny", hint: "surowo i negatywnie oceniający (oceniany) lub oparty na sumiennej ocenie"},
   { answer: "krzewić", hint: "szerzyć, propagować coś, np. idee lub wartości"},
   { answer: "kunszt", hint: "umiejętność wykonywania czegoś lub posługiwania się, doprowadzona do perfekcji"},
-  { answer: "kuriozalny", hint: "rzecz (np. przepis prawny) budzący zdumienie swą dziwacznością lub niezwykłością"},
+  { answer: "kuriozalny", hint: "rzecz (np. przepis prawny) budzący zdumienie swą dziwacznością lub niezwykłością (przymiotnik)"},
   { answer: "kurtuazja", hint: "uprzejmość, grzeczność, często w nadmiarze"},
   { answer: "kurtuazyjny", hint: "wyszukanie uprzejmy, zachowujący takt w swoim zachowaniu"},
   { answer: "kwatera", hint: "pomieszczenie wynajmowane na pobyt czasowy, też np. przez wojsko"},
