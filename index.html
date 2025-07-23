@@ -254,6 +254,9 @@
       <button id="auto-mode-btn" style="background:#b3e0ff;color:#005a9e;">Auto tryb</button>
       <button id="toggle-dark-mode-btn" style="background:#222;color:#fff;">Tryb nocny</button>
     </div>
+    <div style="margin-top: 0.7em; display: flex; justify-content: center;">
+      <button id="speak-hint-btn" style="background: linear-gradient(90deg, #e0e0ff 0%, #b3e0ff 100%); color: #005a9e; border-radius: 8px; font-size: 1em; font-weight: 600; border: none; box-shadow: 0 2px 8px rgba(179,224,255,0.10); padding: 0.7em 1.5em; cursor: pointer; transition: background 0.2s, color 0.2s;">Czytaj podpowiedź na głos</button>
+    </div>
     <div id="auto-timer" style="position:fixed;top:10px;right:20px;font-size:1.3em;color:#005a9e;display:none;z-index:1000;"></div>
     <div style="margin-top: 1em; display: flex; align-items: center; gap: 0.5em;">
       <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko..." style="padding: 0.7em; flex: 1; border: 1px solid #ccc; border-radius: 8px; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); height: 44px; min-width: 0;">
@@ -281,6 +284,7 @@
     let autoTimer = null;
     let autoStep = 0;
     let autoTimeLeft = 0;
+    let speakHintActive = false;
 
     function updateProgress() {
       document.getElementById("progress").textContent = `Słówko ${used.length + 1} z ${window.allWords.length}`;
@@ -305,6 +309,7 @@
       document.getElementById("answer").textContent = current.answer;
       document.getElementById("answer").style.visibility = "hidden";
       updateProgress();
+      autoSpeakHintIfActive();
     }
 
     function skipWord() {
@@ -643,6 +648,38 @@ document.getElementById('clear-used-btn').onclick = function() {
         alert('Odgadnięte słówka zostały wyczyszczone.');
       }
     };
+
+    // --- Web Speech API: czytanie podpowiedzi na głos ---
+    function speakHint() {
+      if (!autoMode) {
+        alert('Czytanie podpowiedzi działa tylko w trybie auto!');
+        return;
+      }
+      speakHintActive = !speakHintActive;
+      const btn = document.getElementById('speak-hint-btn');
+      if (speakHintActive) {
+        btn.textContent = 'Wyłącz czytanie podpowiedzi';
+        // przeczytaj od razu aktualną podpowiedź
+        if (current && current.hint) {
+          const utter = new window.SpeechSynthesisUtterance(current.hint);
+          utter.lang = 'pl-PL';
+          window.speechSynthesis.speak(utter);
+        }
+      } else {
+        btn.textContent = 'Czytaj podpowiedź na głos';
+        window.speechSynthesis.cancel();
+      }
+    }
+    document.getElementById('speak-hint-btn').onclick = speakHint;
+
+    // Dodaj automatyczne czytanie podpowiedzi przy każdej zmianie hasła w trybie auto
+    function autoSpeakHintIfActive() {
+      if (autoMode && speakHintActive && current && current.hint) {
+        const utter = new window.SpeechSynthesisUtterance(current.hint);
+        utter.lang = 'pl-PL';
+        window.speechSynthesis.speak(utter);
+      }
+    }
   </script>
 </body>
 </html>
