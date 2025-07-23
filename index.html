@@ -316,6 +316,7 @@
       wasSkipped = true;
       document.getElementById("answer").style.visibility = "visible";
       document.querySelector('button[onclick="nextWord()"]') .textContent = "Dalej";
+      autoSpeakAnswerIfActive();
     }
 
     function nextWord() {
@@ -676,6 +677,14 @@ document.getElementById('clear-used-btn').onclick = function() {
     function autoSpeakHintIfActive() {
       if (autoMode && speakHintActive && current && current.hint) {
         const utter = new window.SpeechSynthesisUtterance(current.hint);
+        utter.lang = 'pl-PL';
+        window.speechSynthesis.speak(utter);
+      }
+    }
+
+    function autoSpeakAnswerIfActive() {
+      if (autoMode && speakHintActive && current && current.answer) {
+        const utter = new window.SpeechSynthesisUtterance(current.answer);
         utter.lang = 'pl-PL';
         window.speechSynthesis.speak(utter);
       }
