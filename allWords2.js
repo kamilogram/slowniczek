@@ -1,5 +1,5 @@
 window.allWords2 = [
-  { answer: "absorbować", hint: "wchłaniać, przyjmować substancję lub informację" }
+  { answer: "absorbować", hint: "wchłaniać, przyjmować substancję lub informację" },
   { answer: "administracja", hint: "dział odpowiedzialny za zarządzanie dokumentacją i wsparcie organizacyjne w firmie" },
   { answer: "agenda", hint: "plan spotkania lub lista spraw do omówienia" },
   { answer: "akordeon", hint: "instrument muzyczny z klawiszami i z rozciąganiem trzymany przed sobą" },
@@ -25,7 +25,7 @@ window.allWords2 = [
   { answer: "atrapa, imitacja", hint: "przedmiot udający coś innego, gorszej jakości (2 znaczenia)" },
   { answer: "atrybut", hint: "cecha charakterystyczna, wyróżnik, zaleta" },
   { answer: "autonomia", hint: "niezależność w podejmowaniu decyzji" },
-  { answer: "awangarda", hint: "ruch artystyczny lub intelektualny, który dąży do nowatorskich, eksperymentalnych i często kontrowersyjnych form wyrazu" }
+  { answer: "awangarda", hint: "ruch artystyczny lub intelektualny, który dąży do nowatorskich, eksperymentalnych i często kontrowersyjnych form wyrazu" },
   { answer: "bagatelizować", hint: "traktować coś jako mało ważne" },
   { answer: "balans", hint: "równowaga, stan stabilności" },
   { answer: "balustrada", hint: "barierka zabezpieczająca schody lub balkon" },
