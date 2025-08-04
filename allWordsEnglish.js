@@ -1,4 +1,4 @@
-window.allWordsTopEnAdvanced = [
+window.allWordsEnglish = [
   { answer: "approach", hint: "podejście, zbliżać się" },
   { answer: "assume", hint: "zakładać, przypuszczać" },
   { answer: "available", hint: "dostępny" },

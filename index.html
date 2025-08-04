@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Słówka Głosowe</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4facfe">
   <style>
     body {
       font-family: sans-serif;
@@ -12,15 +14,18 @@
       max-width: 400px;
       margin: auto;
     }
+    
     .card {
       background: white;
       padding: 1.5em;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
+    
     .buttons {
       margin-top: 1em;
     }
+    
     button {
       padding: 0.7em 1.7em;
       margin: 0.4em;
@@ -40,15 +45,20 @@
       position: relative;
       overflow: hidden;
     }
+    
     button::after {
       content: '';
       position: absolute;
-      left: 0; top: 0; right: 0; bottom: 0;
+      left: 0; 
+      top: 0; 
+      right: 0; 
+      bottom: 0;
       border-radius: 30px;
       opacity: 0;
       transition: opacity 0.2s;
       pointer-events: none;
     }
+    
     button:hover, button:focus {
       box-shadow: 0 8px 32px rgba(0,0,0,0.16);
       transform: scale(1.06);
@@ -56,45 +66,176 @@
       filter: brightness(1.10);
       background: linear-gradient(90deg, #f7f7fa 0%, #e3e3f7 100%);
     }
+    
     button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.35);
-  border-radius: 30px;
-}
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.35);
+      border-radius: 30px;
+    }
+    
     button:active {
       transform: scale(0.97);
       filter: brightness(0.96);
     }
+    
     #restart-btn {
       background: linear-gradient(90deg, #f7e7ff 0%, #e3e3f7 100%);
       color: #6c2eb7;
       box-shadow: 0 2px 12px rgba(108,46,183,0.08);
     }
+    
     #save-word-btn, #save-current-btn {
       background: linear-gradient(90deg, #ffe0e0 0%, #ffb3b3 100%);
       color: #900;
       box-shadow: 0 2px 12px rgba(255,179,179,0.10);
     }
+    
     #show-memory-btn {
       background: linear-gradient(90deg, #fff3f3 0%, #ffe0e0 100%);
       color: #900;
       box-shadow: 0 2px 12px rgba(255,224,224,0.10);
     }
+    
     #auto-mode-btn {
       background: linear-gradient(90deg, #b3e0ff 0%, #e0f7ff 100%);
       color: #005a9e;
       box-shadow: 0 2px 12px rgba(179,224,255,0.10);
     }
+    
     #toggle-dark-mode-btn {
       background: linear-gradient(90deg, #222 0%, #444 100%);
       color: #fff;
       box-shadow: 0 2px 12px rgba(34,34,34,0.10);
     }
+    
     #undo-known-btn {
       background: linear-gradient(90deg, #e0e0e0 0%, #f7f7fa 100%);
       color: #222;
       box-shadow: 0 2px 12px rgba(224,224,224,0.10);
     }
+    
+    #speak-hint-btn {
+      background: linear-gradient(90deg, #e0e0ff 0%, #b3e0ff 100%);
+      color: #005a9e;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 2px 8px rgba(179,224,255,0.10);
+      padding: 0.7em 1.5em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    #clear-used-btn {
+      background: linear-gradient(90deg, #ffe0e0 0%, #ffb3b3 100%);
+      color: #900;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 2px 8px rgba(255,179,179,0.10);
+      padding: 0.7em 1.5em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    #background-mode-btn {
+      background: linear-gradient(90deg, #e8f5e8 0%, #c8e6c9 100%);
+      color: #2e7d32;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 2px 8px rgba(200,230,201,0.10);
+      padding: 0.7em 1.5em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    #background-mode-btn.active {
+      background: linear-gradient(90deg, #4caf50 0%, #66bb6a 100%);
+      color: white;
+      box-shadow: 0 2px 8px rgba(76,175,80,0.20);
+    }
+    
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin-top: 1em;
+    }
+    
+    #search-input {
+      padding: 0.7em;
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1.1em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 44px;
+      min-width: 0;
+    }
+    
+    .search-btn {
+      height: 44px;
+      width: 44px;
+      min-width: 44px;
+      padding: 0;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      color: white;
+      font-size: 1.3em;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    
+    .search-btn span {
+      font-size: 1.3em;
+      line-height: 1;
+      width: 100%;
+      text-align: center;
+    }
+    
+    #search-results {
+      margin-top: 1em;
+      padding: 1em;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-results-placeholder {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+    }
+    
+    .search-result-item {
+      padding: 1em;
+      margin-bottom: 0.5em;
+      background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-result-item b {
+      font-size: 1.2em;
+      color: #0d47a1;
+    }
+    
+    .search-result-item p {
+      margin: 0;
+      color: #555;
+    }
+    
     .memory-item {
       background: #fff3f3;
       border: 1px solid #fabbbb;
@@ -110,15 +251,18 @@
       justify-content: space-between;
       align-items: center;
     }
+    
     .memory-item-content {
       flex: 1;
       min-width: 0;
     }
+    
     .memory-item b {
       font-size: 1.08em;
       display: block;
       margin-bottom: 0.2em;
     }
+    
     .memory-item span {
       color: #888;
       font-size: 0.98em;
@@ -126,6 +270,7 @@
       margin-bottom: 0.5em;
       word-break: break-word;
     }
+    
     .memory-item button {
       display: block;
       position: static;
@@ -142,139 +287,684 @@
       min-width: 0;
       width: fit-content;
     }
-    /* Dodane style dla trybu nocnego */
+    
+    .memory-buttons {
+      margin-top: 1em;
+    }
+    
+    .center-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+    }
+    
+    .center-buttons.gap {
+      gap: 1em;
+    }
+    
+    .center-buttons.margin-top-small {
+      margin-top: 0.7em;
+    }
+    
+    #auto-timer {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      font-size: 1.3em;
+      color: #005a9e;
+      display: none;
+      z-index: 1000;
+    }
+    
+    #memory-list {
+      display: none;
+      margin-top: 1em;
+    }
+    
+    #answer {
+      font-size: 1.45em;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-top: 1.1em;
+      visibility: hidden;
+    }
+    
+    #hint {
+      font-size: 1.18em;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 0.2em;
+    }
+    
+    /* Styling for English word hints */
+    #hint.english-hint {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      color: #1565c0;
+      padding: 0.8em 1.2em;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+      font-style: italic;
+      position: relative;
+    }
+    
+    #hint.english-hint::before {
+      content: "🇬🇧 ";
+      margin-right: 0.5em;
+      font-style: normal;
+    }
+    
+    .highlight-green {
+      background-color: #7be87b !important;
+      color: #222 !important;
+    }
+    
+    .last-word-green {
+      color: #2dbf2d;
+      font-weight: 600;
+    }
+    
+    /* Dark mode styles */
     .dark-mode {
       background-color: #121212;
       color: #e0e0e0;
     }
+    
     .dark-mode .card {
       background-color: #1e1e1e;
       color: #e0e0e0;
     }
+    
     .dark-mode button {
       background: linear-gradient(90deg, #222 0%, #333 100%);
       color: #e0e0e0;
       box-shadow: 0 2px 12px rgba(34,34,34,0.10);
     }
+    
     .dark-mode #auto-mode-btn {
       background: linear-gradient(90deg, #444 0%, #222 100%) !important;
       color: #eee !important;
     }
+    
     .dark-mode #toggle-dark-mode-btn {
       background: linear-gradient(90deg, #444 0%, #222 100%) !important;
       color: #eee !important;
     }
+    
     .dark-mode #save-word-btn,
     .dark-mode #save-current-btn {
       background: linear-gradient(90deg, #5a2323 0%, #7a3a3a 100%) !important;
       color: #ffb3b3 !important;
     }
+    
     .dark-mode #show-memory-btn {
       background: linear-gradient(90deg, #7a3a3a 0%, #5a2323 100%) !important;
       color: #ffe0e0 !important;
     }
+    
     .dark-mode #undo-known-btn {
       background: linear-gradient(90deg, #444 0%, #222 100%) !important;
       color: #e0e0e0 !important;
     }
+    
     .dark-mode .memory-item {
       background: #1e1e1e;
       border: 1px solid #7a3a3a;
     }
+    
     .dark-mode .memory-item button {
       background: linear-gradient(90deg, #7a3a3a 0%, #5a2323 100%) !important;
       color: #ffb3b3 !important;
     }
-    /* Dodane style dla podświetlenia na zielono, działa w obu trybach */
-.highlight-green {
-  background-color: #7be87b !important;
-  color: #222 !important;
-}
-.dark-mode .highlight-green {
-  background-color: #7be87b !important;
-  color: #222 !important;
-}
-.last-word-green {
-  color: #2dbf2d;
-  font-weight: 600;
-}
-#answer {
-  font-size: 1.45em;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  margin-top: 1.1em;
-}
-#hint {
-  font-size: 1.18em;
-  font-weight: 600;
-  color: #444;
-  margin-bottom: 0.2em;
-}
-.dark-mode #answer {
-  color: #7be87b;
-}
-.dark-mode #hint {
-  color: #e0e0e0;
-}
+    
+    .dark-mode .highlight-green {
+      background-color: #7be87b !important;
+      color: #222 !important;
+    }
+    
+    .dark-mode #answer {
+      color: #7be87b;
+    }
+    
+    .dark-mode #hint {
+      color: #e0e0e0;
+    }
+    
+    .dark-mode #hint.english-hint {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      color: #90caf9;
+      box-shadow: 0 2px 8px rgba(66, 165, 245, 0.25);
+    }
+    
     .dark-mode #search-input {
       background: #222 !important;
       color: #e0e0e0 !important;
       border: 1px solid #444 !important;
       box-shadow: 0 4px 6px rgba(0,0,0,0.18);
     }
+    
     .dark-mode #search-results {
       background: #222 !important;
       color: #e0e0e0 !important;
       box-shadow: 0 4px 6px rgba(0,0,0,0.18);
       border-radius: 8px;
     }
+    
+    .dark-mode #background-mode-btn {
+      background: linear-gradient(90deg, #2e4a2e 0%, #3a5a3a 100%) !important;
+      color: #a5d6a7 !important;
+    }
+    
+    .dark-mode #background-mode-btn.active {
+      background: linear-gradient(90deg, #4caf50 0%, #66bb6a 100%) !important;
+      color: white !important;
+    }
+    
+    .voice-settings {
+      margin-top: 1em;
+      padding: 1.5em;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 12px;
+      border: 1px solid #dee2e6;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    
+    .voice-settings label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+      color: #495057;
+      font-size: 0.95em;
+    }
+    
+    .voice-select {
+      width: 100%;
+      padding: 0.7em;
+      border: 2px solid #ced4da;
+      border-radius: 8px;
+      margin-bottom: 1.2em;
+      font-size: 0.9em;
+      background: white;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .voice-select:focus {
+      outline: none;
+      border-color: #4facfe;
+      box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
+    }
+    
+    .voice-rate-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8em;
+      margin-bottom: 1.2em;
+      flex-wrap: wrap;
+    }
+    
+    .voice-rate-container label {
+      margin-bottom: 0;
+      min-width: 60px;
+    }
+    
+    .voice-rate-slider {
+      flex: 1;
+      min-width: 120px;
+      height: 6px;
+      border-radius: 3px;
+      background: #e9ecef;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+    }
+    
+    .voice-rate-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(79, 172, 254, 0.3);
+      transition: transform 0.2s;
+    }
+    
+    .voice-rate-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.1);
+    }
+    
+    .voice-rate-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(79, 172, 254, 0.3);
+    }
+    
+    .rate-value {
+      font-weight: 600;
+      color: #495057;
+      min-width: 30px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    
+    .test-voice-btn {
+      width: 100%;
+      padding: 0.8em;
+      font-size: 0.9em;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      color: #1976d2;
+      border: 2px solid #bbdefb;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+      box-shadow: 0 2px 4px rgba(25, 118, 210, 0.1);
+    }
+    
+    .test-voice-btn:hover {
+      background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(25, 118, 210, 0.2);
+    }
+    
+    .test-voice-btn:active {
+      transform: translateY(0);
+    }
+    
+    .dark-mode .voice-settings {
+      background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+      border-color: #718096;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    
+    .dark-mode .voice-settings label {
+      color: #e2e8f0;
+    }
+    
+    .dark-mode .voice-select {
+      background: #4a5568;
+      color: #e2e8f0;
+      border-color: #718096;
+    }
+    
+    .dark-mode .voice-select:focus {
+      border-color: #90cdf4;
+      box-shadow: 0 0 0 3px rgba(144, 205, 244, 0.15);
+    }
+    
+    .dark-mode .voice-rate-slider {
+      background: #4a5568;
+    }
+    
+    .dark-mode .voice-rate-slider::-webkit-slider-thumb {
+      background: linear-gradient(135deg, #90cdf4 0%, #63b3ed 100%);
+      box-shadow: 0 2px 6px rgba(144, 205, 244, 0.3);
+    }
+    
+    .dark-mode .voice-rate-slider::-moz-range-thumb {
+      background: linear-gradient(135deg, #90cdf4 0%, #63b3ed 100%);
+      box-shadow: 0 2px 6px rgba(144, 205, 244, 0.3);
+    }
+    
+    .dark-mode .rate-value {
+      color: #e2e8f0;
+    }
+    
+    .dark-mode .test-voice-btn {
+      background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
+      color: #90cdf4 !important;
+      border-color: #718096 !important;
+    }
+    
+    .dark-mode .test-voice-btn:hover {
+      background: linear-gradient(135deg, #4a5568 0%, #718096 100%) !important;
+      box-shadow: 0 4px 8px rgba(144, 205, 244, 0.2) !important;
+    }
+    
+    /* Strona startowa */
+    .start-screen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .start-card {
+      background: white;
+      padding: 2.5em;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .start-card h1 {
+      margin: 0 0 0.5em 0;
+      font-size: 2.2em;
+      color: #333;
+      font-weight: 700;
+    }
+    
+    .start-description {
+      color: #666;
+      margin-bottom: 2em;
+      font-size: 1.1em;
+    }
+    
+    .package-categories {
+      text-align: left;
+      margin-bottom: 2em;
+    }
+    
+    .category {
+      margin-bottom: 1.5em;
+    }
+    
+    .category h3 {
+      margin: 0 0 1em 0;
+      font-size: 1.3em;
+      color: #333;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 0.5em;
+    }
+    
+    .package-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8em;
+    }
+    
+    .package-item {
+      display: flex;
+      align-items: center;
+      padding: 1em;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #f8f9fa;
+    }
+    
+    .package-item:hover {
+      border-color: #667eea;
+      background: #f0f4ff;
+    }
+    
+    .package-item input[type="checkbox"] {
+      margin-right: 1em;
+      transform: scale(1.2);
+      accent-color: #667eea;
+    }
+    
+    .package-name {
+      flex: 1;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .package-count {
+      color: #666;
+      font-size: 0.9em;
+      background: #e9ecef;
+      padding: 0.3em 0.8em;
+      border-radius: 20px;
+    }
+    
+    .empty-category {
+      color: #999;
+      font-style: italic;
+      text-align: center;
+      padding: 1em;
+    }
+    
+    .start-actions {
+      text-align: center;
+    }
+    
+    .start-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 1em 2.5em;
+      font-size: 1.2em;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .start-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+    
+    .start-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    
+    .selected-info {
+      margin-top: 1em;
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    /* Główna aplikacja */
+    .main-app {
+      max-width: 400px;
+      margin: auto;
+    }
+    
+    .app-header {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    
+    .change-packages-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 0.7em 1.5em;
+      font-size: 0.9em;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+    }
+    
+    .change-packages-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    /* Dark mode dla strony startowej */
+    .dark-mode .start-screen {
+      background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    }
+    
+    .dark-mode .start-card {
+      background: #1a202c;
+      color: #e2e8f0;
+    }
+    
+    .dark-mode .start-card h1 {
+      color: #e2e8f0;
+    }
+    
+    .dark-mode .start-description {
+      color: #a0aec0;
+    }
+    
+    .dark-mode .category h3 {
+      color: #e2e8f0;
+      border-bottom-color: #4a5568;
+    }
+    
+    .dark-mode .package-item {
+      background: #2d3748;
+      border-color: #4a5568;
+      color: #e2e8f0;
+    }
+    
+    .dark-mode .package-item:hover {
+      border-color: #667eea;
+      background: #2a4365;
+    }
+    
+    .dark-mode .package-name {
+      color: #e2e8f0;
+    }
+    
+    .dark-mode .package-count {
+      background: #4a5568;
+      color: #a0aec0;
+    }
+    
+    .dark-mode .empty-category {
+      color: #718096;
+    }
+    
+    .dark-mode .selected-info {
+      color: #a0aec0;
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <p id="last-word"></p>
-    <p id="progress"></p>
-    <h2 id="hint">Ładowanie...</h2>
-    <p id="answer" style="visibility: hidden;"></p>
+  <!-- Strona startowa z wyborem pakietów -->
+  <div id="start-screen" class="start-screen">
+    <div class="start-card">
+      <h1>🎯 Słówka Głosowe</h1>
+      <p class="start-description">Wybierz pakiety słówek, które chcesz ćwiczyć:</p>
+      
+      <div class="package-categories">
+        <div class="category">
+          <h3>🇵🇱 Polski</h3>
+          <div class="package-list">
+            <label class="package-item">
+              <input type="checkbox" id="allWords" data-package="allWords">
+              <span class="package-name">Podstawowe słówka</span>
+              <span class="package-count" id="allWords-count">0 słów</span>
+            </label>
+            <label class="package-item">
+              <input type="checkbox" id="allWords2" data-package="allWords2">
+              <span class="package-name">Rozszerzone słówka</span>
+              <span class="package-count" id="allWords2-count">0 słów</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="category">
+          <h3>🇬🇧 Angielski</h3>
+          <div class="package-list">
+            <label class="package-item">
+              <input type="checkbox" id="allWordsEnglish" data-package="allWordsEnglish">
+              <span class="package-name">Angielskie słówka</span>
+              <span class="package-count" id="allWordsEnglish-count">0 słów</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="start-actions">
+        <button id="start-btn" class="start-btn" disabled>Rozpocznij</button>
+        <p class="selected-info" id="selected-info">Wybierz co najmniej jeden pakiet</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Główna aplikacja (początkowo ukryta) -->
+  <div id="main-app" class="main-app" style="display: none;">
+    <div class="card">
+      <p id="last-word"></p>
+      <p id="progress"></p>
+      <h2 id="hint">Ładowanie...</h2>
+      <p id="answer"></p>
+    
     <div class="buttons">
       <button onclick="skipWord()">Pokaż</button>
       <button onclick="nextWord()">Wiem</button>
       <button onclick="restart()" id="restart-btn" style="display:none;">Jeszcze raz</button>
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 1em;">
-      <button id="undo-known-btn" style="background:#e0e0e0;color:#222;">Jednak nie wiedziałem</button>
+    
+    <div class="center-buttons">
+      <button id="undo-known-btn">Jednak nie wiedziałem</button>
     </div>
+    
     <div class="memory-buttons">
-      <button id="save-word-btn" style="background:#ffb3b3;color:#900;margin-top:1em;">Dodaj poprzednie</button>
-      <button id="save-current-btn" style="background:#ffb3b3;color:#900;margin-top:1em;">Dodaj aktualne</button>
-      <button id="show-memory-btn" style="background:#ffe0e0;color:#900;margin-top:1em;">Pokaż zapamiętane</button>
+      <button id="save-word-btn">Dodaj poprzednie</button>
+      <button id="save-current-btn">Dodaj aktualne</button>
+      <button id="show-memory-btn">Pokaż zapamiętane</button>
     </div>
-    <div id="memory-list" style="display:none;margin-top:1em;"></div>
-    <div style="display: flex; justify-content: center; gap: 1em; margin-top: 1em;">
-      <button id="auto-mode-btn" style="background:#b3e0ff;color:#005a9e;">Auto tryb</button>
-      <button id="toggle-dark-mode-btn" style="background:#222;color:#fff;">Tryb nocny</button>
+    
+    <div id="memory-list"></div>
+    
+    <div class="center-buttons gap">
+      <button id="auto-mode-btn">Auto tryb</button>
+      <button id="toggle-dark-mode-btn">Tryb nocny</button>
     </div>
-    <div style="margin-top: 0.7em; display: flex; justify-content: center;">
-      <button id="speak-hint-btn" style="background: linear-gradient(90deg, #e0e0ff 0%, #b3e0ff 100%); color: #005a9e; border-radius: 8px; font-size: 1em; font-weight: 600; border: none; box-shadow: 0 2px 8px rgba(179,224,255,0.10); padding: 0.7em 1.5em; cursor: pointer; transition: background 0.2s, color 0.2s;">Czytaj podpowiedź na głos</button>
+    
+    <div class="center-buttons margin-top-small">
+      <button id="speak-hint-btn">Czytaj podpowiedź na głos</button>
+      <button id="background-mode-btn">Tryb tła</button>
     </div>
-    <div id="auto-timer" style="position:fixed;top:10px;right:20px;font-size:1.3em;color:#005a9e;display:none;z-index:1000;"></div>
-    <div style="margin-top: 1em; display: flex; align-items: center; gap: 0.5em;">
-      <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko..." style="padding: 0.7em; flex: 1; border: 1px solid #ccc; border-radius: 8px; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); height: 44px; min-width: 0;">
-      <button onclick="searchWord()" style="height: 44px; width: 44px; min-width: 44px; padding: 0; border-radius: 8px; background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; font-size: 1.3em; font-weight: bold; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; justify-content: center; box-sizing: border-box; overflow: hidden;">
-        <span style="font-size: 1.3em; line-height: 1; width: 100%; text-align: center;">🔍</span>
+    
+    <div class="center-buttons margin-top-small">
+      <button id="change-packages-btn" class="change-packages-btn">📦 Zmień pakiety</button>
+    </div>
+    
+    <div class="voice-settings">
+      <label for="voice-select">Głos:</label>
+      <select id="voice-select" class="voice-select">
+        <option value="">Ładowanie głosów...</option>
+      </select>
+      <div class="voice-rate-container">
+        <label for="voice-rate">Tempo:</label>
+        <input type="range" id="voice-rate" min="0.5" max="2" step="0.1" value="1" class="voice-rate-slider">
+        <span id="rate-value" class="rate-value">1.0</span>
+      </div>
+      <button id="test-voice-btn" class="test-voice-btn">Testuj głos</button>
+    </div>
+    
+    <div id="auto-timer"></div>
+    
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko...">
+      <button onclick="searchWord()" class="search-btn">
+        <span>🔍</span>
       </button>
     </div>
-    <div id="search-results" style="margin-top: 1em; padding: 1em; background: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-      <p style="text-align: center; color: #888; font-style: italic;">Wyniki wyszukiwania pojawią się tutaj...</p>
+    
+    <div id="search-results">
+      <p class="search-results-placeholder">Wyniki wyszukiwania pojawią się tutaj...</p>
     </div>
-    <div style="margin-top: 0.7em; display: flex; justify-content: center;">
-      <button id="clear-used-btn" style="background: linear-gradient(90deg, #ffe0e0 0%, #ffb3b3 100%); color: #900; border-radius: 8px; font-size: 1em; font-weight: 600; border: none; box-shadow: 0 2px 8px rgba(255,179,179,0.10); padding: 0.7em 1.5em; cursor: pointer; transition: background 0.2s, color 0.2s;">Wyczyść odgadnięte słówka</button>
+    
+    <div class="center-buttons margin-top-small">
+      <button id="clear-used-btn">Wyczyść odgadnięte słówka</button>
     </div>
   </div>
+  
   <script src="allWords.js"></script>
+  <script src="allWords2.js"></script>
+  <script src="allWordsEnglish.js"></script>
   <script>
-    // teraz możesz używać window.allWords
-    let pool = [...window.allWords];
+    // Zmienne globalne
+    let allPackages = {}; // Wszystkie dostępne pakiety
+    let selectedPackages = []; // Wybrane pakiety
+    let combinedWords = []; // Połączone wybrane pakiety
+    let pool = [];
     let used = [];
     let current = null;
     let previous = null;
@@ -285,27 +975,172 @@
     let autoStep = 0;
     let autoTimeLeft = 0;
     let speakHintActive = false;
+    let selectedVoice = null;
+    let voiceRate = 1.0;
+
+    // --- Inicjalizacja pakietów ---
+    function initializePackages() {
+      // Zbierz wszystkie dostępne pakiety
+      allPackages = {
+        allWords: window.allWords || [],
+        allWords2: window.allWords2 || [],
+        allWordsEnglish: window.allWordsEnglish || []
+      };
+      
+      // Aktualizuj liczniki słów
+      updatePackageCounts();
+      
+      // Załaduj zapisane wybory
+      loadSavedPackages();
+      
+      // Dodaj event listeners
+      setupPackageSelection();
+    }
+    
+    function updatePackageCounts() {
+      const allWordsCount = document.getElementById('allWords-count');
+      const allWords2Count = document.getElementById('allWords2-count');
+      const allWordsEnglishCount = document.getElementById('allWordsEnglish-count');
+      
+      if (allWordsCount) allWordsCount.textContent = `${allPackages.allWords.length} słów`;
+      if (allWords2Count) allWords2Count.textContent = `${allPackages.allWords2.length} słów`;
+      if (allWordsEnglishCount) allWordsEnglishCount.textContent = `${allPackages.allWordsEnglish.length} słów`;
+    }
+    
+    function loadSavedPackages() {
+      const saved = localStorage.getItem('slowkaSelectedPackages');
+      if (saved) {
+        selectedPackages = JSON.parse(saved);
+        // Zaznacz zapisane pakiety
+        selectedPackages.forEach(pkg => {
+          const checkbox = document.getElementById(pkg);
+          if (checkbox) checkbox.checked = true;
+        });
+        updateStartButton();
+      }
+    }
+    
+    function setupPackageSelection() {
+      // Event listeners dla checkboxów
+      document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', updateStartButton);
+      });
+      
+      // Event listener dla przycisku start
+      document.getElementById('start-btn').addEventListener('click', startApplication);
+      
+      // Event listener dla przycisku zmiany pakietów
+      document.getElementById('change-packages-btn').addEventListener('click', showPackageSelection);
+    }
+    
+    function updateStartButton() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      const startBtn = document.getElementById('start-btn');
+      const selectedInfo = document.getElementById('selected-info');
+      
+      if (checkboxes.length > 0) {
+        startBtn.disabled = false;
+        const totalWords = Array.from(checkboxes).reduce((total, checkbox) => {
+          const packageName = checkbox.id;
+          return total + (allPackages[packageName] ? allPackages[packageName].length : 0);
+        }, 0);
+        selectedInfo.textContent = `Wybrano ${checkboxes.length} pakiet(ów) - ${totalWords} słów`;
+      } else {
+        startBtn.disabled = true;
+        selectedInfo.textContent = 'Wybierz co najmniej jeden pakiet';
+      }
+    }
+    
+    function startApplication() {
+      // Zbierz wybrane pakiety
+      selectedPackages = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.id);
+      
+      // Zapisz wybór
+      localStorage.setItem('slowkaSelectedPackages', JSON.stringify(selectedPackages));
+      
+      // Połącz wybrane pakiety
+      combineSelectedPackages();
+      
+      // Ukryj stronę startową i pokaż aplikację
+      document.getElementById('start-screen').style.display = 'none';
+      document.getElementById('main-app').style.display = 'block';
+      
+      // Inicjalizuj aplikację
+      initializeApp();
+    }
+    
+    function combineSelectedPackages() {
+      combinedWords = [];
+      selectedPackages.forEach(packageName => {
+        if (allPackages[packageName]) {
+          // Dodaj informację o źródle pakietu do każdego słowa
+          const wordsWithSource = allPackages[packageName].map(word => ({
+            ...word,
+            source: packageName
+          }));
+          combinedWords = combinedWords.concat(wordsWithSource);
+        }
+      });
+      
+      // Ustaw window.allWords dla kompatybilności
+      window.allWords = combinedWords;
+    }
+    
+    function showPackageSelection() {
+      // Zatrzymaj aplikację jeśli działa
+      if (autoMode) {
+        stopAutoMode();
+      }
+      
+      // Pokaż stronę startową
+      document.getElementById('main-app').style.display = 'none';
+      document.getElementById('start-screen').style.display = 'flex';
+      
+      // Zaktualizuj przycisk start
+      updateStartButton();
+    }
+    
+    function initializeApp() {
+      // Inicjalizacja puli i statystyki
+      used = getUsedWords();
+      pool = combinedWords.filter(w => !used.some(u => u.answer === w.answer && u.hint === w.hint));
+      
+      // Pokaż pierwsze słowo
+      showWord();
+    }
 
     function updateProgress() {
-      document.getElementById("progress").textContent = `Słówko ${used.length + 1} z ${window.allWords.length}`;
+      document.getElementById("progress").textContent = `Słówko ${used.length + 1} z ${combinedWords.length}`;
     }
 
     function showWord() {
       if (pool.length === 0) {
         document.getElementById("hint").textContent = "🎉 Ukończyłeś wszystkie słówka!";
+        document.getElementById("hint").className = "";
         document.getElementById("answer").textContent = "";
         document.getElementById("answer").style.visibility = "hidden";
         document.getElementById("progress").textContent = "";
         document.getElementById("last-word").textContent = "";
         document.getElementById("restart-btn").style.display = "inline-block";
-        if (autoMode) toggleAutoMode(); // wyłącz tryb automatyczny po ukończeniu
+        if (autoMode) stopAutoMode(); // wyłącz tryb automatyczny po ukończeniu
         return;
       }
       document.getElementById("restart-btn").style.display = "none";
       const index = Math.floor(Math.random() * pool.length);
       current = pool[index];
       wasSkipped = false;
-      document.getElementById("hint").textContent = current.hint;
+      
+      const hintElement = document.getElementById("hint");
+      hintElement.textContent = current.hint;
+      
+      // Apply styling based on word source
+      if (current.source === 'allWordsEnglish') {
+        hintElement.className = 'english-hint';
+      } else {
+        hintElement.className = '';
+      }
+      
       document.getElementById("answer").textContent = current.answer;
       document.getElementById("answer").style.visibility = "hidden";
       updateProgress();
@@ -315,7 +1150,7 @@
     function skipWord() {
       wasSkipped = true;
       document.getElementById("answer").style.visibility = "visible";
-      document.querySelector('button[onclick="nextWord()"]') .textContent = "Dalej";
+      document.querySelector('button[onclick="nextWord()"]').textContent = "Dalej";
       autoSpeakAnswerIfActive();
     }
 
@@ -337,9 +1172,8 @@
 
     function restart() {
       setUsedWords([]); // Wyczyść historię odgadniętych słówek
-      pool = [...allWords];
       used = [];
-      pool = window.allWords.filter(w => !used.some(u => u.answer === w.answer && u.hint === w.hint));
+      pool = [...combinedWords];
       previous = null;
       wasSkipped = false;
       document.getElementById("restart-btn").style.display = "none";
@@ -352,24 +1186,25 @@
     }
 
     let touchStartX = 0;
-document.addEventListener("touchstart", e => {
-  touchStartX = e.changedTouches[0].screenX;
-});
-document.addEventListener("touchend", e => {
-  const deltaX = e.changedTouches[0].screenX - touchStartX;
-  if (Math.abs(deltaX) > 50) {
-    if (deltaX < 0) {
-      nextWord(); // przesunięcie w lewo
-    } else {
-      skipWord(); // przesunięcie w prawo
-    }
-  }
-});
+    document.addEventListener("touchstart", e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    document.addEventListener("touchend", e => {
+      const deltaX = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(deltaX) > 50) {
+        if (deltaX < 0) {
+          nextWord(); // przesunięcie w lewo
+        } else {
+          skipWord(); // przesunięcie w prawo
+        }
+      }
+    });
 
     // --- Pamięć słówek ---
     function getMemory() {
       return JSON.parse(localStorage.getItem('slowkaMemory') || '[]');
     }
+    
     function setMemory(arr) {
       localStorage.setItem('slowkaMemory', JSON.stringify(arr));
     }
@@ -378,15 +1213,12 @@ document.addEventListener("touchend", e => {
     function getUsedWords() {
       return JSON.parse(localStorage.getItem('slowkaUsed') || '[]');
     }
+    
     function setUsedWords(arr) {
       localStorage.setItem('slowkaUsed', JSON.stringify(arr));
     }
 
-    // --- Inicjalizacja puli i statystyki na starcie ---
-    used = getUsedWords();
-    pool = window.allWords.filter(w => !used.some(u => u.answer === w.answer && u.hint === w.hint));
 
-    showWord();
 
     function renderMemory() {
       const mem = getMemory();
@@ -405,12 +1237,14 @@ document.addEventListener("touchend", e => {
         </div>`
       ).join('');
     }
+    
     function removeMemory(idx) {
       const mem = getMemory();
       mem.splice(idx,1);
       setMemory(mem);
       renderMemory();
     }
+    
     document.getElementById('save-word-btn').onclick = function() {
       if (!previous) return alert('Brak poprzedniego słowa!');
       const mem = getMemory();
@@ -426,6 +1260,7 @@ document.addEventListener("touchend", e => {
         alert('To słowo już jest w pamięci.');
       }
     };
+    
     document.getElementById('save-current-btn').onclick = function() {
       if (!current) return alert('Brak aktualnego słowa!');
       const mem = getMemory();
@@ -441,19 +1276,21 @@ document.addEventListener("touchend", e => {
         alert('To słowo już jest w pamięci.');
       }
     };
+    
     let memoryVisible = false;
-document.getElementById('show-memory-btn').onclick = function() {
-  memoryVisible = !memoryVisible;
-  document.getElementById('memory-list').style.display = memoryVisible ? 'block' : 'none';
-  this.textContent = memoryVisible ? 'Ukryj zapamiętane' : 'Pokaż zapamiętane';
-  if (memoryVisible) renderMemory();
-};
+    document.getElementById('show-memory-btn').onclick = function() {
+      memoryVisible = !memoryVisible;
+      document.getElementById('memory-list').style.display = memoryVisible ? 'block' : 'none';
+      this.textContent = memoryVisible ? 'Ukryj zapamiętane' : 'Pokaż zapamiętane';
+      if (memoryVisible) renderMemory();
+    };
 
     function showAutoTimer(sec) {
       const timerDiv = document.getElementById('auto-timer');
       timerDiv.style.display = 'block';
       timerDiv.textContent = `⏱️ ${sec}s`;
     }
+    
     function hideAutoTimer() {
       document.getElementById('auto-timer').style.display = 'none';
     }
@@ -462,6 +1299,26 @@ document.getElementById('show-memory-btn').onclick = function() {
       document.querySelector('.buttons').style.display = visible ? '' : 'none';
       document.getElementById('undo-known-btn').style.display = visible ? '' : 'none';
       document.getElementById('show-memory-btn').style.display = visible ? '' : 'none';
+      
+      // Show/hide voice-related elements only in auto mode
+      const speakHintBtn = document.getElementById('speak-hint-btn');
+      const backgroundModeBtn = document.getElementById('background-mode-btn');
+      const voiceSettings = document.querySelector('.voice-settings');
+      
+      if (speakHintBtn) speakHintBtn.style.display = autoMode ? '' : 'none';
+      if (backgroundModeBtn) backgroundModeBtn.style.display = autoMode ? '' : 'none';
+      if (voiceSettings) voiceSettings.style.display = autoMode ? '' : 'none';
+    }
+    
+    function initializeVoiceElementsVisibility() {
+      // Initially hide voice-related elements since auto mode is off by default
+      const speakHintBtn = document.getElementById('speak-hint-btn');
+      const backgroundModeBtn = document.getElementById('background-mode-btn');
+      const voiceSettings = document.querySelector('.voice-settings');
+      
+      if (speakHintBtn) speakHintBtn.style.display = 'none';
+      if (backgroundModeBtn) backgroundModeBtn.style.display = 'none';
+      if (voiceSettings) voiceSettings.style.display = 'none';
     }
 
     function startAutoMode() {
@@ -471,14 +1328,29 @@ document.getElementById('show-memory-btn').onclick = function() {
       setButtonsVisible(false);
       autoStep = 0;
       autoNextStep();
+      
+      // Sprawdź czy tryb tła był aktywny i włącz go ponownie
+      if (isBackgroundMode) {
+        enableBackgroundMode();
+      }
     }
+    
     function stopAutoMode() {
       autoMode = false;
       document.getElementById('auto-mode-btn').textContent = 'Auto tryb';
       setButtonsVisible(true);
       hideAutoTimer();
       if (autoTimer) clearTimeout(autoTimer);
+      
+      // Wyłącz tryb tła gdy wyłączamy auto mode
+      if (isBackgroundMode) {
+        isBackgroundMode = false;
+        document.getElementById('background-mode-btn').textContent = 'Tryb tła';
+        document.getElementById('background-mode-btn').classList.remove('active');
+        disableBackgroundMode();
+      }
     }
+    
     function autoNextStep() {
       if (!autoMode) return;
       if (autoStep === 0) {
@@ -509,6 +1381,7 @@ document.getElementById('show-memory-btn').onclick = function() {
         }, 1000);
       }
     }
+    
     document.getElementById('auto-mode-btn').onclick = function() {
       if (!autoMode) {
         startAutoMode();
@@ -545,6 +1418,9 @@ document.getElementById('show-memory-btn').onclick = function() {
         darkBtn.style.background = '#444';
         darkBtn.style.color = '#eee';
         document.getElementById('auto-timer').style.color = '#b3e0ff';
+        
+        // Zapisz preferencję trybu ciemnego
+        localStorage.setItem('slowkaDarkMode', 'true');
       } else {
         body.classList.remove('dark-mode');
         this.textContent = 'Tryb nocny';
@@ -569,6 +1445,9 @@ document.getElementById('show-memory-btn').onclick = function() {
           btn.style.color = '#900';
         });
         document.getElementById('auto-timer').style.color = '#005a9e';
+        
+        // Zapisz preferencję trybu jasnego
+        localStorage.setItem('slowkaDarkMode', 'false');
       }
     };
 
@@ -587,64 +1466,261 @@ document.getElementById('show-memory-btn').onclick = function() {
       document.getElementById('last-word').innerHTML = 'Poprzednie cofnięte.';
     };
 
-    showWord();
-
     function searchWord() {
       const query = document.getElementById('search-input').value.toLowerCase();
       const resultsDiv = document.getElementById('search-results');
       if (query.length < 2) {
-        resultsDiv.innerHTML = '<p style="text-align: center; color: #888; font-style: italic;">Wpisz co najmniej 2 litery, aby wyszukać.</p>';
+        resultsDiv.innerHTML = '<p class="search-results-placeholder">Wpisz co najmniej 2 litery, aby wyszukać.</p>';
         return;
       }
-      const results = window.allWords.filter(word => 
+      const results = combinedWords.filter(word => 
         word.answer.toLowerCase().includes(query) || word.hint.toLowerCase().includes(query)
       );
       if (results.length === 0) {
-        resultsDiv.innerHTML = '<p style="text-align: center; color: #888; font-style: italic;">Brak wyników.</p>';
+        resultsDiv.innerHTML = '<p class="search-results-placeholder">Brak wyników.</p>';
         return;
       }
       resultsDiv.innerHTML = results.map(word => 
-        `<div style='padding: 1em; margin-bottom: 0.5em; background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);'>
-          <b style='font-size: 1.2em; color: #0d47a1;'>${word.answer}</b>
-          <p style='margin: 0; color: #555;'>${word.hint}</p>
+        `<div class="search-result-item">
+          <b>${word.answer}</b>
+          <p>${word.hint}</p>
         </div>`
       ).join('');
     }
 
     document.getElementById('search-input').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
-    searchWord();
-  }
-});
+      if (e.key === 'Enter') {
+        searchWord();
+      }
+    });
 
-    // --- Wake Lock API ---
-let wakeLock = null;
-async function requestWakeLock() {
-  if ('wakeLock' in navigator) {
-    try {
-      wakeLock = await navigator.wakeLock.request('screen');
-      wakeLock.addEventListener('release', () => {
-        // Wake Lock released
-      });
-    } catch (err) {
-      // Wake Lock request failed
+    // --- Wake Lock API i Background Audio ---
+    let wakeLock = null;
+    let backgroundAudio = null;
+    let isBackgroundMode = false;
+    
+    async function requestWakeLock() {
+      if ('wakeLock' in navigator) {
+        try {
+          wakeLock = await navigator.wakeLock.request('screen');
+          wakeLock.addEventListener('release', () => {
+            console.log('Wake Lock released');
+            // Jeśli jesteśmy w trybie auto, kontynuuj działanie w tle
+            if (autoMode) {
+              enableBackgroundMode();
+            }
+          });
+        } catch (err) {
+          console.log('Wake Lock request failed:', err);
+        }
+      }
     }
-  }
-}
-// Ponownie aktywuj Wake Lock po wznowieniu strony
-window.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'visible') {
+    
+    // Funkcja do włączania trybu tła
+    function enableBackgroundMode() {
+      if (!isBackgroundMode && autoMode) {
+        isBackgroundMode = true;
+        console.log('Background mode enabled');
+        
+        // Dodaj powiadomienie o działaniu w tle
+        if ('Notification' in window && Notification.permission === 'granted') {
+          new Notification('Słówka Głosowe', {
+            body: 'Aplikacja działa w tle - czytanie pytań i odpowiedzi',
+            icon: '/favicon.ico',
+            tag: 'slowka-background'
+          });
+        }
+        
+        // Kontynuuj automatyczne czytanie
+        continueBackgroundReading();
+      }
+    }
+    
+    // Funkcja do tworzenia utterance z wybranymi ustawieniami
+    function createUtterance(text) {
+      const utter = new window.SpeechSynthesisUtterance(text);
+      utter.lang = 'pl-PL';
+      utter.volume = 0.8;
+      utter.rate = voiceRate;
+      
+      // Ustaw wybrany głos jeśli jest dostępny
+      if (selectedVoice) {
+        utter.voice = selectedVoice;
+      }
+      
+      return utter;
+    }
+    
+    // Funkcja do kontynuowania czytania w tle
+    function continueBackgroundReading() {
+      if (isBackgroundMode && autoMode && speakHintActive) {
+        // Użyj Web Speech API do czytania w tle
+        if (current && current.hint) {
+          const utter = createUtterance(current.hint);
+          
+          // Po przeczytaniu podpowiedzi, poczekaj i przeczytaj odpowiedź
+          utter.onend = () => {
+            setTimeout(() => {
+              if (current && current.answer) {
+                const answerUtter = createUtterance(current.answer);
+                window.speechSynthesis.speak(answerUtter);
+              }
+            }, 2000);
+          };
+          
+          window.speechSynthesis.speak(utter);
+        }
+      }
+    }
+    
+    // Funkcja do wyłączania trybu tła
+    function disableBackgroundMode() {
+      if (isBackgroundMode) {
+        isBackgroundMode = false;
+        console.log('Background mode disabled');
+        window.speechSynthesis.cancel();
+      }
+    }
+    
+    // Ponownie aktywuj Wake Lock po wznowieniu strony
+    window.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        requestWakeLock();
+        disableBackgroundMode();
+      } else if (document.visibilityState === 'hidden' && autoMode) {
+        enableBackgroundMode();
+      }
+    });
+    
+    // Obsługa powiadomień
+    if ('Notification' in window) {
+      Notification.requestPermission();
+    }
+    
+    // Aktywuj Wake Lock na starcie
     requestWakeLock();
-  }
-});
-// Aktywuj Wake Lock na starcie
-requestWakeLock();
+    
+    // Dodaj obsługę Page Visibility API dla lepszego wykrywania stanu aplikacji
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && autoMode) {
+        console.log('Page hidden - continuing in background');
+        enableBackgroundMode();
+      } else if (!document.hidden) {
+        console.log('Page visible - disabling background mode');
+        disableBackgroundMode();
+      }
+    });
+    
 
-document.getElementById('clear-used-btn').onclick = function() {
+    
+    // --- Inicjalizacja głosów ---
+    function loadVoices() {
+      const voiceSelect = document.getElementById('voice-select');
+      const voices = window.speechSynthesis.getVoices();
+      
+      voiceSelect.innerHTML = '';
+      
+      // Dodaj opcję domyślną
+      const defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = 'Domyślny głos';
+      voiceSelect.appendChild(defaultOption);
+      
+      // Filtruj głosy polskie i dodaj je
+      const polishVoices = voices.filter(voice => 
+        voice.lang.startsWith('pl') || 
+        voice.lang.startsWith('pl-PL') ||
+        voice.name.toLowerCase().includes('polish') ||
+        voice.name.toLowerCase().includes('polski')
+      );
+      
+      // Dodaj głosy polskie na początku
+      polishVoices.forEach(voice => {
+        const option = document.createElement('option');
+        option.value = voice.name;
+        option.textContent = `${voice.name} (${voice.lang})`;
+        voiceSelect.appendChild(option);
+      });
+      
+      // Dodaj separator jeśli są głosy polskie i inne
+      if (polishVoices.length > 0 && voices.length > polishVoices.length) {
+        const separator = document.createElement('option');
+        separator.disabled = true;
+        separator.textContent = '──────────';
+        voiceSelect.appendChild(separator);
+      }
+      
+      // Dodaj pozostałe głosy
+      voices.forEach(voice => {
+        if (!polishVoices.includes(voice)) {
+          const option = document.createElement('option');
+          option.value = voice.name;
+          option.textContent = `${voice.name} (${voice.lang})`;
+          voiceSelect.appendChild(option);
+        }
+      });
+      
+      // Ustaw domyślny głos polski jeśli dostępny
+      if (polishVoices.length > 0) {
+        voiceSelect.value = polishVoices[0].name;
+        selectedVoice = polishVoices[0];
+      }
+    }
+    
+    // Obsługa zmiany głosu
+    document.getElementById('voice-select').addEventListener('change', function() {
+      const voices = window.speechSynthesis.getVoices();
+      const selectedVoiceName = this.value;
+      
+      if (selectedVoiceName) {
+        selectedVoice = voices.find(voice => voice.name === selectedVoiceName);
+      } else {
+        selectedVoice = null;
+      }
+      
+      // Zapisz wybór w localStorage
+      localStorage.setItem('slowkaSelectedVoice', selectedVoiceName);
+    });
+    
+    // Obsługa zmiany tempa
+    document.getElementById('voice-rate').addEventListener('input', function() {
+      voiceRate = parseFloat(this.value);
+      document.getElementById('rate-value').textContent = voiceRate.toFixed(1);
+      localStorage.setItem('slowkaVoiceRate', voiceRate.toString());
+    });
+    
+    // Załaduj zapisane ustawienia
+    function loadVoiceSettings() {
+      const savedVoice = localStorage.getItem('slowkaSelectedVoice');
+      const savedRate = localStorage.getItem('slowkaVoiceRate');
+      
+      if (savedVoice) {
+        document.getElementById('voice-select').value = savedVoice;
+        const voices = window.speechSynthesis.getVoices();
+        selectedVoice = voices.find(voice => voice.name === savedVoice);
+      }
+      
+      if (savedRate) {
+        voiceRate = parseFloat(savedRate);
+        document.getElementById('voice-rate').value = voiceRate;
+        document.getElementById('rate-value').textContent = voiceRate.toFixed(1);
+      }
+    }
+    
+
+    
+    // Obsługa przycisku testowania głosu
+    document.getElementById('test-voice-btn').addEventListener('click', function() {
+      const testText = "To jest test wybranego głosu. Sprawdź jak brzmi!";
+      const utter = createUtterance(testText);
+      window.speechSynthesis.speak(utter);
+    });
+
+    document.getElementById('clear-used-btn').onclick = function() {
       if (confirm('Czy na pewno chcesz wyczyścić wszystkie odgadnięte słówka?')) {
         localStorage.removeItem('slowkaUsed');
         used = [];
-        pool = [...window.allWords];
+        pool = [...combinedWords];
         showWord();
         alert('Odgadnięte słówka zostały wyczyszczone.');
       }
@@ -662,8 +1738,7 @@ document.getElementById('clear-used-btn').onclick = function() {
         btn.textContent = 'Wyłącz czytanie podpowiedzi';
         // przeczytaj od razu aktualną podpowiedź
         if (current && current.hint) {
-          const utter = new window.SpeechSynthesisUtterance(current.hint);
-          utter.lang = 'pl-PL';
+          const utter = createUtterance(current.hint);
           window.speechSynthesis.speak(utter);
         }
       } else {
@@ -673,22 +1748,104 @@ document.getElementById('clear-used-btn').onclick = function() {
     }
     document.getElementById('speak-hint-btn').onclick = speakHint;
 
+    // Obsługa trybu tła
+    document.getElementById('background-mode-btn').onclick = function() {
+      if (!autoMode) {
+        alert('Tryb tła działa tylko w trybie auto!');
+        return;
+      }
+      
+      if (!speakHintActive) {
+        alert('Najpierw włącz czytanie podpowiedzi na głos!');
+        return;
+      }
+      
+      isBackgroundMode = !isBackgroundMode;
+      const btn = this;
+      
+      if (isBackgroundMode) {
+        btn.textContent = 'Wyłącz tryb tła';
+        btn.classList.add('active');
+        enableBackgroundMode();
+      } else {
+        btn.textContent = 'Tryb tła';
+        btn.classList.remove('active');
+        disableBackgroundMode();
+      }
+    };
+
     // Dodaj automatyczne czytanie podpowiedzi przy każdej zmianie hasła w trybie auto
     function autoSpeakHintIfActive() {
       if (autoMode && speakHintActive && current && current.hint) {
-        const utter = new window.SpeechSynthesisUtterance(current.hint);
-        utter.lang = 'pl-PL';
+        const utter = createUtterance(current.hint);
+        
+        // Jeśli tryb tła jest aktywny, kontynuuj czytanie odpowiedzi
+        if (isBackgroundMode) {
+          utter.onend = () => {
+            setTimeout(() => {
+              if (current && current.answer) {
+                const answerUtter = createUtterance(current.answer);
+                window.speechSynthesis.speak(answerUtter);
+              }
+            }, 2000);
+          };
+        }
+        
         window.speechSynthesis.speak(utter);
       }
     }
 
     function autoSpeakAnswerIfActive() {
       if (autoMode && speakHintActive && current && current.answer) {
-        const utter = new window.SpeechSynthesisUtterance(current.answer);
-        utter.lang = 'pl-PL';
+        const utter = createUtterance(current.answer);
         window.speechSynthesis.speak(utter);
       }
     }
+    
+    // --- Inicjalizacja aplikacji ---
+    // Poczekaj na załadowanie wszystkich skryptów
+    window.addEventListener('load', function() {
+      // Przywróć tryb ciemny jeśli był zapisany
+      const savedDarkMode = localStorage.getItem('slowkaDarkMode');
+      if (savedDarkMode === 'true') {
+        document.body.classList.add('dark-mode');
+        const darkBtn = document.getElementById('toggle-dark-mode-btn');
+        if (darkBtn) darkBtn.textContent = 'Tryb dzienny';
+      }
+      
+      // Inicjalizuj pakiety
+      initializePackages();
+      
+      // Inicjalizuj głosy
+      if ('speechSynthesis' in window) {
+        if (window.speechSynthesis.getVoices().length > 0) {
+          loadVoices();
+          loadVoiceSettings();
+        } else {
+          window.speechSynthesis.addEventListener('voiceschanged', () => {
+            loadVoices();
+            loadVoiceSettings();
+          });
+        }
+      }
+      
+      // Inicjalizuj widoczność elementów związanych z głosem (tylko w trybie auto)
+      initializeVoiceElementsVisibility();
+      
+      // Rejestracja Service Worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker registered successfully:', registration);
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+      
+      // Aktywuj Wake Lock
+      requestWakeLock();
+    });
   </script>
 </body>
 </html>

@@ -222,7 +222,6 @@ NOWE
   melisa
   membrana
   migracja
-  mikro
   mikroserwisy
   Minecraft
   miraż
@@ -450,5 +449,5 @@ NOWE
   zmienne środowiskowe
   zmodernizować
   znęcanie się
-  żonkil
   zwodniczy
+  żonkil
