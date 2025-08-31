@@ -104,7 +104,7 @@ window.allWords2 = [
   { answer: "ferma", hint: "miejsce hodowli zwierząt na dużą skalę" },
   { answer: "flaming", hint: "różowy ptak z długimi nogami" },
   { answer: "flirtować", hint: "prowadzić zalotną, lekką rozmowę lub kokietować kogoś" },
-  { answer: "fork", hint: "ozwidlenie, rozgałęzienie lub kopia projektu rozwijana niezależnie (np. na GitHubie)" },
+  { answer: "fork", hint: "rozwidlenie, rozgałęzienie lub kopia projektu rozwijana niezależnie (np. na GitHubie)" },
   { answer: "formalina", hint: "substancja do konserwowania tkanek" },
   { answer: "fortyfikacja", hint: "budowla obronna, np. mur lub wał" },
   { answer: "framuga", hint: "obramowanie drzwi lub okna" },
