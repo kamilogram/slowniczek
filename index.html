@@ -6,841 +6,7 @@
   <title>Słówka Głosowe</title>
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4facfe">
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 2em;
-      background: #f4f4f4;
-      max-width: 400px;
-      margin: auto;
-    }
-    
-    .card {
-      background: white;
-      padding: 1.5em;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    
-    .buttons {
-      margin-top: 1em;
-    }
-    
-    button {
-      padding: 0.7em 1.7em;
-      margin: 0.4em;
-      font-size: 1.12em;
-      cursor: pointer;
-      min-width: 100px;
-      min-height: 48px;
-      box-sizing: border-box;
-      border: none;
-      border-radius: 30px;
-      background: rgba(255,255,255,0.18);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.07);
-      backdrop-filter: blur(2px);
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      transition: background 0.25s, color 0.2s, box-shadow 0.2s, transform 0.18s;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    button::after {
-      content: '';
-      position: absolute;
-      left: 0; 
-      top: 0; 
-      right: 0; 
-      bottom: 0;
-      border-radius: 30px;
-      opacity: 0;
-      transition: opacity 0.2s;
-      pointer-events: none;
-    }
-    
-    button:hover, button:focus {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
-      transform: scale(1.06);
-      outline: none;
-      filter: brightness(1.10);
-      background: linear-gradient(90deg, #f7f7fa 0%, #e3e3f7 100%);
-    }
-    
-    button:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.35);
-      border-radius: 30px;
-    }
-    
-    button:active {
-      transform: scale(0.97);
-      filter: brightness(0.96);
-    }
-    
-    #restart-btn {
-      background: linear-gradient(90deg, #f7e7ff 0%, #e3e3f7 100%);
-      color: #6c2eb7;
-      box-shadow: 0 2px 12px rgba(108,46,183,0.08);
-    }
-    
-    #save-word-btn, #save-current-btn {
-      background: linear-gradient(90deg, #ffe0e0 0%, #ffb3b3 100%);
-      color: #900;
-      box-shadow: 0 2px 12px rgba(255,179,179,0.10);
-    }
-    
-    #show-memory-btn {
-      background: linear-gradient(90deg, #fff3f3 0%, #ffe0e0 100%);
-      color: #900;
-      box-shadow: 0 2px 12px rgba(255,224,224,0.10);
-    }
-    
-    #auto-mode-btn {
-      background: linear-gradient(90deg, #b3e0ff 0%, #e0f7ff 100%);
-      color: #005a9e;
-      box-shadow: 0 2px 12px rgba(179,224,255,0.10);
-    }
-    
-    #toggle-dark-mode-btn {
-      background: linear-gradient(90deg, #222 0%, #444 100%);
-      color: #fff;
-      box-shadow: 0 2px 12px rgba(34,34,34,0.10);
-    }
-    
-    #undo-known-btn {
-      background: linear-gradient(90deg, #e0e0e0 0%, #f7f7fa 100%);
-      color: #222;
-      box-shadow: 0 2px 12px rgba(224,224,224,0.10);
-    }
-    
-    #speak-hint-btn {
-      background: linear-gradient(90deg, #e0e0ff 0%, #b3e0ff 100%);
-      color: #005a9e;
-      border-radius: 8px;
-      font-size: 1em;
-      font-weight: 600;
-      border: none;
-      box-shadow: 0 2px 8px rgba(179,224,255,0.10);
-      padding: 0.7em 1.5em;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-    
-    #clear-used-btn {
-      background: linear-gradient(90deg, #ffe0e0 0%, #ffb3b3 100%);
-      color: #900;
-      border-radius: 8px;
-      font-size: 1em;
-      font-weight: 600;
-      border: none;
-      box-shadow: 0 2px 8px rgba(255,179,179,0.10);
-      padding: 0.7em 1.5em;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-    
-    #background-mode-btn {
-      background: linear-gradient(90deg, #e8f5e8 0%, #c8e6c9 100%);
-      color: #2e7d32;
-      border-radius: 8px;
-      font-size: 1em;
-      font-weight: 600;
-      border: none;
-      box-shadow: 0 2px 8px rgba(200,230,201,0.10);
-      padding: 0.7em 1.5em;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-    
-    #background-mode-btn.active {
-      background: linear-gradient(90deg, #4caf50 0%, #66bb6a 100%);
-      color: white;
-      box-shadow: 0 2px 8px rgba(76,175,80,0.20);
-    }
-    
-    .search-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      margin-top: 1em;
-    }
-    
-    #search-input {
-      padding: 0.7em;
-      flex: 1;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1.1em;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      height: 44px;
-      min-width: 0;
-    }
-    
-    .search-btn {
-      height: 44px;
-      width: 44px;
-      min-width: 44px;
-      padding: 0;
-      border-radius: 8px;
-      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
-      color: white;
-      font-size: 1.3em;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      overflow: hidden;
-    }
-    
-    .search-btn span {
-      font-size: 1.3em;
-      line-height: 1;
-      width: 100%;
-      text-align: center;
-    }
-    
-    #search-results {
-      margin-top: 1em;
-      padding: 1em;
-      background: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .search-results-placeholder {
-      text-align: center;
-      color: #888;
-      font-style: italic;
-    }
-    
-    .search-result-item {
-      padding: 1em;
-      margin-bottom: 0.5em;
-      background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .search-result-item b {
-      font-size: 1.2em;
-      color: #0d47a1;
-    }
-    
-    .search-result-item p {
-      margin: 0;
-      color: #555;
-    }
-    
-    .memory-item {
-      background: #fff3f3;
-      border: 1px solid #fabbbb;
-      padding: 0.7em 1em 0.7em 1em;
-      margin-bottom: 0.7em;
-      border-radius: 16px;
-      position: relative;
-      min-width: 0;
-      word-break: break-word;
-      overflow: hidden;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .memory-item-content {
-      flex: 1;
-      min-width: 0;
-    }
-    
-    .memory-item b {
-      font-size: 1.08em;
-      display: block;
-      margin-bottom: 0.2em;
-    }
-    
-    .memory-item span {
-      color: #888;
-      font-size: 0.98em;
-      display: block;
-      margin-bottom: 0.5em;
-      word-break: break-word;
-    }
-    
-    .memory-item button {
-      display: block;
-      position: static;
-      margin: 0 0 0 1em;
-      border-radius: 12px;
-      font-size: 0.88em;
-      padding: 0.25em 1em;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.09);
-      background: linear-gradient(90deg, #ffb3b3 0%, #ffe0e0 100%);
-      color: #900;
-      border: none;
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
-      text-align: center;
-      min-width: 0;
-      width: fit-content;
-    }
-    
-    .memory-buttons {
-      margin-top: 1em;
-    }
-    
-    .center-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 1em;
-    }
-    
-    .center-buttons.gap {
-      gap: 1em;
-    }
-    
-    .center-buttons.margin-top-small {
-      margin-top: 0.7em;
-    }
-    
-    #auto-timer {
-      position: fixed;
-      top: 10px;
-      right: 20px;
-      font-size: 1.3em;
-      color: #005a9e;
-      display: none;
-      z-index: 1000;
-    }
-    
-    #memory-list {
-      display: none;
-      margin-top: 1em;
-    }
-    
-    #answer {
-      font-size: 1.45em;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      margin-top: 1.1em;
-      visibility: hidden;
-    }
-    
-    #hint {
-      font-size: 1.18em;
-      font-weight: 600;
-      color: #444;
-      margin-bottom: 0.2em;
-    }
-    
-    /* Styling for English word hints */
-    #hint.english-hint {
-      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-      color: #1565c0;
-      padding: 0.8em 1.2em;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
-      font-style: italic;
-      position: relative;
-    }
-    
-    #hint.english-hint::before {
-      content: "🇬🇧 ";
-      margin-right: 0.5em;
-      font-style: normal;
-    }
-    
-    .highlight-green {
-      background-color: #7be87b !important;
-      color: #222 !important;
-    }
-    
-    .last-word-green {
-      color: #2dbf2d;
-      font-weight: 600;
-    }
-    
-    /* Dark mode styles */
-    .dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .card {
-      background-color: #1e1e1e;
-      color: #e0e0e0;
-    }
-    
-    .dark-mode button {
-      background: linear-gradient(90deg, #222 0%, #333 100%);
-      color: #e0e0e0;
-      box-shadow: 0 2px 12px rgba(34,34,34,0.10);
-    }
-    
-    .dark-mode #auto-mode-btn {
-      background: linear-gradient(90deg, #444 0%, #222 100%) !important;
-      color: #eee !important;
-    }
-    
-    .dark-mode #toggle-dark-mode-btn {
-      background: linear-gradient(90deg, #444 0%, #222 100%) !important;
-      color: #eee !important;
-    }
-    
-    .dark-mode #save-word-btn,
-    .dark-mode #save-current-btn {
-      background: linear-gradient(90deg, #5a2323 0%, #7a3a3a 100%) !important;
-      color: #ffb3b3 !important;
-    }
-    
-    .dark-mode #show-memory-btn {
-      background: linear-gradient(90deg, #7a3a3a 0%, #5a2323 100%) !important;
-      color: #ffe0e0 !important;
-    }
-    
-    .dark-mode #undo-known-btn {
-      background: linear-gradient(90deg, #444 0%, #222 100%) !important;
-      color: #e0e0e0 !important;
-    }
-    
-    .dark-mode .memory-item {
-      background: #1e1e1e;
-      border: 1px solid #7a3a3a;
-    }
-    
-    .dark-mode .memory-item button {
-      background: linear-gradient(90deg, #7a3a3a 0%, #5a2323 100%) !important;
-      color: #ffb3b3 !important;
-    }
-    
-    .dark-mode .highlight-green {
-      background-color: #7be87b !important;
-      color: #222 !important;
-    }
-    
-    .dark-mode #answer {
-      color: #7be87b;
-    }
-    
-    .dark-mode #hint {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode #hint.english-hint {
-      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
-      color: #90caf9;
-      box-shadow: 0 2px 8px rgba(66, 165, 245, 0.25);
-    }
-    
-    .dark-mode #search-input {
-      background: #222 !important;
-      color: #e0e0e0 !important;
-      border: 1px solid #444 !important;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.18);
-    }
-    
-    .dark-mode #search-results {
-      background: #222 !important;
-      color: #e0e0e0 !important;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.18);
-      border-radius: 8px;
-    }
-    
-    .dark-mode #background-mode-btn {
-      background: linear-gradient(90deg, #2e4a2e 0%, #3a5a3a 100%) !important;
-      color: #a5d6a7 !important;
-    }
-    
-    .dark-mode #background-mode-btn.active {
-      background: linear-gradient(90deg, #4caf50 0%, #66bb6a 100%) !important;
-      color: white !important;
-    }
-    
-    .voice-settings {
-      margin-top: 1em;
-      padding: 1.5em;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border-radius: 12px;
-      border: 1px solid #dee2e6;
-      text-align: left;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    
-    .voice-settings label {
-      display: block;
-      margin-bottom: 0.5em;
-      font-weight: 600;
-      color: #495057;
-      font-size: 0.95em;
-    }
-    
-    .voice-select {
-      width: 100%;
-      padding: 0.7em;
-      border: 2px solid #ced4da;
-      border-radius: 8px;
-      margin-bottom: 1.2em;
-      font-size: 0.9em;
-      background: white;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    
-    .voice-select:focus {
-      outline: none;
-      border-color: #4facfe;
-      box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
-    }
-    
-    .voice-rate-container {
-      display: flex;
-      align-items: center;
-      gap: 0.8em;
-      margin-bottom: 1.2em;
-      flex-wrap: wrap;
-    }
-    
-    .voice-rate-container label {
-      margin-bottom: 0;
-      min-width: 60px;
-    }
-    
-    .voice-rate-slider {
-      flex: 1;
-      min-width: 120px;
-      height: 6px;
-      border-radius: 3px;
-      background: #e9ecef;
-      outline: none;
-      -webkit-appearance: none;
-      appearance: none;
-      cursor: pointer;
-    }
-    
-    .voice-rate-slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(79, 172, 254, 0.3);
-      transition: transform 0.2s;
-    }
-    
-    .voice-rate-slider::-webkit-slider-thumb:hover {
-      transform: scale(1.1);
-    }
-    
-    .voice-rate-slider::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      cursor: pointer;
-      border: none;
-      box-shadow: 0 2px 6px rgba(79, 172, 254, 0.3);
-    }
-    
-    .rate-value {
-      font-weight: 600;
-      color: #495057;
-      min-width: 30px;
-      text-align: center;
-      font-size: 0.9em;
-    }
-    
-    .test-voice-btn {
-      width: 100%;
-      padding: 0.8em;
-      font-size: 0.9em;
-      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-      color: #1976d2;
-      border: 2px solid #bbdefb;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.2s;
-      box-shadow: 0 2px 4px rgba(25, 118, 210, 0.1);
-    }
-    
-    .test-voice-btn:hover {
-      background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 8px rgba(25, 118, 210, 0.2);
-    }
-    
-    .test-voice-btn:active {
-      transform: translateY(0);
-    }
-    
-    .dark-mode .voice-settings {
-      background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-      border-color: #718096;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    
-    .dark-mode .voice-settings label {
-      color: #e2e8f0;
-    }
-    
-    .dark-mode .voice-select {
-      background: #4a5568;
-      color: #e2e8f0;
-      border-color: #718096;
-    }
-    
-    .dark-mode .voice-select:focus {
-      border-color: #90cdf4;
-      box-shadow: 0 0 0 3px rgba(144, 205, 244, 0.15);
-    }
-    
-    .dark-mode .voice-rate-slider {
-      background: #4a5568;
-    }
-    
-    .dark-mode .voice-rate-slider::-webkit-slider-thumb {
-      background: linear-gradient(135deg, #90cdf4 0%, #63b3ed 100%);
-      box-shadow: 0 2px 6px rgba(144, 205, 244, 0.3);
-    }
-    
-    .dark-mode .voice-rate-slider::-moz-range-thumb {
-      background: linear-gradient(135deg, #90cdf4 0%, #63b3ed 100%);
-      box-shadow: 0 2px 6px rgba(144, 205, 244, 0.3);
-    }
-    
-    .dark-mode .rate-value {
-      color: #e2e8f0;
-    }
-    
-    .dark-mode .test-voice-btn {
-      background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
-      color: #90cdf4 !important;
-      border-color: #718096 !important;
-    }
-    
-    .dark-mode .test-voice-btn:hover {
-      background: linear-gradient(135deg, #4a5568 0%, #718096 100%) !important;
-      box-shadow: 0 4px 8px rgba(144, 205, 244, 0.2) !important;
-    }
-    
-    /* Strona startowa */
-    .start-screen {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2em;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-    
-    .start-card {
-      background: white;
-      padding: 2.5em;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
-    }
-    
-    .start-card h1 {
-      margin: 0 0 0.5em 0;
-      font-size: 2.2em;
-      color: #333;
-      font-weight: 700;
-    }
-    
-    .start-description {
-      color: #666;
-      margin-bottom: 2em;
-      font-size: 1.1em;
-    }
-    
-    .package-categories {
-      text-align: left;
-      margin-bottom: 2em;
-    }
-    
-    .category {
-      margin-bottom: 1.5em;
-    }
-    
-    .category h3 {
-      margin: 0 0 1em 0;
-      font-size: 1.3em;
-      color: #333;
-      border-bottom: 2px solid #f0f0f0;
-      padding-bottom: 0.5em;
-    }
-    
-    .package-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8em;
-    }
-    
-    .package-item {
-      display: flex;
-      align-items: center;
-      padding: 1em;
-      border: 2px solid #e9ecef;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      background: #f8f9fa;
-    }
-    
-    .package-item:hover {
-      border-color: #667eea;
-      background: #f0f4ff;
-    }
-    
-    .package-item input[type="checkbox"] {
-      margin-right: 1em;
-      transform: scale(1.2);
-      accent-color: #667eea;
-    }
-    
-    .package-name {
-      flex: 1;
-      font-weight: 600;
-      color: #333;
-    }
-    
-    .package-count {
-      color: #666;
-      font-size: 0.9em;
-      background: #e9ecef;
-      padding: 0.3em 0.8em;
-      border-radius: 20px;
-    }
-    
-    .empty-category {
-      color: #999;
-      font-style: italic;
-      text-align: center;
-      padding: 1em;
-    }
-    
-    .start-actions {
-      text-align: center;
-    }
-    
-    .start-btn {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border: none;
-      padding: 1em 2.5em;
-      font-size: 1.2em;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    .start-btn:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    }
-    
-    .start-btn:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-    
-    .selected-info {
-      margin-top: 1em;
-      color: #666;
-      font-size: 0.9em;
-    }
-    
-    /* Główna aplikacja */
-    .main-app {
-      max-width: 400px;
-      margin: auto;
-    }
-    
-    .app-header {
-      text-align: center;
-      margin-bottom: 1em;
-    }
-    
-    .change-packages-btn {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border: none;
-      padding: 0.7em 1.5em;
-      font-size: 0.9em;
-      font-weight: 600;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
-    }
-    
-    .change-packages-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    /* Dark mode dla strony startowej */
-    .dark-mode .start-screen {
-      background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-    }
-    
-    .dark-mode .start-card {
-      background: #1a202c;
-      color: #e2e8f0;
-    }
-    
-    .dark-mode .start-card h1 {
-      color: #e2e8f0;
-    }
-    
-    .dark-mode .start-description {
-      color: #a0aec0;
-    }
-    
-    .dark-mode .category h3 {
-      color: #e2e8f0;
-      border-bottom-color: #4a5568;
-    }
-    
-    .dark-mode .package-item {
-      background: #2d3748;
-      border-color: #4a5568;
-      color: #e2e8f0;
-    }
-    
-    .dark-mode .package-item:hover {
-      border-color: #667eea;
-      background: #2a4365;
-    }
-    
-    .dark-mode .package-name {
-      color: #e2e8f0;
-    }
-    
-    .dark-mode .package-count {
-      background: #4a5568;
-      color: #a0aec0;
-    }
-    
-    .dark-mode .empty-category {
-      color: #718096;
-    }
-    
-    .dark-mode .selected-info {
-      color: #a0aec0;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <!-- Strona startowa z wyborem pakietów -->
@@ -873,6 +39,32 @@
               <input type="checkbox" id="allWordsEnglish" data-package="allWordsEnglish">
               <span class="package-name">Angielskie słówka</span>
               <span class="package-count" id="allWordsEnglish-count">0 słów</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="category">
+          <h3>🇬🇧 Angielski - Rozszerzone</h3>
+          <div class="package-list">
+            <label class="package-item">
+              <input type="checkbox" id="easiest" data-package="easiest">
+              <span class="package-name">Najłatwiejsze</span>
+              <span class="package-count" id="easiest-count">0 słów</span>
+            </label>
+            <label class="package-item">
+              <input type="checkbox" id="stillEasy" data-package="stillEasy">
+              <span class="package-name">Wciąż łatwe</span>
+              <span class="package-count" id="stillEasy-count">0 słów</span>
+            </label>
+            <label class="package-item">
+              <input type="checkbox" id="harder" data-package="harder">
+              <span class="package-name">Trudniejsze</span>
+              <span class="package-count" id="harder-count">0 słów</span>
+            </label>
+            <label class="package-item">
+              <input type="checkbox" id="advanced" data-package="advanced">
+              <span class="package-name">Zaawansowane</span>
+              <span class="package-count" id="advanced-count">0 słów</span>
             </label>
           </div>
         </div>
@@ -956,6 +148,12 @@
     </div>
   </div>
   
+  <!-- Dodanie skryptów dla nowych plików słówek -->
+  <script src="english/easiest.js"></script>
+  <script src="english/stillEasy.js"></script>
+  <script src="english/harder.js"></script>
+  <script src="english/advanced.js"></script>
+  
   <script src="allWords.js"></script>
   <script src="allWords2.js"></script>
   <script src="allWordsEnglish.js"></script>
@@ -984,7 +182,11 @@
       allPackages = {
         allWords: window.allWords || [],
         allWords2: window.allWords2 || [],
-        allWordsEnglish: window.allWordsEnglish || []
+        allWordsEnglish: window.allWordsEnglish || [],
+        easiest: window.easiest || [],
+        stillEasy: window.stillEasy || [],
+        harder: window.harder || [],
+        advanced: window.advanced || []
       };
       
       // Aktualizuj liczniki słów
@@ -1001,10 +203,18 @@
       const allWordsCount = document.getElementById('allWords-count');
       const allWords2Count = document.getElementById('allWords2-count');
       const allWordsEnglishCount = document.getElementById('allWordsEnglish-count');
+      const easiestCount = document.getElementById('easiest-count');
+      const stillEasyCount = document.getElementById('stillEasy-count');
+      const harderCount = document.getElementById('harder-count');
+      const advancedCount = document.getElementById('advanced-count');
       
       if (allWordsCount) allWordsCount.textContent = `${allPackages.allWords.length} słów`;
       if (allWords2Count) allWords2Count.textContent = `${allPackages.allWords2.length} słów`;
       if (allWordsEnglishCount) allWordsEnglishCount.textContent = `${allPackages.allWordsEnglish.length} słów`;
+      if (easiestCount) easiestCount.textContent = `${allPackages.easiest.length} słów`;
+      if (stillEasyCount) stillEasyCount.textContent = `${allPackages.stillEasy.length} słów`;
+      if (harderCount) harderCount.textContent = `${allPackages.harder.length} słów`;
+      if (advancedCount) advancedCount.textContent = `${allPackages.advanced.length} słów`;
     }
     
     function loadSavedPackages() {
@@ -1070,19 +280,92 @@
       initializeApp();
     }
     
+    // --- Generator białego szumu ---
+    let whiteNoiseNode = null;
+    let audioContext = null;
+
+    function startWhiteNoise() {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+
+      const bufferSize = 2 * audioContext.sampleRate;
+      const noiseBuffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
+      const output = noiseBuffer.getChannelData(0);
+
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = Math.random() * 2 - 1;
+      }
+
+      whiteNoiseNode = audioContext.createBufferSource();
+      whiteNoiseNode.buffer = noiseBuffer;
+      whiteNoiseNode.loop = true;
+
+      const gainNode = audioContext.createGain();
+      gainNode.gain.value = 0.02; // Ustaw głośność białego szumu
+
+      whiteNoiseNode.connect(gainNode).connect(audioContext.destination);
+      whiteNoiseNode.start(0);
+    }
+
+    function stopWhiteNoise() {
+      if (whiteNoiseNode) {
+        whiteNoiseNode.stop(0);
+        whiteNoiseNode.disconnect();
+        whiteNoiseNode = null;
+      }
+    }
+
+    // --- Funkcja czytania na głos ---
+    function speakHint() {
+      if (!current || !current.hint) return;
+
+      startWhiteNoise();
+
+      const utterance = new SpeechSynthesisUtterance(current.hint);
+
+      // Wybierz głos na podstawie języka podpowiedzi
+      utterance.voice = speechSynthesis.getVoices().find(voice => 
+        current.hintLanguage === 'pl' ? voice.lang.startsWith('pl') : voice.lang.startsWith('en')
+      );
+
+      utterance.rate = voiceRate;
+      utterance.onend = stopWhiteNoise; // Zatrzymaj biały szum po zakończeniu czytania
+      speechSynthesis.speak(utterance);
+    }
+
+    function speakAnswer() {
+      if (!current || !current.answer) return;
+
+      startWhiteNoise();
+
+      const utterance = new SpeechSynthesisUtterance(current.answer);
+
+      // Wybierz głos na podstawie języka odpowiedzi
+      utterance.voice = speechSynthesis.getVoices().find(voice => 
+        current.answerLanguage === 'pl' ? voice.lang.startsWith('pl') : voice.lang.startsWith('en')
+      );
+
+      utterance.rate = voiceRate;
+      utterance.onend = stopWhiteNoise; // Zatrzymaj biały szum po zakończeniu czytania
+      speechSynthesis.speak(utterance);
+    }
+
+    // --- Aktualizacja struktury słówek ---
     function combineSelectedPackages() {
       combinedWords = [];
       selectedPackages.forEach(packageName => {
         if (allPackages[packageName]) {
-          // Dodaj informację o źródle pakietu do każdego słowa
-          const wordsWithSource = allPackages[packageName].map(word => ({
-            ...word,
-            source: packageName
-          }));
-          combinedWords = combinedWords.concat(wordsWithSource);
+          allPackages[packageName].forEach(word => {
+            combinedWords.push({
+              ...word,
+              hintLanguage: packageName === 'allWords' || packageName === 'allWords2' ? 'pl' : 'en',
+              answerLanguage: packageName === 'allWords' || packageName === 'allWords2' ? 'pl' : 'en'
+            });
+          });
         }
       });
-      
+
       // Ustaw window.allWords dla kompatybilności
       window.allWords = combinedWords;
     }
@@ -1397,26 +680,6 @@
       if (!body.classList.contains('dark-mode')) {
         body.classList.add('dark-mode');
         this.textContent = 'Tryb dzienny';
-        document.querySelector('.card').style.background = '#222';
-        document.querySelector('.card').style.color = '#eee';
-        document.querySelectorAll('button').forEach(btn => {
-          btn.style.background = '#444';
-          btn.style.color = '#eee';
-        });
-        document.getElementById('save-word-btn').style.background = '#5a2323';
-        document.getElementById('save-word-btn').style.color = '#ffb3b3';
-        document.getElementById('save-current-btn').style.background = '#5a2323';
-        document.getElementById('save-current-btn').style.color = '#ffb3b3';
-        document.getElementById('show-memory-btn').style.background = '#7a3a3a';
-        document.getElementById('show-memory-btn').style.color = '#ffe0e0';
-        document.querySelectorAll('.memory-item button').forEach(btn => {
-          btn.style.background = '#7a3a3a';
-          btn.style.color = '#ffb3b3';
-        });
-        autoBtn.style.background = '#444';
-        autoBtn.style.color = '#eee';
-        darkBtn.style.background = '#444';
-        darkBtn.style.color = '#eee';
         document.getElementById('auto-timer').style.color = '#b3e0ff';
         
         // Zapisz preferencję trybu ciemnego
@@ -1424,26 +687,6 @@
       } else {
         body.classList.remove('dark-mode');
         this.textContent = 'Tryb nocny';
-        document.querySelector('.card').style.background = 'white';
-        document.querySelector('.card').style.color = 'black';
-        document.querySelectorAll('button').forEach(btn => {
-          btn.style.background = '';
-          btn.style.color = '';
-        });
-        document.getElementById('save-word-btn').style.background = '#ffb3b3';
-        document.getElementById('save-word-btn').style.color = '#900';
-        document.getElementById('save-current-btn').style.background = '#ffb3b3';
-        document.getElementById('save-current-btn').style.color = '#900';
-        document.getElementById('show-memory-btn').style.background = '#ffe0e0';
-        document.getElementById('show-memory-btn').style.color = '#900';
-        document.getElementById('auto-mode-btn').style.background = '#b3e0ff';
-        document.getElementById('auto-mode-btn').style.color = '#005a9e';
-        document.getElementById('toggle-dark-mode-btn').style.background = '#222';
-        document.getElementById('toggle-dark-mode-btn').style.color = '#fff';
-        document.querySelectorAll('.memory-item button').forEach(btn => {
-          btn.style.background = '#ffb3b3';
-          btn.style.color = '#900';
-        });
         document.getElementById('auto-timer').style.color = '#005a9e';
         
         // Zapisz preferencję trybu jasnego
