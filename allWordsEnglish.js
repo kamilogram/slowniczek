@@ -88,7 +88,6 @@ window.allWordsEnglish = [
   { hint: "po", answer: "after" },
   { hint: "przed", answer: "before" },
   { hint: "podczas", answer: "during" },
-  { hint: "dom (go home)", answer: "home" },
   { hint: "rama obrazu", answer: "picture frame" },
   { hint: "podróżować", answer: "travel" },
   { hint: "góry", answer: "mountains" },
