@@ -280,74 +280,19 @@
       initializeApp();
     }
     
-    // --- Generator białego szumu ---
-    let whiteNoiseNode = null;
-    let audioContext = null;
-
-    function startWhiteNoise() {
-      if (!audioContext) {
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      }
-
-      const bufferSize = 2 * audioContext.sampleRate;
-      const noiseBuffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
-      const output = noiseBuffer.getChannelData(0);
-
-      for (let i = 0; i < bufferSize; i++) {
-        output[i] = Math.random() * 2 - 1;
-      }
-
-      whiteNoiseNode = audioContext.createBufferSource();
-      whiteNoiseNode.buffer = noiseBuffer;
-      whiteNoiseNode.loop = true;
-
-      const gainNode = audioContext.createGain();
-      gainNode.gain.value = 0.02; // Ustaw głośność białego szumu
-
-      whiteNoiseNode.connect(gainNode).connect(audioContext.destination);
-      whiteNoiseNode.start(0);
-    }
-
-    function stopWhiteNoise() {
-      if (whiteNoiseNode) {
-        whiteNoiseNode.stop(0);
-        whiteNoiseNode.disconnect();
-        whiteNoiseNode = null;
-      }
-    }
-
     // --- Funkcja czytania na głos ---
     function speakHint() {
       if (!current || !current.hint) return;
 
-      startWhiteNoise();
-
       const utterance = new SpeechSynthesisUtterance(current.hint);
 
-      // Wybierz głos na podstawie języka podpowiedzi
-      utterance.voice = speechSynthesis.getVoices().find(voice => 
-        current.hintLanguage === 'pl' ? voice.lang.startsWith('pl') : voice.lang.startsWith('en')
+      // Decide voice dynamically based on the current hint
+      const isEnglishCategory = selectedPackages.some(pkg => pkg === 'allWordsEnglish' || pkg === 'advanced');
+      utterance.voice = speechSynthesis.getVoices().find(voice =>
+        isEnglishCategory ? voice.lang.startsWith('en') : voice.lang.startsWith('pl')
       );
 
-      utterance.rate = voiceRate;
-      utterance.onend = stopWhiteNoise; // Zatrzymaj biały szum po zakończeniu czytania
-      speechSynthesis.speak(utterance);
-    }
-
-    function speakAnswer() {
-      if (!current || !current.answer) return;
-
-      startWhiteNoise();
-
-      const utterance = new SpeechSynthesisUtterance(current.answer);
-
-      // Wybierz głos na podstawie języka odpowiedzi
-      utterance.voice = speechSynthesis.getVoices().find(voice => 
-        current.answerLanguage === 'pl' ? voice.lang.startsWith('pl') : voice.lang.startsWith('en')
-      );
-
-      utterance.rate = voiceRate;
-      utterance.onend = stopWhiteNoise; // Zatrzymaj biały szum po zakończeniu czytania
+      utter.rate = voiceRate;
       speechSynthesis.speak(utterance);
     }
 
@@ -611,11 +556,6 @@
       setButtonsVisible(false);
       autoStep = 0;
       autoNextStep();
-      
-      // Sprawdź czy tryb tła był aktywny i włącz go ponownie
-      if (isBackgroundMode) {
-        enableBackgroundMode();
-      }
     }
     
     function stopAutoMode() {
@@ -624,14 +564,6 @@
       setButtonsVisible(true);
       hideAutoTimer();
       if (autoTimer) clearTimeout(autoTimer);
-      
-      // Wyłącz tryb tła gdy wyłączamy auto mode
-      if (isBackgroundMode) {
-        isBackgroundMode = false;
-        document.getElementById('background-mode-btn').textContent = 'Tryb tła';
-        document.getElementById('background-mode-btn').classList.remove('active');
-        disableBackgroundMode();
-      }
     }
     
     function autoNextStep() {
@@ -737,10 +669,8 @@
       }
     });
 
-    // --- Wake Lock API i Background Audio ---
+    // --- Wake Lock API ---
     let wakeLock = null;
-    let backgroundAudio = null;
-    let isBackgroundMode = false;
     
     async function requestWakeLock() {
       if ('wakeLock' in navigator) {
@@ -750,7 +680,7 @@
             console.log('Wake Lock released');
             // Jeśli jesteśmy w trybie auto, kontynuuj działanie w tle
             if (autoMode) {
-              enableBackgroundMode();
+              // Removed call to enableBackgroundMode();
             }
           });
         } catch (err) {
@@ -758,99 +688,30 @@
         }
       }
     }
-    
-    // Funkcja do włączania trybu tła
-    function enableBackgroundMode() {
-      if (!isBackgroundMode && autoMode) {
-        isBackgroundMode = true;
-        console.log('Background mode enabled');
-        
-        // Dodaj powiadomienie o działaniu w tle
-        if ('Notification' in window && Notification.permission === 'granted') {
-          new Notification('Słówka Głosowe', {
-            body: 'Aplikacja działa w tle - czytanie pytań i odpowiedzi',
-            icon: '/favicon.ico',
-            tag: 'slowka-background'
-          });
-        }
-        
-        // Kontynuuj automatyczne czytanie
-        continueBackgroundReading();
-      }
-    }
-    
-    // Funkcja do tworzenia utterance z wybranymi ustawieniami
-    function createUtterance(text) {
-      const utter = new window.SpeechSynthesisUtterance(text);
-      utter.lang = 'pl-PL';
-      utter.volume = 0.8;
-      utter.rate = voiceRate;
-      
-      // Ustaw wybrany głos jeśli jest dostępny
-      if (selectedVoice) {
-        utter.voice = selectedVoice;
-      }
-      
-      return utter;
-    }
-    
-    // Funkcja do kontynuowania czytania w tle
-    function continueBackgroundReading() {
-      if (isBackgroundMode && autoMode && speakHintActive) {
-        // Użyj Web Speech API do czytania w tle
-        if (current && current.hint) {
-          const utter = createUtterance(current.hint);
-          
-          // Po przeczytaniu podpowiedzi, poczekaj i przeczytaj odpowiedź
-          utter.onend = () => {
-            setTimeout(() => {
-              if (current && current.answer) {
-                const answerUtter = createUtterance(current.answer);
-                window.speechSynthesis.speak(answerUtter);
-              }
-            }, 2000);
-          };
-          
-          window.speechSynthesis.speak(utter);
-        }
-      }
-    }
-    
-    // Funkcja do wyłączania trybu tła
-    function disableBackgroundMode() {
-      if (isBackgroundMode) {
-        isBackgroundMode = false;
-        console.log('Background mode disabled');
-        window.speechSynthesis.cancel();
-      }
-    }
-    
+
     // Ponownie aktywuj Wake Lock po wznowieniu strony
     window.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') {
         requestWakeLock();
-        disableBackgroundMode();
-      } else if (document.visibilityState === 'hidden' && autoMode) {
-        enableBackgroundMode();
       }
     });
-    
+
     // Obsługa powiadomień
     if ('Notification' in window) {
       Notification.requestPermission();
     }
-    
+
     // Aktywuj Wake Lock na starcie
     requestWakeLock();
-    
+
     // Dodaj obsługę Page Visibility API dla lepszego wykrywania stanu aplikacji
     document.addEventListener('visibilitychange', () => {
       if (document.hidden && autoMode) {
         console.log('Page hidden - continuing in background');
-        enableBackgroundMode();
+        // Removed call to enableBackgroundMode();
       } else if (!document.hidden) {
         console.log('Page visible - disabling background mode');
-        disableBackgroundMode();
+        // Removed call to disableBackgroundMode();
       }
     });
     
@@ -991,56 +852,37 @@
     }
     document.getElementById('speak-hint-btn').onclick = speakHint;
 
-    // Obsługa trybu tła
-    document.getElementById('background-mode-btn').onclick = function() {
-      if (!autoMode) {
-        alert('Tryb tła działa tylko w trybie auto!');
-        return;
-      }
-      
-      if (!speakHintActive) {
-        alert('Najpierw włącz czytanie podpowiedzi na głos!');
-        return;
-      }
-      
-      isBackgroundMode = !isBackgroundMode;
-      const btn = this;
-      
-      if (isBackgroundMode) {
-        btn.textContent = 'Wyłącz tryb tła';
-        btn.classList.add('active');
-        enableBackgroundMode();
-      } else {
-        btn.textContent = 'Tryb tła';
-        btn.classList.remove('active');
-        disableBackgroundMode();
-      }
-    };
-
     // Dodaj automatyczne czytanie podpowiedzi przy każdej zmianie hasła w trybie auto
     function autoSpeakHintIfActive() {
       if (autoMode && speakHintActive && current && current.hint) {
-        const utter = createUtterance(current.hint);
-        
-        // Jeśli tryb tła jest aktywny, kontynuuj czytanie odpowiedzi
-        if (isBackgroundMode) {
-          utter.onend = () => {
-            setTimeout(() => {
-              if (current && current.answer) {
-                const answerUtter = createUtterance(current.answer);
-                window.speechSynthesis.speak(answerUtter);
-              }
-            }, 2000);
-          };
-        }
-        
+        const utter = new SpeechSynthesisUtterance(current.hint);
+
+        // Zawsze używaj polskiego głosu dla hint
+        utter.voice = speechSynthesis.getVoices().find(voice => voice.lang.startsWith('pl'));
+
+        utter.rate = voiceRate;
         window.speechSynthesis.speak(utter);
       }
     }
 
     function autoSpeakAnswerIfActive() {
       if (autoMode && speakHintActive && current && current.answer) {
-        const utter = createUtterance(current.answer);
+        const utter = new SpeechSynthesisUtterance(current.answer);
+
+        // Wybierz głos na podstawie wybranych pakietów (angielski dla answer)
+        const isEnglishCategory = selectedPackages.some(pkg => 
+          pkg === 'allWordsEnglish' || 
+          pkg === 'easiest' || 
+          pkg === 'stillEasy' || 
+          pkg === 'harder' || 
+          pkg === 'advanced'
+        );
+
+        utter.voice = speechSynthesis.getVoices().find(voice =>
+          isEnglishCategory ? voice.lang.startsWith('en') : voice.lang.startsWith('pl')
+        );
+
+        utter.rate = voiceRate;
         window.speechSynthesis.speak(utter);
       }
     }
@@ -1089,6 +931,21 @@
       // Aktywuj Wake Lock
       requestWakeLock();
     });
+
+    // Restoring the createUtterance function
+    function createUtterance(text) {
+      const utter = new window.SpeechSynthesisUtterance(text);
+      utter.lang = 'pl-PL';
+      utter.volume = 0.8;
+      utter.rate = voiceRate;
+
+      // Set the selected voice if available
+      if (selectedVoice) {
+        utter.voice = selectedVoice;
+      }
+
+      return utter;
+    }
   </script>
 </body>
 </html>

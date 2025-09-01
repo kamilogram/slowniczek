@@ -55,13 +55,13 @@ stillEasy = [
   { hint: "mądry, rozsądny", answer: "wise" },
   { hint: "scena", answer: "stage" },
   { hint: "zdecydować", answer: "decide" },
-  { hint: "crowd", answer: "tłum" },
   { hint: "przed", answer: "in front of" },
-  { hint: "zajęcia", answer: "classes" },
-  { hint: "crayons", answer: "kredki" },
-  { hint: "paint", answer: "malować" },
-  { hint: "to lose", answer: "przegrać" },
   { hint: "gry planszowe", answer: "board games" },
   { hint: "góry", answer: "mountains" },
-  { hint: "również", answer: "also" }
-]
+  { hint: "zajęcia", answer: "classes" },
+  { hint: "malować", answer: "paint" },
+  { hint: "przegrać", answer: "to lose" },
+  { hint: "również", answer: "also" },
+  { hint: "tłum", answer: "crowd" },
+  { hint: "kredki", answer: "crayons" },
+];
