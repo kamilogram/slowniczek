@@ -869,7 +869,15 @@
       if (autoMode && speakHintActive && current && current.answer) {
         const utter = new SpeechSynthesisUtterance(current.answer);
 
-        // Wybierz głos na podstawie wybranych pakietów (angielski dla answer)
+        // Ensure voices are loaded before selecting
+        const voices = window.speechSynthesis.getVoices();
+        if (voices.length === 0) {
+          console.warn('Voices not loaded yet. Retrying...');
+          window.speechSynthesis.addEventListener('voiceschanged', autoSpeakAnswerIfActive);
+          return;
+        }
+
+        // Select voice based on category
         const isEnglishCategory = selectedPackages.some(pkg => 
           pkg === 'allWordsEnglish' || 
           pkg === 'easiest' || 
@@ -878,9 +886,13 @@
           pkg === 'advanced'
         );
 
-        utter.voice = speechSynthesis.getVoices().find(voice =>
+        utter.voice = voices.find(voice =>
           isEnglishCategory ? voice.lang.startsWith('en') : voice.lang.startsWith('pl')
         );
+
+        if (!utter.voice) {
+          console.error('No suitable voice found. Using default.');
+        }
 
         utter.rate = voiceRate;
         window.speechSynthesis.speak(utter);
