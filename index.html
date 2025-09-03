@@ -176,6 +176,47 @@
     let selectedVoice = null;
     let voiceRate = 1.0;
 
+        // --- Generator białego szumu ---
+    let noiseAudioCtx = null;
+    let noiseSource = null;
+    let noiseGain = null;
+    
+    function startWhiteNoise() {
+      if (noiseAudioCtx) return; // już gra
+      noiseAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const bufferSize = 2 * noiseAudioCtx.sampleRate;
+      const noiseBuffer = noiseAudioCtx.createBuffer(1, bufferSize, noiseAudioCtx.sampleRate);
+      const output = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = Math.random() * 2 - 1;
+      }
+      noiseSource = noiseAudioCtx.createBufferSource();
+      noiseSource.buffer = noiseBuffer;
+      noiseSource.loop = true;
+    
+      noiseGain = noiseAudioCtx.createGain();
+      noiseGain.gain.value = 0.01; // bardzo cicho, niesłyszalne
+    
+      noiseSource.connect(noiseGain).connect(noiseAudioCtx.destination);
+      noiseSource.start(0);
+    }
+    
+    function stopWhiteNoise() {
+      if (noiseSource) {
+        noiseSource.stop();
+        noiseSource.disconnect();
+        noiseSource = null;
+      }
+      if (noiseGain) {
+        noiseGain.disconnect();
+        noiseGain = null;
+      }
+      if (noiseAudioCtx) {
+        noiseAudioCtx.close();
+        noiseAudioCtx = null;
+      }
+    }
+
     // --- Inicjalizacja pakietów ---
     function initializePackages() {
       // Zbierz wszystkie dostępne pakiety
@@ -282,18 +323,25 @@
     
     // --- Funkcja czytania na głos ---
     function speakHint() {
-      if (!current || !current.hint) return;
-
-      const utterance = new SpeechSynthesisUtterance(current.hint);
-
-      // Decide voice dynamically based on the current hint
-      const isEnglishCategory = selectedPackages.some(pkg => pkg === 'allWordsEnglish' || pkg === 'advanced');
-      utterance.voice = speechSynthesis.getVoices().find(voice =>
-        isEnglishCategory ? voice.lang.startsWith('en') : voice.lang.startsWith('pl')
-      );
-
-      utter.rate = voiceRate;
-      speechSynthesis.speak(utterance);
+      if (!autoMode) {
+        alert('Czytanie podpowiedzi działa tylko w trybie auto!');
+        return;
+      }
+      speakHintActive = !speakHintActive;
+      const btn = document.getElementById('speak-hint-btn');
+      if (speakHintActive) {
+        btn.textContent = 'Wyłącz czytanie podpowiedzi';
+        startWhiteNoise(); // uruchom szum
+        // przeczytaj od razu aktualną podpowiedź
+        if (current && current.hint) {
+          const utter = createUtterance(current.hint);
+          window.speechSynthesis.speak(utter);
+        }
+      } else {
+        btn.textContent = 'Czytaj podpowiedź na głos';
+        window.speechSynthesis.cancel();
+        stopWhiteNoise(); // wyłącz szum
+      }
     }
 
     // --- Aktualizacja struktury słówek ---
@@ -564,6 +612,7 @@
       setButtonsVisible(true);
       hideAutoTimer();
       if (autoTimer) clearTimeout(autoTimer);
+      stopWhiteNoise(); // wyłącz szum przy wyjściu z auto
     }
     
     function autoNextStep() {
