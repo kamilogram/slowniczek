@@ -109,25 +109,20 @@
     </div>
     
     <div class="center-buttons margin-top-small">
-      <button id="speak-hint-btn">Czytaj podpowiedź na głos</button>
-      <button id="background-mode-btn">Tryb tła</button>
+      <label for="hint-lang-select">Język podpowiedzi:</label>
+      <select id="hint-lang-select">
+        <option value="pl-PL">Polski</option>
+        <option value="en-US">Angielski</option>
+      </select>
+      <label for="answer-lang-select">Język odpowiedzi:</label>
+      <select id="answer-lang-select">
+        <option value="en-US">Angielski</option>
+        <option value="pl-PL">Polski</option>
+      </select>
     </div>
     
     <div class="center-buttons margin-top-small">
       <button id="change-packages-btn" class="change-packages-btn">📦 Zmień pakiety</button>
-    </div>
-    
-    <div class="voice-settings">
-      <label for="voice-select">Głos:</label>
-      <select id="voice-select" class="voice-select">
-        <option value="">Ładowanie głosów...</option>
-      </select>
-      <div class="voice-rate-container">
-        <label for="voice-rate">Tempo:</label>
-        <input type="range" id="voice-rate" min="0.5" max="2" step="0.1" value="1" class="voice-rate-slider">
-        <span id="rate-value" class="rate-value">1.0</span>
-      </div>
-      <button id="test-voice-btn" class="test-voice-btn">Testuj głos</button>
     </div>
     
     <div id="auto-timer"></div>
@@ -173,49 +168,9 @@
     let autoStep = 0;
     let autoTimeLeft = 0;
     let speakHintActive = false;
-    let selectedVoice = null;
     let voiceRate = 1.0;
 
-        // --- Generator białego szumu ---
-    let noiseAudioCtx = null;
-    let noiseSource = null;
-    let noiseGain = null;
-    
-    function startWhiteNoise() {
-      if (noiseAudioCtx) return; // już gra
-      noiseAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      const bufferSize = 2 * noiseAudioCtx.sampleRate;
-      const noiseBuffer = noiseAudioCtx.createBuffer(1, bufferSize, noiseAudioCtx.sampleRate);
-      const output = noiseBuffer.getChannelData(0);
-      for (let i = 0; i < bufferSize; i++) {
-        output[i] = Math.random() * 2 - 1;
-      }
-      noiseSource = noiseAudioCtx.createBufferSource();
-      noiseSource.buffer = noiseBuffer;
-      noiseSource.loop = true;
-    
-      noiseGain = noiseAudioCtx.createGain();
-      noiseGain.gain.value = 0.01; // bardzo cicho, niesłyszalne
-    
-      noiseSource.connect(noiseGain).connect(noiseAudioCtx.destination);
-      noiseSource.start(0);
-    }
-    
-    function stopWhiteNoise() {
-      if (noiseSource) {
-        noiseSource.stop();
-        noiseSource.disconnect();
-        noiseSource = null;
-      }
-      if (noiseGain) {
-        noiseGain.disconnect();
-        noiseGain = null;
-      }
-      if (noiseAudioCtx) {
-        noiseAudioCtx.close();
-        noiseAudioCtx = null;
-      }
-    }
+        // ...usunięto generator białego szumu...
 
     // --- Inicjalizacja pakietów ---
     function initializePackages() {
@@ -321,28 +276,7 @@
       initializeApp();
     }
     
-    // --- Funkcja czytania na głos ---
-    function speakHint() {
-      if (!autoMode) {
-        alert('Czytanie podpowiedzi działa tylko w trybie auto!');
-        return;
-      }
-      speakHintActive = !speakHintActive;
-      const btn = document.getElementById('speak-hint-btn');
-      if (speakHintActive) {
-        btn.textContent = 'Wyłącz czytanie podpowiedzi';
-        startWhiteNoise(); // uruchom szum
-        // przeczytaj od razu aktualną podpowiedź
-        if (current && current.hint) {
-          const utter = createUtterance(current.hint);
-          window.speechSynthesis.speak(utter);
-        }
-      } else {
-        btn.textContent = 'Czytaj podpowiedź na głos';
-        window.speechSynthesis.cancel();
-        stopWhiteNoise(); // wyłącz szum
-      }
-    }
+    // ...usunięto funkcję czytania na głos...
 
     // --- Aktualizacja struktury słówek ---
     function combineSelectedPackages() {
@@ -420,14 +354,61 @@
       document.getElementById("answer").textContent = current.answer;
       document.getElementById("answer").style.visibility = "hidden";
       updateProgress();
-      autoSpeakHintIfActive();
+      // Czytaj hint na głos tylko w trybie auto
+      if (autoMode) {
+        const hintLang = document.getElementById('hint-lang-select').value;
+        if (current.hint) {
+          const utterHint = new window.SpeechSynthesisUtterance(current.hint);
+          utterHint.lang = hintLang;
+          utterHint.volume = 0.8;
+          utterHint.rate = 1.0;
+          window.speechSynthesis.speak(utterHint);
+        }
+      }
     }
+    // --- Nowa funkcja czytania na głos ---
+    function speakCurrent() {
+      const hintLang = document.getElementById('hint-lang-select').value;
+      const answerLang = document.getElementById('answer-lang-select').value;
+      if (!current) return;
+      // Czytaj hint
+      if (current.hint) {
+        const utterHint = new window.SpeechSynthesisUtterance(current.hint);
+        utterHint.lang = hintLang;
+        utterHint.volume = 0.8;
+        utterHint.rate = 1.0;
+        window.speechSynthesis.speak(utterHint);
+      }
+      // Czytaj answer
+      if (current.answer) {
+        const utterAnswer = new window.SpeechSynthesisUtterance(current.answer);
+        utterAnswer.lang = answerLang;
+        utterAnswer.volume = 0.8;
+        utterAnswer.rate = 1.0;
+        window.speechSynthesis.speak(utterAnswer);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const speakBtn = document.getElementById('speak-btn');
+      if (speakBtn) speakBtn.onclick = speakCurrent;
+    });
 
     function skipWord() {
       wasSkipped = true;
       document.getElementById("answer").style.visibility = "visible";
       document.querySelector('button[onclick="nextWord()"]').textContent = "Dalej";
-      autoSpeakAnswerIfActive();
+      // Czytaj answer na głos tylko w trybie auto
+      if (autoMode) {
+        const answerLang = document.getElementById('answer-lang-select').value;
+        if (current.answer) {
+          const utterAnswer = new window.SpeechSynthesisUtterance(current.answer);
+          utterAnswer.lang = answerLang;
+          utterAnswer.volume = 0.8;
+          utterAnswer.rate = 1.0;
+          window.speechSynthesis.speak(utterAnswer);
+        }
+      }
     }
 
     function nextWord() {
@@ -571,37 +552,16 @@
       document.getElementById('auto-timer').style.display = 'none';
     }
 
-    function setButtonsVisible(visible) {
-      document.querySelector('.buttons').style.display = visible ? '' : 'none';
-      document.getElementById('undo-known-btn').style.display = visible ? '' : 'none';
-      document.getElementById('show-memory-btn').style.display = visible ? '' : 'none';
-      
-      // Show/hide voice-related elements only in auto mode
-      const speakHintBtn = document.getElementById('speak-hint-btn');
-      const backgroundModeBtn = document.getElementById('background-mode-btn');
-      const voiceSettings = document.querySelector('.voice-settings');
-      
-      if (speakHintBtn) speakHintBtn.style.display = autoMode ? '' : 'none';
-      if (backgroundModeBtn) backgroundModeBtn.style.display = autoMode ? '' : 'none';
-      if (voiceSettings) voiceSettings.style.display = autoMode ? '' : 'none';
-    }
-    
-    function initializeVoiceElementsVisibility() {
-      // Initially hide voice-related elements since auto mode is off by default
-      const speakHintBtn = document.getElementById('speak-hint-btn');
-      const backgroundModeBtn = document.getElementById('background-mode-btn');
-      const voiceSettings = document.querySelector('.voice-settings');
-      
-      if (speakHintBtn) speakHintBtn.style.display = 'none';
-      if (backgroundModeBtn) backgroundModeBtn.style.display = 'none';
-      if (voiceSettings) voiceSettings.style.display = 'none';
-    }
+    // ...usunięto obsługę widoczności elementów głosowych...
 
     function startAutoMode() {
       if (autoMode) return;
       autoMode = true;
       document.getElementById('auto-mode-btn').textContent = 'Wyłącz auto';
-      setButtonsVisible(false);
+      // Ukryj przyciski odpowiedzi w trybie auto
+      document.querySelector('.buttons').style.display = 'none';
+      document.getElementById('undo-known-btn').style.display = 'none';
+      document.getElementById('show-memory-btn').style.display = 'none';
       autoStep = 0;
       autoNextStep();
     }
@@ -609,10 +569,12 @@
     function stopAutoMode() {
       autoMode = false;
       document.getElementById('auto-mode-btn').textContent = 'Auto tryb';
-      setButtonsVisible(true);
+      // Przywróć przyciski odpowiedzi po wyłączeniu auto
+      document.querySelector('.buttons').style.display = '';
+      document.getElementById('undo-known-btn').style.display = '';
+      document.getElementById('show-memory-btn').style.display = '';
       hideAutoTimer();
       if (autoTimer) clearTimeout(autoTimer);
-      stopWhiteNoise(); // wyłącz szum przy wyjściu z auto
     }
     
     function autoNextStep() {
@@ -766,188 +728,6 @@
     
 
     
-    // --- Inicjalizacja głosów ---
-    function loadVoices() {
-      const voiceSelect = document.getElementById('voice-select');
-      const voices = window.speechSynthesis.getVoices();
-      
-      voiceSelect.innerHTML = '';
-      
-      // Dodaj opcję domyślną
-      const defaultOption = document.createElement('option');
-      defaultOption.value = '';
-      defaultOption.textContent = 'Domyślny głos';
-      voiceSelect.appendChild(defaultOption);
-      
-      // Filtruj głosy polskie i dodaj je
-      const polishVoices = voices.filter(voice => 
-        voice.lang.startsWith('pl') || 
-        voice.lang.startsWith('pl-PL') ||
-        voice.name.toLowerCase().includes('polish') ||
-        voice.name.toLowerCase().includes('polski')
-      );
-      
-      // Dodaj głosy polskie na początku
-      polishVoices.forEach(voice => {
-        const option = document.createElement('option');
-        option.value = voice.name;
-        option.textContent = `${voice.name} (${voice.lang})`;
-        voiceSelect.appendChild(option);
-      });
-      
-      // Dodaj separator jeśli są głosy polskie i inne
-      if (polishVoices.length > 0 && voices.length > polishVoices.length) {
-        const separator = document.createElement('option');
-        separator.disabled = true;
-        separator.textContent = '──────────';
-        voiceSelect.appendChild(separator);
-      }
-      
-      // Dodaj pozostałe głosy
-      voices.forEach(voice => {
-        if (!polishVoices.includes(voice)) {
-          const option = document.createElement('option');
-          option.value = voice.name;
-          option.textContent = `${voice.name} (${voice.lang})`;
-          voiceSelect.appendChild(option);
-        }
-      });
-      
-      // Ustaw domyślny głos polski jeśli dostępny
-      if (polishVoices.length > 0) {
-        voiceSelect.value = polishVoices[0].name;
-        selectedVoice = polishVoices[0];
-      }
-    }
-    
-    // Obsługa zmiany głosu
-    document.getElementById('voice-select').addEventListener('change', function() {
-      const voices = window.speechSynthesis.getVoices();
-      const selectedVoiceName = this.value;
-      
-      if (selectedVoiceName) {
-        selectedVoice = voices.find(voice => voice.name === selectedVoiceName);
-      } else {
-        selectedVoice = null;
-      }
-      
-      // Zapisz wybór w localStorage
-      localStorage.setItem('slowkaSelectedVoice', selectedVoiceName);
-    });
-    
-    // Obsługa zmiany tempa
-    document.getElementById('voice-rate').addEventListener('input', function() {
-      voiceRate = parseFloat(this.value);
-      document.getElementById('rate-value').textContent = voiceRate.toFixed(1);
-      localStorage.setItem('slowkaVoiceRate', voiceRate.toString());
-    });
-    
-    // Załaduj zapisane ustawienia
-    function loadVoiceSettings() {
-      const savedVoice = localStorage.getItem('slowkaSelectedVoice');
-      const savedRate = localStorage.getItem('slowkaVoiceRate');
-      
-      if (savedVoice) {
-        document.getElementById('voice-select').value = savedVoice;
-        const voices = window.speechSynthesis.getVoices();
-        selectedVoice = voices.find(voice => voice.name === savedVoice);
-      }
-      
-      if (savedRate) {
-        voiceRate = parseFloat(savedRate);
-        document.getElementById('voice-rate').value = voiceRate;
-        document.getElementById('rate-value').textContent = voiceRate.toFixed(1);
-      }
-    }
-    
-
-    
-    // Obsługa przycisku testowania głosu
-    document.getElementById('test-voice-btn').addEventListener('click', function() {
-      const testText = "To jest test wybranego głosu. Sprawdź jak brzmi!";
-      const utter = createUtterance(testText);
-      window.speechSynthesis.speak(utter);
-    });
-
-    document.getElementById('clear-used-btn').onclick = function() {
-      if (confirm('Czy na pewno chcesz wyczyścić wszystkie odgadnięte słówka?')) {
-        localStorage.removeItem('slowkaUsed');
-        used = [];
-        pool = [...combinedWords];
-        showWord();
-        alert('Odgadnięte słówka zostały wyczyszczone.');
-      }
-    };
-
-    // --- Web Speech API: czytanie podpowiedzi na głos ---
-    function speakHint() {
-      if (!autoMode) {
-        alert('Czytanie podpowiedzi działa tylko w trybie auto!');
-        return;
-      }
-      speakHintActive = !speakHintActive;
-      const btn = document.getElementById('speak-hint-btn');
-      if (speakHintActive) {
-        btn.textContent = 'Wyłącz czytanie podpowiedzi';
-        // przeczytaj od razu aktualną podpowiedź
-        if (current && current.hint) {
-          const utter = createUtterance(current.hint);
-          window.speechSynthesis.speak(utter);
-        }
-      } else {
-        btn.textContent = 'Czytaj podpowiedź na głos';
-        window.speechSynthesis.cancel();
-      }
-    }
-    document.getElementById('speak-hint-btn').onclick = speakHint;
-
-    // Dodaj automatyczne czytanie podpowiedzi przy każdej zmianie hasła w trybie auto
-    function autoSpeakHintIfActive() {
-      if (autoMode && speakHintActive && current && current.hint) {
-        const utter = new SpeechSynthesisUtterance(current.hint);
-
-        // Zawsze używaj polskiego głosu dla hint
-        utter.voice = speechSynthesis.getVoices().find(voice => voice.lang.startsWith('pl'));
-
-        utter.rate = voiceRate;
-        window.speechSynthesis.speak(utter);
-      }
-    }
-
-    function autoSpeakAnswerIfActive() {
-      if (autoMode && speakHintActive && current && current.answer) {
-        const utter = new SpeechSynthesisUtterance(current.answer);
-
-        // Ensure voices are loaded before selecting
-        const voices = window.speechSynthesis.getVoices();
-        if (voices.length === 0) {
-          console.warn('Voices not loaded yet. Retrying...');
-          window.speechSynthesis.addEventListener('voiceschanged', autoSpeakAnswerIfActive);
-          return;
-        }
-
-        // Select voice based on category
-        const isEnglishCategory = selectedPackages.some(pkg => 
-          pkg === 'allWordsEnglish' || 
-          pkg === 'easiest' || 
-          pkg === 'stillEasy' || 
-          pkg === 'harder' || 
-          pkg === 'advanced'
-        );
-
-        utter.voice = voices.find(voice =>
-          isEnglishCategory ? voice.lang.startsWith('en') : voice.lang.startsWith('pl')
-        );
-
-        if (!utter.voice) {
-          console.error('No suitable voice found. Using default.');
-        }
-
-        utter.rate = voiceRate;
-        window.speechSynthesis.speak(utter);
-      }
-    }
-    
     // --- Inicjalizacja aplikacji ---
     // Poczekaj na załadowanie wszystkich skryptów
     window.addEventListener('load', function() {
@@ -962,21 +742,7 @@
       // Inicjalizuj pakiety
       initializePackages();
       
-      // Inicjalizuj głosy
-      if ('speechSynthesis' in window) {
-        if (window.speechSynthesis.getVoices().length > 0) {
-          loadVoices();
-          loadVoiceSettings();
-        } else {
-          window.speechSynthesis.addEventListener('voiceschanged', () => {
-            loadVoices();
-            loadVoiceSettings();
-          });
-        }
-      }
-      
-      // Inicjalizuj widoczność elementów związanych z głosem (tylko w trybie auto)
-      initializeVoiceElementsVisibility();
+  // ...usunięto inicjalizację widoczności elementów głosowych...
       
       // Rejestracja Service Worker
       if ('serviceWorker' in navigator) {
@@ -991,22 +757,11 @@
       
       // Aktywuj Wake Lock
       requestWakeLock();
+      
+  // ...usunięto ładowanie ustawień języka głosowego...
     });
 
-    // Restoring the createUtterance function
-    function createUtterance(text) {
-      const utter = new window.SpeechSynthesisUtterance(text);
-      utter.lang = 'pl-PL';
-      utter.volume = 0.8;
-      utter.rate = voiceRate;
-
-      // Set the selected voice if available
-      if (selectedVoice) {
-        utter.voice = selectedVoice;
-      }
-
-      return utter;
-    }
+    // ...usunięto całą logikę głosową...
   </script>
 </body>
 </html>
