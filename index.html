@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Słówka</title>
-  <link rel="icon" type="image/png" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./favicon.ico">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4facfe">
   <link rel="stylesheet" href="./styles.css">
@@ -15,8 +15,14 @@
   <div id="start-screen" class="start-screen">
     <div class="start-card">
       <h1>🎯 Słówka</h1>
-      <p class="start-description">Wybierz pakiety słówek, które chcesz ćwiczyć:</p>
-      
+      <p class="start-description">Wybierz pakiety słówek, które chcesz ćwiczyć lub wklej własne:</p>
+
+      <div class="custom-words-container" style="margin-bottom:16px;">
+        <label for="custom-words-input"><b>Wklej własne słówka (array obiektów hint/answer):</b></label>
+        <textarea id="custom-words-input" rows="4" style="width:100%;margin-top:4px;" placeholder='[{"hint":"pies","answer":"dog"},...]'></textarea>
+        <div id="custom-words-error" style="color:red;display:none;"></div>
+      </div>
+
       <div class="package-categories">
         <div class="category">
           <h3>🇵🇱 Polski</h3>
@@ -33,7 +39,6 @@
             </label>
           </div>
         </div>
-        
         <div class="category">
           <h3>🇬🇧 Angielski</h3>
           <div class="package-list">
@@ -44,7 +49,6 @@
             </label>
           </div>
         </div>
-        
         <div class="category">
           <h3>🇬🇧 Angielski - Rozszerzone</h3>
           <div class="package-list">
@@ -71,8 +75,8 @@
           </div>
         </div>
       </div>
-      
-      <div class="start-actions">
+
+      <div class="start-actions" style="margin-top:24px;">
         <button id="start-btn" class="start-btn" disabled>Rozpocznij</button>
         <p class="selected-info" id="selected-info">Wybierz co najmniej jeden pakiet</p>
       </div>
@@ -100,16 +104,6 @@
       <button id="auto-mode-btn">Auto tryb</button>
       <button id="toggle-dark-mode-btn">Tryb nocny</button>
     </div>
-    <div class="center-buttons" id="other-options-btn-container">
-      <button id="other-options-btn">Inne opcje</button>
-    </div>
-    <div class="memory-buttons" id="memory-buttons" style="display:none;">
-      <button id="save-word-btn">Dodaj poprzednie</button>
-      <button id="save-current-btn">Dodaj aktualne</button>
-      <button id="show-memory-btn">Pokaż zapamiętane</button>
-    </div>
-    <div id="memory-list" style="display:none;"></div>
-    
     <div class="center-buttons margin-top-small" id="lang-select-container" style="display:none;">
       <label for="hint-lang-select">Język podpowiedzi:</label>
       <select id="hint-lang-select">
@@ -122,6 +116,16 @@
         <option value="pl-PL">Polski</option>
       </select>
     </div>
+    <div class="center-buttons" id="other-options-btn-container">
+      <button id="other-options-btn">Inne opcje</button>
+    </div>
+    <div class="memory-buttons" id="memory-buttons" style="display:none;">
+  <button id="save-word-btn">Dodaj poprzednie</button>
+  <button id="save-current-btn">Dodaj aktualne</button>
+  <button id="show-memory-btn">Pokaż zapamiętane</button>
+  <button id="save-selected-btn">Dodaj zaznaczone</button>
+    </div>
+    <div id="memory-list" style="display:none;"></div>
     
     <div class="center-buttons margin-top-small">
       <button id="change-packages-btn" class="change-packages-btn">📦 Zmień pakiety</button>
@@ -154,6 +158,37 @@
   <script src="allWords2.js"></script>
   <script src="allWordsEnglish.js"></script>
   <script>
+// --- Zaznaczanie fragmentu tekstu ---
+let selectedFragment = null;
+function getSelectedTextInElement(element) {
+  const selection = window.getSelection();
+  if (!selection || selection.rangeCount === 0) return null;
+  const range = selection.getRangeAt(0);
+  if (!element.contains(range.commonAncestorContainer)) return null;
+  return selection.toString().trim();
+}
+document.getElementById('hint').onmouseup = function() {
+  const text = getSelectedTextInElement(this);
+  if (text) {
+    selectedFragment = {type: 'hint', text};
+    this.classList.add('highlight-selected');
+    document.getElementById('answer').classList.remove('highlight-selected');
+  }
+};
+document.getElementById('answer').onmouseup = function() {
+  const text = getSelectedTextInElement(this);
+  if (text) {
+    selectedFragment = {type: 'answer', text};
+    this.classList.add('highlight-selected');
+    document.getElementById('hint').classList.remove('highlight-selected');
+  }
+};
+function clearSelectedHighlight() {
+  document.getElementById('hint').classList.remove('highlight-selected');
+  document.getElementById('answer').classList.remove('highlight-selected');
+  selectedFragment = null;
+  window.getSelection().removeAllRanges();
+}
     // Zmienne globalne
     let allPackages = {}; // Wszystkie dostępne pakiety
     let selectedPackages = []; // Wybrane pakiety
@@ -244,17 +279,48 @@
       const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
       const startBtn = document.getElementById('start-btn');
       const selectedInfo = document.getElementById('selected-info');
-      
-      if (checkboxes.length > 0) {
+      const customInput = document.getElementById('custom-words-input');
+      let customCount = 0;
+      if (customInput && customInput.value.trim()) {
+        let arr = null;
+        let input = customInput.value.trim();
+        try {
+          arr = JSON.parse(input);
+        } catch (e) {
+          if (input.startsWith('[') && input.endsWith(']')) {
+            let evalInput = input.replace(/\n/g, ' ').replace(/\r/g, ' ');
+            try {
+              arr = eval(evalInput);
+            } catch (err) {
+              try {
+                let jsonLike = input.replace(/'/g, '"');
+                arr = JSON.parse(jsonLike);
+              } catch (err2) {
+                arr = null;
+              }
+            }
+          }
+        }
+        if (Array.isArray(arr)) {
+          customCount = arr.filter(obj => obj && typeof obj.hint === 'string' && typeof obj.answer === 'string').length;
+        }
+      }
+      if (checkboxes.length > 0 || customCount > 0) {
         startBtn.disabled = false;
         const totalWords = Array.from(checkboxes).reduce((total, checkbox) => {
           const packageName = checkbox.id;
           return total + (allPackages[packageName] ? allPackages[packageName].length : 0);
         }, 0);
-        selectedInfo.textContent = `Wybrano ${checkboxes.length} pakiet(ów) - ${totalWords} słów`;
+        if (checkboxes.length > 0 && customCount > 0) {
+          selectedInfo.textContent = `Wybrano ${checkboxes.length} pakiet(ów) - ${totalWords} słów + ${customCount} własnych`;
+        } else if (checkboxes.length > 0) {
+          selectedInfo.textContent = `Wybrano ${checkboxes.length} pakiet(ów) - ${totalWords} słów`;
+        } else {
+          selectedInfo.textContent = `Własne słówka: ${customCount}`;
+        }
       } else {
         startBtn.disabled = true;
-        selectedInfo.textContent = 'Wybierz co najmniej jeden pakiet';
+        selectedInfo.textContent = 'Wybierz co najmniej jeden pakiet lub wklej własne słówka';
       }
     }
     
@@ -294,6 +360,56 @@
           });
         }
       });
+
+      // Dodaj własne słówka jeśli są
+      const customInput = document.getElementById('custom-words-input');
+      const customError = document.getElementById('custom-words-error');
+      customError.style.display = 'none';
+      if (customInput && customInput.value.trim()) {
+        let arr = null;
+        let input = customInput.value.trim();
+        // Spróbuj najpierw JSON.parse
+        try {
+          arr = JSON.parse(input);
+        } catch (e) {
+          // Jeśli nie jest JSON, spróbuj eval jeśli wygląda jak array JS
+          if (input.startsWith('[') && input.endsWith(']')) {
+            // Usuń nowe linie i nadmiarowe spacje
+            let evalInput = input.replace(/\n/g, ' ').replace(/\r/g, ' ');
+            try {
+              arr = eval(evalInput);
+            } catch (err) {
+              // Spróbuj zamienić pojedyncze cudzysłowy na podwójne i ponowić JSON.parse
+              try {
+                let jsonLike = input.replace(/'/g, '"');
+                arr = JSON.parse(jsonLike);
+              } catch (err2) {
+                customError.textContent = 'Błąd parsowania tablicy: ' + err2.message;
+                customError.style.display = 'block';
+              }
+            }
+          } else {
+            customError.textContent = 'Wklej poprawną tablicę obiektów!';
+            customError.style.display = 'block';
+          }
+        }
+        if (Array.isArray(arr)) {
+          arr.forEach(obj => {
+            if (obj && typeof obj.hint === 'string' && typeof obj.answer === 'string') {
+              combinedWords.push({
+                hint: obj.hint,
+                answer: obj.answer,
+                hintLanguage: 'pl',
+                answerLanguage: 'en',
+                source: 'custom'
+              });
+            }
+          });
+        } else if (arr !== null) {
+          customError.textContent = 'Wklej poprawną tablicę obiektów!';
+          customError.style.display = 'block';
+        }
+      }
 
       // Ustaw window.allWords dla kompatybilności
       window.allWords = combinedWords;
@@ -460,6 +576,33 @@
     });
 
     // --- Pamięć słówek ---
+// --- Pamięć fragmentów ---
+function getFragmentMemory() {
+  return JSON.parse(localStorage.getItem('slowkaFragmentMemory') || '[]');
+}
+function setFragmentMemory(arr) {
+  localStorage.setItem('slowkaFragmentMemory', JSON.stringify(arr));
+}
+
+function renderFragmentMemoryComma() {
+  const mem = getFragmentMemory();
+  const list = document.getElementById('fragment-memory-list-comma');
+  if (!list) return;
+  if (!mem.length) {
+    list.textContent = 'Brak zapamiętanych fragmentów.';
+    list.style.display = 'block';
+    return;
+  }
+  list.textContent = mem.map(w => w.text).join(', ');
+  list.style.display = 'block';
+}
+
+function removeFragmentMemory(idx) {
+  const mem = getFragmentMemory();
+  mem.splice(idx,1);
+  setFragmentMemory(mem);
+  renderFragmentMemory();
+}
     function getMemory() {
       return JSON.parse(localStorage.getItem('slowkaMemory') || '[]');
     }
@@ -479,23 +622,23 @@
 
 
 
-    function renderMemory() {
-      const mem = getMemory();
-      const list = document.getElementById('memory-list');
-      if (!mem.length) {
-        list.innerHTML = '<em>Brak zapamiętanych słówek.</em>';
-        return;
-      }
-      list.innerHTML = mem.map((w,i) =>
-        `<div class='memory-item'>
-          <div class='memory-item-content'>
-            <b>${w.answer}</b>
-            <span>${w.hint}</span>
-          </div>
-          <button onclick='removeMemory(${i})'>Usuń</button>
-        </div>`
-      ).join('');
+function renderMemory() {
+  const mem = getMemory();
+  const list = document.getElementById('memory-list');
+  if (!mem.length) {
+    list.innerHTML = '<em>Brak zapamiętanych słówek.</em>';
+    return;
+  }
+  list.innerHTML = mem.map((w,i) => {
+    if (w.type === 'hint') {
+      return `<div class='memory-item'><div class='memory-item-content'><b>${w.answer}</b> <span class='memory-type'>(z podpowiedzi)</span></div><button onclick='removeMemory(${i})'>Usuń</button></div>`;
+    } else if (w.type === 'answer') {
+      return `<div class='memory-item'><div class='memory-item-content'><b>${w.answer}</b> <span class='memory-type'>(z odpowiedzi)</span></div><button onclick='removeMemory(${i})'>Usuń</button></div>`;
+    } else {
+      return `<div class='memory-item'><div class='memory-item-content'><b>${w.answer}</b> <span>${w.hint}</span></div><button onclick='removeMemory(${i})'>Usuń</button></div>`;
     }
+  }).join('');
+}
     
     function removeMemory(idx) {
       const mem = getMemory();
@@ -504,21 +647,22 @@
       renderMemory();
     }
     
-    document.getElementById('save-word-btn').onclick = function() {
-      if (!previous) return alert('Brak poprzedniego słowa!');
-      const mem = getMemory();
-      if (!mem.some(w => w.answer === previous.answer && w.hint === previous.hint)) {
-        mem.push({answer: previous.answer, hint: previous.hint});
-        setMemory(mem);
-        const btn = this;
-        btn.classList.add('highlight-green');
-        setTimeout(() => {
-          btn.classList.remove('highlight-green');
-        }, 2000);
-      } else {
-        alert('To słowo już jest w pamięci.');
-      }
-    };
+document.getElementById('save-selected-btn').onclick = function() {
+  if (!selectedFragment || !selectedFragment.text) return alert('Nie zaznaczono fragmentu! Zaznacz fragment tekstu w podpowiedzi lub odpowiedzi.');
+  const fragMem = getFragmentMemory();
+  if (!fragMem.some(w => w.text === selectedFragment.text && w.type === selectedFragment.type)) {
+    fragMem.push({text: selectedFragment.text, type: selectedFragment.type});
+    setFragmentMemory(fragMem);
+    this.classList.add('highlight-green');
+    setTimeout(() => {
+      this.classList.remove('highlight-green');
+    }, 2000);
+    clearSelectedHighlight();
+  } else {
+    alert('Ten fragment już jest w pamięci.');
+  }
+};
+
     
     document.getElementById('save-current-btn').onclick = function() {
       if (!current) return alert('Brak aktualnego słowa!');
@@ -549,6 +693,7 @@
         document.getElementById('memory-buttons').style.display = 'none';
       }
     };
+
 
     function showAutoTimer(sec) {
       const timerDiv = document.getElementById('auto-timer');
@@ -619,8 +764,10 @@
     document.getElementById('auto-mode-btn').onclick = function() {
       if (!autoMode) {
         startAutoMode();
+        document.getElementById('lang-select-container').style.display = 'flex';
       } else {
         stopAutoMode();
+        document.getElementById('lang-select-container').style.display = 'none';
       }
     };
 
@@ -667,9 +814,10 @@
         resultsDiv.innerHTML = '<p class="search-results-placeholder">Wpisz co najmniej 2 litery, aby wyszukać.</p>';
         return;
       }
-      const results = combinedWords.filter(word => 
-        word.answer.toLowerCase().includes(query) || word.hint.toLowerCase().includes(query)
-      );
+      const results = combinedWords.filter(word => {
+        if (!word || typeof word.answer !== 'string' || typeof word.hint !== 'string') return false;
+        return word.answer.toLowerCase().includes(query) || word.hint.toLowerCase().includes(query);
+      });
       if (results.length === 0) {
         resultsDiv.innerHTML = '<p class="search-results-placeholder">Brak wyników.</p>';
         return;
@@ -740,10 +888,47 @@
   // Ukryj dodatkowe opcje na starcie
   document.getElementById('memory-buttons').style.display = 'none';
   document.getElementById('memory-list').style.display = 'none';
-    document.getElementById('lang-select-container').style.display = 'flex';
+  document.getElementById('lang-select-container').style.display = 'none';
   document.getElementById('search-container').style.display = 'none';
   document.getElementById('search-results').style.display = 'none';
   document.getElementById('other-options-btn-container').style.display = 'block';
+  // Dodaj przycisk i kontener do fragmentów jako lista po przecinku
+  if (!document.getElementById('show-fragment-memory-comma-btn')) {
+    const btn = document.createElement('button');
+    btn.id = 'show-fragment-memory-comma-btn';
+    btn.textContent = 'Pokaż fragmenty jako listę';
+    btn.className = 'show-fragment-memory-btn';
+    btn.style.marginLeft = '8px';
+    document.getElementById('memory-buttons').appendChild(btn);
+    const fragList = document.createElement('div');
+    fragList.id = 'fragment-memory-list-comma';
+    fragList.style.display = 'none';
+    fragList.style.marginTop = '8px';
+    document.getElementById('memory-buttons').appendChild(fragList);
+    // Dodaj przycisk "Usuń wszystkie fragmenty" poniżej listy fragmentów
+    const clearFragmentsBtn = document.createElement('button');
+    clearFragmentsBtn.id = 'clear-fragments-btn';
+    clearFragmentsBtn.textContent = 'Usuń wszystkie fragmenty';
+    clearFragmentsBtn.style.marginTop = '8px';
+    clearFragmentsBtn.style.display = 'none';
+    document.getElementById('memory-buttons').appendChild(clearFragmentsBtn);
+    let fragmentMemoryVisible = false;
+    btn.onclick = function() {
+      fragmentMemoryVisible = !fragmentMemoryVisible;
+      fragList.style.display = fragmentMemoryVisible ? 'block' : 'none';
+      clearFragmentsBtn.style.display = fragmentMemoryVisible ? 'inline-block' : 'none';
+      btn.textContent = fragmentMemoryVisible ? 'Ukryj fragmenty' : 'Pokaż fragmenty jako listę';
+      if (fragmentMemoryVisible) {
+        renderFragmentMemoryComma();
+      }
+    };
+    clearFragmentsBtn.onclick = function() {
+      if (confirm('Czy na pewno chcesz usunąć wszystkie zapamiętane fragmenty?')) {
+        setFragmentMemory([]);
+        renderFragmentMemoryComma();
+      }
+    };
+  }
     // Obsługa przycisku "Inne opcje" - pokazuje/ukrywa dodatkowe opcje
     let otherOptionsVisible = false;
     document.getElementById('other-options-btn').onclick = function() {
