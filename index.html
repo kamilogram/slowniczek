@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Słówka Głosowe</title>
+  <title>Słówka</title>
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.ico">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4facfe">
   <link rel="stylesheet" href="./styles.css">
@@ -12,7 +14,7 @@
   <!-- Strona startowa z wyborem pakietów -->
   <div id="start-screen" class="start-screen">
     <div class="start-card">
-      <h1>🎯 Słówka Głosowe</h1>
+      <h1>🎯 Słówka</h1>
       <p class="start-description">Wybierz pakiety słówek, które chcesz ćwiczyć:</p>
       
       <div class="package-categories">
@@ -94,21 +96,21 @@
     <div class="center-buttons">
       <button id="undo-known-btn">Jednak nie wiedziałem</button>
     </div>
-    
-    <div class="memory-buttons">
-      <button id="save-word-btn">Dodaj poprzednie</button>
-      <button id="save-current-btn">Dodaj aktualne</button>
-      <button id="show-memory-btn">Pokaż zapamiętane</button>
-    </div>
-    
-    <div id="memory-list"></div>
-    
     <div class="center-buttons gap">
       <button id="auto-mode-btn">Auto tryb</button>
       <button id="toggle-dark-mode-btn">Tryb nocny</button>
     </div>
+    <div class="center-buttons" id="other-options-btn-container">
+      <button id="other-options-btn">Inne opcje</button>
+    </div>
+    <div class="memory-buttons" id="memory-buttons" style="display:none;">
+      <button id="save-word-btn">Dodaj poprzednie</button>
+      <button id="save-current-btn">Dodaj aktualne</button>
+      <button id="show-memory-btn">Pokaż zapamiętane</button>
+    </div>
+    <div id="memory-list" style="display:none;"></div>
     
-    <div class="center-buttons margin-top-small">
+    <div class="center-buttons margin-top-small" id="lang-select-container" style="display:none;">
       <label for="hint-lang-select">Język podpowiedzi:</label>
       <select id="hint-lang-select">
         <option value="pl-PL">Polski</option>
@@ -127,14 +129,13 @@
     
     <div id="auto-timer"></div>
     
-    <div class="search-container">
+    <div class="search-container" id="search-container" style="display:none;">
       <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko...">
       <button onclick="searchWord()" class="search-btn">
         <span>🔍</span>
       </button>
     </div>
-    
-    <div id="search-results">
+    <div id="search-results" style="display:none;">
       <p class="search-results-placeholder">Wyniki wyszukiwania pojawią się tutaj...</p>
     </div>
     
@@ -268,12 +269,13 @@
       // Połącz wybrane pakiety
       combineSelectedPackages();
       
-      // Ukryj stronę startową i pokaż aplikację
-      document.getElementById('start-screen').style.display = 'none';
-      document.getElementById('main-app').style.display = 'block';
-      
-      // Inicjalizuj aplikację
-      initializeApp();
+  // Ukryj stronę startową i pokaż aplikację
+  document.getElementById('start-screen').style.display = 'none';
+  document.getElementById('main-app').style.display = 'block';
+  // Płynnie przewiń na górę strony
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Inicjalizuj aplikację
+  initializeApp();
     }
     
     // ...usunięto funkcję czytania na głos...
@@ -537,9 +539,15 @@
     let memoryVisible = false;
     document.getElementById('show-memory-btn').onclick = function() {
       memoryVisible = !memoryVisible;
-      document.getElementById('memory-list').style.display = memoryVisible ? 'block' : 'none';
+      const memoryList = document.getElementById('memory-list');
+      memoryList.style.display = memoryVisible ? 'block' : 'none';
       this.textContent = memoryVisible ? 'Ukryj zapamiętane' : 'Pokaż zapamiętane';
-      if (memoryVisible) renderMemory();
+      if (memoryVisible) {
+        renderMemory();
+        document.getElementById('memory-buttons').style.display = 'block';
+      } else {
+        document.getElementById('memory-buttons').style.display = 'none';
+      }
     };
 
     function showAutoTimer(sec) {
@@ -708,9 +716,7 @@
     });
 
     // Obsługa powiadomień
-    if ('Notification' in window) {
-      Notification.requestPermission();
-    }
+    // Usunięto automatyczne pytanie o pozwolenie na powiadomienia przy starcie
 
     // Aktywuj Wake Lock na starcie
     requestWakeLock();
@@ -731,6 +737,23 @@
     // --- Inicjalizacja aplikacji ---
     // Poczekaj na załadowanie wszystkich skryptów
     window.addEventListener('load', function() {
+  // Ukryj dodatkowe opcje na starcie
+  document.getElementById('memory-buttons').style.display = 'none';
+  document.getElementById('memory-list').style.display = 'none';
+    document.getElementById('lang-select-container').style.display = 'flex';
+  document.getElementById('search-container').style.display = 'none';
+  document.getElementById('search-results').style.display = 'none';
+  document.getElementById('other-options-btn-container').style.display = 'block';
+    // Obsługa przycisku "Inne opcje" - pokazuje/ukrywa dodatkowe opcje
+    let otherOptionsVisible = false;
+    document.getElementById('other-options-btn').onclick = function() {
+      otherOptionsVisible = !otherOptionsVisible;
+      document.getElementById('memory-buttons').style.display = otherOptionsVisible ? 'block' : 'none';
+        document.getElementById('lang-select-container').style.display = 'flex';
+      document.getElementById('search-container').style.display = otherOptionsVisible ? 'flex' : 'none';
+      document.getElementById('search-results').style.display = otherOptionsVisible ? 'block' : 'none';
+      this.textContent = otherOptionsVisible ? 'Ukryj opcje' : 'Inne opcje';
+    };
       // Przywróć tryb ciemny jeśli był zapisany
       const savedDarkMode = localStorage.getItem('slowkaDarkMode');
       if (savedDarkMode === 'true') {
@@ -739,8 +762,8 @@
         if (darkBtn) darkBtn.textContent = 'Tryb dzienny';
       }
       
-      // Inicjalizuj pakiety
-      initializePackages();
+  // Inicjalizuj pakiety
+  initializePackages();
       
   // ...usunięto inicjalizację widoczności elementów głosowych...
       
