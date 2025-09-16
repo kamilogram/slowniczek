@@ -124,6 +124,7 @@
   <button id="save-current-btn">Dodaj aktualne</button>
   <button id="show-memory-btn">Pokaż zapamiętane</button>
   <button id="save-selected-btn">Dodaj zaznaczone</button>
+  <button id="save-global-selection-btn">Dodaj aktualnie zaznaczony tekst</button>
     </div>
     <div id="memory-list" style="display:none;"></div>
     
@@ -167,28 +168,64 @@ function getSelectedTextInElement(element) {
   if (!element.contains(range.commonAncestorContainer)) return null;
   return selection.toString().trim();
 }
-document.getElementById('hint').onmouseup = function() {
-  const text = getSelectedTextInElement(this);
+function handleFragmentSelection(type, element) {
+  const text = getSelectedTextInElement(element);
   if (text) {
-    selectedFragment = {type: 'hint', text};
-    this.classList.add('highlight-selected');
-    document.getElementById('answer').classList.remove('highlight-selected');
+    selectedFragment = {type, text};
+    element.classList.add('highlight-selected');
+    if (type === 'hint') document.getElementById('answer').classList.remove('highlight-selected');
+    if (type === 'answer') document.getElementById('hint').classList.remove('highlight-selected');
   }
-};
-document.getElementById('answer').onmouseup = function() {
-  const text = getSelectedTextInElement(this);
-  if (text) {
-    selectedFragment = {type: 'answer', text};
-    this.classList.add('highlight-selected');
-    document.getElementById('hint').classList.remove('highlight-selected');
-  }
-};
+}
+document.getElementById('hint').addEventListener('mouseup', function() {
+  handleFragmentSelection('hint', this);
+});
+document.getElementById('answer').addEventListener('mouseup', function() {
+  handleFragmentSelection('answer', this);
+});
+// Obsługa dotyku na smartfonach
+document.getElementById('hint').addEventListener('touchend', function() {
+  setTimeout(() => handleFragmentSelection('hint', this), 100);
+});
+document.getElementById('answer').addEventListener('touchend', function() {
+  setTimeout(() => handleFragmentSelection('answer', this), 100);
+});
 function clearSelectedHighlight() {
   document.getElementById('hint').classList.remove('highlight-selected');
   document.getElementById('answer').classList.remove('highlight-selected');
   selectedFragment = null;
   window.getSelection().removeAllRanges();
 }
+// Przycisk do dodawania dowolnie zaznaczonego tekstu (np. na mobilnych)
+window.addEventListener('DOMContentLoaded', function() {
+  const globalBtn = document.getElementById('save-global-selection-btn');
+  if (globalBtn) {
+    globalBtn.onclick = function() {
+      const selection = window.getSelection();
+      const text = selection ? selection.toString().trim() : '';
+      if (!text) return alert('Nie zaznaczono tekstu!');
+      // Spróbuj określić typ na podstawie miejsca zaznaczenia
+      let type = null;
+      const hintEl = document.getElementById('hint');
+      const answerEl = document.getElementById('answer');
+      if (hintEl.contains(selection.anchorNode)) type = 'hint';
+      else if (answerEl.contains(selection.anchorNode)) type = 'answer';
+      else type = 'other';
+      const fragMem = getFragmentMemory();
+      if (!fragMem.some(w => w.text === text && w.type === type)) {
+        fragMem.push({text, type});
+        setFragmentMemory(fragMem);
+        this.classList.add('highlight-green');
+        setTimeout(() => {
+          this.classList.remove('highlight-green');
+        }, 2000);
+        clearSelectedHighlight();
+      } else {
+        alert('Ten fragment już jest w pamięci.');
+      }
+    };
+  }
+});
     // Zmienne globalne
     let allPackages = {}; // Wszystkie dostępne pakiety
     let selectedPackages = []; // Wybrane pakiety
