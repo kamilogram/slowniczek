@@ -219,7 +219,12 @@ window.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
           this.classList.remove('highlight-green');
         }, 2000);
-        clearSelectedHighlight();
+                clearSelectedHighlight();
+        // Aktualizuj listę fragmentów po przecinku jeśli jest widoczna
+        const fragList = document.getElementById('fragment-memory-list-comma');
+        if (fragList && fragList.style.display !== 'none') {
+          renderFragmentMemoryComma();
+        }
       } else {
         alert('Ten fragment już jest w pamięci.');
       }
@@ -695,6 +700,11 @@ document.getElementById('save-selected-btn').onclick = function() {
       this.classList.remove('highlight-green');
     }, 2000);
     clearSelectedHighlight();
+    // Aktualizuj listę fragmentów po przecinku jeśli jest widoczna
+    const fragList = document.getElementById('fragment-memory-list-comma');
+    if (fragList && fragList.style.display !== 'none') {
+      renderFragmentMemoryComma();
+    }
   } else {
     alert('Ten fragment już jest w pamięci.');
   }
