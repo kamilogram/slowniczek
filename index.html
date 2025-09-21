@@ -21,15 +21,26 @@
         <label for="custom-words-input"><b>Wklej własne słówka (array obiektów hint/answer):</b></label>
         <textarea id="custom-words-input" rows="4" style="width:100%;margin-top:4px;" placeholder='[{"hint":"pies","answer":"dog"},...]'></textarea>
         <div id="custom-words-error" style="color:red;display:none;"></div>
-        <div class="remote-sets" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center;">
-          <input id="remote-set-name" type="text" placeholder="Nazwa zestawu" style="flex:1 1 240px;">
-          <button id="btn-save-remote">💾 Zapisz do API</button>
-          <button id="btn-load-remote">⬇️ Załaduj z API</button>
-          <button id="btn-delete-remote">🗑 Usuń z API</button>
-          <select id="remote-sets-list" style="flex:1 1 200px;min-width:200px;">
-            <option value="">(lista zestawów z API)</option>
-          </select>
-          <button id="btn-refresh-remote">🔄 Odśwież listę</button>
+        <div class="remote-sets" style="margin-top:8px;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
+            <input id="remote-set-name" type="text" placeholder="Nazwa zestawu" style="flex:1 1 240px;">
+            <button id="btn-save-remote">💾 Zapisz do API</button>
+            <button id="btn-delete-remote">🗑 Usuń z API</button>
+            <button id="btn-refresh-remote">🔄 Odśwież listę</button>
+          </div>
+          
+          <div class="remote-sets-section">
+            <div class="remote-sets-header" style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+              <input type="text" id="remote-search" placeholder="🔍 Wyszukaj zestawy..." style="flex:1;padding:8px;">
+            </div>
+            
+            <div class="category">
+              <h3>🌐 Zestawy z API</h3>
+              <div class="package-list" id="remote-sets-list">
+                <div class="loading-placeholder">Ładowanie zestawów...</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -307,13 +318,10 @@ window.addEventListener('DOMContentLoaded', function() {
             updateStartButton();
             return;
           }
-          let arr = null;
-          try {
-            arr = JSON.parse(val);
-          } catch (e) {
-            try { arr = JSON.parse(val.replace(/'/g, '"')); } catch (e2) { arr = null; }
-          }
-          if (Array.isArray(arr)) {
+          
+          // Użyj tej samej logiki parsowania co getCustomWordsArrayFromTextarea
+          const arr = getCustomWordsArrayFromTextarea();
+          if (Array.isArray(arr) && arr.length > 0) {
             const valid = arr.filter(o => o && typeof o.hint === 'string' && typeof o.answer === 'string');
             if (valid.length > 0) {
               localStorage.setItem('slowkaCustomWords', JSON.stringify(valid));
@@ -321,6 +329,8 @@ window.addEventListener('DOMContentLoaded', function() {
             } else {
               localStorage.removeItem('slowkaCustomWords');
             }
+          } else {
+            localStorage.removeItem('slowkaCustomWords');
           }
           updateStartButton();
         });
@@ -381,25 +391,8 @@ window.addEventListener('DOMContentLoaded', function() {
       const customInput = document.getElementById('custom-words-input');
       let customCount = 0;
       if (customInput && customInput.value.trim()) {
-        let arr = null;
-        let input = customInput.value.trim();
-        try {
-          arr = JSON.parse(input);
-        } catch (e) {
-          if (input.startsWith('[') && input.endsWith(']')) {
-            let evalInput = input.replace(/\n/g, ' ').replace(/\r/g, ' ');
-            try {
-              arr = eval(evalInput);
-            } catch (err) {
-              try {
-                let jsonLike = input.replace(/'/g, '"');
-                arr = JSON.parse(jsonLike);
-              } catch (err2) {
-                arr = null;
-              }
-            }
-          }
-        }
+        // Użyj tej samej logiki parsowania co getCustomWordsArrayFromTextarea
+        const arr = getCustomWordsArrayFromTextarea();
         if (Array.isArray(arr)) {
           customCount = arr.filter(obj => obj && typeof obj.hint === 'string' && typeof obj.answer === 'string').length;
         }
@@ -410,26 +403,34 @@ window.addEventListener('DOMContentLoaded', function() {
           if (Array.isArray(saved)) customCount = saved.length;
         } catch (_) {}
       }
-      if (checkboxes.length > 0 || customCount > 0) {
+      // Sprawdź remote sets
+      const remoteCheckboxes = document.querySelectorAll('input[data-package^="remote-"]:checked');
+      const remoteCount = Array.from(remoteCheckboxes).reduce((total, checkbox) => {
+        const setName = checkbox.getAttribute('data-set-name');
+        const set = remoteSets.find(s => s.name === setName);
+        return total + (set ? set.count : 0);
+      }, 0);
+      
+      if (checkboxes.length > 0 || customCount > 0 || remoteCount > 0) {
         startBtn.disabled = false;
         const totalWords = Array.from(checkboxes).reduce((total, checkbox) => {
           const packageName = checkbox.id;
           return total + (allPackages[packageName] ? allPackages[packageName].length : 0);
         }, 0);
-        if (checkboxes.length > 0 && customCount > 0) {
-          selectedInfo.textContent = `Wybrano ${checkboxes.length} pakiet(ów) - ${totalWords} słów + ${customCount} własnych`;
-        } else if (checkboxes.length > 0) {
-          selectedInfo.textContent = `Wybrano ${checkboxes.length} pakiet(ów) - ${totalWords} słów`;
-        } else {
-          selectedInfo.textContent = `Własne słówka: ${customCount}`;
-        }
+        
+        const parts = [];
+        if (checkboxes.length > 0) parts.push(`${checkboxes.length} pakiet(ów) - ${totalWords} słów`);
+        if (remoteCount > 0) parts.push(`${remoteCheckboxes.length} zestaw(ów) API - ${remoteCount} słów`);
+        if (customCount > 0) parts.push(`${customCount} własnych`);
+        
+        selectedInfo.textContent = parts.join(' + ');
       } else {
         startBtn.disabled = true;
-        selectedInfo.textContent = 'Wybierz co najmniej jeden pakiet lub wklej własne słówka';
+        selectedInfo.textContent = 'Wybierz co najmniej jeden pakiet, zestaw z API lub wklej własne słówka';
       }
     }
     
-    function startApplication() {
+    async function startApplication() {
       // Zbierz wybrane pakiety
       selectedPackages = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
         .map(checkbox => checkbox.id);
@@ -437,23 +438,38 @@ window.addEventListener('DOMContentLoaded', function() {
       // Zapisz wybór
       localStorage.setItem('slowkaSelectedPackages', JSON.stringify(selectedPackages));
       
-      // Połącz wybrane pakiety
-      combineSelectedPackages();
+      // Pokaż loading
+      const startBtn = document.getElementById('start-btn');
+      const originalText = startBtn.textContent;
+      startBtn.textContent = 'Ładowanie...';
+      startBtn.disabled = true;
       
-  // Ukryj stronę startową i pokaż aplikację
-  document.getElementById('start-screen').style.display = 'none';
-  document.getElementById('main-app').style.display = 'block';
-  // Płynnie przewiń na górę strony
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  // Inicjalizuj aplikację
-  initializeApp();
+      try {
+        // Połącz wybrane pakiety (teraz async)
+        await combineSelectedPackages();
+        
+        // Ukryj stronę startową i pokaż aplikację
+        document.getElementById('start-screen').style.display = 'none';
+        document.getElementById('main-app').style.display = 'block';
+        // Płynnie przewiń na górę strony
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Inicjalizuj aplikację
+        initializeApp();
+      } catch (e) {
+        console.error('Błąd ładowania pakietów:', e);
+        alert('Błąd ładowania pakietów. Sprawdź połączenie z internetem.');
+        startBtn.textContent = originalText;
+        startBtn.disabled = false;
+      }
     }
     
     // ...usunięto funkcję czytania na głos...
 
     // --- Aktualizacja struktury słówek ---
-    function combineSelectedPackages() {
+    async function combineSelectedPackages() {
       combinedWords = [];
+      
+      // Dodaj lokalne pakiety
       selectedPackages.forEach(packageName => {
         if (allPackages[packageName]) {
           allPackages[packageName].forEach(word => {
@@ -465,40 +481,39 @@ window.addEventListener('DOMContentLoaded', function() {
           });
         }
       });
+      
+      // Dodaj remote sets
+      const remoteCheckboxes = document.querySelectorAll('input[data-package^="remote-"]:checked');
+      for (const checkbox of remoteCheckboxes) {
+        const setName = checkbox.getAttribute('data-set-name');
+        if (setName) {
+          try {
+            const resp = await fetch(`${API_BASE}/api/sets/${encodeURIComponent(setName)}`);
+            const data = await resp.json();
+            if (resp.ok && Array.isArray(data.words)) {
+              data.words.forEach(word => {
+                combinedWords.push({
+                  ...word,
+                  hintLanguage: 'pl',
+                  answerLanguage: 'en',
+                  source: `remote-${setName}`
+                });
+              });
+            }
+          } catch (e) {
+            console.error(`Błąd ładowania zestawu ${setName}:`, e);
+          }
+        }
+      }
 
       // Dodaj własne słówka jeśli są
       const customInput = document.getElementById('custom-words-input');
       const customError = document.getElementById('custom-words-error');
       customError.style.display = 'none';
       if (customInput && customInput.value.trim()) {
-        let arr = null;
-        let input = customInput.value.trim();
-        // Spróbuj najpierw JSON.parse
-        try {
-          arr = JSON.parse(input);
-        } catch (e) {
-          // Jeśli nie jest JSON, spróbuj eval jeśli wygląda jak array JS
-          if (input.startsWith('[') && input.endsWith(']')) {
-            // Usuń nowe linie i nadmiarowe spacje
-            let evalInput = input.replace(/\n/g, ' ').replace(/\r/g, ' ');
-            try {
-              arr = eval(evalInput);
-            } catch (err) {
-              // Spróbuj zamienić pojedyncze cudzysłowy na podwójne i ponowić JSON.parse
-              try {
-                let jsonLike = input.replace(/'/g, '"');
-                arr = JSON.parse(jsonLike);
-              } catch (err2) {
-                customError.textContent = 'Błąd parsowania tablicy: ' + err2.message;
-                customError.style.display = 'block';
-              }
-            }
-          } else {
-            customError.textContent = 'Wklej poprawną tablicę obiektów!';
-            customError.style.display = 'block';
-          }
-        }
-        if (Array.isArray(arr)) {
+        // Użyj tej samej logiki parsowania co getCustomWordsArrayFromTextarea
+        const arr = getCustomWordsArrayFromTextarea();
+        if (Array.isArray(arr) && arr.length > 0) {
           arr.forEach(obj => {
             if (obj && typeof obj.hint === 'string' && typeof obj.answer === 'string') {
               combinedWords.push({
@@ -512,7 +527,7 @@ window.addEventListener('DOMContentLoaded', function() {
           });
           // Zapisz poprawnie sparsowane własne słówka do localStorage
           try { localStorage.setItem('slowkaCustomWords', JSON.stringify(arr)); } catch (_) {}
-        } else if (arr !== null) {
+        } else {
           customError.textContent = 'Wklej poprawną tablicę obiektów!';
           customError.style.display = 'block';
         }
@@ -571,16 +586,28 @@ window.addEventListener('DOMContentLoaded', function() {
       if (!el) return [];
       const val = el.value.trim();
       if (!val) return [];
-      // 1) Surowy JSON
-      try { return JSON.parse(val) || []; } catch (_) {}
-      // 2) JSON z pojedynczymi cudzysłowami i niecytowanymi kluczami hint/answer
-      try {
-        const normalized = val
-          .replace(/'(.*?)'/g, '"$1"')
-          .replace(/\b(hint|answer)\s*:/g, '"$1":');
-        const parsed = JSON.parse(normalized);
+      
+      // 1) Spróbuj najpierw standardowy JSON
+      try { 
+        const parsed = JSON.parse(val);
         if (Array.isArray(parsed)) return parsed;
       } catch (_) {}
+      
+      // 2) Jeśli nie JSON, spróbuj JavaScript (bezpiecznie)
+      try {
+        // Sprawdź czy wygląda jak tablica JavaScript
+        if (val.startsWith('[') && val.endsWith(']')) {
+          // Usuń nowe linie i nadmiarowe spacje dla bezpieczeństwa
+          const cleanVal = val.replace(/\n/g, ' ').replace(/\r/g, ' ').replace(/\s+/g, ' ');
+          
+          // Użyj Function constructor zamiast eval (bezpieczniejsze)
+          const func = new Function('return ' + cleanVal);
+          const result = func();
+          
+          if (Array.isArray(result)) return result;
+        }
+      } catch (_) {}
+      
       // 3) Prosty format linijkowy: "hint - answer" / "hint;answer" / "hint,answer" / "hint -> answer"
       const lines = val.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
       const pairs = [];
@@ -605,35 +632,89 @@ window.addEventListener('DOMContentLoaded', function() {
       updateStartButton();
     }
 
+    let remoteSets = [];
+    let filteredRemoteSets = [];
+
     async function refreshRemoteSetsList() {
       const list = document.getElementById('remote-sets-list');
       if (!list) return;
-      list.innerHTML = '<option value="">(ładowanie...)</option>';
+      list.innerHTML = '<div class="loading-placeholder">Ładowanie zestawów...</div>';
+      
       try {
         const resp = await fetch(`${API_BASE}/api/sets`);
         const data = await resp.json();
-        const names = Array.isArray(data.names) ? data.names : [];
-        list.innerHTML = '<option value="">(lista zestawów z API)</option>' +
-          names.map(n => `<option value="${n}">${n}</option>`).join('');
+        remoteSets = Array.isArray(data.sets) ? data.sets : [];
+        filteredRemoteSets = [...remoteSets];
+        renderRemoteSets();
       } catch (e) {
-        list.innerHTML = '<option value="">(błąd pobierania listy)</option>';
+        list.innerHTML = '<div class="loading-placeholder">Błąd pobierania listy</div>';
       }
+    }
+
+    function renderRemoteSets() {
+      const list = document.getElementById('remote-sets-list');
+      if (!list) return;
+      
+      if (filteredRemoteSets.length === 0) {
+        list.innerHTML = '<div class="loading-placeholder">Brak zestawów</div>';
+        return;
+      }
+      
+      list.innerHTML = filteredRemoteSets.map(set => `
+        <label class="package-item">
+          <input type="checkbox" id="remote-${set.name}" data-package="remote-${set.name}" data-set-name="${set.name}">
+          <span class="package-name">${set.name}</span>
+          <span class="package-count">${set.count} słów</span>
+        </label>
+      `).join('');
+      
+      // Dodaj event listeners dla nowych checkboxów
+      setupRemotePackageSelection();
+    }
+
+    function filterRemoteSets(searchTerm) {
+      if (!searchTerm.trim()) {
+        filteredRemoteSets = [...remoteSets];
+      } else {
+        const term = searchTerm.toLowerCase();
+        filteredRemoteSets = remoteSets.filter(set => 
+          set.name.toLowerCase().includes(term)
+        );
+      }
+      renderRemoteSets();
+    }
+
+    function setupRemotePackageSelection() {
+      // Dodaj event listeners dla checkboxów remote sets
+      document.querySelectorAll('input[data-package^="remote-"]').forEach(checkbox => {
+        checkbox.addEventListener('change', updateStartButton);
+      });
     }
 
     function setupRemoteSetsUI() {
       const btnRefresh = document.getElementById('btn-refresh-remote');
       const btnSave = document.getElementById('btn-save-remote');
-      const btnLoad = document.getElementById('btn-load-remote');
       const btnDelete = document.getElementById('btn-delete-remote');
       const nameInput = document.getElementById('remote-set-name');
-      const list = document.getElementById('remote-sets-list');
-      if (!btnRefresh || !btnSave || !btnLoad || !btnDelete || !nameInput || !list) return;
+      const searchInput = document.getElementById('remote-search');
+      
+      if (!btnRefresh || !btnSave || !btnDelete || !nameInput || !searchInput) return;
 
       btnRefresh.onclick = refreshRemoteSetsList;
+      
+      // Wyszukiwarka z debouncing
+      let searchTimeout;
+      searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          filterRemoteSets(this.value);
+        }, 300);
+      });
+      
       refreshRemoteSetsList();
 
       btnSave.onclick = async function() {
-        const name = (nameInput.value || '').trim() || list.value;
+        const name = (nameInput.value || '').trim();
         if (!name) return alert('Podaj nazwę zestawu.');
         const words = getCustomWordsArrayFromTextarea();
         const valid = words.filter(o => o && typeof o.hint === 'string' && typeof o.answer === 'string' && o.hint && o.answer);
@@ -647,30 +728,28 @@ window.addEventListener('DOMContentLoaded', function() {
           const data = await resp.json();
           if (!resp.ok) throw new Error(data && data.error ? data.error : 'Błąd zapisu');
           alert(`Zapisano zestaw "${name}" (${data.count} słów).`);
+          
+          // Wyczyść pola po udanym zapisie
+          const customInput = document.getElementById('custom-words-input');
+          const nameInput = document.getElementById('remote-set-name');
+          if (customInput) customInput.value = '';
+          if (nameInput) nameInput.value = '';
+          
+          // Wyczyść localStorage
+          localStorage.removeItem('slowkaCustomWords');
+          
+          // Zaktualizuj przycisk start
+          updateStartButton();
+          
           refreshRemoteSetsList();
         } catch (e) {
           alert('Błąd zapisu: ' + e.message);
         }
       };
 
-      btnLoad.onclick = async function() {
-        const name = list.value || (nameInput.value || '').trim();
-        if (!name) return alert('Wybierz lub wpisz nazwę zestawu.');
-        try {
-          const resp = await fetch(`${API_BASE}/api/sets/${encodeURIComponent(name)}`);
-          const data = await resp.json();
-          if (!resp.ok) throw new Error(data && data.error ? data.error : 'Błąd pobierania');
-          if (!Array.isArray(data.words)) throw new Error('Nieprawidłowy format danych');
-          setCustomWordsArrayToTextarea(data.words);
-          alert(`Załadowano zestaw "${name}" (${data.words.length} słów).`);
-        } catch (e) {
-          alert('Błąd pobierania: ' + e.message);
-        }
-      };
-
       btnDelete.onclick = async function() {
-        const name = list.value || (nameInput.value || '').trim();
-        if (!name) return alert('Wybierz lub wpisz nazwę zestawu.');
+        const name = (nameInput.value || '').trim();
+        if (!name) return alert('Wpisz nazwę zestawu do usunięcia.');
         if (!confirm(`Usunąć zestaw "${name}" z API?`)) return;
         try {
           const resp = await fetch(`${API_BASE}/api/sets/${encodeURIComponent(name)}`, { method: 'DELETE' });
