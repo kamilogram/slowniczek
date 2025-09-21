@@ -28,19 +28,6 @@
             <button id="btn-delete-remote">🗑 Usuń z API</button>
             <button id="btn-refresh-remote">🔄 Odśwież listę</button>
           </div>
-          
-          <div class="remote-sets-section">
-            <div class="remote-sets-header" style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
-              <input type="text" id="remote-search" placeholder="🔍 Wyszukaj zestawy..." style="flex:1;padding:8px;">
-            </div>
-            
-            <div class="category">
-              <h3>🌐 Zestawy z API</h3>
-              <div class="package-list" id="remote-sets-list">
-                <div class="loading-placeholder">Ładowanie zestawów...</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -64,40 +51,26 @@
           <h3>🇬🇧 Angielski</h3>
           <div class="package-list">
             <label class="package-item">
-              <input type="checkbox" id="allWordsEnglish" data-package="allWordsEnglish">
-              <span class="package-name">Angielskie słówka</span>
-              <span class="package-count" id="allWordsEnglish-count">0 słów</span>
-            </label>
-          </div>
-        </div>
-        <div class="category">
-          <h3>🇬🇧 Angielski - Rozszerzone</h3>
-          <div class="package-list">
-            <label class="package-item">
               <input type="checkbox" id="easiest" data-package="easiest">
-              <span class="package-name">Najłatwiejsze</span>
+              <span class="package-name">Angielskie słówka</span>
               <span class="package-count" id="easiest-count">0 słów</span>
             </label>
-            <label class="package-item">
-              <input type="checkbox" id="stillEasy" data-package="stillEasy">
-              <span class="package-name">Wciąż łatwe</span>
-              <span class="package-count" id="stillEasy-count">0 słów</span>
-            </label>
-            <label class="package-item">
-              <input type="checkbox" id="harder" data-package="harder">
-              <span class="package-name">Trudniejsze</span>
-              <span class="package-count" id="harder-count">0 słów</span>
-            </label>
-            <label class="package-item">
-              <input type="checkbox" id="advanced" data-package="advanced">
-              <span class="package-name">Zaawansowane</span>
-              <span class="package-count" id="advanced-count">0 słów</span>
-            </label>
+          </div>
+          <div class="remote-sets-section">
+            <div class="remote-sets-header" style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+              <input type="text" id="remote-search" placeholder="🔍 Wyszukaj zestawy..." style="flex:1;padding:8px;">
+            </div>
+            <div class="category">
+              <h3>🌐 Zestawy z API</h3>
+              <div class="package-list" id="remote-sets-list">
+                <div class="loading-placeholder">Ładowanie zestawów...</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="start-actions" style="margin-top:24px;">
+      <div class="start-actions sticky-start-actions" style="margin-top:24px;">
         <button id="start-btn" class="start-btn" disabled>Rozpocznij</button>
         <p class="selected-info" id="selected-info">Wybierz co najmniej jeden pakiet</p>
       </div>
@@ -172,13 +145,8 @@
   
   <!-- Dodanie skryptów dla nowych plików słówek -->
   <script src="english/easiest.js"></script>
-  <script src="english/stillEasy.js"></script>
-  <script src="english/harder.js"></script>
-  <script src="english/advanced.js"></script>
-  
   <script src="allWords.js"></script>
   <script src="allWords2.js"></script>
-  <script src="allWordsEnglish.js"></script>
   <script>
 // --- API config ---
 const API_BASE = 'https://slowka-backend.onrender.com';
@@ -279,11 +247,7 @@ window.addEventListener('DOMContentLoaded', function() {
       allPackages = {
         allWords: window.allWords || [],
         allWords2: window.allWords2 || [],
-        allWordsEnglish: window.allWordsEnglish || [],
-        easiest: window.easiest || [],
-        stillEasy: window.stillEasy || [],
-        harder: window.harder || [],
-        advanced: window.advanced || []
+        easiest: window.easiest || []
       };
       
       // Aktualizuj liczniki słów
@@ -343,19 +307,11 @@ window.addEventListener('DOMContentLoaded', function() {
     function updatePackageCounts() {
       const allWordsCount = document.getElementById('allWords-count');
       const allWords2Count = document.getElementById('allWords2-count');
-      const allWordsEnglishCount = document.getElementById('allWordsEnglish-count');
       const easiestCount = document.getElementById('easiest-count');
-      const stillEasyCount = document.getElementById('stillEasy-count');
-      const harderCount = document.getElementById('harder-count');
-      const advancedCount = document.getElementById('advanced-count');
       
       if (allWordsCount) allWordsCount.textContent = `${allPackages.allWords.length} słów`;
       if (allWords2Count) allWords2Count.textContent = `${allPackages.allWords2.length} słów`;
-      if (allWordsEnglishCount) allWordsEnglishCount.textContent = `${allPackages.allWordsEnglish.length} słów`;
       if (easiestCount) easiestCount.textContent = `${allPackages.easiest.length} słów`;
-      if (stillEasyCount) stillEasyCount.textContent = `${allPackages.stillEasy.length} słów`;
-      if (harderCount) harderCount.textContent = `${allPackages.harder.length} słów`;
-      if (advancedCount) advancedCount.textContent = `${allPackages.advanced.length} słów`;
     }
     
     function loadSavedPackages() {
@@ -674,12 +630,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function filterRemoteSets(searchTerm) {
       if (!searchTerm.trim()) {
+        // Jeśli pole wyszukiwania jest puste, pokaż wszystkie zestawy
         filteredRemoteSets = [...remoteSets];
       } else {
         const term = searchTerm.toLowerCase();
         filteredRemoteSets = remoteSets.filter(set => 
           set.name.toLowerCase().includes(term)
         );
+        // Jeśli nie znaleziono żadnych zestawów, pokaż wszystkie
+        if (filteredRemoteSets.length === 0) {
+          filteredRemoteSets = [...remoteSets];
+        }
       }
       renderRemoteSets();
     }
@@ -1300,5 +1261,51 @@ document.getElementById('save-selected-btn').onclick = function() {
 
     // ...usunięto całą logikę głosową...
   </script>
+  <style>
+      .sticky-start-actions {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 100vw;
+        max-width: 420px;
+        background: #fff;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+        padding: 12px 0 8px 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 16px 16px 0 0;
+        transition: width 0.2s;
+        pointer-events: auto;
+      }
+      body.dark-mode .sticky-start-actions {
+        background: #222;
+      }
+      .start-card {
+        position: relative;
+        padding-bottom: 90px; /* miejsce na sticky przycisk */
+      }
+      @media (max-width: 700px) {
+        .sticky-start-actions {
+          max-width: 98vw;
+          width: 98vw;
+          border-radius: 12px 12px 0 0;
+        }
+        .start-card {
+          padding-bottom: 90px;
+        }
+      }
+
+      /* Zmniejszenie rozmiaru przycisku Rozpocznij */
+      .start-btn {
+        font-size: 1.05rem;
+        padding: 10px 28px;
+        border-radius: 8px;
+        min-width: 120px;
+        max-width: 90vw;
+      }
+    </style>
 </body>
 </html>
