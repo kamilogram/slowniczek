@@ -107,11 +107,14 @@ async function deleteSet(name) {
 app.get('/api/sets', async (req, res) => {
   try {
     const all = await getAllSets();
-    const sets = Object.keys(all).map(name => ({
-      name: name,
-      count: Array.isArray(all[name]) ? all[name].length : 0,
-      updated_at: all[name]?.updated_at || null
-    }));
+    const sets = Object.keys(all).map(name => {
+      const wordsArr = all[name]?.words;
+      return {
+        name: name,
+        count: Array.isArray(wordsArr) ? wordsArr.length : 0,
+        updated_at: all[name]?.updated_at || null
+      };
+    });
     res.json({ sets: sets });
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch sets' });
