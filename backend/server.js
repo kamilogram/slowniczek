@@ -42,7 +42,10 @@ async function getAllSets() {
     
     const result = {};
     data.forEach(set => {
-      result[set.name] = set.words;
+      result[set.name] = {
+        words: set.words,
+        updated_at: set.updated_at
+      };
     });
     return result;
   } catch (error) {
@@ -100,11 +103,16 @@ async function deleteSet(name) {
   }
 }
 
-// List all set names
+// List all sets with metadata
 app.get('/api/sets', async (req, res) => {
   try {
     const all = await getAllSets();
-    res.json({ names: Object.keys(all) });
+    const sets = Object.keys(all).map(name => ({
+      name: name,
+      count: Array.isArray(all[name]) ? all[name].length : 0,
+      updated_at: all[name]?.updated_at || null
+    }));
+    res.json({ sets: sets });
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch sets' });
   }
