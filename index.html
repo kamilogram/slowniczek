@@ -103,11 +103,15 @@
       <select id="hint-lang-select">
         <option value="pl-PL">Polski</option>
         <option value="en-US">Angielski</option>
+        <option value="es-ES">Hiszpański</option>
+        <option value="it-IT">Włoski</option>
       </select>
       <label for="answer-lang-select">Język odpowiedzi:</label>
       <select id="answer-lang-select">
         <option value="en-US">Angielski</option>
         <option value="pl-PL">Polski</option>
+        <option value="es-ES">Hiszpański</option>
+        <option value="it-IT">Włoski</option>
       </select>
     </div>
     <div class="center-buttons" id="other-options-btn-container">
@@ -740,7 +744,15 @@ window.addEventListener('DOMContentLoaded', function() {
         return;
       }
       document.getElementById("restart-btn").style.display = "none";
-      const index = Math.floor(Math.random() * pool.length);
+      // Losuj słowo, ale nie to samo co poprzednie
+      let index;
+      if (pool.length === 1) {
+        index = 0;
+      } else {
+        do {
+          index = Math.floor(Math.random() * pool.length);
+        } while (previous && pool[index].hint === previous.hint && pool[index].answer === previous.answer && pool.length > 1);
+      }
       current = pool[index];
       wasSkipped = false;
       
@@ -1239,6 +1251,8 @@ document.getElementById('save-selected-btn').onclick = function() {
       
   // Inicjalizuj pakiety
   initializePackages();
+  // Pobierz zestawy z API na starcie
+  refreshRemoteSetsList();
       
   // ...usunięto inicjalizację widoczności elementów głosowych...
       
