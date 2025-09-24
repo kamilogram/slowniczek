@@ -129,6 +129,11 @@
     <div class="center-buttons margin-top-small">
       <button id="change-packages-btn" class="change-packages-btn">📦 Zmień pakiety</button>
     </div>
+    <div class="center-buttons margin-top-small">
+      <button id="show-voices-btn">Pokaż dostępne głosy</button>
+    </div>
+    <div id="voices-list" style="display:none;margin:12px 0;padding:8px;border-radius:8px;background:#f7f7f7;color:#222;"></div>
+    </div>
     
     <div id="auto-timer"></div>
     
@@ -153,6 +158,38 @@
   <script src="allWords2.js"></script>
   <script>
 // --- API config ---
+
+// --- Wyświetlanie dostępnych głosów ---
+document.addEventListener('DOMContentLoaded', function() {
+  const showVoicesBtn = document.getElementById('show-voices-btn');
+  const voicesListDiv = document.getElementById('voices-list');
+  if (showVoicesBtn && voicesListDiv) {
+    showVoicesBtn.onclick = function() {
+      const synth = window.speechSynthesis;
+      let voices = synth.getVoices();
+      // Niektóre przeglądarki wymagają wywołania getVoices po onvoiceschanged
+      if (!voices.length && typeof synth.onvoiceschanged !== 'undefined') {
+        synth.onvoiceschanged = function() {
+          voices = synth.getVoices();
+          renderVoicesList(voices);
+        };
+      } else {
+        renderVoicesList(voices);
+      }
+    };
+    function renderVoicesList(voices) {
+      if (!voices || !voices.length) {
+        voicesListDiv.innerHTML = '<em>Brak dostępnych głosów. Upewnij się, że Twoja przeglądarka i system obsługują syntezę mowy.</em>';
+        voicesListDiv.style.display = 'block';
+        return;
+      }
+      voicesListDiv.innerHTML = '<b>Dostępne głosy:</b><br>' + voices.map(v =>
+        `<div style='margin-bottom:4px;'><b>${v.name}</b> <span style='color:#555;'>(${v.lang})</span>${v.default ? ' <span style=\"color:green;\">[domyślny]</span>' : ''}</div>`
+      ).join('');
+      voicesListDiv.style.display = 'block';
+    }
+  }
+});
 const API_BASE = 'https://slowka-backend.onrender.com';
 // --- Zaznaczanie fragmentu tekstu ---
 let selectedFragment = null;
