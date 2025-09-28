@@ -28,18 +28,6 @@
             <button id="btn-delete-remote">🗑 Usuń z API</button>
             <button id="btn-refresh-remote">🔄 Odśwież listę</button>
           </div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-            <select id="remote-set-lang" style="flex:0 0 110px;">
-              <option value="pl">Polski</option>
-              <option value="en">Angielski</option>
-              <option value="es">Hiszpański</option>
-              <option value="it">Włoski</option>
-            </select>
-            <select id="remote-set-type" style="flex:0 0 110px;">
-              <option value="words">Słówka</option>
-              <option value="sentences">Zdania</option>
-            </select>
-          </div>
         </div>
       </div>
 
@@ -648,39 +636,19 @@ window.addEventListener('DOMContentLoaded', function() {
     let remoteSets = [];
     let filteredRemoteSets = [];
 
-    async function refreshRemoteSetsList() {
-      // Przygotuj kontenery dla języków
-      const containers = {
-        pl: document.getElementById('remote-sets-list-pl'),
-        en: document.getElementById('remote-sets-list-en'),
-        es: document.getElementById('remote-sets-list-es'),
-        it: document.getElementById('remote-sets-list-it')
-      };
-      Object.values(containers).forEach(c => { if (c) c.innerHTML = '<div class="loading-placeholder">Ładowanie zestawów...</div>'; });
-
+     async function refreshRemoteSetsList() {
+      const list = document.getElementById('remote-sets-list');
+      if (!list) return;
+      list.innerHTML = '<div class="loading-placeholder">Ładowanie zestawów...</div>';
+      
       try {
         const resp = await fetch(`${API_BASE}/api/sets`);
         const data = await resp.json();
         remoteSets = Array.isArray(data.sets) ? data.sets : [];
         filteredRemoteSets = [...remoteSets];
-        const listContainer = document.getElementById('remote-sets-list');
-        if (listContainer) {
-          if (filteredRemoteSets.length === 0) {
-            listContainer.innerHTML = '<div class="loading-placeholder">Brak zestawów</div>';
-          } else {
-            listContainer.innerHTML = filteredRemoteSets.map(set =>
-              '<label class="package-item">' +
-                '<input type="checkbox" id="remote-' + set.name + '" data-package="remote-' + set.name + '" data-set-name="' + set.name + '">' +
-                '<span class="package-name">' + set.name + '</span>' +
-                '<span class="package-count">' + set.count + (set.type === 'sentences' ? ' zdań' : ' słów') + '</span>' +
-                '<span class="package-meta">' + (set.lang ? ('Język: ' + set.lang) : '') + (set.type ? (', Typ: ' + set.type) : '') + '</span>' +
-              '</label>'
-            ).join('');
-          }
-        }
+        renderRemoteSets();
       } catch (e) {
-        const listContainer = document.getElementById('remote-sets-list');
-        if (listContainer) listContainer.innerHTML = '<div class="loading-placeholder">Błąd pobierania listy</div>';
+        list.innerHTML = '<div class="loading-placeholder">Błąd pobierania listy</div>';
       }
     }
 
@@ -758,12 +726,10 @@ window.addEventListener('DOMContentLoaded', function() {
         const valid = words.filter(o => o && typeof o.hint === 'string' && typeof o.answer === 'string' && o.hint && o.answer);
         if (!valid.length) return alert('Brak słówek do zapisania. Użyj np. linii "pies - dog" lub tablicy [{"hint":"pies","answer":"dog"}].');
         try {
-          const lang = document.getElementById('remote-set-lang').value;
-const type = document.getElementById('remote-set-type').value;
           const resp = await fetch(`${API_BASE}/api/sets/${encodeURIComponent(name)}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ words: valid, lang, type })
+            body: JSON.stringify({ words: valid })
           });
           const data = await resp.json();
           if (!resp.ok) throw new Error(data && data.error ? data.error : 'Błąd zapisu');
