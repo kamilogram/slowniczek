@@ -28,6 +28,18 @@
             <button id="btn-delete-remote">🗑 Usuń z API</button>
             <button id="btn-refresh-remote">🔄 Odśwież listę</button>
           </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+            <select id="remote-set-lang" style="flex:0 0 110px;">
+              <option value="pl">Polski</option>
+              <option value="en">Angielski</option>
+              <option value="es">Hiszpański</option>
+              <option value="it">Włoski</option>
+            </select>
+            <select id="remote-set-type" style="flex:0 0 110px;">
+              <option value="words">Słówka</option>
+              <option value="sentences">Zdania</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -62,9 +74,7 @@
             </div>
             <div class="category">
               <h3>🌐 Zestawy z API</h3>
-              <div class="package-list" id="remote-sets-list">
-                <div class="loading-placeholder">Ładowanie zestawów...</div>
-              </div>
+              <div class="package-list" id="remote-sets-list"><div class="loading-placeholder">Ładowanie zestawów...</div></div>
             </div>
           </div>
         </div>
@@ -136,6 +146,12 @@
     </div>
     
     <div id="auto-timer"></div>
+    <div class="center-buttons margin-top-small" id="auto-mode-settings" style="display:none;gap:8px;align-items:center;"></div>
+      <label for="auto-hint-delay">Czas na podpowiedź (s):</label>
+      <input type="number" id="auto-hint-delay" min="1" max="60" value="8" style="width:56px;">
+      <label for="auto-answer-delay">Czas na odpowiedź (s):</label>
+      <input type="number" id="auto-answer-delay" min="1" max="30" value="3" style="width:56px;">
+    </div>
     
     <div class="search-container" id="search-container" style="display:none;">
       <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko...">
@@ -633,18 +649,38 @@ window.addEventListener('DOMContentLoaded', function() {
     let filteredRemoteSets = [];
 
     async function refreshRemoteSetsList() {
-      const list = document.getElementById('remote-sets-list');
-      if (!list) return;
-      list.innerHTML = '<div class="loading-placeholder">Ładowanie zestawów...</div>';
-      
+      // Przygotuj kontenery dla języków
+      const containers = {
+        pl: document.getElementById('remote-sets-list-pl'),
+        en: document.getElementById('remote-sets-list-en'),
+        es: document.getElementById('remote-sets-list-es'),
+        it: document.getElementById('remote-sets-list-it')
+      };
+      Object.values(containers).forEach(c => { if (c) c.innerHTML = '<div class="loading-placeholder">Ładowanie zestawów...</div>'; });
+
       try {
         const resp = await fetch(`${API_BASE}/api/sets`);
         const data = await resp.json();
         remoteSets = Array.isArray(data.sets) ? data.sets : [];
         filteredRemoteSets = [...remoteSets];
-        renderRemoteSets();
+        const listContainer = document.getElementById('remote-sets-list');
+        if (listContainer) {
+          if (filteredRemoteSets.length === 0) {
+            listContainer.innerHTML = '<div class="loading-placeholder">Brak zestawów</div>';
+          } else {
+            listContainer.innerHTML = filteredRemoteSets.map(set =>
+              '<label class="package-item">' +
+                '<input type="checkbox" id="remote-' + set.name + '" data-package="remote-' + set.name + '" data-set-name="' + set.name + '">' +
+                '<span class="package-name">' + set.name + '</span>' +
+                '<span class="package-count">' + set.count + (set.type === 'sentences' ? ' zdań' : ' słów') + '</span>' +
+                '<span class="package-meta">' + (set.lang ? ('Język: ' + set.lang) : '') + (set.type ? (', Typ: ' + set.type) : '') + '</span>' +
+              '</label>'
+            ).join('');
+          }
+        }
       } catch (e) {
-        list.innerHTML = '<div class="loading-placeholder">Błąd pobierania listy</div>';
+        const listContainer = document.getElementById('remote-sets-list');
+        if (listContainer) listContainer.innerHTML = '<div class="loading-placeholder">Błąd pobierania listy</div>';
       }
     }
 
@@ -722,10 +758,12 @@ window.addEventListener('DOMContentLoaded', function() {
         const valid = words.filter(o => o && typeof o.hint === 'string' && typeof o.answer === 'string' && o.hint && o.answer);
         if (!valid.length) return alert('Brak słówek do zapisania. Użyj np. linii "pies - dog" lub tablicy [{"hint":"pies","answer":"dog"}].');
         try {
+          const lang = document.getElementById('remote-set-lang').value;
+const type = document.getElementById('remote-set-type').value;
           const resp = await fetch(`${API_BASE}/api/sets/${encodeURIComponent(name)}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ words: valid })
+            body: JSON.stringify({ words: valid, lang, type })
           });
           const data = await resp.json();
           if (!resp.ok) throw new Error(data && data.error ? data.error : 'Błąd zapisu');
@@ -1054,8 +1092,9 @@ document.getElementById('save-selected-btn').onclick = function() {
       document.querySelector('.buttons').style.display = 'none';
       document.getElementById('undo-known-btn').style.display = 'none';
       document.getElementById('show-memory-btn').style.display = 'none';
-      autoStep = 0;
-      autoNextStep();
+  autoStep = 0;
+  document.getElementById('auto-mode-settings').style.display = 'flex';
+  autoNextStep();
     }
     
     function stopAutoMode() {
@@ -1065,14 +1104,17 @@ document.getElementById('save-selected-btn').onclick = function() {
       document.querySelector('.buttons').style.display = '';
       document.getElementById('undo-known-btn').style.display = '';
       document.getElementById('show-memory-btn').style.display = '';
-      hideAutoTimer();
-      if (autoTimer) clearTimeout(autoTimer);
+  hideAutoTimer();
+  document.getElementById('auto-mode-settings').style.display = 'none';
+  if (autoTimer) clearTimeout(autoTimer);
     }
     
     function autoNextStep() {
       if (!autoMode) return;
+      const hintDelay = parseInt(document.getElementById('auto-hint-delay').value, 10) || 8;
+      const answerDelay = parseInt(document.getElementById('auto-answer-delay').value, 10) || 3;
       if (autoStep === 0) {
-        autoTimeLeft = 8;
+        autoTimeLeft = hintDelay;
         showAutoTimer(autoTimeLeft);
         autoTimer = setInterval(() => {
           autoTimeLeft--;
@@ -1085,7 +1127,7 @@ document.getElementById('save-selected-btn').onclick = function() {
           }
         }, 1000);
       } else if (autoStep === 1) {
-        autoTimeLeft = 3;
+        autoTimeLeft = answerDelay;
         showAutoTimer(autoTimeLeft);
         autoTimer = setInterval(() => {
           autoTimeLeft--;
