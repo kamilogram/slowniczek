@@ -34,9 +34,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 async function getAllSets() {
   try {
     const { data, error } = await supabase
-      .from('word_sets')
-      .select('name, words, updated_at')
-      .order('updated_at', { ascending: false });
+          .from('word_sets')
+          .select('name, words, updated_at, lang, type')
+          .order('updated_at', { ascending: false });
     
     if (error) throw error;
     
@@ -44,7 +44,9 @@ async function getAllSets() {
     data.forEach(set => {
       result[set.name] = {
         words: set.words,
-        updated_at: set.updated_at
+        updated_at: set.updated_at,
+        lang: set.lang,
+        type: set.type
       };
     });
     return result;
@@ -57,29 +59,30 @@ async function getAllSets() {
 async function getSetByName(name) {
   try {
     const { data, error } = await supabase
-      .from('word_sets')
-      .select('words')
-      .eq('name', name)
-      .single();
-    
-    if (error) throw error;
-    return data ? data.words : null;
+          .from('word_sets')
+          .select('words, lang, type')
+          .eq('name', name)
+          .single();
+        if (error) throw error;
+        return data ? { words: data.words, lang: data.lang, type: data.type } : null;
   } catch (error) {
     console.error('Error fetching set:', error);
     return null;
   }
 }
 
-async function saveSet(name, words) {
+async function saveSet(name, words, lang, type) {
+  // Dodaję obsługę lang i type
   try {
     const { error } = await supabase
       .from('word_sets')
       .upsert({
         name,
         words,
+        lang,
+        type,
         updated_at: new Date().toISOString()
       });
-    
     if (error) throw error;
     return true;
   } catch (error) {
@@ -112,7 +115,9 @@ app.get('/api/sets', async (req, res) => {
       return {
         name: name,
         count: Array.isArray(wordsArr) ? wordsArr.length : 0,
-        updated_at: all[name]?.updated_at || null
+        updated_at: all[name]?.updated_at || null,
+        lang: all[name]?.lang || null,
+        type: all[name]?.type || null
       };
     });
     res.json({ sets: sets });
@@ -124,9 +129,9 @@ app.get('/api/sets', async (req, res) => {
 // Get a set by name
 app.get('/api/sets/:name', async (req, res) => {
   try {
-    const words = await getSetByName(req.params.name);
-    if (!words) return res.status(404).json({ error: 'Not found' });
-    res.json({ name: req.params.name, words });
+          const set = await getSetByName(req.params.name);
+          if (!set) return res.status(404).json({ error: 'Not found' });
+          res.json({ name: req.params.name, words: set.words, lang: set.lang, type: set.type });
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch set' });
   }
@@ -136,13 +141,16 @@ app.get('/api/sets/:name', async (req, res) => {
 app.post('/api/sets/:name', async (req, res) => {
   const name = req.params.name.trim();
   const words = req.body && Array.isArray(req.body.words) ? req.body.words : null;
+  const lang = req.body && typeof req.body.lang === 'string' ? req.body.lang : null;
+  const type = req.body && typeof req.body.type === 'string' ? req.body.type : null;
   if (!name) return res.status(400).json({ error: 'Name required' });
   if (!words) return res.status(400).json({ error: 'Body.words must be an array' });
+  if (!lang) return res.status(400).json({ error: 'Body.lang required' });
+  if (!type) return res.status(400).json({ error: 'Body.type required' });
 
   const valid = words.filter(w => w && typeof w.hint === 'string' && typeof w.answer === 'string');
-  
   try {
-    const success = await saveSet(name, valid);
+    const success = await saveSet(name, valid, lang, type);
     if (!success) return res.status(500).json({ error: 'Failed to save set' });
     res.json({ ok: true, count: valid.length });
   } catch (error) {
