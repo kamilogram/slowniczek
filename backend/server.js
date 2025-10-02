@@ -35,7 +35,7 @@ async function getAllSets() {
   try {
     const { data, error } = await supabase
           .from('word_sets')
-          .select('name, words, updated_at, lang, type')
+          .select('name, words, updated_at')
           .order('updated_at', { ascending: false });
     
     if (error) throw error;
@@ -44,9 +44,7 @@ async function getAllSets() {
     data.forEach(set => {
       result[set.name] = {
         words: set.words,
-        updated_at: set.updated_at,
-        lang: set.lang,
-        type: set.type
+        updated_at: set.updated_at
       };
     });
     return result;
@@ -60,31 +58,28 @@ async function getSetByName(name) {
   try {
     const { data, error } = await supabase
           .from('word_sets')
-          .select('words, lang, type')
+          .select('words')
           .eq('name', name)
           .single();
         if (error) throw error;
-        return data ? { words: data.words, lang: data.lang, type: data.type } : null;
+        return data ? { words: data.words } : null;
   } catch (error) {
     console.error('Error fetching set:', error);
     return null;
   }
 }
 
-async function saveSet(name, words, lang, type) {
-  // Dodaję obsługę lang i type
+async function saveSet(name, words) {
   try {
     const { error } = await supabase
-      .from('word_sets')
-      .upsert({
-        name,
-        words,
-        lang,
-        type,
-        updated_at: new Date().toISOString()
-      });
-    if (error) throw error;
-    return true;
+          .from('word_sets')
+          .upsert({
+            name,
+            words,
+            updated_at: new Date().toISOString()
+          });
+        if (error) throw error;
+        return true;
   } catch (error) {
     console.error('Error saving set:', error);
     return false;
@@ -110,17 +105,15 @@ async function deleteSet(name) {
 app.get('/api/sets', async (req, res) => {
   try {
     const all = await getAllSets();
-    const sets = Object.keys(all).map(name => {
-      const wordsArr = all[name]?.words;
-      return {
-        name: name,
-        count: Array.isArray(wordsArr) ? wordsArr.length : 0,
-        updated_at: all[name]?.updated_at || null,
-        lang: all[name]?.lang || null,
-        type: all[name]?.type || null
-      };
-    });
-    res.json({ sets: sets });
+          const sets = Object.keys(all).map(name => {
+            const wordsArr = all[name]?.words;
+            return {
+              name: name,
+              count: Array.isArray(wordsArr) ? wordsArr.length : 0,
+              updated_at: all[name]?.updated_at || null,
+            };
+          });
+          res.json({ sets: sets });
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch sets' });
   }
@@ -131,7 +124,7 @@ app.get('/api/sets/:name', async (req, res) => {
   try {
           const set = await getSetByName(req.params.name);
           if (!set) return res.status(404).json({ error: 'Not found' });
-          res.json({ name: req.params.name, words: set.words, lang: set.lang, type: set.type });
+          res.json({ name: req.params.name, words: set.words});
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch set' });
   }
@@ -141,16 +134,12 @@ app.get('/api/sets/:name', async (req, res) => {
 app.post('/api/sets/:name', async (req, res) => {
   const name = req.params.name.trim();
   const words = req.body && Array.isArray(req.body.words) ? req.body.words : null;
-  const lang = req.body && typeof req.body.lang === 'string' ? req.body.lang : null;
-  const type = req.body && typeof req.body.type === 'string' ? req.body.type : null;
   if (!name) return res.status(400).json({ error: 'Name required' });
   if (!words) return res.status(400).json({ error: 'Body.words must be an array' });
-  if (!lang) return res.status(400).json({ error: 'Body.lang required' });
-  if (!type) return res.status(400).json({ error: 'Body.type required' });
 
   const valid = words.filter(w => w && typeof w.hint === 'string' && typeof w.answer === 'string');
   try {
-    const success = await saveSet(name, valid, lang, type);
+    const success = await saveSet(name, valid);
     if (!success) return res.status(500).json({ error: 'Failed to save set' });
     res.json({ ok: true, count: valid.length });
   } catch (error) {
