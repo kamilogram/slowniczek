@@ -34,10 +34,15 @@ PORT=3001
 ## Uruchomienie
 
 ### Lokalnie:
+1. Zainstaluj zależności:
 ```bash
 npm install
-npm start
 ```
+2. Uruchom serwer deweloperski (backend + frontend):
+```bash
+npm run dev
+```
+Aplikacja będzie dostępna pod adresem `http://localhost:3000`, a API pod `http://localhost:3001`.
 
 ### Na Render (deployment):
 1. Połącz repo z Render

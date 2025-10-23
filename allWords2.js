@@ -1,4 +1,4 @@
-window.allWords2 = [
+const allWords2 = [
   { answer: "absorbować", hint: "wchłaniać, przyjmować substancję lub informację" },
   { answer: "administracja", hint: "dział odpowiedzialny za zarządzanie dokumentacją i wsparcie organizacyjne w firmie" },
   { answer: "agenda", hint: "plan spotkania lub lista spraw do omówienia" },
@@ -461,4 +461,6 @@ window.allWords2 = [
   { answer: "bieżnik na stole", hint: "ozdobny pas materiału układany wzdłuż stołu" },
   { answer: "konfabulacja", hint: "zmyślanie wydarzeń dla uzupełnienia luk w pamięci" },
   { answer: "karmel", hint: "cukier rozpuszczony i podgrzany do złocistej masy" },
-]
+];
+
+export default allWords2;

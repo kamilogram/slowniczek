@@ -1,165 +1,123 @@
-'use strict';
-
+// Importowanie niezbędnych bibliotek
+require('dotenv').config(); // Ładuje zmienne środowiskowe z pliku .env
 const express = require('express');
 const cors = require('cors');
-// Polyfill fetch/Headers for older Node (<=18)
-try {
-  if (typeof global.fetch === 'undefined') {
-    const { fetch, Headers, Request, Response } = require('undici');
-    Object.assign(global, { fetch, Headers, Request, Response });
-  }
-} catch (_) {}
-
 const { createClient } = require('@supabase/supabase-js');
-require('dotenv').config();
 
+// Inicjalizacja aplikacji Express
 const app = express();
-const PORT = process.env.PORT || 3001;
+app.use(cors()); // Włączenie CORS, aby frontend mógł komunikować się z backendem
+app.use(express.json()); // Umożliwia parsowanie ciała żądań w formacie JSON
 
-app.use(cors());
-app.use(express.json({ limit: '2mb' }));
-
-// Initialize Supabase client
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseKey) {
-  console.error('Missing Supabase configuration. Please set SUPABASE_URL and SUPABASE_ANON_KEY environment variables.');
-  process.exit(1);
+// Sprawdzenie, czy klucze API do Supabase są dostępne
+if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
+  console.error('Błąd: Zmienne środowiskowe SUPABASE_URL i SUPABASE_ANON_KEY muszą być ustawione.');
+  process.exit(1); // Zakończ proces, jeśli brakuje kluczy
 }
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+// Inicjalizacja klienta Supabase
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
 
-// Helper functions for Supabase operations
-async function getAllSets() {
+// Endpoint główny - do testowania, czy serwer działa
+app.get('/', (req, res) => {
+  res.json({ message: "Słówka API is running!" });
+});
+
+// Endpoint do pobierania listy wszystkich zestawów
+app.get('/api/sets', async (req, res) => {
   try {
+    // Pobieramy tylko potrzebne dane, aby zmniejszyć transfer
     const { data, error } = await supabase
-          .from('word_sets')
-          .select('name, words, updated_at')
-          .order('updated_at', { ascending: false });
-    
+      .from('word_sets')
+      .select('name, count, language, type');
+
     if (error) throw error;
-    
-    const result = {};
-    data.forEach(set => {
-      result[set.name] = {
-        words: set.words,
-        updated_at: set.updated_at
-      };
-    });
-    return result;
+    res.json({ sets: data || [] });
   } catch (error) {
-    console.error('Error fetching sets:', error);
-    return {};
+    console.error('Błąd przy pobieraniu listy zestawów:', error);
+    res.status(500).json({ error: error.message });
   }
-}
+});
 
-async function getSetByName(name) {
+// Endpoint do pobierania konkretnego zestawu po nazwie
+app.get('/api/sets/:name', async (req, res) => {
+  const { name } = req.params;
   try {
     const { data, error } = await supabase
-          .from('word_sets')
-          .select('words')
-          .eq('name', name)
-          .single();
-        if (error) throw error;
-        return data ? { words: data.words } : null;
-  } catch (error) {
-    console.error('Error fetching set:', error);
-    return null;
-  }
-}
+      .from('word_sets')
+      .select('words')
+      .eq('name', name)
+      .single(); // .single() zwraca jeden obiekt zamiast tablicy
 
-async function saveSet(name, words) {
+    if (error) {
+        // Jeśli zestaw nie istnieje, Supabase zwróci błąd, ale my chcemy 404
+        if (error.code === 'PGRST116') {
+            return res.status(404).json({ error: 'Zestaw nie został znaleziony' });
+        }
+        throw error;
+    }
+    res.json({ words: data ? data.words : [] });
+  } catch (error) {
+    console.error(`Błąd przy pobieraniu zestawu "${name}":`, error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint do zapisywania lub aktualizowania zestawu
+app.post('/api/sets/:name', async (req, res) => {
+  const { name } = req.params;
+  const { words, language, type } = req.body;
+
+  console.log(`Otrzymano żądanie zapisu dla "${name}" z językiem "${language}" i typem "${type}"`);
+
+  // Walidacja danych
+  if (!Array.isArray(words) || !language || !type) {
+    return res.status(400).json({ error: 'Nieprawidłowe dane. Wymagane są: words (tablica), language i type.' });
+  }
+
   try {
-    const { error } = await supabase
-          .from('word_sets')
-          .upsert({
-            name,
-            words,
-            updated_at: new Date().toISOString()
-          });
-        if (error) throw error;
-        return true;
-  } catch (error) {
-    console.error('Error saving set:', error);
-    return false;
-  }
-}
+    const { data, error } = await supabase
+      .from('word_sets')
+      .upsert({ 
+          name, 
+          words, 
+          count: words.length,
+          language,
+          type
+      }, {
+          onConflict: 'name' // To jest kluczowe! Mówi Supabase, aby aktualizować wiersz, jeśli nazwa już istnieje.
+      })
+      .select()
+      .single();
 
-async function deleteSet(name) {
+    if (error) throw error;
+    res.status(201).json({ message: 'Zestaw zapisany pomyślnie', count: words.length });
+  } catch (error) {
+    console.error(`Błąd przy zapisywaniu zestawu "${name}":`, error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint do usuwania zestawu
+app.delete('/api/sets/:name', async (req, res) => {
+  const { name } = req.params;
   try {
     const { error } = await supabase
       .from('word_sets')
       .delete()
       .eq('name', name);
-    
+
     if (error) throw error;
-    return true;
+    res.status(200).json({ message: `Zestaw "${name}" został usunięty.` });
   } catch (error) {
-    console.error('Error deleting set:', error);
-    return false;
-  }
-}
-
-// List all sets with metadata
-app.get('/api/sets', async (req, res) => {
-  try {
-    const all = await getAllSets();
-          const sets = Object.keys(all).map(name => {
-            const wordsArr = all[name]?.words;
-            return {
-              name: name,
-              count: Array.isArray(wordsArr) ? wordsArr.length : 0,
-              updated_at: all[name]?.updated_at || null,
-            };
-          });
-          res.json({ sets: sets });
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch sets' });
+    console.error(`Błąd przy usuwaniu zestawu "${name}":`, error);
+    res.status(500).json({ error: error.message });
   }
 });
 
-// Get a set by name
-app.get('/api/sets/:name', async (req, res) => {
-  try {
-          const set = await getSetByName(req.params.name);
-          if (!set) return res.status(404).json({ error: 'Not found' });
-          res.json({ name: req.params.name, words: set.words});
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch set' });
-  }
-});
 
-// Create or update a set
-app.post('/api/sets/:name', async (req, res) => {
-  const name = req.params.name.trim();
-  const words = req.body && Array.isArray(req.body.words) ? req.body.words : null;
-  if (!name) return res.status(400).json({ error: 'Name required' });
-  if (!words) return res.status(400).json({ error: 'Body.words must be an array' });
-
-  const valid = words.filter(w => w && typeof w.hint === 'string' && typeof w.answer === 'string');
-  try {
-    const success = await saveSet(name, valid);
-    if (!success) return res.status(500).json({ error: 'Failed to save set' });
-    res.json({ ok: true, count: valid.length });
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to save set' });
-  }
-});
-
-// Delete a set
-app.delete('/api/sets/:name', async (req, res) => {
-  try {
-    const success = await deleteSet(req.params.name);
-    if (!success) return res.status(500).json({ error: 'Failed to delete set' });
-    res.json({ ok: true });
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to delete set' });
-  }
-});
-
+// Uruchomienie serwera
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Word sets API listening on http://localhost:${PORT}`);
+  console.log(`Serwer backendu działa na porcie ${PORT}`);
 });
-
-

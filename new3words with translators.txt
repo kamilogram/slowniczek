@@ -1,4 +1,4 @@
-﻿"absurdalny": "niedorzeczny, niemieszczący się w głowie",
+"absurdalny": "niedorzeczny, niemieszczący się w głowie",
 "adekwatny": "odpowiedni do sytuacji",
 "adwersarz": "przeciwnik w dyskusji lub sporze",
 "agroturystyka": "miejsce na wsi gdzie można spędzić urlop",
