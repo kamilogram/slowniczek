@@ -831,3 +831,47 @@ button:active {
 .dark-mode .selected-info {
   color: #a0aec0;
 }
+.sticky-start-actions {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100vw;
+  max-width: 420px;
+  background: #fff;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+  padding: 12px 0 8px 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+  transition: width 0.2s;
+  pointer-events: auto;
+}
+body.dark-mode .sticky-start-actions {
+  background: #222;
+}
+.start-card {
+  position: relative;
+  padding-bottom: 90px; /* miejsce na sticky przycisk */
+}
+@media (max-width: 700px) {
+  .sticky-start-actions {
+    max-width: 98vw;
+    width: 98vw;
+    border-radius: 12px 12px 0 0;
+  }
+  .start-card {
+    padding-bottom: 90px;
+  }
+}
+
+/* Zmniejszenie rozmiaru przycisku Rozpocznij */
+.start-btn {
+  font-size: 1.05rem;
+  padding: 10px 28px;
+  border-radius: 8px;
+  min-width: 120px;
+  max-width: 90vw;
+}
