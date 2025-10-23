@@ -1,4 +1,4 @@
-easiest = [
+const easiest = [
   { hint: "dłoń", answer: "hand" },
   { hint: "fryzjer", answer: "hairdresser" },
   { hint: "znajomy (w kontekście osoby, którą się zna powierzchownie)", answer: "acquaintance" },
@@ -390,4 +390,6 @@ easiest = [
   { hint: "dotychczasowy", answer: "so far" },
   { hint: "zajęcia akademickie (w kontekście kursów)", answer: "courses" },
   { hint: "zajęcia akademickie (w kontekście lekcji)", answer: "classes" }
-]
+];
+
+export default easiest;

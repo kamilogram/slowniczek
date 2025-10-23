@@ -1,4 +1,4 @@
-window.allWords = [
+const allWords = [
       { answer: "absurdalny", hint: "niedorzeczny, niemieszczący się w głowie"},
       { answer: "adekwatny", hint: "odpowiedni do sytuacji"},
       { answer: "adwersarz", hint: "przeciwnik w dyskusji lub sporze"},
@@ -103,7 +103,7 @@ window.allWords = [
       { answer: "futerał", hint: "pojemnik do przechowywania delikatnych rzeczy jak okulary czy skrzypce"},
       { answer: "gablota", hint: "oszklona szafka do wystawiania eksponatów lub wieszania ogłoszeń"},
       { answer: "galimatias", hint: "ogólny nieład lub zamęt, nieporządek, pomieszane ze sobą rzeczy"},
-      { answer: "Garwolińska", hint: "ulica, prostopadła do Szaserów, przy parku Polińskiego i szpitalu, następny przystanek za moim"},
+      { answer: "Garwolińska", hint: "ulica, prostopła do Szaserów, przy parku Polińskiego i szpitalu, następny przystanek za moim"},
       { answer: "Giewont", hint: "szczyt w Tatrach przy Zakopanem, śpiący rycerz"},
       { answer: "gorgonzola", hint: "rodzaj sera pleśniowego, niegotowany, biały"},
       { answer: "grafomania", hint: "bezwartościowe 'utwory' literackie, świadczące o braku talentu"},
@@ -354,3 +354,5 @@ window.allWords = [
       { answer: "ekstaza", hint: "stan intensywnego uniesienia emocjonalnego, często związany z głębokim przeżyciem artystycznym"},
       { answer: "idealista", hint: "osoba wierząca w doskonałość, często wbrew rzeczywistości"}
     ];
+
+export default allWords;

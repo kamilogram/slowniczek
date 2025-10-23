@@ -657,10 +657,6 @@ button:active {
   margin-bottom: 2em;
 }
 
-.category {
-  margin-bottom: 1.5em;
-}
-
 .category h3 {
   margin: 0 0 1em 0;
   font-size: 1.3em;
@@ -668,6 +664,23 @@ button:active {
   border-bottom: 2px solid #f0f0f0;
   padding-bottom: 0.5em;
 }
+.category h4 {
+  margin: 1.2em 0 0.8em 0;
+  font-size: 1.1em;
+  color: #555;
+  font-weight: 600;
+}
+.category h5 {
+  margin: 1em 0 0.6em 0;
+  font-size: 1em;
+  color: #777;
+  font-weight: normal;
+  font-style: italic;
+}
+.remote-sets-section {
+  margin-top: 1.5em;
+}
+
 
 .package-list {
   display: flex;
@@ -803,6 +816,12 @@ button:active {
   color: #e2e8f0;
   border-bottom-color: #4a5568;
 }
+.dark-mode .category h4 {
+  color: #cbd5e0;
+}
+.dark-mode .category h5 {
+    color: #a0aec0;
+}
 
 .dark-mode .package-item {
   background: #2d3748;
@@ -874,4 +893,157 @@ body.dark-mode .sticky-start-actions {
   border-radius: 8px;
   min-width: 120px;
   max-width: 90vw;
+}
+
+/* Container for auto mode settings (slider) */
+.auto-mode-settings-panel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 90%;
+  max-width: 300px;
+  margin: 1em auto 0 auto;
+}
+
+.auto-mode-settings-panel label {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  color: #444;
+}
+
+.dark-mode .auto-mode-settings-panel label {
+  color: #e0e0e0;
+}
+
+/* Custom Slider Styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dark-mode input[type="range"] {
+  background: #4a5568;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  margin-top: -7px; /* Center thumb on track */
+  transition: transform 0.2s;
+}
+
+.dark-mode input[type="range"]::-webkit-slider-thumb {
+  border-color: #1e1e1e;
+}
+
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.dark-mode input[type="range"]::-moz-range-thumb {
+    border-color: #1e1e1e;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.1);
+}
+
+/* Language Selector */
+.language-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+.language-selector-container label {
+    font-weight: 600;
+    color: #444;
+}
+.dark-mode .language-selector-container label {
+    color: #e0e0e0;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0.7em 2.5em 0.7em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    min-width: 150px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #f7f7fa 0%, #e3e3f7 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-weight: 600;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.dark-mode .custom-select select {
+    background: linear-gradient(90deg, #2d3748 0%, #4a5568 100%);
+    color: #e2e8f0;
+}
+
+.custom-select::after {
+    content: '▼';
+    font-size: 0.8em;
+    position: absolute;
+    top: 50%;
+    right: 1.2em;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #555;
+    transition: color 0.2s;
+}
+
+.dark-mode .custom-select::after {
+    color: #a0aec0;
+}
+
+.custom-select select:hover, .custom-select select:focus {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    outline: none;
+    filter: brightness(1.05);
+}
+
+.remote-set-meta {
+  display: flex;
+  gap: 8px;
+  flex: 1 1 240px; /* Allow wrapping */
+}
+
+.remote-set-meta select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }

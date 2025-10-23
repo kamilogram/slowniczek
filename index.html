@@ -24,6 +24,18 @@
         <div class="remote-sets" style="margin-top:8px;">
           <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
             <input id="remote-set-name" type="text" placeholder="Nazwa zestawu" style="flex:1 1 240px;">
+            <div class="remote-set-meta">
+              <select id="remote-set-language">
+                <option value="">Język...</option>
+                <option value="Polski">Polski</option>
+                <option value="Angielski">Angielski</option>
+              </select>
+              <select id="remote-set-type">
+                <option value="">Typ...</option>
+                <option value="word">Słówka</option>
+                <option value="sentence">Zdania</option>
+              </select>
+            </div>
             <button id="btn-save-remote">💾 Zapisz do API</button>
             <button id="btn-delete-remote">🗑 Usuń z API</button>
             <button id="btn-refresh-remote">🔄 Odśwież listę</button>
@@ -31,42 +43,16 @@
         </div>
       </div>
 
-      <div class="package-categories">
-        <div class="category">
-          <h3>🇵🇱 Polski</h3>
-          <div class="package-list">
-            <label class="package-item">
-              <input type="checkbox" id="allWords" data-package="allWords">
-              <span class="package-name">Podstawowe słówka</span>
-              <span class="package-count" id="allWords-count">0 słów</span>
-            </label>
-            <label class="package-item">
-              <input type="checkbox" id="allWords2" data-package="allWords2">
-              <span class="package-name">Rozszerzone słówka</span>
-              <span class="package-count" id="allWords2-count">0 słów</span>
-            </label>
-          </div>
-        </div>
-        <div class="category">
-          <h3>🇬🇧 Angielski</h3>
-          <div class="package-list">
-            <label class="package-item">
-              <input type="checkbox" id="easiest" data-package="easiest">
-              <span class="package-name">Angielskie słówka</span>
-              <span class="package-count" id="easiest-count">0 słów</span>
-            </label>
-          </div>
-          <div class="remote-sets-section">
-            <div class="remote-sets-header" style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
-              <input type="text" id="remote-search" placeholder="🔍 Wyszukaj zestawy..." style="flex:1;padding:8px;">
-            </div>
-            <div class="category">
-              <h3>🌐 Zestawy z API</h3>
-              <div class="package-list" id="remote-sets-list"><div class="loading-placeholder">Ładowanie zestawów z darmowego serwera (może to chwilę potrwać)...</div></div>
-            </div>
-          </div>
+      <div id="package-categories-container">
+          <!-- Kategorie i pakiety będą renderowane tutaj przez JavaScript -->
+      </div>
+      
+      <div class="remote-sets-section">
+        <div class="remote-sets-header" style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+          <input type="text" id="remote-search" placeholder="🔍 Wyszukaj zestawy z API..." style="flex:1;padding:8px;">
         </div>
       </div>
+
 
       <div class="start-actions sticky-start-actions" style="margin-top:24px;">
         <button id="start-btn" class="start-btn" disabled>Rozpocznij</button>
@@ -84,9 +70,9 @@
       <p id="answer"></p>
     
     <div class="buttons">
-      <button onclick="skipWord()">Pokaż</button>
-      <button onclick="nextWord()">Wiem</button>
-      <button onclick="restart()" id="restart-btn" style="display:none;">Jeszcze raz</button>
+      <button id="skip-word-btn">Pokaż</button>
+      <button id="next-word-btn">Wiem</button>
+      <button id="restart-btn" style="display:none;">Jeszcze raz</button>
     </div>
     
     <div class="center-buttons">
@@ -96,21 +82,22 @@
       <button id="auto-mode-btn">Auto tryb</button>
       <button id="toggle-dark-mode-btn">Tryb nocny</button>
     </div>
+    <div id="auto-mode-settings" class="auto-mode-settings-panel" style="display:none;">
+      <label for="time-multiplier-slider">Tempo nauki: <span id="time-multiplier-value">x1.0</span></label>
+      <input type="range" id="time-multiplier-slider" min="0.5" max="2.0" step="0.1" value="1.0">
+    </div>
     <div class="center-buttons margin-top-small" id="lang-select-container" style="display:none;">
-      <label for="hint-lang-select">Język podpowiedzi:</label>
-      <select id="hint-lang-select">
-        <option value="pl-PL">Polski</option>
-        <option value="en-US">Angielski</option>
-        <option value="es-ES">Hiszpański</option>
-        <option value="it-IT">Włoski</option>
-      </select>
-      <label for="answer-lang-select">Język odpowiedzi:</label>
-      <select id="answer-lang-select">
-        <option value="en-US">Angielski</option>
-        <option value="pl-PL">Polski</option>
-        <option value="es-ES">Hiszpański</option>
-        <option value="it-IT">Włoski</option>
-      </select>
+      <div class="language-selector-container">
+        <label for="answer-lang-select">Głos odpowiedzi:</label>
+        <div class="custom-select">
+            <select id="answer-lang-select">
+                <option value="en-US">Angielski</option>
+                <option value="pl-PL">Polski</option>
+                <option value="es-ES">Hiszpański</option>
+                <option value="it-IT">Włoski</option>
+            </select>
+        </div>
+      </div>
     </div>
     <div class="center-buttons" id="other-options-btn-container">
       <button id="other-options-btn">Inne opcje</button>
@@ -134,14 +121,10 @@
     </div>
     
     <div id="auto-timer"></div>
-    <div class="center-buttons margin-top-small" id="auto-mode-settings" style="display:none;gap:8px;align-items:center;flex-direction:column; width: 90%; max-width: 300px; margin-left: auto; margin-right: auto;">
-      <label for="time-multiplier-slider" style="width: 100%; text-align: center;">Tempo nauki: <span id="time-multiplier-value">x1.0</span></label>
-      <input type="range" id="time-multiplier-slider" min="0.5" max="2.0" step="0.1" value="1.0" style="width:100%;">
-    </div>
     
     <div class="search-container" id="search-container" style="display:none;">
       <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko...">
-      <button onclick="searchWord()" class="search-btn">
+      <button id="search-btn" class="search-btn">
         <span>🔍</span>
       </button>
     </div>
@@ -154,13 +137,8 @@
     </div>
   </div>
   
-  <!-- Dane słówek -->
-  <script src="english/easiest.js"></script>
-  <script src="allWords.js"></script>
-  <script src="allWords2.js"></script>
-  
-  <!-- Główna logika aplikacji -->
-  <script src="index.js"></script>
+  <!-- Główna logika aplikacji jako moduł -->
+  <script type="module" src="index.js"></script>
 
 </body>
 </html>
