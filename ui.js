@@ -101,8 +101,15 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
         ...remoteSets.map(p => ({ ...p, isLocal: false }))
     ];
 
+    // Mapowanie kategorii językowych
+    const languageMapping = {
+        'en': 'Angielski',
+        'es': 'Hiszpański'
+    };
+
     const grouped = allPackages.reduce((acc, pkg) => {
-        const lang = pkg.language || 'Nieokreślony';
+        const originalLang = pkg.language || 'Nieokreślony';
+        const lang = languageMapping[originalLang] || originalLang;
         const type = pkg.type || 'Nieokreślony typ';
         if (!acc[lang]) acc[lang] = {};
         if (!acc[lang][type]) acc[lang][type] = [];
