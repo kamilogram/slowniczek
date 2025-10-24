@@ -50,7 +50,7 @@ export async function getVoices() {
  * @param {string} text The text to speak.
  * @param {string} lang The language code (e.g., 'pl-PL', 'en-US').
  */
-export async function speak(text, lang) {
+export async function speak(text, lang, rate = 1.0) {
     if (!synth || !text) {
         return;
     }
@@ -66,6 +66,8 @@ export async function speak(text, lang) {
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = lang;
+    // Set speaking rate (0.1 - 10, typical values 0.5 - 2.0)
+    utterance.rate = rate || 1.0;
 
     const voiceForLang = voices.find(v => v.lang === lang);
     if (voiceForLang) {

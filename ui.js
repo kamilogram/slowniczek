@@ -20,6 +20,8 @@ function initElements() {
         autoModeSettings: document.getElementById('auto-mode-settings'),
         timeMultiplierSlider: document.getElementById('time-multiplier-slider'),
         timeMultiplierValue: document.getElementById('time-multiplier-value'),
+        speechRateSlider: document.getElementById('speech-rate-slider'),
+        speechRateValue: document.getElementById('speech-rate-value'),
         memoryListEl: document.getElementById('memory-list'),
         packageCategoriesContainer: document.getElementById('package-categories-container'),
         customWordsInput: document.getElementById('custom-words-input'),
@@ -118,12 +120,30 @@ export function initUI(handlers) {
     document.getElementById('undo-known-btn').addEventListener('click', handlers.onUndo);
     
     const autoModeBtn = document.getElementById('auto-mode-btn');
-    autoModeBtn.addEventListener('click', () => {
-        const isAuto = autoModeBtn.classList.toggle('active');
-        elements.autoModeSettings.style.display = isAuto ? 'flex' : 'none';
-        elements.langSelectContainer.style.display = isAuto ? 'flex' : 'none';
-        handlers.onAutoModeToggle();
-    });
+    // Ustaw początkowy stan przycisku auto na podstawie localStorage
+    try {
+        const savedAuto = loadFromStorage('slowkaAutoMode') === 'true';
+        if (autoModeBtn) {
+            if (savedAuto) {
+                autoModeBtn.classList.add('active');
+            } else {
+                autoModeBtn.classList.remove('active');
+            }
+        }
+        // Apply full auto UI state (hide/show buttons and panels)
+        setAutoModeUI(savedAuto);
+    } catch (e) {
+        // Jeśli dostęp do storage rzuci błędem, nie blokujemy inicjalizacji
+        console.warn('Nie udało się odczytać ustawienia auto mode z localStorage', e);
+    }
+
+    if (autoModeBtn) {
+        autoModeBtn.addEventListener('click', () => {
+            const isAuto = autoModeBtn.classList.toggle('active');
+            setAutoModeUI(isAuto);
+            handlers.onAutoModeToggle();
+        });
+    }
     
     elements.timeMultiplierSlider.addEventListener('input', (e) => {
         elements.timeMultiplierValue.textContent = `x${parseFloat(e.target.value).toFixed(1)}`;
@@ -131,6 +151,18 @@ export function initUI(handlers) {
     elements.timeMultiplierSlider.addEventListener('change', (e) => {
         saveToStorage('slowkaTimeMultiplier', e.target.value);
     });
+
+    if (elements.speechRateSlider) {
+        elements.speechRateSlider.addEventListener('input', (e) => {
+            elements.speechRateValue.textContent = parseFloat(e.target.value).toFixed(1);
+        });
+        elements.speechRateSlider.addEventListener('change', (e) => {
+            saveToStorage('slowkaSpeechRate', e.target.value);
+        });
+        // Load saved speech rate
+        elements.speechRateSlider.value = loadFromStorage('slowkaSpeechRate') || 1.0;
+        elements.speechRateValue.textContent = parseFloat(elements.speechRateSlider.value).toFixed(1);
+    }
     
     // Inne opcje i zapamiętywanie
     document.getElementById('other-options-btn').addEventListener('click', () => {
@@ -157,6 +189,29 @@ export function initUI(handlers) {
     // Wczytanie zapisanych ustawień
     elements.timeMultiplierSlider.value = loadFromStorage('slowkaTimeMultiplier') || 1.0;
     elements.timeMultiplierValue.textContent = `x${parseFloat(elements.timeMultiplierSlider.value).toFixed(1)}`;
+}
+
+// Toggle UI elements for auto mode (hide navigation buttons, show sliders)
+export function setAutoModeUI(isAuto) {
+    // Ensure elements are initialized
+    if (!elements || Object.keys(elements).length === 0) initElements();
+    const skipBtn = document.getElementById('skip-word-btn');
+    const nextBtn = document.getElementById('next-word-btn');
+    const undoBtn = document.getElementById('undo-known-btn');
+    const autoModeBtn = document.getElementById('auto-mode-btn');
+
+    if (skipBtn) skipBtn.style.display = isAuto ? 'none' : '';
+    if (nextBtn) nextBtn.style.display = isAuto ? 'none' : '';
+    if (undoBtn) undoBtn.style.display = isAuto ? 'none' : '';
+
+    if (elements.autoModeSettings) elements.autoModeSettings.style.display = isAuto ? 'flex' : 'none';
+    if (elements.langSelectContainer) elements.langSelectContainer.style.display = isAuto ? 'flex' : 'none';
+
+    // Update auto button label
+    if (autoModeBtn) {
+        autoModeBtn.textContent = isAuto ? 'Wyłącz auto' : 'Auto tryb';
+        if (isAuto) autoModeBtn.classList.add('active'); else autoModeBtn.classList.remove('active');
+    }
 }
 
 // Funkcja pomocnicza do czekania na dostępność elementu
@@ -388,9 +443,16 @@ export function displayWord(current, showAnswer, previous, message = null) {
     if (message) {
         lastWordText = message;
     } else if (previous) {
-        lastWordText = `Poprzednie: <b>${previous.answer}</b> - <i>${previous.hint}</i>`;
+        // Make the bolded answer also appear green
+        lastWordText = `Poprzednie: <b class="last-word-green">${previous.answer}</b> - <i>${previous.hint}</i>`;
     }
     elements.lastWordEl.innerHTML = lastWordText;
+
+    // Update next button label depending on whether the answer is visible
+    const nextBtn = document.getElementById('next-word-btn');
+    if (nextBtn) {
+        nextBtn.textContent = showAnswer ? 'Dalej' : 'Wiem';
+    }
 }
 
 export function updateProgressUI(usedCount, totalCount) {

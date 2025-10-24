@@ -1,4 +1,4 @@
-import { initUI, renderAllPackages, updateStartButton, showPackageSelectionScreen, showMainAppScreen, updateProgressUI, displayWord, renderMemoryList, clearUsedWordsUI } from './ui.js';
+import { initUI, renderAllPackages, updateStartButton, showPackageSelectionScreen, showMainAppScreen, updateProgressUI, displayWord, renderMemoryList, clearUsedWordsUI, setAutoModeUI } from './ui.js';
 import { getSets, getSet, saveSet, deleteSet } from './api.js';
 import { loadFromStorage, saveToStorage } from './storage.js';
 import { speak, cancel as cancelSpeech } from './speech.js';
@@ -269,6 +269,8 @@ function startAutoMode() {
   if (autoMode) return;
   autoMode = true;
   saveToStorage('slowkaAutoMode', 'true');
+  // Update UI to reflect auto mode
+  try { setAutoModeUI(true); } catch (_) {}
   autoStep = 0;
   autoNextStep();
 }
@@ -279,6 +281,8 @@ function stopAutoMode() {
   if (autoTimer) clearTimeout(autoTimer);
   autoTimer = null;
   cancelSpeech();
+  // Restore UI
+  try { setAutoModeUI(false); } catch (_) {}
 }
 
 function autoNextStep() {
@@ -303,14 +307,16 @@ function autoNextStep() {
   const answerLang = document.getElementById('answer-lang-select').value || 'en-US';
 
   if (autoStep === 0) {
-    speak(current.hint, 'pl-PL');
+    const speechRate = parseFloat(loadFromStorage('slowkaSpeechRate') || 1.0);
+    speak(current.hint, 'pl-PL', speechRate);
     autoTimer = setTimeout(() => {
       skipWord();
       autoStep = 1;
       autoNextStep();
     }, hintDelay);
   } else if (autoStep === 1) {
-    speak(current.answer, answerLang);
+    const speechRate = parseFloat(loadFromStorage('slowkaSpeechRate') || 1.0);
+    speak(current.answer, answerLang, speechRate);
     autoTimer = setTimeout(() => {
       nextWord();
       autoStep = 0;
