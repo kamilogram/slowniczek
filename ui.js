@@ -3,30 +3,38 @@ import { loadFromStorage, saveToStorage } from './storage.js';
 import { getVoices } from './speech.js';
 
 // --- Selektory elementów DOM ---
-const elements = {
-    startScreen: document.getElementById('start-screen'),
-    mainApp: document.getElementById('main-app'),
-    startBtn: document.getElementById('start-btn'),
-    selectedInfo: document.getElementById('selected-info'),
-    hintEl: document.getElementById('hint'),
-    answerEl: document.getElementById('answer'),
-    progressEl: document.getElementById('progress'),
-    lastWordEl: document.getElementById('last-word'),
-    autoTimerEl: document.getElementById('auto-timer'),
-    autoModeSettings: document.getElementById('auto-mode-settings'),
-    timeMultiplierSlider: document.getElementById('time-multiplier-slider'),
-    timeMultiplierValue: document.getElementById('time-multiplier-value'),
-    memoryListEl: document.getElementById('memory-list'),
-    packageCategoriesContainer: document.getElementById('package-categories-container'),
-    customWordsInput: document.getElementById('custom-words-input'),
-    remoteSearchInput: document.getElementById('remote-search'),
-    langSelectContainer: document.getElementById('lang-select-container')
-};
+let elements = {};
+
+// Funkcja do inicjalizacji elementów DOM
+function initElements() {
+    elements = {
+        startScreen: document.getElementById('start-screen'),
+        mainApp: document.getElementById('main-app'),
+        startBtn: document.getElementById('start-btn'),
+        selectedInfo: document.getElementById('selected-info'),
+        hintEl: document.getElementById('hint'),
+        answerEl: document.getElementById('answer'),
+        progressEl: document.getElementById('progress'),
+        lastWordEl: document.getElementById('last-word'),
+        autoTimerEl: document.getElementById('auto-timer'),
+        autoModeSettings: document.getElementById('auto-mode-settings'),
+        timeMultiplierSlider: document.getElementById('time-multiplier-slider'),
+        timeMultiplierValue: document.getElementById('time-multiplier-value'),
+        memoryListEl: document.getElementById('memory-list'),
+        packageCategoriesContainer: document.getElementById('package-categories-container'),
+        customWordsInput: document.getElementById('custom-words-input'),
+        remoteSearchInput: document.getElementById('remote-search'),
+        langSelectContainer: document.getElementById('lang-select-container')
+    };
+}
 
 let eventHandlers = {};
 
 // --- Inicjalizacja UI ---
 export function initUI(handlers) {
+    // Inicjalizuj elementy DOM
+    initElements();
+    
     eventHandlers = handlers;
     
     // Listeners na ekranie startowym
@@ -38,11 +46,70 @@ export function initUI(handlers) {
     elements.remoteSearchInput.addEventListener('input', (e) => handlers.onFilterRemote(e.target.value));
     
     // Ustawienie nasłuchiwania na zmiany w checkboxach, delegacja zdarzeń
-    elements.packageCategoriesContainer.addEventListener('change', (event) => {
+    if (elements.packageCategoriesContainer) {
+        elements.packageCategoriesContainer.addEventListener('change', (event) => {
         if (event.target.type === 'checkbox') {
+            if (event.target.classList.contains('type-checkbox')) {
+                // Obsługa checkboxa typu
+                const lang = event.target.dataset.lang;
+                const type = event.target.dataset.type;
+                const isChecked = event.target.checked;
+                
+                // Zaznacz/odznacz wszystkie pakiety w tym typie
+                const packageCheckboxes = document.querySelectorAll(`input[data-lang="${lang}"][data-type="${type}"]:not(.type-checkbox)`);
+                packageCheckboxes.forEach(checkbox => {
+                    checkbox.checked = isChecked;
+                });
+                
+                // Zaktualizuj wygląd nagłówka typu
+                updateTypeHeaderState(lang, type, isChecked);
+                
+                // Opóźnij aktualizację, aby dać czas na zaktualizowanie DOM
+                setTimeout(() => {
+                    updateTypeCheckboxes();
+                }, 10);
+                
+                // Zapisz stan zaznaczonych pakietów do localStorage
+                saveSelectedPackagesToStorage();
+            } else {
+                // Obsługa checkboxa pakietu - aktualizuj stan checkboxa typu
+                const lang = event.target.dataset.lang;
+                const type = event.target.dataset.type;
+                if (lang && type) {
+                    // Opóźnij aktualizację, aby dać czas na zaktualizowanie DOM
+                    setTimeout(() => {
+                        updateTypeCheckboxes();
+                    }, 10);
+                }
+                
+                // Zapisz stan zaznaczonych pakietów do localStorage
+                saveSelectedPackagesToStorage();
+            }
             handlers.onSelectionChange();
         }
     });
+    }
+
+    // Obsługa kliknięć w nagłówki kategorii i typów
+    if (elements.packageCategoriesContainer) {
+        elements.packageCategoriesContainer.addEventListener('click', (event) => {
+        // Sprawdź czy kliknięto na checkbox - jeśli tak, nie rozwijaj/zwijaj
+        if (event.target.type === 'checkbox' && event.target.classList.contains('type-checkbox')) {
+            return; // Nie rób nic więcej - checkbox obsłuży się sam
+        }
+        
+        if (event.target.closest('.category-toggle')) {
+            const button = event.target.closest('.category-toggle');
+            const lang = button.dataset.lang;
+            toggleCategory(lang);
+        } else if (event.target.closest('.type-toggle')) {
+            const button = event.target.closest('.type-toggle');
+            const lang = button.dataset.lang;
+            const type = button.dataset.type;
+            toggleType(lang, type);
+        }
+    });
+    }
     
     // Listeners w głównej aplikacji
     document.getElementById('skip-word-btn').addEventListener('click', handlers.onSkip);
@@ -92,8 +159,42 @@ export function initUI(handlers) {
     elements.timeMultiplierValue.textContent = `x${parseFloat(elements.timeMultiplierSlider.value).toFixed(1)}`;
 }
 
+// Funkcja pomocnicza do czekania na dostępność elementu
+function waitForElement(selector, timeout = 1000) {
+    return new Promise((resolve, reject) => {
+        const element = document.querySelector(selector);
+        if (element) {
+            resolve(element);
+            return;
+        }
+        
+        const observer = new MutationObserver(() => {
+            const element = document.querySelector(selector);
+            if (element) {
+                observer.disconnect();
+                resolve(element);
+            }
+        });
+        
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+        
+        setTimeout(() => {
+            observer.disconnect();
+            reject(new Error(`Element ${selector} not found within ${timeout}ms`));
+        }, timeout);
+    });
+}
+
 // --- Renderowanie dynamicznej listy pakietów ---
 export function renderAllPackages(localPackages, remoteSets, apiError = false) {
+    if (!elements.packageCategoriesContainer) {
+        console.error('Package categories container not found');
+        return;
+    }
+    
     elements.packageCategoriesContainer.innerHTML = ''; // Wyczyść kontener
 
     const allPackages = [
@@ -105,6 +206,22 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
     const languageMapping = {
         'en': 'Angielski',
         'es': 'Hiszpański'
+    };
+
+    // Mapowanie flag krajów z alternatywnymi opcjami
+    const flagMapping = {
+        'Polski': '🇵🇱',
+        'Angielski': '🇬🇧', 
+        'Hiszpański': '🇪🇸',
+        'Nieokreślony': '❓'
+    };
+    
+    // Alternatywne flagi dla systemów, które nie obsługują emoji flag
+    const altFlagMapping = {
+        'Polski': 'PL',
+        'Angielski': 'GB',
+        'Hiszpański': 'ES',
+        'Nieokreślony': '?'
     };
 
     const grouped = allPackages.reduce((acc, pkg) => {
@@ -122,11 +239,59 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
     for (const lang of sortedLanguages) {
         const categoryDiv = document.createElement('div');
         categoryDiv.className = 'category';
-        categoryDiv.innerHTML += `<h4>${lang}</h4>`;
+        
+        // Nagłówek kategorii językowej z flagą i przyciskiem rozwijania
+        const langHeader = document.createElement('div');
+        langHeader.className = 'category-header';
+        // Sprawdź czy przeglądarka obsługuje emoji flagi
+        const testFlag = '🇵🇱';
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.textBaseline = 'top';
+        ctx.font = '16px Arial';
+        const emojiWidth = ctx.measureText(testFlag).width;
+        const regularWidth = ctx.measureText('PL').width;
+        
+        // Jeśli emoji flagi są szersze niż zwykły tekst, prawdopodobnie są obsługiwane
+        const supportsEmojiFlags = emojiWidth > regularWidth * 1.5;
+        
+        const flag = supportsEmojiFlags ? (flagMapping[lang] || '❓') : (altFlagMapping[lang] || '?');
+        
+        langHeader.innerHTML = `
+            <button class="category-toggle" data-lang="${lang}">
+                <span class="toggle-icon">▼</span>
+                <span class="flag">${flag}</span>
+                <span class="category-title">${lang}</span>
+            </button>
+        `;
+        categoryDiv.appendChild(langHeader);
+
+        const langContent = document.createElement('div');
+        langContent.className = 'category-content';
+        langContent.style.display = loadFromStorage(`category-${lang}-expanded`) === 'true' ? 'block' : 'none';
 
         const sortedTypes = Object.keys(grouped[lang]).sort();
         for (const type of sortedTypes) {
-            categoryDiv.innerHTML += `<h5>${type === 'word' ? 'Słówka' : type === 'sentence' ? 'Zdania' : type}</h5>`;
+            const typeDiv = document.createElement('div');
+            typeDiv.className = 'type-section';
+            
+            // Nagłówek typu z checkboxem
+            const typeHeader = document.createElement('div');
+            typeHeader.className = 'type-header';
+            const typeDisplayName = type === 'word' ? 'Słówka' : type === 'sentence' ? 'Zdania' : type;
+            
+            typeHeader.innerHTML = `
+                <button class="type-toggle" data-lang="${lang}" data-type="${type}">
+                    <span class="toggle-icon">▼</span>
+                    <input type="checkbox" class="type-checkbox" data-lang="${lang}" data-type="${type}">
+                    <span class="type-title">${typeDisplayName}</span>
+                </button>
+            `;
+            typeDiv.appendChild(typeHeader);
+
+            const typeContent = document.createElement('div');
+            typeContent.className = 'type-content';
+            typeContent.style.display = loadFromStorage(`type-${lang}-${type}-expanded`) === 'true' ? 'block' : 'none';
             
             const packageListDiv = document.createElement('div');
             packageListDiv.className = 'package-list';
@@ -140,14 +305,21 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
                     <label class="package-item" for="${id}">
                         <input type="checkbox" id="${id}" 
                                data-package-type="${pkg.isLocal ? 'local' : 'remote'}" 
-                               data-set-name="${pkg.isLocal ? '' : pkg.name}">
+                               data-set-name="${pkg.isLocal ? '' : pkg.name}"
+                               data-lang="${lang}"
+                               data-type="${type}">
                         <span class="package-name">${name}</span>
                         <span class="package-count">${count || '...'}</span>
                     </label>
                 `;
             });
-            categoryDiv.appendChild(packageListDiv);
+            
+            typeContent.appendChild(packageListDiv);
+            typeDiv.appendChild(typeContent);
+            langContent.appendChild(typeDiv);
         }
+        
+        categoryDiv.appendChild(langContent);
         elements.packageCategoriesContainer.appendChild(categoryDiv);
     }
      // Sprawdź zapisane checkboxy
@@ -162,6 +334,11 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
     if (apiError) {
         elements.packageCategoriesContainer.innerHTML += `<p style="color:red;text-align:center;">Błąd ładowania zestawów z API. Spróbuj odświeżyć.</p>`;
     }
+    
+    // Aktualizuj stan checkboxów typu po renderowaniu
+    setTimeout(() => {
+        updateTypeCheckboxes();
+    }, 100);
 }
 
 
@@ -282,4 +459,123 @@ async function toggleVoicesList() {
             showVoicesBtn.textContent = 'Spróbuj ponownie';
         }
     }
+}
+
+// Funkcje pomocnicze dla rozwijania/zwijania kategorii
+function toggleCategory(lang) {
+    const button = document.querySelector(`.category-toggle[data-lang="${lang}"]`);
+    if (!button) return;
+    
+    const categoryDiv = button.closest('.category');
+    const content = categoryDiv.querySelector('.category-content');
+    const icon = button.querySelector('.toggle-icon');
+    
+    if (!content || !icon) return;
+    
+    const isExpanded = content.style.display === 'block';
+    content.style.display = isExpanded ? 'none' : 'block';
+    icon.textContent = isExpanded ? '▶' : '▼';
+    
+    // Zapisz stan
+    saveToStorage(`category-${lang}-expanded`, !isExpanded);
+}
+
+function toggleType(lang, type) {
+    const button = document.querySelector(`.type-toggle[data-lang="${lang}"][data-type="${type}"]`);
+    if (!button) return;
+    
+    const typeSection = button.closest('.type-section');
+    const content = typeSection.querySelector('.type-content');
+    const icon = button.querySelector('.toggle-icon');
+    
+    if (!content || !icon) return;
+    
+    const isExpanded = content.style.display === 'block';
+    content.style.display = isExpanded ? 'none' : 'block';
+    icon.textContent = isExpanded ? '▶' : '▼';
+    
+    // Zapisz stan
+    saveToStorage(`type-${lang}-${type}-expanded`, !isExpanded);
+}
+
+function updateTypeHeaderState(lang, type, hasSelected) {
+    const typeHeader = document.querySelector(`.type-toggle[data-lang="${lang}"][data-type="${type}"]`);
+    if (typeHeader) {
+        if (hasSelected) {
+            typeHeader.classList.add('has-selected');
+        } else {
+            typeHeader.classList.remove('has-selected');
+        }
+    }
+}
+
+function updateLanguageHeaderState(lang, hasSelected) {
+    const langHeader = document.querySelector(`.category-toggle[data-lang="${lang}"]`);
+    if (langHeader) {
+        if (hasSelected) {
+            langHeader.classList.add('has-selected');
+        } else {
+            langHeader.classList.remove('has-selected');
+        }
+    }
+}
+
+// Funkcja do zapisywania zaznaczonych pakietów do localStorage
+function saveSelectedPackagesToStorage() {
+    const selectedPackages = Array.from(document.querySelectorAll('#start-screen input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.id);
+    saveToStorage('slowkaSelectedPackages', selectedPackages);
+}
+
+// Funkcja do aktualizacji stanu checkboxów typu na podstawie zaznaczonych pakietów
+function updateTypeCheckboxes() {
+    const typeCheckboxes = document.querySelectorAll('.type-checkbox');
+    const languageStates = {}; // Śledź stan każdego języka
+    
+    typeCheckboxes.forEach(checkbox => {
+        const lang = checkbox.dataset.lang;
+        const type = checkbox.dataset.type;
+        
+        const packageCheckboxes = document.querySelectorAll(`input[data-lang="${lang}"][data-type="${type}"]:not(.type-checkbox)`);
+        const checkedPackages = document.querySelectorAll(`input[data-lang="${lang}"][data-type="${type}"]:not(.type-checkbox):checked`);
+        
+        if (checkedPackages.length === 0) {
+            checkbox.checked = false;
+            checkbox.indeterminate = false;
+        } else if (checkedPackages.length === packageCheckboxes.length) {
+            checkbox.checked = true;
+            checkbox.indeterminate = false;
+        } else {
+            checkbox.checked = false;
+            checkbox.indeterminate = true;
+        }
+        
+        updateTypeHeaderState(lang, type, checkedPackages.length > 0);
+        
+        // Śledź stan języka - inicjalizuj jako false
+        if (!languageStates.hasOwnProperty(lang)) {
+            languageStates[lang] = false;
+        }
+        // Ustaw na true tylko jeśli są zaznaczone pakiety w tym typie
+        if (checkedPackages.length > 0) {
+            languageStates[lang] = true;
+        }
+    });
+    
+    // Sprawdź czy wszystkie typy w języku są odznaczone
+    const allLanguages = new Set(Array.from(typeCheckboxes).map(cb => cb.dataset.lang));
+    allLanguages.forEach(lang => {
+        const allPackagesInLang = document.querySelectorAll(`input[data-lang="${lang}"]:not(.type-checkbox)`);
+        const checkedPackagesInLang = document.querySelectorAll(`input[data-lang="${lang}"]:not(.type-checkbox):checked`);
+        
+        // Jeśli nie ma zaznaczonych pakietów w całym języku, ustaw stan na false
+        if (checkedPackagesInLang.length === 0) {
+            languageStates[lang] = false;
+        }
+    });
+    
+    // Aktualizuj stan nagłówków języków
+    Object.keys(languageStates).forEach(lang => {
+        updateLanguageHeaderState(lang, languageStates[lang]);
+    });
 }

@@ -38,31 +38,55 @@ export function initializeApp() {
     return acc;
   }, {});
 
-  renderAllPackages(localPackagesConfig, []);
-  loadSavedPackages();
-  updateStartButton(localPackages, remoteSets);
+  // Opóźnij renderowanie do momentu gdy DOM jest gotowy
+  setTimeout(() => {
+    initUI({
+      onStart: startApplication,
+      onChangePackages: showPackageSelection,
+      onSkip: skipWord,
+      onNext: nextWord,
+      onRestart: restart,
+      onUndo: undoKnownWord,
+      onAutoModeToggle: toggleAutoMode,
+      onSaveCurrent: saveCurrentWordToMemory,
+      onSavePrevious: savePreviousWordToMemory,
+      onClearUsed: clearUsed,
+      onRefreshRemote: refreshRemoteSetsList,
+      onSaveRemote: saveCustomSetToApi,
+      onDeleteRemote: deleteRemoteSetFromApi,
+      onSelectionChange: () => updateStartButton(localPackages, remoteSets),
+      onFilterRemote: filterRemoteSets,
+    });
 
-  initUI({
-    onStart: startApplication,
-    onChangePackages: showPackageSelection,
-    onSkip: skipWord,
-    onNext: nextWord,
-    onRestart: restart,
-    onUndo: undoKnownWord,
-    onAutoModeToggle: toggleAutoMode,
-    onSaveCurrent: saveCurrentWordToMemory,
-    onSavePrevious: savePreviousWordToMemory,
-    onClearUsed: clearUsed,
-    onRefreshRemote: refreshRemoteSetsList,
-    onSaveRemote: saveCustomSetToApi,
-    onDeleteRemote: deleteRemoteSetFromApi,
-    onSelectionChange: () => updateStartButton(localPackages, remoteSets),
-    onFilterRemote: filterRemoteSets,
-  });
-
-  refreshRemoteSetsList().catch(err => {
-    console.error("An unhandled error occurred during remote set refresh:", err);
-  });
+    // Dodatkowe opóźnienie, aby initUI zdążyło zainicjalizować elementy
+    setTimeout(async () => {
+      // Sprawdź czy element istnieje przed renderowaniem
+      const container = document.getElementById('package-categories-container');
+      if (container) {
+        // Najpierw załaduj zestawy z cache/API
+        await refreshRemoteSetsList().catch(err => {
+          console.error("An unhandled error occurred during remote set refresh:", err);
+        });
+        
+        // Potem renderuj z aktualnymi zestawami
+        renderAllPackages(localPackagesConfig, remoteSets);
+        loadSavedPackages();
+        updateStartButton(localPackages, remoteSets);
+      } else {
+        console.error('Package categories container not found, retrying...');
+        // Spróbuj ponownie za 100ms
+        setTimeout(async () => {
+          await refreshRemoteSetsList().catch(err => {
+            console.error("An unhandled error occurred during remote set refresh:", err);
+          });
+          
+          renderAllPackages(localPackagesConfig, remoteSets);
+          loadSavedPackages();
+          updateStartButton(localPackages, remoteSets);
+        }, 100);
+      }
+    }, 10);
+  }, 0);
   
   if (loadFromStorage('slowkaDarkMode') === 'true') {
     document.body.classList.add('dark-mode');
