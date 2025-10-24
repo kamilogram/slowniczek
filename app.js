@@ -388,8 +388,15 @@ async function saveCustomSetToApi() {
     const typeInput = document.getElementById('remote-set-type');
     
     const name = (nameInput.value || '').trim();
-    const language = langInput.value;
+    const selectedLanguage = langInput.value;
     const type = typeInput.value;
+
+    // Mapowanie kategorii językowych dla API
+    const languageMapping = {
+        'Angielski': 'en',
+        'Hiszpański': 'es'
+    };
+    const language = languageMapping[selectedLanguage] || selectedLanguage;
 
     if (!name) return alert('Podaj nazwę zestawu.');
     if (!language) return alert('Wybierz język zestawu.');
