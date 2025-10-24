@@ -285,6 +285,35 @@ function stopAutoMode() {
   try { setAutoModeUI(false); } catch (_) {}
 }
 
+// Cleanup function to run before unload / pagehide to avoid timers/voices sticking
+function cleanupBeforeUnload() {
+  try {
+    // Ensure auto mode is stopped and timers cleared
+    if (autoTimer) {
+      clearTimeout(autoTimer);
+      autoTimer = null;
+    }
+    // Stop any ongoing speech
+    cancelSpeech();
+    // Do not persist auto mode state as running when user refreshes
+    saveToStorage('slowkaAutoMode', 'false');
+    // Reset UI (best-effort)
+    try { setAutoModeUI(false); } catch (_) {}
+  } catch (e) {
+    console.warn('Error during cleanupBeforeUnload', e);
+  }
+}
+
+// Attach handlers to clean up when the page is unloaded or hidden.
+window.addEventListener('beforeunload', cleanupBeforeUnload);
+window.addEventListener('pagehide', cleanupBeforeUnload);
+// On mobile browsers, when the page is hidden we also attempt cleanup to avoid weird resumed states
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') {
+    cleanupBeforeUnload();
+  }
+});
+
 function autoNextStep() {
   if (!autoMode || !current) {
       if(autoMode && pool.length === 0){
