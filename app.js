@@ -96,14 +96,7 @@ export function initializeApp() {
     if (darkBtn) darkBtn.textContent = 'Tryb dzienny';
   }
 
-  // Przywracanie trybu auto
-  if (loadFromStorage('slowkaAutoMode') === 'true') {
-    setTimeout(() => {
-      startAutoMode();
-      const langContainer = document.getElementById('lang-select-container');
-      if (langContainer) langContainer.style.display = 'flex';
-    }, 100);
-  }
+
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
@@ -141,10 +134,10 @@ async function startApplication() {
     // Aktywuj blokadę wygaszania ekranu
     await requestWakeLock();
 
-    if (loadFromStorage('slowkaAutoMode') === 'true') {
+    if (loadFromStorage('slowkaWasAutoMode') === 'true') {
       startAutoMode();
-      document.getElementById('lang-select-container').style.display = 'flex';
     }
+    saveToStorage('slowkaWasAutoMode', 'false');
   } catch (e) {
     console.error('Błąd ładowania pakietów:', e);
     alert('Błąd ładowania pakietów. Sprawdź połączenie z internetem.');
@@ -178,9 +171,11 @@ function setAnswerLanguage(language) {
 }
 
 function showPackageSelection() {
+    const wasAutoMode = autoMode;
     if (autoMode) {
         stopAutoMode();
     }
+    saveToStorage('slowkaWasAutoMode', wasAutoMode);
     showPackageSelectionScreen();
     renderAllPackages(localPackagesConfig, remoteSets);
     updateStartButton(localPackages, remoteSets);
