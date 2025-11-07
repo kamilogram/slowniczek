@@ -131,6 +131,7 @@ async function startApplication() {
   try {
     await combineSelectedPackages();
     showMainAppScreen();
+    history.pushState({ page: 'quiz' }, '', '');
     initializeGame();
     // Aktywuj blokadę wygaszania ekranu
     await requestWakeLock();

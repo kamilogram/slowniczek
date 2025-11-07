@@ -7,3 +7,14 @@ window.addEventListener('DOMContentLoaded', () => {
     initializeApp();
   }, 50);
 });
+
+// Obsługa przycisku wstecz
+window.addEventListener('popstate', (event) => {
+  const mainApp = document.getElementById('main-app');
+  const startScreen = document.getElementById('start-screen');
+  
+  if (mainApp && mainApp.style.display !== 'none') {
+    event.preventDefault();
+    document.getElementById('change-packages-btn')?.click();
+  }
+});

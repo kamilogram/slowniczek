@@ -17,33 +17,34 @@
       <h1>🎯 Słowappka</h1>
       <p class="start-description">Wybierz pakiety słówek, które chcesz ćwiczyć lub wklej własne:</p>
 
+      <div class="remote-sets" style="margin-bottom:16px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
+          <input id="remote-set-name" type="text" placeholder="Nazwa zestawu" style="flex:1 1 240px;">
+          <div class="remote-set-meta">
+            <select id="remote-set-language">
+              <option value="">Język...</option>
+              <option value="Polski">Polski</option>
+              <option value="Angielski">Angielski</option>
+              <option value="Hiszpański">Hiszpański</option>
+              <option value="Włoski">Włoski</option>
+              <option value="Francuski">Francuski</option>
+            </select>
+            <select id="remote-set-type">
+              <option value="">Typ...</option>
+              <option value="word">Słówka</option>
+              <option value="sentence">Zdania</option>
+            </select>
+          </div>
+          <button id="btn-save-remote">💾 Zapisz do API</button>
+          <button id="btn-delete-remote">🗑 Usuń z API</button>
+          <button id="btn-refresh-remote">🔄 Odśwież listę</button>
+        </div>
+      </div>
+
       <div class="custom-words-container" style="margin-bottom:16px;">
         <label for="custom-words-input"><b>Wklej własne słówka (array obiektów hint/answer):</b></label>
         <textarea id="custom-words-input" rows="4" style="width:100%;margin-top:4px;" placeholder='[{"hint":"pies","answer":"dog"},...]'></textarea>
         <div id="custom-words-error" style="color:red;display:none;"></div>
-        <div class="remote-sets" style="margin-top:8px;">
-          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
-            <input id="remote-set-name" type="text" placeholder="Nazwa zestawu" style="flex:1 1 240px;">
-            <div class="remote-set-meta">
-              <select id="remote-set-language">
-                <option value="">Język...</option>
-                <option value="Polski">Polski</option>
-                <option value="Angielski">Angielski</option>
-                <option value="Hiszpański">Hiszpański</option>
-                <option value="Włoski">Włoski</option>
-                <option value="Francuski">Francuski</option>
-              </select>
-              <select id="remote-set-type">
-                <option value="">Typ...</option>
-                <option value="word">Słówka</option>
-                <option value="sentence">Zdania</option>
-              </select>
-            </div>
-            <button id="btn-save-remote">💾 Zapisz do API</button>
-            <button id="btn-delete-remote">🗑 Usuń z API</button>
-            <button id="btn-refresh-remote">🔄 Odśwież listę</button>
-          </div>
-        </div>
       </div>
 
       <div id="package-categories-container">
