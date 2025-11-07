@@ -299,12 +299,24 @@ button:active {
 
 #auto-timer {
   position: fixed;
-  top: 10px;
+  top: 20px;
   right: 20px;
-  font-size: 1.3em;
-  color: #005a9e;
-  display: none;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #667eea;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.3em 0.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 60px;
+  text-align: center;
   z-index: 1000;
+}
+
+.dark-mode #auto-timer {
+  color: #90caf9;
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 #memory-list {
