@@ -19,10 +19,10 @@ let autoTimeLeft = 0;
 let wakeLock = null;
 
 // Import statycznych słówek
-import allWordsData from './allWords.js';
-import allWords2Data from './allWords2.js';
-import easiestData from './english/easiest.js';
-import zdaniaData from './zdania.js';
+import allWordsData from './data/allWords.js';
+import allWords2Data from './data/allWords2.js';
+import easiestData from './data/english/easiest.js';
+import zdaniaData from './data/zdania.js';
 
 
 const localPackagesConfig = [
