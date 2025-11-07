@@ -269,7 +269,9 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
     // Mapowanie kategorii językowych
     const languageMapping = {
         'en': 'Angielski',
-        'es': 'Hiszpański'
+        'es': 'Hiszpański',
+        'it': 'Włoski',
+        'fr': 'Francuski'
     };
 
     // Mapowanie flag krajów z alternatywnymi opcjami
@@ -277,6 +279,8 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
         'Polski': '🇵🇱',
         'Angielski': '🇬🇧', 
         'Hiszpański': '🇪🇸',
+        'Włoski': '🇮🇹',
+        'Francuski': '🇫🇷',
         'Nieokreślony': '❓'
     };
     
@@ -285,6 +289,8 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
         'Polski': 'PL',
         'Angielski': 'GB',
         'Hiszpański': 'ES',
+        'Włoski': 'IT',
+        'Francuski': 'FR',
         'Nieokreślony': '?'
     };
 
