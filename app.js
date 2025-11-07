@@ -484,7 +484,9 @@ async function saveCustomSetToApi() {
     // Mapowanie kategorii językowych dla API
     const languageMapping = {
         'Angielski': 'en',
-        'Hiszpański': 'es'
+        'Hiszpański': 'es',
+        'Włoski': 'it',
+        'Francuski': 'fr'
     };
     const language = languageMapping[selectedLanguage] || selectedLanguage;
 
