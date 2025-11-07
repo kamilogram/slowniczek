@@ -438,7 +438,6 @@ function updateCountdownDisplay(seconds) {
     timerEl.textContent = seconds > 0 ? seconds : '';
   }
 }
-}
 
 function saveCurrentWordToMemory() {
     if (!current) return alert('Brak aktualnego słowa!');
