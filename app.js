@@ -16,6 +16,7 @@ let autoMode = false;
 let autoTimer = null;
 let autoStep = 0;
 let autoTimeLeft = 0;
+let wakeLock = null;
 
 // Import statycznych słówek
 import allWordsData from './allWords.js';
@@ -88,10 +89,20 @@ export function initializeApp() {
     }, 10);
   }, 0);
   
+  // Przywracanie trybu ciemnego
   if (loadFromStorage('slowkaDarkMode') === 'true') {
     document.body.classList.add('dark-mode');
     const darkBtn = document.getElementById('toggle-dark-mode-btn');
     if (darkBtn) darkBtn.textContent = 'Tryb dzienny';
+  }
+
+  // Przywracanie trybu auto
+  if (loadFromStorage('slowkaAutoMode') === 'true') {
+    setTimeout(() => {
+      startAutoMode();
+      const langContainer = document.getElementById('lang-select-container');
+      if (langContainer) langContainer.style.display = 'flex';
+    }, 100);
   }
 
   if ('serviceWorker' in navigator) {
@@ -121,6 +132,8 @@ async function startApplication() {
     await combineSelectedPackages();
     showMainAppScreen();
     initializeGame();
+    // Aktywuj blokadę wygaszania ekranu
+    await requestWakeLock();
 
     if (loadFromStorage('slowkaAutoMode') === 'true') {
       startAutoMode();
@@ -285,6 +298,18 @@ function stopAutoMode() {
   try { setAutoModeUI(false); } catch (_) {}
 }
 
+// Funkcja do zarządzania blokadą wygaszania ekranu
+async function requestWakeLock() {
+  try {
+    if ('wakeLock' in navigator) {
+      wakeLock = await navigator.wakeLock.request('screen');
+      console.log('Wake Lock aktywny');
+    }
+  } catch (err) {
+    console.log(`Nie udało się aktywować Wake Lock: ${err.name}, ${err.message}`);
+  }
+}
+
 // Cleanup function to run before unload / pagehide to avoid timers/voices sticking
 function cleanupBeforeUnload() {
   try {
@@ -295,10 +320,13 @@ function cleanupBeforeUnload() {
     }
     // Stop any ongoing speech
     cancelSpeech();
-    // Do not persist auto mode state as running when user refreshes
-    saveToStorage('slowkaAutoMode', 'false');
     // Reset UI (best-effort)
     try { setAutoModeUI(false); } catch (_) {}
+    // Release wake lock if active
+    if (wakeLock) {
+      wakeLock.release();
+      wakeLock = null;
+    }
   } catch (e) {
     console.warn('Error during cleanupBeforeUnload', e);
   }
@@ -308,9 +336,12 @@ function cleanupBeforeUnload() {
 window.addEventListener('beforeunload', cleanupBeforeUnload);
 window.addEventListener('pagehide', cleanupBeforeUnload);
 // On mobile browsers, when the page is hidden we also attempt cleanup to avoid weird resumed states
-document.addEventListener('visibilitychange', () => {
+document.addEventListener('visibilitychange', async () => {
   if (document.visibilityState === 'hidden') {
     cleanupBeforeUnload();
+  } else if (document.visibilityState === 'visible') {
+    // Próbuj ponownie aktywować blokadę wygaszania ekranu
+    await requestWakeLock();
   }
 });
 
