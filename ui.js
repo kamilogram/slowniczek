@@ -26,7 +26,7 @@ function initElements() {
         packageCategoriesContainer: document.getElementById('package-categories-container'),
         customWordsInput: document.getElementById('custom-words-input'),
         remoteSearchInput: document.getElementById('remote-search'),
-        langSelectContainer: document.getElementById('lang-select-container')
+        langSelectContainer: null
     };
 }
 
@@ -233,7 +233,6 @@ export function setAutoModeUI(isAuto) {
     if (undoBtn) undoBtn.style.display = isAuto ? 'none' : '';
 
     if (elements.autoModeSettings) elements.autoModeSettings.style.display = isAuto ? 'flex' : 'none';
-    if (elements.langSelectContainer) elements.langSelectContainer.style.display = isAuto ? 'flex' : 'none';
 
     // Update auto button label
     if (autoModeBtn) {
@@ -433,7 +432,11 @@ export function renderAllPackages(localPackages, remoteSets, apiError = false) {
 
 // --- Aktualizacje UI ---
 export function updateStartButton(localPackages, remoteSets) {
-    const customWords = (elements.customWordsInput.value || '').trim();
+    if (!elements.customWordsInput || !elements.startBtn || !elements.selectedInfo) {
+        initElements();
+    }
+    
+    const customWords = (elements.customWordsInput?.value || '').trim();
     const checkedBoxes = document.querySelectorAll('#start-screen input[type="checkbox"]:checked').length;
     
     const totalSelected = checkedBoxes + (customWords ? 1 : 0);
@@ -448,6 +451,9 @@ export function updateStartButton(localPackages, remoteSets) {
 }
 
 export function showPackageSelectionScreen() {
+    if (!elements.startScreen || !elements.mainApp) {
+        initElements();
+    }
     elements.startScreen.style.display = 'flex';
     elements.mainApp.style.display = 'none';
 }
