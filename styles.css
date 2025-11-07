@@ -299,11 +299,11 @@ button:active {
 
 #auto-timer {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
   font-size: 2.5em;
   font-weight: 700;
-  color: #667eea;
+  color: #7be87b;
   background: rgba(255, 255, 255, 0.95);
   padding: 0.3em 0.5em;
   border-radius: 12px;
@@ -311,10 +311,11 @@ button:active {
   min-width: 60px;
   text-align: center;
   z-index: 1000;
+  display: none;
 }
 
 .dark-mode #auto-timer {
-  color: #90caf9;
+  color: #7be87b;
   background: rgba(30, 30, 30, 0.95);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }

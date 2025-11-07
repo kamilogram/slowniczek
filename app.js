@@ -437,9 +437,13 @@ function startCountdown(duration) {
 function updateCountdownDisplay(seconds) {
   const timerEl = document.getElementById('auto-timer');
   if (timerEl) {
-    timerEl.textContent = seconds > 0 ? seconds : '';
     const timerVisible = loadFromStorage('slowkaTimerVisible') !== 'false';
-    timerEl.style.visibility = timerVisible ? 'visible' : 'hidden';
+    if (timerVisible && seconds > 0) {
+      timerEl.textContent = seconds;
+      timerEl.style.display = 'block';
+    } else {
+      timerEl.style.display = 'none';
+    }
   }
 }
 
