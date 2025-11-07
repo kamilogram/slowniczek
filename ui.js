@@ -210,9 +210,20 @@ export function initUI(handlers) {
         });
     }
 
-    // Voices
-    const showVoicesBtn = document.getElementById('show-voices-btn');
-    showVoicesBtn.addEventListener('click', toggleVoicesList);
+    // Toggle Timer
+    const toggleTimerBtn = document.getElementById('toggle-timer-btn');
+    if (toggleTimerBtn) {
+        const timerVisible = loadFromStorage('slowkaTimerVisible') !== 'false';
+        toggleTimerBtn.textContent = timerVisible ? 'Ukryj licznik' : 'Pokaż licznik';
+        
+        toggleTimerBtn.addEventListener('click', () => {
+            const timerEl = document.getElementById('auto-timer');
+            const isVisible = timerEl.style.visibility !== 'hidden';
+            timerEl.style.visibility = isVisible ? 'hidden' : 'visible';
+            toggleTimerBtn.textContent = isVisible ? 'Pokaż licznik' : 'Ukryj licznik';
+            saveToStorage('slowkaTimerVisible', !isVisible);
+        });
+    }
 
     // Wczytanie zapisanych ustawień
     elements.timeMultiplierSlider.value = loadFromStorage('slowkaTimeMultiplier') || 1.0;
@@ -542,28 +553,7 @@ export function clearUsedWordsUI() {
     updateProgressUI(0, 0); 
 }
 
-async function toggleVoicesList() {
-    const voicesListEl = document.getElementById('voices-list');
-    const showVoicesBtn = document.getElementById('show-voices-btn');
-    const isVisible = voicesListEl.style.display === 'block';
 
-    if (isVisible) {
-        voicesListEl.style.display = 'none';
-        showVoicesBtn.textContent = 'Pokaż dostępne głosy';
-    } else {
-        showVoicesBtn.textContent = 'Wczytywanie głosów...';
-        try {
-            const voices = await getVoices();
-            voicesListEl.innerHTML = voices.map(v => `<div>${v.name} (${v.lang})</div>`).join('');
-            voicesListEl.style.display = 'block';
-            showVoicesBtn.textContent = 'Ukryj dostępne głosy';
-        } catch (error) {
-            voicesListEl.innerHTML = 'Nie udało się załadować głosów.';
-            console.error('Error fetching voices:', error);
-            showVoicesBtn.textContent = 'Spróbuj ponownie';
-        }
-    }
-}
 
 // Funkcje pomocnicze dla rozwijania/zwijania kategorii
 function toggleCategory(lang) {
