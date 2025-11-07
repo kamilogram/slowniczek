@@ -443,9 +443,11 @@ export function updateStartButton(localPackages, remoteSets) {
 
     if (totalSelected > 0) {
         elements.startBtn.disabled = false;
+        elements.startBtn.textContent = 'Rozpocznij';
         elements.selectedInfo.textContent = `Wybrano ${totalSelected} pakiet(ów).`;
     } else {
         elements.startBtn.disabled = true;
+        elements.startBtn.textContent = 'Wybierz pakiet';
         elements.selectedInfo.textContent = 'Wybierz co najmniej jeden pakiet';
     }
 }
