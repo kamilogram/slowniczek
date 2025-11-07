@@ -176,11 +176,20 @@ export function initUI(handlers) {
 
     // Dark Mode
     const toggleDarkModeBtn = document.getElementById('toggle-dark-mode-btn');
-    toggleDarkModeBtn.addEventListener('click', () => {
-        const isDarkMode = document.body.classList.toggle('dark-mode');
-        toggleDarkModeBtn.textContent = isDarkMode ? 'Tryb dzienny' : 'Tryb nocny';
-        saveToStorage('slowkaDarkMode', isDarkMode);
-    });
+    if (toggleDarkModeBtn) {
+        // Ustaw początkowy stan przycisku
+        const savedDarkMode = loadFromStorage('slowkaDarkMode') === 'true';
+        if (savedDarkMode) {
+            document.body.classList.add('dark-mode');
+            toggleDarkModeBtn.textContent = 'Tryb dzienny';
+        }
+
+        toggleDarkModeBtn.addEventListener('click', () => {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            toggleDarkModeBtn.textContent = isDarkMode ? 'Tryb dzienny' : 'Tryb nocny';
+            saveToStorage('slowkaDarkMode', isDarkMode);
+        });
+    }
 
     // Voices
     const showVoicesBtn = document.getElementById('show-voices-btn');
