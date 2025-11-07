@@ -16,6 +16,7 @@ let autoMode = false;
 let autoTimer = null;
 let autoStep = 0;
 let autoTimeLeft = 0;
+let autoCountdownInterval = null;
 let wakeLock = null;
 
 // Import statycznych słówek
@@ -318,9 +319,12 @@ function stopAutoMode() {
   saveToStorage('slowkaAutoMode', 'false');
   if (autoTimer) clearTimeout(autoTimer);
   autoTimer = null;
+  if (autoCountdownInterval) clearInterval(autoCountdownInterval);
+  autoCountdownInterval = null;
   cancelSpeech();
   // Restore UI
   try { setAutoModeUI(false); } catch (_) {}
+  updateCountdownDisplay(0);
 }
 
 // Funkcja do zarządzania blokadą wygaszania ekranu
@@ -394,6 +398,7 @@ function autoNextStep() {
   if (autoStep === 0) {
     const speechRate = parseFloat(loadFromStorage('slowkaSpeechRate') || 1.0);
     speak(current.hint, 'pl-PL', speechRate);
+    startCountdown(hintDelay);
     autoTimer = setTimeout(() => {
       skipWord();
       autoStep = 1;
@@ -402,12 +407,37 @@ function autoNextStep() {
   } else if (autoStep === 1) {
     const speechRate = parseFloat(loadFromStorage('slowkaSpeechRate') || 1.0);
     speak(current.answer, answerLang, speechRate);
+    startCountdown(answerDelay);
     autoTimer = setTimeout(() => {
       nextWord();
       autoStep = 0;
       autoNextStep();
     }, answerDelay);
   }
+}
+
+function startCountdown(duration) {
+  if (autoCountdownInterval) clearInterval(autoCountdownInterval);
+  
+  autoTimeLeft = Math.ceil(duration / 1000);
+  updateCountdownDisplay(autoTimeLeft);
+  
+  autoCountdownInterval = setInterval(() => {
+    autoTimeLeft--;
+    if (autoTimeLeft <= 0) {
+      clearInterval(autoCountdownInterval);
+      autoCountdownInterval = null;
+    }
+    updateCountdownDisplay(autoTimeLeft);
+  }, 1000);
+}
+
+function updateCountdownDisplay(seconds) {
+  const timerEl = document.getElementById('auto-timer');
+  if (timerEl) {
+    timerEl.textContent = seconds > 0 ? seconds : '';
+  }
+}
 }
 
 function saveCurrentWordToMemory() {
