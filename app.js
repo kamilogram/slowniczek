@@ -136,7 +136,9 @@ async function startApplication() {
     await requestWakeLock();
 
     if (loadFromStorage('slowkaWasAutoMode') === 'true') {
-      startAutoMode();
+      setTimeout(() => {
+        startAutoMode();
+      }, 100);
     }
     saveToStorage('slowkaWasAutoMode', 'false');
   } catch (e) {
@@ -436,6 +438,8 @@ function updateCountdownDisplay(seconds) {
   const timerEl = document.getElementById('auto-timer');
   if (timerEl) {
     timerEl.textContent = seconds > 0 ? seconds : '';
+    const timerVisible = loadFromStorage('slowkaTimerVisible') !== 'false';
+    timerEl.style.visibility = timerVisible ? 'visible' : 'hidden';
   }
 }
 
