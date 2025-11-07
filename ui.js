@@ -218,10 +218,12 @@ export function initUI(handlers) {
         
         toggleTimerBtn.addEventListener('click', () => {
             const timerEl = document.getElementById('auto-timer');
-            const isVisible = timerEl.style.visibility !== 'hidden';
-            timerEl.style.visibility = isVisible ? 'hidden' : 'visible';
-            toggleTimerBtn.textContent = isVisible ? 'Pokaż licznik' : 'Ukryj licznik';
+            const isVisible = loadFromStorage('slowkaTimerVisible') !== 'false';
             saveToStorage('slowkaTimerVisible', !isVisible);
+            toggleTimerBtn.textContent = isVisible ? 'Pokaż licznik' : 'Ukryj licznik';
+            if (!isVisible) {
+                timerEl.style.display = 'none';
+            }
         });
     }
 
