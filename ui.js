@@ -57,6 +57,15 @@ export function initUI(handlers) {
                 const type = event.target.dataset.type;
                 const isChecked = event.target.checked;
                 
+                // Jeśli zaznaczamy, odznacz inne języki
+                if (isChecked) {
+                    document.querySelectorAll('input[type="checkbox"]:not(.type-checkbox)').forEach(cb => {
+                        if (cb.dataset.lang && cb.dataset.lang !== lang) {
+                            cb.checked = false;
+                        }
+                    });
+                }
+                
                 // Zaznacz/odznacz wszystkie pakiety w tym typie
                 const packageCheckboxes = document.querySelectorAll(`input[data-lang="${lang}"][data-type="${type}"]:not(.type-checkbox)`);
                 packageCheckboxes.forEach(checkbox => {
@@ -74,9 +83,19 @@ export function initUI(handlers) {
                 // Zapisz stan zaznaczonych pakietów do localStorage
                 saveSelectedPackagesToStorage();
             } else {
-                // Obsługa checkboxa pakietu - aktualizuj stan checkboxa typu
+                // Obsługa checkboxa pakietu
                 const lang = event.target.dataset.lang;
                 const type = event.target.dataset.type;
+                
+                // Jeśli zaznaczamy pakiet, odznacz pakiety z innych języków
+                if (event.target.checked && lang) {
+                    document.querySelectorAll('input[type="checkbox"]:not(.type-checkbox)').forEach(cb => {
+                        if (cb.dataset.lang && cb.dataset.lang !== lang) {
+                            cb.checked = false;
+                        }
+                    });
+                }
+                
                 if (lang && type) {
                     // Opóźnij aktualizację, aby dać czas na zaktualizowanie DOM
                     setTimeout(() => {

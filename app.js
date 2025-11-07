@@ -130,6 +130,11 @@ async function startApplication() {
 
   try {
     await combineSelectedPackages();
+    
+    // Wykryj język wybranych pakietów i ustaw głos
+    const selectedLang = detectSelectedLanguage();
+    setAnswerLanguage(selectedLang);
+    
     showMainAppScreen();
     history.pushState({ page: 'quiz' }, '', '');
     initializeGame();
@@ -145,6 +150,30 @@ async function startApplication() {
     alert('Błąd ładowania pakietów. Sprawdź połączenie z internetem.');
     startBtn.textContent = originalText;
     startBtn.disabled = false;
+  }
+}
+
+function detectSelectedLanguage() {
+  const checkedCheckbox = document.querySelector('#start-screen input[type="checkbox"]:checked');
+  if (checkedCheckbox && checkedCheckbox.dataset.lang) {
+    return checkedCheckbox.dataset.lang;
+  }
+  return 'Angielski';
+}
+
+function setAnswerLanguage(language) {
+  const langMapping = {
+    'Angielski': 'en-US',
+    'Polski': 'pl-PL',
+    'Hiszpański': 'es-ES',
+    'Włoski': 'it-IT',
+    'Francuski': 'fr-FR'
+  };
+  
+  const langCode = langMapping[language] || 'en-US';
+  const select = document.getElementById('answer-lang-select');
+  if (select) {
+    select.value = langCode;
   }
 }
 
