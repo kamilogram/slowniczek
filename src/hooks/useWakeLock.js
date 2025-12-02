@@ -16,7 +16,7 @@ export function useWakeLock() {
         });
       }
     } catch (err) {
-      console.error(`Failed to request Wake Lock: ${err.name}, ${err.message}`);
+      console.error(`It is failed to request Wake Lock: ${err.name}, ${err.message}`);
     }
   }, []);
 
