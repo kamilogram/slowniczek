@@ -1,5 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { saveSet, deleteSet } from '../services/api';
+import { saveToStorage } from '../services/storage';
+
+// Mapowanie kodów języków na pełne nazwy
+const LANGUAGE_MAP = {
+  'en': 'Angielski',
+  'pl': 'Polski',
+  'es': 'Hiszpański',
+  'it': 'Włoski',
+  'fr': 'Francuski'
+};
+
+// Funkcja normalizująca nazwę języka
+const normalizeLanguage = (lang) => {
+  if (!lang) return 'Nieokreślony';
+  // Jeśli to dwuliterowy kod, zmapuj na pełną nazwę
+  if (lang.length === 2 && LANGUAGE_MAP[lang.toLowerCase()]) {
+    return LANGUAGE_MAP[lang.toLowerCase()];
+  }
+  // Jeśli to już pełna nazwa, zwróć ją
+  return lang;
+};
 
 export default function StartScreen({
   localPackagesConfig,
@@ -11,10 +32,14 @@ export default function StartScreen({
   customWordsInput,
   setCustomWordsInput
 }) {
-  // Group Packages
+  // Group Packages - normalizuj języki z backendu
   const allPackages = [
     ...localPackagesConfig.map(p => ({ ...p, isLocal: true })),
-    ...remoteSets.map(p => ({ ...p, isLocal: false }))
+    ...remoteSets.map(p => ({
+      ...p,
+      isLocal: false,
+      language: normalizeLanguage(p.language) // Normalizuj język
+    }))
   ];
 
   const [expandedCategories, setExpandedCategories] = useState({});
@@ -37,11 +62,33 @@ export default function StartScreen({
     setExpandedTypes(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
+  // Auto-expand categories and types with selected packages
+  useEffect(() => {
+    if (selectedPackages.length > 0) {
+      const newExpandedCategories = {};
+      const newExpandedTypes = {};
+
+      selectedPackages.forEach(pkgId => {
+        const pkg = allPackages.find(p => (p.isLocal ? p.id : `remote-${p.name}`) === pkgId);
+        if (pkg) {
+          const lang = pkg.language || 'Nieokreślony';
+          const type = pkg.type || 'Nieokreślony typ';
+          newExpandedCategories[lang] = true;
+          newExpandedTypes[`${lang}-${type}`] = true;
+        }
+      });
+
+      setExpandedCategories(newExpandedCategories);
+      setExpandedTypes(newExpandedTypes);
+    }
+  }, []); // Run only once on mount
+
   // Handle Checkbox
   const handleCheckboxChange = (id, isLocal, lang, type) => {
     setSelectedPackages(prev => {
+      let newSelected;
       if (prev.includes(id)) {
-        return prev.filter(p => p !== id);
+        newSelected = prev.filter(p => p !== id);
       } else {
         // Enforce single language: remove packages from other languages
         const keptPackages = prev.filter(prevId => {
@@ -49,8 +96,12 @@ export default function StartScreen({
           if (!pkg) return false; // Remove if not found (stale)
           return pkg.language === lang;
         });
-        return [...keptPackages, id];
+        newSelected = [...keptPackages, id];
       }
+
+      // Save to localStorage
+      saveToStorage('slowkaSelectedPackages', newSelected);
+      return newSelected;
     });
   };
 

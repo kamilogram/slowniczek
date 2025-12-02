@@ -19,7 +19,7 @@ export default function FlashCard({ current, showAnswer, previous }) {
 
       <p id="progress"></p> {/* Progress is handled in MainApp usually, but original had it in card */}
 
-      <h2 id="hint" className={current.source && current.source.startsWith('remote') ? 'english-hint' : ''}>
+      <h2 id="hint">
         {current.hint}
       </h2>
 

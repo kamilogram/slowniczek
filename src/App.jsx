@@ -20,7 +20,7 @@ function App() {
 
   const toggleDarkMode = () => {
     const isDark = document.body.classList.toggle('dark-mode');
-    saveToStorage('slowkaDarkMode', isDark);
+    saveToStorage('slowkaDarkMode', isDark ? 'true' : 'false');
   };
 
   const handleStart = (localIds, customWords, remoteNames) => {

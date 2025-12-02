@@ -147,10 +147,27 @@ export function useGameLogic() {
     setUsed(savedUsed);
     setGameState('quiz');
 
-    // Pick first word
-    pickNextWord(newPool, null);
+    // Pick first word directly (avoid circular dependency with pickNextWord)
+    if (newPool.length > 0) {
+      const index = Math.floor(Math.random() * newPool.length);
+      const firstWord = newPool[index];
+      setCurrent(firstWord);
+      setWasSkipped(false);
+    } else {
+      setCurrent(null);
+    }
 
-  }, []);
+    // Check if auto mode was enabled before
+    const savedAuto = loadFromStorage('slowkaAutoMode') === 'true';
+    if (savedAuto && !autoMode) {
+      // Enable auto mode after a short delay to ensure current word is set
+      setTimeout(() => {
+        setAutoMode(true);
+        setAutoStep(0);
+      }, 100);
+    }
+
+  }, [autoMode]);
 
   const pickNextWord = useCallback((currentPool, currentPrevious) => {
     if (currentPool.length === 0) {
