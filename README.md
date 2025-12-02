@@ -1,72 +1,16 @@
-# slowniczek
+# React + Vite
 
-## Konfiguracja Supabase
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### 1. Utwórz projekt w Supabase
-1. Idź na [supabase.com](https://supabase.com) i zarejestruj się
-2. Kliknij "New Project"
-3. Wybierz organizację i nazwę projektu
-4. Poczekaj na utworzenie (2-3 minuty)
+Currently, two official plugins are available:
 
-### 2. Skonfiguruj bazę danych
-1. W panelu Supabase, idź do **SQL Editor**
-2. Wklej zawartość pliku `supabase-schema.sql` i wykonaj
-3. Sprawdź w **Table Editor** czy tabela `word_sets` została utworzona
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### 3. Pobierz klucze API
-1. W panelu Supabase, idź do **Settings** → **API**
-2. Skopiuj:
-   - **Project URL** (np. `https://xyz.supabase.co`)
-   - **anon public** key (długi ciąg znaków)
+## React Compiler
 
-### 4. Skonfiguruj zmienne środowiskowe
-1. Skopiuj `env.example` do `.env`:
-```bash
-cp env.example .env
-```
-2. Wypełnij `.env`:
-```
-SUPABASE_URL=https://twoj-projekt.supabase.co
-SUPABASE_ANON_KEY=twoj_anon_key
-PORT=3001
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Uruchomienie
+## Expanding the ESLint configuration
 
-### Lokalnie:
-1. Zainstaluj zależności:
-```bash
-npm install
-```
-2. Uruchom serwer deweloperski (backend + frontend):
-```bash
-npm run dev
-```
-Aplikacja będzie dostępna pod adresem `http://localhost:3000`, a API pod `http://localhost:3001`.
-
-### Na Render (deployment):
-1. Połącz repo z Render
-2. New → Web Service → wybierz repo
-3. Dodaj zmienne środowiskowe w sekcji **Environment**:
-   - `SUPABASE_URL` = twój URL z Supabase
-   - `SUPABASE_ANON_KEY` = twój klucz anon
-4. Deploy
-
-### Frontend (GitHub Pages):
-1. W `slowniczek/index.html` zmień `API_BASE` na URL z Render:
-```js
-const API_BASE = 'https://twoj-serwis.onrender.com';
-```
-2. Deploy na GitHub Pages
-
-## API Endpointy:
-- GET `/api/sets` → lista nazw zestawów `{ names: string[] }`
-- GET `/api/sets/:name` → pobierz zestaw `{ name, words }`
-- POST `/api/sets/:name` body: `{ words: {hint,answer}[] }` → zapis/aktualizacja
-- DELETE `/api/sets/:name` → usuń zestaw
-
-## UI:
-Na ekranie startowym:
-- pole "Nazwa zestawu"
-- przyciski: "Zapisz do API", "Załaduj z API", "Usuń z API", "Odśwież listę"
-- lista rozwijana z nazwami zestawów
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

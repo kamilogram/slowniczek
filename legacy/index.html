@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Słówka</title>
+  <link rel="icon" type="image/png" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4facfe">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Strona startowa z wyborem pakietów -->
+  <div id="start-screen" class="start-screen">
+    <div class="start-card">
+      <h1>🎯 Słowappka</h1>
+      <p class="start-description">Wybierz pakiety słówek, które chcesz ćwiczyć lub wklej własne:</p>
+
+      <div id="package-categories-container">
+          <!-- Kategorie i pakiety będą renderowane tutaj przez JavaScript -->
+      </div>
+
+      <div class="custom-words-container" style="margin-bottom:16px;">
+        <label for="custom-words-input"><b>Wklej własne słówka (array obiektów hint/answer):</b></label>
+        <textarea id="custom-words-input" rows="4" style="width:100%;margin-top:4px;" placeholder='[{"hint":"pies","answer":"dog"},...]'></textarea>
+        <div id="custom-words-error" style="color:red;display:none;"></div>
+      </div>
+
+      <div class="remote-sets" style="margin-bottom:16px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
+          <input id="remote-set-name" type="text" placeholder="Nazwa zestawu" style="flex:1 1 240px;">
+          <div class="remote-set-meta">
+            <select id="remote-set-language">
+              <option value="">Język...</option>
+              <option value="Polski">Polski</option>
+              <option value="Angielski">Angielski</option>
+              <option value="Hiszpański">Hiszpański</option>
+              <option value="Włoski">Włoski</option>
+              <option value="Francuski">Francuski</option>
+            </select>
+            <select id="remote-set-type">
+              <option value="">Typ...</option>
+              <option value="word">Słówka</option>
+              <option value="sentence">Zdania</option>
+            </select>
+          </div>
+          <button id="btn-save-remote">💾 Zapisz do API</button>
+          <button id="btn-delete-remote">🗑 Usuń z API</button>
+          <button id="btn-refresh-remote">🔄 Odśwież listę</button>
+        </div>
+      </div>
+      
+      <div class="remote-sets-section">
+        <div class="remote-sets-header" style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+          <input type="text" id="remote-search" placeholder="🔍 Wyszukaj zestawy z API..." style="flex:1;padding:8px;">
+        </div>
+      </div>
+
+
+      <div class="start-actions sticky-start-actions" style="margin-top:24px;">
+        <button id="start-btn" class="start-btn" disabled>Rozpocznij</button>
+        <p class="selected-info" id="selected-info">Wybierz co najmniej jeden pakiet</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Główna aplikacja (początkowo ukryta) -->
+  <div id="main-app" class="main-app" style="display: none;">
+    <div class="card">
+      <p id="last-word"></p>
+      <p id="progress"></p>
+      <h2 id="hint">Ładowanie...</h2>
+      <p id="answer"></p>
+    
+    <div class="buttons">
+      <button id="skip-word-btn">Pokaż</button>
+      <button id="next-word-btn">Wiem</button>
+      <button id="restart-btn" style="display:none;">Jeszcze raz</button>
+    </div>
+    
+    <div class="center-buttons">
+      <button id="undo-known-btn">Jednak nie wiedziałem</button>
+    </div>
+    <div id="auto-mode-settings" class="auto-mode-settings-panel" style="display:none;">
+      <label for="time-multiplier-slider">Długość czasu na odpowiedź: <span id="time-multiplier-value">x1.0</span></label>
+      <input type="range" id="time-multiplier-slider" min="0.5" max="2.0" step="0.1" value="1.0">
+      <div style="height:8px"></div>
+      <label for="speech-rate-slider">Prędkość czytania: <span id="speech-rate-value">1.0</span></label>
+      <input type="range" id="speech-rate-slider" min="0.5" max="2.0" step="0.1" value="1.0">
+    </div>
+    <div class="center-buttons gap">
+      <button id="auto-mode-btn">Auto tryb</button>
+      <button id="toggle-dark-mode-btn">Tryb nocny</button>
+    </div>
+    <select id="answer-lang-select" style="display:none;">
+        <option value="en-US">Angielski</option>
+        <option value="pl-PL">Polski</option>
+        <option value="es-ES">Hiszpański</option>
+        <option value="it-IT">Włoski</option>
+        <option value="fr-FR">Francuski</option>
+    </select>
+    <div class="center-buttons" id="other-options-btn-container">
+      <button id="other-options-btn">Inne opcje</button>
+    </div>
+    <div class="memory-buttons" id="memory-buttons" style="display:none;">
+      <button id="save-word-btn">Dodaj poprzednie</button>
+      <button id="save-current-btn">Dodaj aktualne</button>
+      <button id="show-memory-btn">Pokaż zapamiętane</button>
+      <button id="save-selected-btn">Dodaj zaznaczone</button>
+      <button id="save-global-selection-btn">Dodaj aktualnie zaznaczony tekst</button>
+    </div>
+    <div id="memory-list" style="display:none;"></div>
+    
+    <div class="center-buttons margin-top-small">
+      <button id="change-packages-btn" class="change-packages-btn">📦 Zmień pakiety</button>
+    </div>
+    <div class="center-buttons margin-top-small">
+      <button id="toggle-timer-btn">Ukryj licznik</button>
+    </div>
+    </div>
+    
+    <div id="auto-timer"></div>
+    
+    <div class="search-container" id="search-container" style="display:none;">
+      <input type="text" id="search-input" placeholder="🔍 Wyszukaj słówko...">
+      <button id="search-btn" class="search-btn">
+        <span>🔍</span>
+      </button>
+    </div>
+    <div id="search-results" style="display:none;">
+      <p class="search-results-placeholder">Wyniki wyszukiwania pojawią się tutaj...</p>
+    </div>
+    
+    <div class="center-buttons margin-top-small">
+      <button id="clear-used-btn">Wyczyść odgadnięte słówka</button>
+    </div>
+  </div>
+  
+  <!-- Główna logika aplikacji jako moduł -->
+  <script type="module" src="index.js"></script>
+
+</body>
+</html>
