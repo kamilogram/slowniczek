@@ -1,8 +1,9 @@
 // Importowanie niezbędnych bibliotek
-require('dotenv').config(); // Ładuje zmienne środowiskowe z pliku .env
-const express = require('express');
-const cors = require('cors');
-const { createClient } = require('@supabase/supabase-js');
+import dotenv from 'dotenv';
+dotenv.config();
+import express from 'express';
+import cors from 'cors';
+import { createClient } from '@supabase/supabase-js';
 
 // Inicjalizacja aplikacji Express
 const app = express();
@@ -49,11 +50,11 @@ app.get('/api/sets/:name', async (req, res) => {
       .single(); // .single() zwraca jeden obiekt zamiast tablicy
 
     if (error) {
-        // Jeśli zestaw nie istnieje, Supabase zwróci błąd, ale my chcemy 404
-        if (error.code === 'PGRST116') {
-            return res.status(404).json({ error: 'Zestaw nie został znaleziony' });
-        }
-        throw error;
+      // Jeśli zestaw nie istnieje, Supabase zwróci błąd, ale my chcemy 404
+      if (error.code === 'PGRST116') {
+        return res.status(404).json({ error: 'Zestaw nie został znaleziony' });
+      }
+      throw error;
     }
     res.json({ words: data ? data.words : [] });
   } catch (error) {
@@ -77,14 +78,14 @@ app.post('/api/sets/:name', async (req, res) => {
   try {
     const { data, error } = await supabase
       .from('word_sets')
-      .upsert({ 
-          name, 
-          words, 
-          count: words.length,
-          language,
-          type
+      .upsert({
+        name,
+        words,
+        count: words.length,
+        language,
+        type
       }, {
-          onConflict: 'name' // To jest kluczowe! Mówi Supabase, aby aktualizować wiersz, jeśli nazwa już istnieje.
+        onConflict: 'name' // To jest kluczowe! Mówi Supabase, aby aktualizować wiersz, jeśli nazwa już istnieje.
       })
       .select()
       .single();
