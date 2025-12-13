@@ -4,11 +4,14 @@ import { useWakeLock } from './hooks/useWakeLock';
 import StartScreen from './components/StartScreen';
 import MainApp from './components/MainApp';
 import { loadFromStorage, saveToStorage } from './services/storage';
+import { getVoices } from './services/speech';
 import './index.css';
 
 function App() {
   const gameLogic = useGameLogic();
-  const { requestWakeLock } = useWakeLock();
+  // Automatically activate wake lock when game is active
+  const isGameActive = gameLogic.gameState === 'quiz';
+  const { requestWakeLock, releaseWakeLock } = useWakeLock(isGameActive);
 
   useEffect(() => {
     // Check dark mode
@@ -16,6 +19,12 @@ function App() {
     if (savedDarkMode) {
       document.body.classList.add('dark-mode');
     }
+
+    // Pre-initialize speech synthesis to ensure it's ready when needed
+    // This is especially important for mobile browsers that require user interaction
+    getVoices().catch(e => {
+      console.warn('Failed to pre-initialize speech synthesis:', e);
+    });
   }, []);
 
   const toggleDarkMode = () => {
@@ -23,9 +32,9 @@ function App() {
     saveToStorage('slowkaDarkMode', isDark ? 'true' : 'false');
   };
 
-  const handleStart = (localIds, customWords, remoteNames) => {
-    gameLogic.startGame(localIds, customWords, remoteNames);
-    requestWakeLock();
+  const handleStart = async (localIds, customWords, remoteNames) => {
+    await gameLogic.startGame(localIds, customWords, remoteNames);
+    // Wake lock will be automatically activated via isGameActive
   };
 
   const handleChangePackages = () => {

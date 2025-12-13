@@ -10,26 +10,40 @@ function init() {
       voices = synth.getVoices();
       if (voices.length > 0) {
         resolve(voices);
+        return true;
       }
+      return false;
     };
 
     // If voices are already available, resolve immediately.
-    if (synth.getVoices().length > 0) {
-      load();
-    } else {
-      // Otherwise, wait for the event.
-      synth.onvoiceschanged = load;
-      // Add a timeout as a fallback for browsers that don't fire the event reliably
-      setTimeout(() => {
-        if (voices.length === 0) {
-          load(); // Try one more time
-        }
-        if (voices.length === 0) {
-          console.warn("Speech synthesis voices did not load after timeout.");
-          reject("Voices not loaded");
-        }
-      }, 1000);
+    if (load()) {
+      return;
     }
+
+    // Otherwise, wait for the event.
+    const handleVoicesChanged = () => {
+      if (load()) {
+        synth.onvoiceschanged = null;
+      }
+    };
+    
+    synth.onvoiceschanged = handleVoicesChanged;
+    
+    // Add a timeout as a fallback for browsers that don't fire the event reliably
+    setTimeout(() => {
+      if (!load()) {
+        // Try one more time after timeout
+        voices = synth.getVoices();
+        if (voices.length > 0) {
+          resolve(voices);
+        } else {
+          console.warn("Speech synthesis voices did not load after timeout.");
+          // Resolve anyway with empty array to not block the app
+          resolve([]);
+        }
+      }
+      synth.onvoiceschanged = null;
+    }, 1000);
   });
   return voicesPromise;
 }
@@ -74,6 +88,12 @@ export async function speak(text, lang, rate = 1.0) {
     utterance.voice = voiceForLang;
   } else {
     console.warn(`No specific voice found for lang "${lang}". Using browser default.`);
+  }
+
+  // Ensure we have voices before speaking (double check for mobile browsers)
+  if (voices.length === 0) {
+    // Force reload voices one more time
+    voices = synth.getVoices();
   }
 
   synth.speak(utterance);

@@ -72,11 +72,13 @@ export default function MainApp({
           <option value="fr-FR">Francuski</option>
         </select>
 
-        <div className="center-buttons margin-top-small">
-          <button id="toggle-timer-btn" onClick={() => setTimerVisible(!timerVisible)}>
-            {timerVisible ? 'Ukryj licznik' : 'Pokaż licznik'}
-          </button>
-        </div>
+        {autoMode && (
+          <div className="center-buttons margin-top-small">
+            <button id="toggle-timer-btn" onClick={() => setTimerVisible(!timerVisible)}>
+              {timerVisible ? 'Ukryj licznik' : 'Pokaż licznik'}
+            </button>
+          </div>
+        )}
       </div>
 
       {timerVisible && autoTimeLeft > 0 && (

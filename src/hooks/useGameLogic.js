@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { loadFromStorage, saveToStorage } from '../services/storage';
-import { speak, cancel as cancelSpeech } from '../services/speech';
+import { speak, cancel as cancelSpeech, getVoices } from '../services/speech';
 import { getSets, getSet, saveSet, deleteSet } from '../services/api';
 
 // Import data
@@ -85,11 +85,31 @@ export function useGameLogic() {
   // --- Game Actions ---
   const startGame = useCallback(async (selectedIds, customWordsRaw, remoteSetNames) => {
     let newCombined = [];
+    
+    // Track which sources are currently selected
+    const selectedSources = new Set();
+    
+    // Add local package sources
+    selectedIds.forEach(id => {
+      selectedSources.add(`local-${id}`);
+    });
+    
+    // Add remote set sources
+    remoteSetNames.forEach(name => {
+      selectedSources.add(`remote-${name}`);
+    });
+    
+    // Add custom source if custom words are provided or loaded
+    if (customWordsRaw || loadFromStorage('slowkaCustomWords')) {
+      selectedSources.add('custom');
+    }
 
     // Local packages
     selectedIds.forEach(id => {
       const pkg = localPackagesConfig.find(p => p.id === id);
-      if (pkg) newCombined.push(...pkg.data);
+      if (pkg) {
+        newCombined.push(...pkg.data.map(w => ({ ...w, source: `local-${id}` })));
+      }
     });
 
     // Remote sets
@@ -139,12 +159,24 @@ export function useGameLogic() {
 
     setCombinedWords(newCombined);
 
-    // Filter out used words
+    // Filter out used words - but only from currently selected sources
     const savedUsed = loadFromStorage('slowkaUsed') || [];
-    const newPool = newCombined.filter(w => !savedUsed.some(u => u.answer === w.answer && u.hint === w.hint));
+    // Only consider used words that come from currently selected sources
+    const relevantUsed = savedUsed.filter(u => {
+      // If the used word has a source, check if it's in selected sources
+      if (u.source) {
+        return selectedSources.has(u.source);
+      }
+      // For backward compatibility: if no source, check if it matches any word in newCombined
+      // This handles old data that might not have source field
+      return newCombined.some(w => w.answer === u.answer && w.hint === u.hint);
+    });
+    
+    const newPool = newCombined.filter(w => !relevantUsed.some(u => u.answer === w.answer && u.hint === w.hint));
 
     setPool(newPool);
-    setUsed(savedUsed);
+    // Only keep used words from currently selected sources
+    setUsed(relevantUsed);
     setGameState('quiz');
 
     // Pick first word directly (avoid circular dependency with pickNextWord)
@@ -160,11 +192,23 @@ export function useGameLogic() {
     // Check if auto mode was enabled before
     const savedAuto = loadFromStorage('slowkaAutoMode') === 'true';
     if (savedAuto && !autoMode) {
-      // Enable auto mode after a short delay to ensure current word is set
-      setTimeout(() => {
-        setAutoMode(true);
-        setAutoStep(0);
-      }, 100);
+      // Enable auto mode after ensuring speech synthesis is ready
+      // First ensure speech synthesis is initialized
+      getVoices()
+        .then(() => {
+          // Then enable auto mode after a short delay to ensure current word is set
+          setTimeout(() => {
+            setAutoMode(true);
+            setAutoStep(0);
+          }, 200);
+        })
+        .catch(() => {
+          // Even if voices fail to load, try to enable auto mode anyway
+          setTimeout(() => {
+            setAutoMode(true);
+            setAutoStep(0);
+          }, 200);
+        });
     }
 
   }, [autoMode]);
@@ -219,7 +263,19 @@ export function useGameLogic() {
 
   const restart = useCallback(() => {
     if (confirm('Czy na pewno chcesz zrestartować?')) {
-      saveToStorage('slowkaUsed', []);
+      // Get sources from currently selected packages
+      const currentSources = new Set(combinedWords.map(w => w.source).filter(Boolean));
+      
+      // Remove only used words from currently selected sources
+      const savedUsed = loadFromStorage('slowkaUsed') || [];
+      const remainingUsed = savedUsed.filter(u => {
+        // Keep words that don't have a source (backward compatibility)
+        if (!u.source) return true;
+        // Remove words from currently selected sources
+        return !currentSources.has(u.source);
+      });
+      
+      saveToStorage('slowkaUsed', remainingUsed);
       setUsed([]);
       setPool([...combinedWords]);
       setPrevious(null);
@@ -282,7 +338,14 @@ export function useGameLogic() {
       return;
     }
 
-    const runAutoStep = () => {
+    const runAutoStep = async () => {
+      // Ensure speech synthesis is fully initialized before speaking
+      try {
+        await getVoices();
+      } catch (e) {
+        console.warn('Speech synthesis voices not ready, continuing anyway', e);
+      }
+
       const multiplier = parseFloat(loadFromStorage('slowkaTimeMultiplier') || 1.0);
       const speechRate = parseFloat(loadFromStorage('slowkaSpeechRate') || 1.0);
 
@@ -297,7 +360,7 @@ export function useGameLogic() {
 
       if (autoStep === 0) {
         // Speak Hint
-        speak(current.hint, 'pl-PL', speechRate); // Assuming hint is PL usually, or detect
+        await speak(current.hint, 'pl-PL', speechRate); // Assuming hint is PL usually, or detect
 
         // Start Timer
         startCountdown(hintDelay);
@@ -307,7 +370,7 @@ export function useGameLogic() {
         }, hintDelay);
       } else {
         // Speak Answer
-        speak(current.answer, answerLanguage, speechRate);
+        await speak(current.answer, answerLanguage, speechRate);
 
         // Start Timer
         startCountdown(answerDelay);
