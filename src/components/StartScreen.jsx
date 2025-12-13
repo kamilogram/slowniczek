@@ -45,6 +45,7 @@ export default function StartScreen({
   const [expandedCategories, setExpandedCategories] = useState({});
   const [expandedTypes, setExpandedTypes] = useState({});
   const [remoteSearch, setRemoteSearch] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   // Remote Set Management State
   const [newSetName, setNewSetName] = useState('');
@@ -121,13 +122,21 @@ export default function StartScreen({
     return acc;
   }, {});
 
-  const handleStart = () => {
+  const handleStart = async () => {
     // Separate local IDs and remote names
     const localIds = selectedPackages.filter(id => localPackagesConfig.some(p => p.id === id));
     const remoteNames = selectedPackages.filter(id => !localPackagesConfig.some(p => p.id === id))
       .map(id => id.replace('remote-', '')); // Assuming remote IDs are prefixed
 
-    onStart(localIds, customWordsInput, remoteNames);
+    setIsLoading(true);
+    try {
+      await onStart(localIds, customWordsInput, remoteNames);
+    } catch (error) {
+      console.error('Error starting game:', error);
+      setIsLoading(false);
+    }
+    // Note: We don't set isLoading to false on success because the component will unmount
+    // when gameState changes to 'quiz'
   };
 
   const handleSaveRemote = async () => {
@@ -287,10 +296,17 @@ export default function StartScreen({
         <div className="start-actions sticky-start-actions">
           <button
             className="start-btn"
-            disabled={selectedPackages.length === 0 && !customWordsInput}
+            disabled={(selectedPackages.length === 0 && !customWordsInput) || isLoading}
             onClick={handleStart}
           >
-            Rozpocznij
+            {isLoading ? (
+              <>
+                <span className="spinner"></span>
+                <span style={{ marginLeft: '8px' }}>Ładowanie...</span>
+              </>
+            ) : (
+              'Rozpocznij'
+            )}
           </button>
           <p className="selected-info">
             {selectedPackages.length > 0 || customWordsInput ? `Wybrano ${selectedPackages.length + (customWordsInput ? 1 : 0)} pakiet(ów).` : 'Wybierz co najmniej jeden pakiet'}

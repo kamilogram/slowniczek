@@ -27,9 +27,15 @@ export default function Controls({
 
   if (autoMode) {
     return (
-      <div className="center-buttons gap">
-        <button id="auto-mode-btn" className="active" onClick={onToggleAutoMode}>Wyłącz auto</button>
-      </div>
+      <>
+        <div className="center-buttons gap">
+          <button id="auto-mode-btn" className="active" onClick={onToggleAutoMode}>Wyłącz auto</button>
+          <button id="toggle-dark-mode-btn" onClick={onToggleDarkMode}>Tryb nocny</button>
+        </div>
+        <div className="center-buttons margin-top-small">
+          <button className="change-packages-btn" onClick={onChangePackages}>📦 Zmień pakiety</button>
+        </div>
+      </>
     );
   }
 
