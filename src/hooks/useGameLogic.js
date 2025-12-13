@@ -417,6 +417,75 @@ export function useGameLogic() {
     }
   }, [gameState, combinedWords, pickNextWord]);
 
+  // --- Memory Functions ---
+  const saveCurrentWordToMemory = useCallback(() => {
+    if (!current) {
+      alert('Brak aktualnego słowa!');
+      return false;
+    }
+    const mem = loadFromStorage('slowkaMemory') || [];
+    if (!mem.some(w => w.answer === current.answer && w.hint === current.hint)) {
+      mem.push(current);
+      saveToStorage('slowkaMemory', mem);
+      return true;
+    }
+    alert('To słowo już jest w pamięci.');
+    return false;
+  }, [current]);
+
+  const savePreviousWordToMemory = useCallback(() => {
+    if (!previous) {
+      alert('Brak poprzedniego słowa!');
+      return false;
+    }
+    const mem = loadFromStorage('slowkaMemory') || [];
+    if (!mem.some(w => w.answer === previous.answer && w.hint === previous.hint)) {
+      mem.push(previous);
+      saveToStorage('slowkaMemory', mem);
+      return true;
+    }
+    alert('To słowo już jest w pamięci.');
+    return false;
+  }, [previous]);
+
+  const getMemory = useCallback(() => {
+    return loadFromStorage('slowkaMemory') || [];
+  }, []);
+
+  const removeFromMemory = useCallback((index) => {
+    const mem = loadFromStorage('slowkaMemory') || [];
+    const updatedMemory = mem.filter((_, i) => i !== index);
+    saveToStorage('slowkaMemory', updatedMemory);
+    return updatedMemory;
+  }, []);
+
+  // --- Selected Text Memory Functions ---
+  const saveSelectedTextToMemory = useCallback((selectedText) => {
+    if (!selectedText || !selectedText.trim()) {
+      alert('Brak zaznaczonego tekstu!');
+      return false;
+    }
+    const mem = loadFromStorage('slowkaSelectedTexts') || [];
+    if (!mem.includes(selectedText.trim())) {
+      mem.push(selectedText.trim());
+      saveToStorage('slowkaSelectedTexts', mem);
+      return true;
+    }
+    alert('Ten tekst już jest w pamięci.');
+    return false;
+  }, []);
+
+  const getSelectedTexts = useCallback(() => {
+    return loadFromStorage('slowkaSelectedTexts') || [];
+  }, []);
+
+  const removeSelectedText = useCallback((index) => {
+    const texts = loadFromStorage('slowkaSelectedTexts') || [];
+    const updatedTexts = texts.filter((_, i) => i !== index);
+    saveToStorage('slowkaSelectedTexts', updatedTexts);
+    return updatedTexts;
+  }, []);
+
   return {
     gameState,
     setGameState,
@@ -446,6 +515,17 @@ export function useGameLogic() {
     setAnswerLanguage,
 
     clearUsedHistory,
+
+    // Memory functions
+    saveCurrentWordToMemory,
+    savePreviousWordToMemory,
+    getMemory,
+    removeFromMemory,
+
+    // Selected text memory functions
+    saveSelectedTextToMemory,
+    getSelectedTexts,
+    removeSelectedText,
 
     // Expose for StartScreen
     selectedPackages,
