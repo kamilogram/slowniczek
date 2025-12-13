@@ -12,7 +12,9 @@ export default function Controls({
   onChangePackages,
   onClearUsed,
   hasPrevious,
-  gameFinished
+  gameFinished,
+  onSaveCurrent,
+  onSavePrevious
 }) {
   if (gameFinished) {
     return (
@@ -63,5 +65,16 @@ export default function Controls({
         <button id="clear-used-btn" onClick={onClearUsed}>Wyczyść odgadnięte słówka</button>
       </div>
     </>
+  );
+}
+
+export function MemoryButtons({ onSaveCurrent, onSavePrevious, onShowMemory, onShowSelectedTexts, showMemory }) {
+  return (
+    <div className="memory-buttons" style={{ display: showMemory ? 'block' : 'none' }}>
+      <button id="save-word-btn" onClick={onSavePrevious}>Dodaj poprzednie</button>
+      <button id="save-current-btn" onClick={onSaveCurrent}>Dodaj aktualne</button>
+      <button id="show-memory-btn" onClick={onShowMemory}>Pokaż zapamiętane</button>
+      <button id="show-selected-texts-btn" onClick={onShowSelectedTexts}>Pokaż zaznaczone</button>
+    </div>
   );
 }

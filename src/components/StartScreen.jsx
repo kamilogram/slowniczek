@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { saveSet, deleteSet } from '../services/api';
 import { saveToStorage } from '../services/storage';
 
@@ -84,6 +84,89 @@ export default function StartScreen({
     }
   }, []); // Run only once on mount
 
+  // Filter Remote
+  const filteredPackages = allPackages.filter(p => {
+    if (p.isLocal) return true;
+    if (!remoteSearch) return true;
+    return p.name.toLowerCase().includes(remoteSearch.toLowerCase());
+  });
+
+  // Check if all packages in a type are selected
+  const areAllPackagesInTypeSelected = (lang, type) => {
+    const packagesInType = filteredPackages.filter(pkg => {
+      const pkgLang = pkg.language || 'Nieokreślony';
+      const pkgType = pkg.type || 'Nieokreślony typ';
+      return pkgLang === lang && pkgType === type;
+    });
+    if (packagesInType.length === 0) return false;
+    return packagesInType.every(pkg => {
+      const id = pkg.isLocal ? pkg.id : `remote-${pkg.name}`;
+      return selectedPackages.includes(id);
+    });
+  };
+
+  // Check if some (but not all) packages in a type are selected
+  const areSomePackagesInTypeSelected = (lang, type) => {
+    const packagesInType = filteredPackages.filter(pkg => {
+      const pkgLang = pkg.language || 'Nieokreślony';
+      const pkgType = pkg.type || 'Nieokreślony typ';
+      return pkgLang === lang && pkgType === type;
+    });
+    if (packagesInType.length === 0) return false;
+    const selectedCount = packagesInType.filter(pkg => {
+      const id = pkg.isLocal ? pkg.id : `remote-${pkg.name}`;
+      return selectedPackages.includes(id);
+    }).length;
+    return selectedCount > 0 && selectedCount < packagesInType.length;
+  };
+
+  // Update indeterminate state for type checkboxes
+  useEffect(() => {
+    // Update all type checkboxes after render
+    const checkboxes = document.querySelectorAll('input.type-checkbox');
+    checkboxes.forEach(checkbox => {
+      const lang = checkbox.getAttribute('data-lang');
+      const type = checkbox.getAttribute('data-type');
+      if (lang && type) {
+        checkbox.indeterminate = areSomePackagesInTypeSelected(lang, type);
+      }
+    });
+  }, [selectedPackages, filteredPackages]);
+
+  // Handle Type Checkbox - toggle all packages in type
+  const handleTypeCheckboxChange = (lang, type, e) => {
+    e.stopPropagation(); // Prevent type toggle
+    const packagesInType = filteredPackages.filter(pkg => {
+      const pkgLang = pkg.language || 'Nieokreślony';
+      const pkgType = pkg.type || 'Nieokreślony typ';
+      return pkgLang === lang && pkgType === type;
+    });
+    const allSelected = areAllPackagesInTypeSelected(lang, type);
+
+    setSelectedPackages(prev => {
+      let newSelected;
+      if (allSelected) {
+        // Deselect all packages in this type
+        const packageIds = packagesInType.map(pkg => pkg.isLocal ? pkg.id : `remote-${pkg.name}`);
+        newSelected = prev.filter(id => !packageIds.includes(id));
+      } else {
+        // Select all packages in this type
+        // First, remove packages from other languages (enforce single language)
+        const keptPackages = prev.filter(prevId => {
+          const pkg = allPackages.find(p => (p.isLocal ? p.id : `remote-${p.name}`) === prevId);
+          if (!pkg) return false;
+          return pkg.language === lang;
+        });
+        const packageIds = packagesInType.map(pkg => pkg.isLocal ? pkg.id : `remote-${pkg.name}`);
+        newSelected = [...keptPackages, ...packageIds.filter(id => !keptPackages.includes(id))];
+      }
+
+      // Save to localStorage
+      saveToStorage('slowkaSelectedPackages', newSelected);
+      return newSelected;
+    });
+  };
+
   // Handle Checkbox
   const handleCheckboxChange = (id, isLocal, lang, type) => {
     setSelectedPackages(prev => {
@@ -105,13 +188,6 @@ export default function StartScreen({
       return newSelected;
     });
   };
-
-  // Filter Remote
-  const filteredPackages = allPackages.filter(p => {
-    if (p.isLocal) return true;
-    if (!remoteSearch) return true;
-    return p.name.toLowerCase().includes(remoteSearch.toLowerCase());
-  });
 
   const grouped = filteredPackages.reduce((acc, pkg) => {
     const lang = pkg.language || 'Nieokreślony';
@@ -210,6 +286,20 @@ export default function StartScreen({
                           <span className="toggle-icon">{expandedTypes[`${lang}-${type}`] ? '▼' : '▶'}</span>
                           <span className="type-title">{type === 'word' ? 'Słówka' : type === 'sentence' ? 'Zdania' : type}</span>
                         </button>
+                        <input
+                          type="checkbox"
+                          className="type-checkbox"
+                          data-lang={lang}
+                          data-type={type}
+                          checked={areAllPackagesInTypeSelected(lang, type)}
+                          onChange={(e) => handleTypeCheckboxChange(lang, type, e)}
+                          onClick={(e) => e.stopPropagation()}
+                          ref={(el) => {
+                            if (el) {
+                              el.indeterminate = areSomePackagesInTypeSelected(lang, type);
+                            }
+                          }}
+                        />
                       </div>
                       {expandedTypes[`${lang}-${type}`] && (
                         <div className="type-content">
