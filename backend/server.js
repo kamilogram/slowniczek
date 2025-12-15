@@ -30,7 +30,7 @@ app.get('/api/sets', async (req, res) => {
     // Pobieramy tylko potrzebne dane, aby zmniejszyć transfer
     const { data, error } = await supabase
       .from('word_sets')
-      .select('name, language, type')
+      .select('name, language, type, created_at, count')
     if (error) throw error;
     res.json({ sets: data || [] });
   } catch (error) {
