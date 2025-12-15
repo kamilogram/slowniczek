@@ -159,9 +159,16 @@ export function useGameLogic() {
 
     setCombinedWords(newCombined);
 
-    // Filter out used words - but only from currently selected sources
+    // Clear used history when starting new game to avoid mixing old data
+    setUsed([]);
+    saveToStorage('slowkaUsed', []);
+    
+    const newPool = newCombined;
+    // No filtering by used words - start fresh
+    const relevantUsed = [];
+    
+    /* Old logic that was causing issues:
     const savedUsed = loadFromStorage('slowkaUsed') || [];
-    // Only consider used words that come from currently selected sources
     const relevantUsed = savedUsed.filter(u => {
       // If the used word has a source, check if it's in selected sources
       if (u.source) {
@@ -171,8 +178,8 @@ export function useGameLogic() {
       // This handles old data that might not have source field
       return newCombined.some(w => w.answer === u.answer && w.hint === u.hint);
     });
-    
-    const newPool = newCombined.filter(w => !relevantUsed.some(u => u.answer === w.answer && u.hint === w.hint));
+    const newPool = newCombined.filter(w => !relevantUsed.some(u => u.answer === w.answer && w.hint === w.hint));
+    */
 
     setPool(newPool);
     // Only keep used words from currently selected sources
