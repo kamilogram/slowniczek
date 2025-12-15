@@ -284,6 +284,7 @@ export default function StartScreen({
 
   return (
     <div className="start-screen">
+      <div className="version-badge">v2025-01-20</div>
       <div className="start-card">
         <h1>🎯 Słowappka</h1>
         <p className="start-description">Wybierz pakiety słówek, które chcesz ćwiczyć lub wklej własne:</p>
@@ -340,8 +341,16 @@ export default function StartScreen({
                               if (sort === 'unsorted') return 0;
                               if (sort === 'alpha-asc') return a.name.localeCompare(b.name);
                               if (sort === 'alpha-desc') return b.name.localeCompare(a.name);
-                              if (sort === 'date-asc') return new Date(a.created_at || 0) - new Date(b.created_at || 0);
-                              if (sort === 'date-desc') return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+                              if (sort === 'date-asc') {
+                                const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+                                const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+                                return dateA - dateB;
+                              }
+                              if (sort === 'date-desc') {
+                                const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+                                const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+                                return dateB - dateA;
+                              }
                               return 0;
                             }).map(pkg => {
                               const id = pkg.isLocal ? pkg.id : `remote-${pkg.name}`;
