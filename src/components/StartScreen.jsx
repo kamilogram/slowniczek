@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { saveSet, deleteSet } from '../services/api';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { saveSet, deleteSet, getSet } from '../services/api';
 import { saveToStorage } from '../services/storage';
 
 // Mapowanie kodów języków na pełne nazwy
@@ -33,19 +33,21 @@ export default function StartScreen({
   setCustomWordsInput
 }) {
   // Group Packages - normalizuj języki z backendu
-  const allPackages = [
+  const allPackages = useMemo(() => [
     ...localPackagesConfig.map(p => ({ ...p, isLocal: true })),
     ...remoteSets.map(p => ({
       ...p,
       isLocal: false,
       language: normalizeLanguage(p.language) // Normalizuj język
     }))
-  ];
+  ], [localPackagesConfig, remoteSets]);
 
   const [expandedCategories, setExpandedCategories] = useState({});
   const [expandedTypes, setExpandedTypes] = useState({});
   const [remoteSearch, setRemoteSearch] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [sortBy, setSortBy] = useState({});
+  const [remoteCounts, setRemoteCounts] = useState({});
 
   // Remote Set Management State
   const [newSetName, setNewSetName] = useState('');
@@ -83,6 +85,24 @@ export default function StartScreen({
       setExpandedTypes(newExpandedTypes);
     }
   }, []); // Run only once on mount
+
+  // Fetch counts for remote packages with count=0
+  useEffect(() => {
+    const fetchMissingCounts = async () => {
+      const toFetch = remoteSets.filter(s => !s.count || s.count === 0);
+      for (const set of toFetch) {
+        try {
+          const data = await getSet(set.name);
+          if (data?.words) {
+            setRemoteCounts(prev => ({...prev, [set.name]: data.words.length}));
+          }
+        } catch (e) {
+          console.error(`Failed to fetch count for ${set.name}`, e);
+        }
+      }
+    };
+    if (remoteSets.length > 0) fetchMissingCounts();
+  }, [remoteSets]);
 
   // Filter Remote
   const filteredPackages = allPackages.filter(p => {
@@ -303,8 +323,27 @@ export default function StartScreen({
                       </div>
                       {expandedTypes[`${lang}-${type}`] && (
                         <div className="type-content">
+                          <select 
+                            value={sortBy[`${lang}-${type}`] || 'unsorted'} 
+                            onChange={(e) => setSortBy(prev => ({...prev, [`${lang}-${type}`]: e.target.value}))}
+                            className="sort-select"
+                          >
+                            <option value="unsorted">Nieposortowane</option>
+                            <option value="alpha-asc">Alfabetycznie A-Z</option>
+                            <option value="alpha-desc">Alfabetycznie Z-A</option>
+                            <option value="date-asc">Data utworzenia (najstarsze)</option>
+                            <option value="date-desc">Data utworzenia (najnowsze)</option>
+                          </select>
                           <div className="package-list">
-                            {grouped[lang][type].map(pkg => {
+                            {[...grouped[lang][type]].sort((a, b) => {
+                              const sort = sortBy[`${lang}-${type}`] || 'unsorted';
+                              if (sort === 'unsorted') return 0;
+                              if (sort === 'alpha-asc') return a.name.localeCompare(b.name);
+                              if (sort === 'alpha-desc') return b.name.localeCompare(a.name);
+                              if (sort === 'date-asc') return new Date(a.created_at || 0) - new Date(b.created_at || 0);
+                              if (sort === 'date-desc') return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+                              return 0;
+                            }).map(pkg => {
                               const id = pkg.isLocal ? pkg.id : `remote-${pkg.name}`;
                               return (
                                 <label key={id} className="package-item">
@@ -314,7 +353,7 @@ export default function StartScreen({
                                     onChange={() => handleCheckboxChange(id, pkg.isLocal, lang, type)}
                                   />
                                   <span className="package-name">{pkg.name}</span>
-                                  <span className="package-count">{pkg.data ? pkg.data.length : pkg.count}</span>
+                                  <span className="package-count">{pkg.isLocal ? pkg.data.length : (pkg.count || remoteCounts[pkg.name] || 0)}</span>
                                 </label>
                               );
                             })}
