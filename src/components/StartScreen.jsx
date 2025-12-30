@@ -88,20 +88,7 @@ export default function StartScreen({
 
   // Fetch counts for remote packages with count=0
   useEffect(() => {
-    const fetchMissingCounts = async () => {
-      const toFetch = remoteSets.filter(s => !s.count || s.count === 0);
-      for (const set of toFetch) {
-        try {
-          const data = await getSet(set.name);
-          if (data?.words) {
-            setRemoteCounts(prev => ({...prev, [set.name]: data.words.length}));
-          }
-        } catch (e) {
-          console.error(`Failed to fetch count for ${set.name}`, e);
-        }
-      }
-    };
-    if (remoteSets.length > 0) fetchMissingCounts();
+    // Removed - count is now always provided by backend
   }, [remoteSets]);
 
   // Filter Remote
@@ -342,14 +329,16 @@ export default function StartScreen({
                               if (sort === 'alpha-asc') return a.name.localeCompare(b.name);
                               if (sort === 'alpha-desc') return b.name.localeCompare(a.name);
                               if (sort === 'date-asc') {
-                                const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
-                                const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
-                                return dateA - dateB;
+                                if (!a.created_at && !b.created_at) return 0;
+                                if (!a.created_at) return 1;
+                                if (!b.created_at) return -1;
+                                return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
                               }
                               if (sort === 'date-desc') {
-                                const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
-                                const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
-                                return dateB - dateA;
+                                if (!a.created_at && !b.created_at) return 0;
+                                if (!a.created_at) return 1;
+                                if (!b.created_at) return -1;
+                                return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
                               }
                               return 0;
                             }).map(pkg => {
@@ -362,7 +351,7 @@ export default function StartScreen({
                                     onChange={() => handleCheckboxChange(id, pkg.isLocal, lang, type)}
                                   />
                                   <span className="package-name">{pkg.name}</span>
-                                  <span className="package-count">{pkg.isLocal ? pkg.data.length : (pkg.count || remoteCounts[pkg.name] || 0)}</span>
+                                  <span className="package-count">{pkg.isLocal ? pkg.data.length : (pkg.count || 0)}</span>
                                 </label>
                               );
                             })}
