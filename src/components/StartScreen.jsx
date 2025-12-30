@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { saveSet, deleteSet, getSet } from '../services/api';
 import { saveToStorage } from '../services/storage';
+import PackageEditor from './PackageEditor';
 
 // Mapowanie kodów języków na pełne nazwy
 const LANGUAGE_MAP = {
@@ -48,6 +49,9 @@ export default function StartScreen({
   const [isLoading, setIsLoading] = useState(false);
   const [sortBy, setSortBy] = useState({});
   const [remoteCounts, setRemoteCounts] = useState({});
+  const [editingPackage, setEditingPackage] = useState(null);
+  const [packageWords, setPackageWords] = useState(null);
+  const longPressTimer = useRef(null);
 
   // Remote Set Management State
   const [newSetName, setNewSetName] = useState('');
@@ -269,6 +273,45 @@ export default function StartScreen({
     }
   };
 
+  const handleLongPressStart = async (pkg) => {
+    if (pkg.isLocal) return;
+    longPressTimer.current = setTimeout(async () => {
+      try {
+        const data = await getSet(pkg.name);
+        if (data?.words) {
+          setPackageWords(data.words);
+          setEditingPackage(pkg);
+        }
+      } catch (e) {
+        console.error('Failed to load package words', e);
+      }
+    }, 800);
+  };
+
+  const handleLongPressEnd = () => {
+    if (longPressTimer.current) {
+      clearTimeout(longPressTimer.current);
+      longPressTimer.current = null;
+    }
+  };
+
+  const handleSavePackage = async (words, newName) => {
+    try {
+      if (newName !== editingPackage.name) {
+        await deleteSet(editingPackage.name);
+      }
+      await saveSet(newName, words, editingPackage.language, editingPackage.type);
+      refreshRemoteSets();
+    } catch (e) {
+      alert('Błąd zapisu: ' + e.message);
+    }
+  };
+
+  const handleCloseEditor = () => {
+    setEditingPackage(null);
+    setPackageWords(null);
+  };
+
   return (
     <div className="start-screen">
       <div className="version-badge">v2025-01-20</div>
@@ -312,11 +355,10 @@ export default function StartScreen({
                       {expandedTypes[`${lang}-${type}`] && (
                         <div className="type-content">
                           <select 
-                            value={sortBy[`${lang}-${type}`] || 'unsorted'} 
+                            value={sortBy[`${lang}-${type}`] || 'date-desc'} 
                             onChange={(e) => setSortBy(prev => ({...prev, [`${lang}-${type}`]: e.target.value}))}
                             className="sort-select"
                           >
-                            <option value="unsorted">Nieposortowane</option>
                             <option value="alpha-asc">Alfabetycznie A-Z</option>
                             <option value="alpha-desc">Alfabetycznie Z-A</option>
                             <option value="date-asc">Data utworzenia (najstarsze)</option>
@@ -324,8 +366,7 @@ export default function StartScreen({
                           </select>
                           <div className="package-list">
                             {[...grouped[lang][type]].sort((a, b) => {
-                              const sort = sortBy[`${lang}-${type}`] || 'unsorted';
-                              if (sort === 'unsorted') return 0;
+                              const sort = sortBy[`${lang}-${type}`] || 'date-desc';
                               if (sort === 'alpha-asc') return a.name.localeCompare(b.name);
                               if (sort === 'alpha-desc') return b.name.localeCompare(a.name);
                               if (sort === 'date-asc') {
@@ -344,7 +385,15 @@ export default function StartScreen({
                             }).map(pkg => {
                               const id = pkg.isLocal ? pkg.id : `remote-${pkg.name}`;
                               return (
-                                <label key={id} className="package-item">
+                                <label 
+                                  key={id} 
+                                  className="package-item"
+                                  onMouseDown={() => handleLongPressStart(pkg)}
+                                  onMouseUp={handleLongPressEnd}
+                                  onMouseLeave={handleLongPressEnd}
+                                  onTouchStart={() => handleLongPressStart(pkg)}
+                                  onTouchEnd={handleLongPressEnd}
+                                >
                                   <input
                                     type="checkbox"
                                     checked={selectedPackages.includes(id)}
@@ -440,6 +489,13 @@ export default function StartScreen({
           </p>
         </div>
       </div>
+      {editingPackage && packageWords && (
+        <PackageEditor
+          pkg={{...editingPackage, words: packageWords}}
+          onSave={handleSavePackage}
+          onClose={handleCloseEditor}
+        />
+      )}
     </div>
   );
 }

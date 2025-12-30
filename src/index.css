@@ -1434,3 +1434,99 @@ button:active {
   background: rgba(45, 55, 72, 0.9);
   color: #a0aec0;
 }
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.words-list {
+  margin: 16px 0;
+}
+
+.word-edit-item {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.word-edit-item textarea {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 40px;
+  font-family: inherit;
+}
+
+.word-edit-item button {
+  padding: 8px 12px;
+  min-width: auto;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.confirm-dialog {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.dark-mode .modal-content,
+.dark-mode .confirm-dialog {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-mode .word-edit-item textarea {
+  background: #2d3748;
+  color: #e0e0e0;
+  border-color: #4a5568;
+}
