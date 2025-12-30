@@ -84,6 +84,11 @@ export function useGameLogic() {
 
   // --- Game Actions ---
   const startGame = useCallback(async (selectedIds, customWordsRaw, remoteSetNames) => {
+    console.log('=== START GAME ===');
+    console.log('Selected local IDs:', selectedIds);
+    console.log('Remote set names:', remoteSetNames);
+    console.log('Custom words raw:', customWordsRaw ? 'provided' : 'none');
+    
     let newCombined = [];
     
     // Track which sources are currently selected
@@ -108,6 +113,7 @@ export function useGameLogic() {
     selectedIds.forEach(id => {
       const pkg = localPackagesConfig.find(p => p.id === id);
       if (pkg) {
+        console.log(`Adding local package: ${pkg.name} (${pkg.data.length} words)`);
         newCombined.push(...pkg.data.map(w => ({ ...w, source: `local-${id}` })));
       }
     });
@@ -115,10 +121,9 @@ export function useGameLogic() {
     // Remote sets
     for (const name of remoteSetNames) {
       try {
-        // Check if we have full data in remoteSets, otherwise fetch
-        // The list only has metadata usually, so we fetch details
         const set = await getSet(name);
         if (set && set.words) {
+          console.log(`Adding remote set: ${name} (${set.words.length} words)`);
           newCombined.push(...set.words.map(w => ({ ...w, source: `remote-${name}` })));
         }
       } catch (e) {
@@ -140,17 +145,17 @@ export function useGameLogic() {
         }
         if (Array.isArray(parsed)) {
           const valid = parsed.filter(w => w.hint && w.answer);
+          console.log(`Adding custom words: ${valid.length} words`);
           newCombined.push(...valid.map(w => ({ ...w, source: 'custom' })));
           saveToStorage('slowkaCustomWords', valid);
         }
       } catch (e) {
         console.error("Failed to parse custom words", e);
       }
-    } else {
-      // Load saved custom words if any
-      const saved = loadFromStorage('slowkaCustomWords');
-      if (saved) newCombined.push(...saved.map(w => ({ ...w, source: 'custom' })));
     }
+
+    console.log('Total combined words:', newCombined.length);
+    console.log('Sources in combined:', [...new Set(newCombined.map(w => w.source))]);
 
     if (newCombined.length === 0) {
       alert("Nie wybrano żadnych słówek!");

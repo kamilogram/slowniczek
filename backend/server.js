@@ -76,6 +76,13 @@ app.post('/api/sets/:name', async (req, res) => {
   }
 
   try {
+    // Check if record exists
+    const { data: existing } = await supabase
+      .from('word_sets')
+      .select('created_at')
+      .eq('name', name)
+      .single();
+
     const { data, error } = await supabase
       .from('word_sets')
       .upsert({
@@ -83,9 +90,10 @@ app.post('/api/sets/:name', async (req, res) => {
         words,
         count: words.length,
         language,
-        type
+        type,
+        ...(existing?.created_at && { created_at: existing.created_at })
       }, {
-        onConflict: 'name' // To jest kluczowe! Mówi Supabase, aby aktualizować wiersz, jeśli nazwa już istnieje.
+        onConflict: 'name'
       })
       .select()
       .single();
