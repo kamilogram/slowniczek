@@ -1,0 +1,17 @@
+{
+  "name": "german-101",
+  "language": "German",
+  "type": "word",
+  "words": [
+    { "front": "hallo", "back": "cześć" },
+    { "front": "auf wiedersehen", "back": "do widzenia" },
+    { "front": "ja", "back": "tak" },
+    { "front": "nein", "back": "nie" },
+    { "front": "bitte", "back": "proszę" },
+    { "front": "danke", "back": "dziękuję" },
+    { "front": "wasser", "back": "woda" },
+    { "front": "brot", "back": "chleb" },
+    { "front": "haus", "back": "dom" },
+    { "front": "katze", "back": "kot" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "french-101",
+  "language": "French",
+  "type": "word",
+  "words": [
+    { "front": "bonjour", "back": "dzień dobry" },
+    { "front": "au revoir", "back": "do widzenia" },
+    { "front": "oui", "back": "tak" },
+    { "front": "non", "back": "nie" },
+    { "front": "s'il vous plaît", "back": "proszę" },
+    { "front": "merci", "back": "dziękuję" },
+    { "front": "eau", "back": "woda" },
+    { "front": "pain", "back": "chleb" },
+    { "front": "maison", "back": "dom" },
+    { "front": "chat", "back": "kot" }
+  ]
+}
