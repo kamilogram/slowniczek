@@ -27,6 +27,13 @@ function App() {
     });
   }, []);
 
+  // Scroll to top when entering quiz mode
+  useEffect(() => {
+    if (gameLogic.gameState === 'quiz') {
+      window.scrollTo(0, 0);
+    }
+  }, [gameLogic.gameState]);
+
   const toggleDarkMode = () => {
     const isDark = document.body.classList.toggle('dark-mode');
     saveToStorage('slowkaDarkMode', isDark ? 'true' : 'false');

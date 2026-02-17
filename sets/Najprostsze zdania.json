@@ -1,0 +1,292 @@
+{
+  "name": "Najprostsze zdania",
+  "language": "fr",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Dzień dobry!",
+      "answer": "Bonjour !"
+    },
+    {
+      "hint": "Cześć!",
+      "answer": "Salut !"
+    },
+    {
+      "hint": "Dobry wieczór!",
+      "answer": "Bonsoir !"
+    },
+    {
+      "hint": "Do widzenia!",
+      "answer": "Au revoir !"
+    },
+    {
+      "hint": "Proszę.",
+      "answer": "S'il vous plaît."
+    },
+    {
+      "hint": "Dziękuję.",
+      "answer": "Merci."
+    },
+    {
+      "hint": "Dziękuję bardzo.",
+      "answer": "Merci beaucoup."
+    },
+    {
+      "hint": "Przepraszam.",
+      "answer": "Pardon."
+    },
+    {
+      "hint": "Nie ma za co.",
+      "answer": "De rien."
+    },
+    {
+      "hint": "Tak.",
+      "answer": "Oui."
+    },
+    {
+      "hint": "Nie.",
+      "answer": "Non."
+    },
+    {
+      "hint": "Może.",
+      "answer": "Peut-être."
+    },
+    {
+      "hint": "Nie rozumiem.",
+      "answer": "Je ne comprends pas."
+    },
+    {
+      "hint": "Proszę powtórzyć.",
+      "answer": "Répétez, s'il vous plaît."
+    },
+    {
+      "hint": "Jak masz na imię?",
+      "answer": "Comment tu t'appelles ?"
+    },
+    {
+      "hint": "Mam na imię...",
+      "answer": "Je m'appelle..."
+    },
+    {
+      "hint": "Skąd jesteś?",
+      "answer": "Tu es d'où ?"
+    },
+    {
+      "hint": "Jestem z Polski.",
+      "answer": "Je viens de Pologne."
+    },
+    {
+      "hint": "Ile masz lat?",
+      "answer": "Tu as quel âge ?"
+    },
+    {
+      "hint": "Mam 20 lat.",
+      "answer": "J'ai vingt ans."
+    },
+    {
+      "hint": "Jak się masz?",
+      "answer": "Ça va ?"
+    },
+    {
+      "hint": "W porządku, dziękuję.",
+      "answer": "Ça va, merci."
+    },
+    {
+      "hint": "Kim jesteś z zawodu?",
+      "answer": "Que fais-tu dans la vie ?"
+    },
+    {
+      "hint": "Jestem studentem.",
+      "answer": "Je suis étudiant."
+    },
+    {
+      "hint": "Jestem programistą.",
+      "answer": "Je suis programmeur."
+    },
+    {
+      "hint": "Co robisz?",
+      "answer": "Qu'est-ce que tu fais ?"
+    },
+    {
+      "hint": "Mieszkam w Warszawie.",
+      "answer": "J'habite à Varsovie."
+    },
+    {
+      "hint": "Gdzie jest toaleta?",
+      "answer": "Où sont les toilettes ?"
+    },
+    {
+      "hint": "Gdzie jest stacja metra?",
+      "answer": "Où est la station de métro ?"
+    },
+    {
+      "hint": "Ile to kosztuje?",
+      "answer": "Combien ça coûte ?"
+    },
+    {
+      "hint": "Czy mówisz po angielsku?",
+      "answer": "Tu parles anglais ?"
+    },
+    {
+      "hint": "Pomocy!",
+      "answer": "À l'aide !"
+    },
+    {
+      "hint": "Nie wiem.",
+      "answer": "Je ne sais pas."
+    },
+    {
+      "hint": "Jestem głodny.",
+      "answer": "J'ai faim."
+    },
+    {
+      "hint": "Jestem spragniony.",
+      "answer": "J'ai soif."
+    },
+    {
+      "hint": "Jestem zmęczony.",
+      "answer": "Je suis fatigué."
+    },
+    {
+      "hint": "Zgubiłem się.",
+      "answer": "Je me suis perdu."
+    },
+    {
+      "hint": "Gratulacje!",
+      "answer": "Félicitations !"
+    },
+    {
+      "hint": "Powodzenia!",
+      "answer": "Bonne chance !"
+    },
+    {
+      "hint": "Miłego dnia!",
+      "answer": "Bonne journée !"
+    },
+    {
+      "hint": "Miłego weekendu!",
+      "answer": "Bon week-end !"
+    },
+    {
+      "hint": "Wszystkiego najlepszego!",
+      "answer": "Joyeux anniversaire !"
+    },
+    {
+      "hint": "Gdzie to jest?",
+      "answer": "Où est-ce ?"
+    },
+    {
+      "hint": "Kiedy?",
+      "answer": "Quand ?"
+    },
+    {
+      "hint": "O której godzinie?",
+      "answer": "À quelle heure ?"
+    },
+    {
+      "hint": "Co to jest?",
+      "answer": "Qu'est-ce que c'est ?"
+    },
+    {
+      "hint": "Dlaczego?",
+      "answer": "Pourquoi ?"
+    },
+    {
+      "hint": "Kto?",
+      "answer": "Qui ?"
+    },
+    {
+      "hint": "Co robisz wieczorem?",
+      "answer": "Que fais-tu ce soir ?"
+    },
+    {
+      "hint": "Masz rodzeństwo?",
+      "answer": "Tu as des frères et sœurs ?"
+    },
+    {
+      "hint": "Mam brata.",
+      "answer": "J'ai un frère."
+    },
+    {
+      "hint": "Mam siostrę.",
+      "answer": "J'ai une sœur."
+    },
+    {
+      "hint": "Mam psa.",
+      "answer": "J'ai un chien."
+    },
+    {
+      "hint": "Mam kota.",
+      "answer": "J'ai un chat."
+    },
+    {
+      "hint": "Lubię to.",
+      "answer": "J'aime ça."
+    },
+    {
+      "hint": "Nie lubię tego.",
+      "answer": "Je n'aime pas ça."
+    },
+    {
+      "hint": "Czy to daleko?",
+      "answer": "C'est loin ?"
+    },
+    {
+      "hint": "Czy to blisko?",
+      "answer": "C'est près ?"
+    },
+    {
+      "hint": "Możesz pomóc?",
+      "answer": "Tu peux m'aider ?"
+    },
+    {
+      "hint": "Coś się stało?",
+      "answer": "Il y a un problème ?"
+    },
+    {
+      "hint": "Do zobaczenia jutro.",
+      "answer": "À demain."
+    },
+    {
+      "hint": "Do zobaczenia później.",
+      "answer": "À plus tard."
+    },
+    {
+      "hint": "Mieszkam tu od roku.",
+      "answer": "J'habite ici depuis un an."
+    },
+    {
+      "hint": "Chciałbym zamówić...",
+      "answer": "Je voudrais commander..."
+    },
+    {
+      "hint": "Jestem alergikiem.",
+      "answer": "Je suis allergique."
+    },
+    {
+      "hint": "Nie jem mięsa.",
+      "answer": "Je ne mange pas de viande."
+    },
+    {
+      "hint": "Czy możesz polecić restaurację?",
+      "answer": "Peux-tu recommander un restaurant ?"
+    },
+    {
+      "hint": "Jesteś zajęty?",
+      "answer": "Tu es occupé ?"
+    },
+    {
+      "hint": "Jestem wolny.",
+      "answer": "Je suis libre."
+    },
+    {
+      "hint": "Miło mi cię poznać.",
+      "answer": "Enchanté."
+    },
+    {
+      "hint": "Możemy się spotkać?",
+      "answer": "On peut se voir ?"
+    }
+  ],
+  "count": 71
+}

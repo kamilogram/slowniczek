@@ -1,0 +1,336 @@
+{
+  "name": "Słówka kartka 2",
+  "language": "en",
+  "type": "word",
+  "words": [
+    {
+      "hint": "Z krwi i kości",
+      "answer": "in the flesh"
+    },
+    {
+      "hint": "nieznacznie",
+      "answer": "slightly"
+    },
+    {
+      "hint": "liczyć na kogoś",
+      "answer": "to count on someone"
+    },
+    {
+      "hint": "polegać na kimś",
+      "answer": "to rely on someone"
+    },
+    {
+      "hint": "faworyzowany",
+      "answer": "favored"
+    },
+    {
+      "hint": "preferowany",
+      "answer": "preferred"
+    },
+    {
+      "hint": "wyśmiewany",
+      "answer": "ridiculed"
+    },
+    {
+      "hint": "przekonanie",
+      "answer": "conviction"
+    },
+    {
+      "hint": "wskazania",
+      "answer": "indication"
+    },
+    {
+      "hint": "planować termin",
+      "answer": "to schedule"
+    },
+    {
+      "hint": "planować",
+      "answer": "to plan"
+    },
+    {
+      "hint": "termin",
+      "answer": "deadline"
+    },
+    {
+      "hint": "nagroda",
+      "answer": "reward"
+    },
+    {
+      "hint": "dlatego",
+      "answer": "therefore"
+    },
+    {
+      "hint": "zatem",
+      "answer": "therefore"
+    },
+    {
+      "hint": "odległy (w znaczeniu daleki)",
+      "answer": "distant"
+    },
+    {
+      "hint": "odległy (w znaczeniu odizolowany)",
+      "answer": "remote"
+    },
+    {
+      "hint": "kondensować",
+      "answer": "to condense"
+    },
+    {
+      "hint": "szalony",
+      "answer": "crazy"
+    },
+    {
+      "hint": "psychiczny (w znaczeniu niezdrowy)",
+      "answer": "insane"
+    },
+    {
+      "hint": "podsumować",
+      "answer": "to summarize"
+    },
+    {
+      "hint": "unikać",
+      "answer": "to avoid"
+    },
+    {
+      "hint": "grupować",
+      "answer": "to group"
+    },
+    {
+      "hint": "nieprzetworzony (w znaczeniu surowy)",
+      "answer": "raw"
+    },
+    {
+      "hint": "nieprzetworzony (w znaczeniu nieobrobiony)",
+      "answer": "unprocessed"
+    },
+    {
+      "hint": "wzniosły",
+      "answer": "sublime"
+    },
+    {
+      "hint": "szczytny",
+      "answer": "lofty"
+    },
+    {
+      "hint": "przesada",
+      "answer": "exaggeration"
+    },
+    {
+      "hint": "dar przyrodzony",
+      "answer": "innate gift"
+    },
+    {
+      "hint": "rozległy",
+      "answer": "vast"
+    },
+    {
+      "hint": "nieprzebrany",
+      "answer": "immense"
+    },
+    {
+      "hint": "w ramach",
+      "answer": "within the framework of"
+    },
+    {
+      "hint": "tysiącletni",
+      "answer": "millennial"
+    },
+    {
+      "hint": "bodziec",
+      "answer": "stimulus"
+    },
+    {
+      "hint": "zachęta",
+      "answer": "incentive"
+    },
+    {
+      "hint": "zadławić się",
+      "answer": "to choke"
+    },
+    {
+      "hint": "przekąska",
+      "answer": "snack"
+    },
+    {
+      "hint": "rozdzielić (w znaczeniu separować)",
+      "answer": "to separate"
+    },
+    {
+      "hint": "rozdzielić (w znaczeniu podzielić)",
+      "answer": "to divide"
+    },
+    {
+      "hint": "wnikliwy (w znaczeniu spostrzegawczy)",
+      "answer": "insightful"
+    },
+    {
+      "hint": "wnikliwy (w znaczeniu bystry)",
+      "answer": "keen"
+    },
+    {
+      "hint": "glina",
+      "answer": "clay"
+    },
+    {
+      "hint": "zaleta",
+      "answer": "advantage"
+    },
+    {
+      "hint": "atut",
+      "answer": "asset"
+    },
+    {
+      "hint": "zaawansowany",
+      "answer": "advanced"
+    },
+    {
+      "hint": "nowoczesny",
+      "answer": "modern"
+    },
+    {
+      "hint": "uśredniony",
+      "answer": "averaged"
+    },
+    {
+      "hint": "odniesienie",
+      "answer": "reference"
+    },
+    {
+      "hint": "przepuszczać (w znaczeniu pozwolić przejść)",
+      "answer": "to let through"
+    },
+    {
+      "hint": "przepuszczać (w znaczeniu przeciekać)",
+      "answer": "to leak"
+    },
+    {
+      "hint": "automatyczny",
+      "answer": "automatic"
+    },
+    {
+      "hint": "samodzielny",
+      "answer": "standalone"
+    },
+    {
+      "hint": "pojemność",
+      "answer": "capacity"
+    },
+    {
+      "hint": "przywoływać (w znaczeniu wywoływać)",
+      "answer": "to evoke"
+    },
+    {
+      "hint": "przywoływać (w znaczeniu przypominać sobie)",
+      "answer": "to recall"
+    },
+    {
+      "hint": "program wykrywający błędy",
+      "answer": "debugger"
+    },
+    {
+      "hint": "pod maską",
+      "answer": "under the hood"
+    },
+    {
+      "hint": "zapakować (w znaczeniu spakować)",
+      "answer": "to pack"
+    },
+    {
+      "hint": "zapakować (w znaczeniu owinąć)",
+      "answer": "to wrap"
+    },
+    {
+      "hint": "nawiasy kwadratowe",
+      "answer": "square brackets"
+    },
+    {
+      "hint": "nawiasy klamrowe",
+      "answer": "curly braces"
+    },
+    {
+      "hint": "uwolniony (w znaczeniu wydany)",
+      "answer": "released"
+    },
+    {
+      "hint": "uwolniony (w znaczeniu oswobodzony)",
+      "answer": "freed"
+    },
+    {
+      "hint": "próba",
+      "answer": "attempt"
+    },
+    {
+      "hint": "wysiłek",
+      "answer": "effort"
+    },
+    {
+      "hint": "staranie",
+      "answer": "effort"
+    },
+    {
+      "hint": "godny",
+      "answer": "worthy"
+    },
+    {
+      "hint": "elastyczny",
+      "answer": "flexible"
+    },
+    {
+      "hint": "pokorny",
+      "answer": "humble"
+    },
+    {
+      "hint": "upokorzony",
+      "answer": "humiliated"
+    },
+    {
+      "hint": "zwyczaje",
+      "answer": "customs"
+    },
+    {
+      "hint": "nawyki",
+      "answer": "habits"
+    },
+    {
+      "hint": "poprzez (w znaczeniu przez)",
+      "answer": "through"
+    },
+    {
+      "hint": "poprzez (w znaczeniu za pomocą)",
+      "answer": "via"
+    },
+    {
+      "hint": "mądrość",
+      "answer": "wisdom"
+    },
+    {
+      "hint": "zapewnić",
+      "answer": "to ensure"
+    },
+    {
+      "hint": "zabezpieczyć",
+      "answer": "to secure"
+    },
+    {
+      "hint": "uregulowane",
+      "answer": "regulated"
+    },
+    {
+      "hint": "przekazać coś dalej komuś",
+      "answer": "to pass something on to someone"
+    },
+    {
+      "hint": "samowolny (w znaczeniu według własnej woli)",
+      "answer": "self-willed"
+    },
+    {
+      "hint": "samowolny (w znaczeniu arbitralny)",
+      "answer": "arbitrary"
+    },
+    {
+      "hint": "do znacznej mierze",
+      "answer": "to a large extent"
+    }
+  ],
+  "count": 82
+}

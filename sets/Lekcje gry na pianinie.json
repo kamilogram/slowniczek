@@ -1,0 +1,292 @@
+{
+  "name": "Lekcje gry na pianinie",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Mam dziś lekcję gry na pianinie.",
+      "answer": "I have a piano lesson today."
+    },
+    {
+      "hint": "Biorę lekcje od roku.",
+      "answer": "I have been taking lessons for a year."
+    },
+    {
+      "hint": "Gramy dziś skalę C-dur.",
+      "answer": "We're playing the C major scale today."
+    },
+    {
+      "hint": "Ćwiczę lewą rękę.",
+      "answer": "I'm practicing my left hand."
+    },
+    {
+      "hint": "Mój nauczyciel jest bardzo cierpliwy.",
+      "answer": "My teacher is very patient."
+    },
+    {
+      "hint": "Na początku byłem zestresowany.",
+      "answer": "I was nervous at first."
+    },
+    {
+      "hint": "Dzisiaj zagram nową piosenkę.",
+      "answer": "Today I will play a new song."
+    },
+    {
+      "hint": "Mam zadanie domowe do przećwiczenia.",
+      "answer": "I have homework to practice."
+    },
+    {
+      "hint": "Gram gamy każdego dnia.",
+      "answer": "I play scales every day."
+    },
+    {
+      "hint": "Ćwiczę czytanie nut.",
+      "answer": "I'm practicing reading sheet music."
+    },
+    {
+      "hint": "Mam jeszcze trudności z rytmem.",
+      "answer": "I still have trouble with rhythm."
+    },
+    {
+      "hint": "Nauczyciel pokazuje mi nowe akordy.",
+      "answer": "The teacher shows me new chords."
+    },
+    {
+      "hint": "Czasem ćwiczę na keyboardzie w domu.",
+      "answer": "Sometimes I practice on the keyboard at home."
+    },
+    {
+      "hint": "Chciałbym grać szybciej.",
+      "answer": "I want to play faster."
+    },
+    {
+      "hint": "Uczę się akompaniamentu do piosenek.",
+      "answer": "I'm learning to accompany songs."
+    },
+    {
+      "hint": "Po lekcji jestem zmotywowany do ćwiczeń.",
+      "answer": "After the lesson, I'm motivated to practice."
+    },
+    {
+      "hint": "Wybraliśmy utwór klasyczny na dziś.",
+      "answer": "We chose a classical piece for today."
+    },
+    {
+      "hint": "Lubię grać utwory z filmów.",
+      "answer": "I like playing pieces from movies."
+    },
+    {
+      "hint": "Gramy prostą melodię na początek.",
+      "answer": "We play a simple melody at the beginning."
+    },
+    {
+      "hint": "Nauczyciel poprawia moją postawę.",
+      "answer": "The teacher corrects my posture."
+    },
+    {
+      "hint": "Muszę używać metronomu.",
+      "answer": "I have to use a metronome."
+    },
+    {
+      "hint": "Nie zawsze trafiam we właściwe klawisze.",
+      "answer": "I don't always hit the right keys."
+    },
+    {
+      "hint": "Gram dzisiaj na fortepianie w szkole muzycznej.",
+      "answer": "I'm playing the piano at the music school today."
+    },
+    {
+      "hint": "Staram się nie patrzeć na ręce.",
+      "answer": "I try not to look at my hands."
+    },
+    {
+      "hint": "Uczę się nut po angielsku i po polsku.",
+      "answer": "I'm learning notes in English and Polish."
+    },
+    {
+      "hint": "Mamy krótką rozgrzewkę na początek.",
+      "answer": "We have a short warm-up at the start."
+    },
+    {
+      "hint": "Czasami improwizuję.",
+      "answer": "Sometimes I improvise."
+    },
+    {
+      "hint": "Zaczynamy od powtórzenia poprzedniego materiału.",
+      "answer": "We start by reviewing the previous material."
+    },
+    {
+      "hint": "Ćwiczymy wspólnie z nauczycielem.",
+      "answer": "We practice together with the teacher."
+    },
+    {
+      "hint": "Podoba mi się dźwięk fortepianu.",
+      "answer": "I like the sound of the piano."
+    },
+    {
+      "hint": "Chciałbym zagrać ulubioną piosenkę.",
+      "answer": "I'd like to play my favorite song."
+    },
+    {
+      "hint": "Nauczyciel pokazuje mi nowe techniki.",
+      "answer": "The teacher shows me new techniques."
+    },
+    {
+      "hint": "Czasami gram dwoma rękami jednocześnie.",
+      "answer": "Sometimes I play with both hands at the same time."
+    },
+    {
+      "hint": "Uczę się grać ze słuchu.",
+      "answer": "I'm learning to play by ear."
+    },
+    {
+      "hint": "Po lekcji rozmawiamy o postępach.",
+      "answer": "After the lesson, we talk about my progress."
+    },
+    {
+      "hint": "Zadałem pytania o trudne fragmenty.",
+      "answer": "I asked questions about difficult parts."
+    },
+    {
+      "hint": "Ćwiczymy też gamy mollowe.",
+      "answer": "We also practice minor scales."
+    },
+    {
+      "hint": "Ćwiczenie wymaga cierpliwości.",
+      "answer": "Practice requires patience."
+    },
+    {
+      "hint": "Uczę się czytać akordy na pięciolinii.",
+      "answer": "I'm learning to read chords on the staff."
+    },
+    {
+      "hint": "Dostałem nowy zeszyt nutowy.",
+      "answer": "I got a new sheet music notebook."
+    },
+    {
+      "hint": "Lubię ćwiczyć po lekcji.",
+      "answer": "I like practicing after the lesson."
+    },
+    {
+      "hint": "Bazuję na wskazówkach nauczyciela.",
+      "answer": "I rely on my teacher's guidance."
+    },
+    {
+      "hint": "Czasem mam tremę przed zagraniem utworu.",
+      "answer": "Sometimes I feel stage fright before playing a piece."
+    },
+    {
+      "hint": "Uczę się nowych terminów muzycznych.",
+      "answer": "I'm learning new musical terms."
+    },
+    {
+      "hint": "Poprawiamy tempo utworu.",
+      "answer": "We improve the tempo of the piece."
+    },
+    {
+      "hint": "Gram fragmenty wielokrotnie, by je zapamiętać.",
+      "answer": "I play passages many times to remember them."
+    },
+    {
+      "hint": "Lepiej mi idzie gra prawą ręką.",
+      "answer": "I do better with my right hand."
+    },
+    {
+      "hint": "Uczę się grać cicho i głośno.",
+      "answer": "I'm learning to play quietly and loudly."
+    },
+    {
+      "hint": "Zdarza mi się zapominać nuty.",
+      "answer": "Sometimes I forget the notes."
+    },
+    {
+      "hint": "Zmieniam ustawienia ławki przed grą.",
+      "answer": "I adjust the bench before playing."
+    },
+    {
+      "hint": "Gram też proste ćwiczenia rozciągające palce.",
+      "answer": "I also practice simple finger stretching exercises."
+    },
+    {
+      "hint": "Nagraliśmy lekcję na telefonie.",
+      "answer": "We recorded the lesson on the phone."
+    },
+    {
+      "hint": "Często robię przerwy podczas ćwiczeń.",
+      "answer": "I often take breaks while practicing."
+    },
+    {
+      "hint": "Dzisiaj zagram nowy akord.",
+      "answer": "Today I will play a new chord."
+    },
+    {
+      "hint": "Nauczyciel wyjaśnia różnice między dźwiękami.",
+      "answer": "The teacher explains differences between notes."
+    },
+    {
+      "hint": "Ćwiczę przebiegi palców.",
+      "answer": "I'm practicing fingering runs."
+    },
+    {
+      "hint": "Zadanie domowe na następną lekcję już mam.",
+      "answer": "I already have the homework for the next lesson."
+    },
+    {
+      "hint": "Pytam nauczyciela o wskazówki do ćwiczeń w domu.",
+      "answer": "I ask the teacher for tips on practicing at home."
+    },
+    {
+      "hint": "Ćwiczymy przejścia między akordami.",
+      "answer": "We practice transitions between chords."
+    },
+    {
+      "hint": "Nagrywam swoje ćwiczenia na dyktafon.",
+      "answer": "I record my practice on a recorder."
+    },
+    {
+      "hint": "Starannie czytam nuty, by nie popełnić błędów.",
+      "answer": "I carefully read the notes to avoid mistakes."
+    },
+    {
+      "hint": "Oglądam filmy instruktażowe o grze na pianinie.",
+      "answer": "I watch instructional videos about playing the piano."
+    },
+    {
+      "hint": "Cieszę się z każdego postępu.",
+      "answer": "I am happy with every bit of progress."
+    },
+    {
+      "hint": "Lekcja trwa czterdzieści pięć minut.",
+      "answer": "The lesson lasts forty-five minutes."
+    },
+    {
+      "hint": "Spotykam się z nauczycielem raz w tygodniu.",
+      "answer": "I meet with the teacher once a week."
+    },
+    {
+      "hint": "Mam tablice z nutami na ścianie.",
+      "answer": "I have a sheet music chart on the wall."
+    },
+    {
+      "hint": "Po lekcji ćwiczę w domu na własnym pianinie.",
+      "answer": "After the lesson, I practice at home on my own piano."
+    },
+    {
+      "hint": "Staram się grać bez pomyłek.",
+      "answer": "I try to play without mistakes."
+    },
+    {
+      "hint": "Otrzymałem pozytywną opinię od nauczyciela.",
+      "answer": "I received positive feedback from the teacher."
+    },
+    {
+      "hint": "Ćwiczę palcowanie zgodnie z instrukcją.",
+      "answer": "I practice fingering as instructed."
+    },
+    {
+      "hint": "Zaczynam nowy utwór na kolejną lekcję.",
+      "answer": "I'm starting a new piece for the next lesson."
+    }
+  ],
+  "count": 71
+}

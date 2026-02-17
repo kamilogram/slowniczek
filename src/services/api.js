@@ -1,47 +1,126 @@
-// GitHub Raw CDN - instant delivery, no cold start
-const GITHUB_RAW = 'https://raw.githubusercontent.com/kamilogram/slowniczek/master/sets';
+// Local sets directory - reads from sets folder
+const SETS_FOLDER = import.meta.env.BASE_URL + 'sets';
 
-// Hardcoded list of available remote sets from GitHub
-// Update this when you add new JSON files to the repo
-const AVAILABLE_SETS = [
-  { name: 'spanish-101', language: 'Spanish', type: 'word', count: 0 },
-  { name: 'french-101', language: 'French', type: 'word', count: 0 },
-  { name: 'german-101', language: 'German', type: 'word', count: 0 },
-];
+// Cache for loaded sets
+let setsCache = [];
+let setsCacheLoaded = false;
+let setsModules = null;
 
-async function fetchJSON(url) {
+/**
+ * Loads all available sets by scanning the sets folder
+ * Uses dynamic import to get all JSON files
+ */
+async function loadAllSets() {
+  if (setsCacheLoaded) {
+    return setsCache;
+  }
+
   try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    // Try to import all JSON files from sets folder dynamically
+    if (!setsModules) {
+      setsModules = import.meta.glob('/sets/*.json', { eager: true });
     }
-    return response.json();
+    const sets = [];
+
+    for (const [path, module] of Object.entries(setsModules)) {
+      const data = module.default;
+      if (data && data.name) {
+        sets.push({
+          name: data.name,
+          language: data.language || 'Unknown',
+          type: data.type || 'word',
+          count: data.count || (data.words ? data.words.length : 0),
+        });
+      }
+    }
+
+    setsCache = sets;
+    setsCacheLoaded = true;
+    console.log(`✓ Loaded ${sets.length} local word sets`);
+    return sets;
   } catch (error) {
-    console.error(`Failed to fetch ${url}:`, error);
-    throw error;
+    console.warn('Could not load sets from files:', error);
+    // Fallback: return empty
+    return [];
   }
 }
 
-export function getSets() {
-  // Return hardcoded list of available sets
-  // Data is loaded on-demand when user selects a set
-  return Promise.resolve({ sets: AVAILABLE_SETS });
+export async function getSets() {
+  // Load all available sets from local folder
+  const sets = await loadAllSets();
+  
+  // Dodaj pakiety z localStorage (własne zestawy)
+  const customSets = getCustomSets();
+  const customSetsMeta = customSets.map(s => ({
+    name: s.name,
+    language: s.language || 'Unknown',
+    type: s.type || 'word',
+    count: s.count || (s.words ? s.words.length : 0),
+    isCustom: true, // Flaga aby wiedzieć że to pakiet własny
+  }));
+
+  return Promise.resolve({ sets: [...sets, ...customSetsMeta] });
 }
 
-export function getSet(name) {
-  // Fetch JSON directly from GitHub Raw
-  return fetchJSON(`${GITHUB_RAW}/${encodeURIComponent(name)}.json`);
+export async function getSet(name) {
+  // Najpierw spróbuj pobrać z localStorage (pakiety własne)
+  const customSets = JSON.parse(localStorage.getItem('slowkaCustomSets') || '{}');
+  if (customSets[name]) {
+    return Promise.resolve(customSets[name]);
+  }
+
+  // Pobierz ze zmiennych modułów załadowanych statycznie
+  if (!setsModules) {
+    setsModules = import.meta.glob('/sets/*.json', { eager: true });
+  }
+
+  // Szukaj pakietu w załadowanych modułach
+  for (const [path, module] of Object.entries(setsModules)) {
+    const data = module.default;
+    if (data && data.name === name) {
+      return Promise.resolve(data);
+    }
+  }
+
+  console.error(`Set "${name}" not found in loaded modules`);
+  throw new Error(`Set "${name}" not found`);
 }
 
 export function saveSet(name, words, language, type) {
-  // Not supported with GitHub-only backend
-  // Users can fork repo and add JSON files directly
-  console.warn('saveSet not supported - edit sets directly in GitHub repo');
-  return Promise.reject(new Error('Edit sets directly in GitHub repo'));
+  // Save custom set to localStorage only
+  const setData = {
+    name,
+    language,
+    type,
+    words,
+    count: words.length,
+  };
+
+  // Save to localStorage for persistence
+  const customSets = JSON.parse(localStorage.getItem('slowkaCustomSets') || '{}');
+  customSets[name] = setData;
+  localStorage.setItem('slowkaCustomSets', JSON.stringify(customSets));
+
+  console.log(`✓ Pakiet "${name}" zapisany w localStorage`);
+  return Promise.resolve({ message: 'Pakiet zapisany pomyślnie w localStorage.' });
 }
 
 export function deleteSet(name) {
-  // Not supported with GitHub-only backend
-  console.warn('deleteSet not supported - delete JSON files in GitHub repo');
-  return Promise.reject(new Error('Delete sets directly in GitHub repo'));
+  // Delete from localStorage
+  const customSets = JSON.parse(localStorage.getItem('slowkaCustomSets') || '{}');
+  if (customSets[name]) {
+    delete customSets[name];
+    localStorage.setItem('slowkaCustomSets', JSON.stringify(customSets));
+    console.log(`✓ Pakiet "${name}" usunięty z localStorage`);
+    return Promise.resolve({ message: 'Pakiet usunięty.' });
+  }
+  return Promise.reject(new Error('Pakiet nie został znaleziony'));
+}
+
+/**
+ * Pobiera JSON z localStorage (pakiety własne)
+ */
+function getCustomSets() {
+  const customSets = JSON.parse(localStorage.getItem('slowkaCustomSets') || '{}');
+  return Object.values(customSets);
 }

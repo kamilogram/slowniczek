@@ -1,0 +1,288 @@
+{
+  "name": "Zdania z opowiadaniem o ostatnim dniu - perplexity",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Dziś rano obudziłem się bardzo wcześnie, bo nie mogłem spać.",
+      "answer": "This morning I woke up very early because I couldn't sleep."
+    },
+    {
+      "hint": "Wczoraj po pracy poszliśmy razem po zakupy do sklepu.",
+      "answer": "Yesterday after work we went shopping together."
+    },
+    {
+      "hint": "Znowu zapomniałem wziąć parasola i cały zmokłem w drodze do domu.",
+      "answer": "I forgot my umbrella again and got soaked on the way home."
+    },
+    {
+      "hint": "Dzieci były dziś wyjątkowo grzeczne podczas śniadania.",
+      "answer": "The kids were exceptionally well-behaved during breakfast today."
+    },
+    {
+      "hint": "Wczoraj pierwszy raz ugotowałem zupę z dyni i wszystkim smakowała.",
+      "answer": "Yesterday I made pumpkin soup for the first time and everyone liked it."
+    },
+    {
+      "hint": "Rano przyjechał niespodziewany kurier z paczką dla nas.",
+      "answer": "A courier unexpectedly arrived this morning with a package for us."
+    },
+    {
+      "hint": "Po południu razem sprzątaliśmy salon i słuchaliśmy muzyki.",
+      "answer": "In the afternoon we cleaned the living room together and listened to music."
+    },
+    {
+      "hint": "Wczoraj dzieci wróciły uśmiechnięte ze szkoły i opowiadały zabawne historie.",
+      "answer": "Yesterday the children came back from school smiling and told funny stories."
+    },
+    {
+      "hint": "Na obiad mieliśmy dziś makaron z warzywami, który przygotowałaś.",
+      "answer": "We had pasta with vegetables for lunch today, which you made."
+    },
+    {
+      "hint": "Dzisiaj ktoś zadzwonił i pytał o twoje zdrowie.",
+      "answer": "Someone called today and asked about your health."
+    },
+    {
+      "hint": "Wieczorem razem oglądaliśmy film, a później długo rozmawialiśmy.",
+      "answer": "In the evening we watched a movie together and talked for a long time afterwards."
+    },
+    {
+      "hint": "Wczoraj zgubiłem klucze od mieszkania – na szczęście później je znalazłem.",
+      "answer": "Yesterday I lost the apartment keys – luckily I found them later."
+    },
+    {
+      "hint": "Dziś rano zrobiłem Ci kawę i przyniosłem do łóżka.",
+      "answer": "I made you coffee this morning and brought it to bed."
+    },
+    {
+      "hint": "Dzieci same pościeliły dziś łóżka – jestem z nich dumny.",
+      "answer": "The children made their beds by themselves today – I'm proud of them."
+    },
+    {
+      "hint": "Dzisiejszy obiad wyszedł mi bardzo dobrze, bo dodałem nowe przyprawy.",
+      "answer": "Today's dinner turned out very well because I added new spices."
+    },
+    {
+      "hint": "Wczoraj podczas spaceru spotkaliśmy naszych sąsiadów z psem.",
+      "answer": "Yesterday we met our neighbors with their dog during a walk."
+    },
+    {
+      "hint": "Przed obiadem długo rozmawialiśmy o naszych planach na przyszły tydzień.",
+      "answer": "Before dinner, we talked a lot about our plans for next week."
+    },
+    {
+      "hint": "Dzisiaj dzieci zasnęły bardzo szybko.",
+      "answer": "Today the children fell asleep very quickly."
+    },
+    {
+      "hint": "Rano zabrakło mleka, więc musiałem iść do sklepu przed śniadaniem.",
+      "answer": "There was no milk in the morning, so I had to go to the store before breakfast."
+    },
+    {
+      "hint": "Wczoraj wieczorem padał deszcz, ale poszliśmy mimo to na spacer.",
+      "answer": "It rained yesterday evening, but we went for a walk anyway."
+    },
+    {
+      "hint": "Dzieci poprosiły dziś o naleśniki na kolację.",
+      "answer": "The kids asked for pancakes for dinner today."
+    },
+    {
+      "hint": "Podczas obiadu opowiedziałaś mi ciekawą anegdotę z pracy.",
+      "answer": "During lunch you told me an interesting anecdote from work."
+    },
+    {
+      "hint": "Wczoraj pierwszy raz razem piekliśmy ciasto czekoladowe.",
+      "answer": "Yesterday we baked chocolate cake together for the first time."
+    },
+    {
+      "hint": "Dziś dostałem wiadomość od starego znajomego.",
+      "answer": "I got a message from an old friend today."
+    },
+    {
+      "hint": "Przypadkiem spotkałem dziś na ulicy kolegę z pracy.",
+      "answer": "I bumped into a colleague from work on the street today."
+    },
+    {
+      "hint": "Dzieci pokazały nam rysunki, które zrobiły w szkole.",
+      "answer": "The kids showed us the drawings they made at school."
+    },
+    {
+      "hint": "Wczoraj próbowałem nowego przepisu i wszystkim smakowało.",
+      "answer": "Yesterday I tried a new recipe and everyone liked it."
+    },
+    {
+      "hint": "Po obiedzie usiedliśmy razem w ogrodzie i odpoczywaliśmy.",
+      "answer": "After lunch, we sat together in the garden and relaxed."
+    },
+    {
+      "hint": "Dziś rano udało mi się wyjść na krótki bieg przed pracą.",
+      "answer": "Today I managed to go for a short run before work."
+    },
+    {
+      "hint": "Wieczorem dzieci bawiły się cicho w swoim pokoju.",
+      "answer": "In the evening, the kids played quietly in their room."
+    },
+    {
+      "hint": "Dziś była u nas Twoja siostra i wspólnie wypiliście kawę.",
+      "answer": "Your sister visited us today and you had coffee together."
+    },
+    {
+      "hint": "Wczoraj zabrałem dzieci do parku i zrobiliśmy mnóstwo zdjęć.",
+      "answer": "Yesterday I took the kids to the park and we took lots of pictures."
+    },
+    {
+      "hint": "Podczas lunchu zadzwoniłeś do mnie z pytaniem o zakupy.",
+      "answer": "You called me during lunch to ask about the shopping."
+    },
+    {
+      "hint": "Dzisiaj miałem awarię samochodu, ale udało się naprawić.",
+      "answer": "Today I had a car breakdown, but it got fixed."
+    },
+    {
+      "hint": "Po południu wybraliśmy się na rowery i odkryliśmy nową ścieżkę.",
+      "answer": "In the afternoon we went cycling and discovered a new trail."
+    },
+    {
+      "hint": "Dzieci pomogły dziś w przygotowaniu kolacji.",
+      "answer": "The kids helped with preparing dinner today."
+    },
+    {
+      "hint": "Wczoraj wieczorem grałem z dziećmi w planszówki.",
+      "answer": "Last night I played board games with the kids."
+    },
+    {
+      "hint": "Rano miałem spotkanie online, więc nie zdążyłem zjeść śniadania.",
+      "answer": "I had an online meeting in the morning, so I didn't have breakfast."
+    },
+    {
+      "hint": "Dziś znalazłem czas, by poczytać książkę po południu.",
+      "answer": "Today I found time to read a book in the afternoon."
+    },
+    {
+      "hint": "Pokłóciliśmy się wczoraj o drobiazg, ale szybko się pogodziliśmy.",
+      "answer": "Yesterday we argued over a trifle, but we made up quickly."
+    },
+    {
+      "hint": "Dzisiaj dzieci dostały dobre oceny z matematyki.",
+      "answer": "The kids got good marks in maths today."
+    },
+    {
+      "hint": "Wczoraj postanowiłem zrobić porządki w szafie.",
+      "answer": "Yesterday I decided to tidy up the wardrobe."
+    },
+    {
+      "hint": "Po obiedzie usiedliśmy razem i posłuchaliśmy muzyki.",
+      "answer": "After dinner we sat together and listened to music."
+    },
+    {
+      "hint": "Skończyłem dziś projekt wcześniej niż zakładałem.",
+      "answer": "I finished my project earlier than expected today."
+    },
+    {
+      "hint": "Dzieci przygotowały dla Ciebie laurkę z okazji Dnia Mamy.",
+      "answer": "The kids made a card for you for Mother's Day."
+    },
+    {
+      "hint": "Wczoraj padał deszcz przez cały dzień i nie mogliśmy wyjść na spacer.",
+      "answer": "It rained all day yesterday, so we couldn't go for a walk."
+    },
+    {
+      "hint": "Oglądaliśmy wspólnie ulubiony serial i śmialiśmy się z żartów bohaterów.",
+      "answer": "We watched our favorite TV show together and laughed at the characters' jokes."
+    },
+    {
+      "hint": "Rano dzieci posprzątały zabawki w całym pokoju.",
+      "answer": "In the morning the kids tidied up all their toys in the room."
+    },
+    {
+      "hint": "Dziś pierwsza rzecz, o której pomyślałem to kawa z Tobą.",
+      "answer": "The first thing I thought about today was coffee with you."
+    },
+    {
+      "hint": "Wczoraj odwiedziła nas sąsiadka i przyniosła ciasto.",
+      "answer": "Our neighbor visited us yesterday and brought cake."
+    },
+    {
+      "hint": "Był dzisiaj piękny zachód słońca – oglądaliśmy go razem z okna kuchni.",
+      "answer": "There was a beautiful sunset today – we watched it together from the kitchen window."
+    },
+    {
+      "hint": "Dzieci zaprosiły nas dziś do zabawy w budowanie zamku z klocków.",
+      "answer": "The kids invited us today to build a castle with blocks."
+    },
+    {
+      "hint": "Zapomniałem kupić mleko, więc rano mieliśmy tylko herbatę.",
+      "answer": "I forgot to buy milk, so we only had tea in the morning."
+    },
+    {
+      "hint": "Dziś odwiozłem dzieci do szkoły i wróciłem na piechotę.",
+      "answer": "Today I drove the kids to school and walked back home."
+    },
+    {
+      "hint": "Wczoraj długo rozmawialiśmy przed snem o planach na wakacje.",
+      "answer": "Yesterday we talked for a long time before sleep about our holiday plans."
+    },
+    {
+      "hint": "Dzieci dziś zatańczyły krótki układ, który same wymyśliły.",
+      "answer": "The kids performed a short dance today that they invented themselves."
+    },
+    {
+      "hint": "Napisałem dzisiaj długi mail do siostry.",
+      "answer": "I wrote a long email to my sister today."
+    },
+    {
+      "hint": "Zrobiliśmy razem listę zakupów na jutro.",
+      "answer": "We made a shopping list for tomorrow together."
+    },
+    {
+      "hint": "Dzisiaj dostałem pochwałę od przełożonego.",
+      "answer": "I received praise from my supervisor today."
+    },
+    {
+      "hint": "Dzieci zrobiły laurkę dla babci i wysłały ją pocztą.",
+      "answer": "The kids made a card for grandma and sent it by post."
+    },
+    {
+      "hint": "Rano do kawy zjedliśmy domowe rogaliki.",
+      "answer": "We had homemade croissants with our morning coffee."
+    },
+    {
+      "hint": "Wczoraj zepsuł się nam ekspres do kawy.",
+      "answer": "Our coffee machine broke down yesterday."
+    },
+    {
+      "hint": "Zaskoczyła mnie dzisiaj wiadomość z pracy.",
+      "answer": "I was surprised by some news from work today."
+    },
+    {
+      "hint": "Zadzwonili dziś do mnie dawni znajomi z liceum.",
+      "answer": "Some old friends from high school called me today."
+    },
+    {
+      "hint": "Dzieci dziś wieczorem czytały książki na głos.",
+      "answer": "The kids read books out loud this evening."
+    },
+    {
+      "hint": "Wczoraj oglądaliśmy wspólnie stare zdjęcia rodzinne.",
+      "answer": "Yesterday we looked at old family photos together."
+    },
+    {
+      "hint": "Dzisiaj miałem wyjątkowo spokojny dzień w pracy.",
+      "answer": "Today I had an exceptionally calm day at work."
+    },
+    {
+      "hint": "Wieczorem napiłaś się ciepłej herbaty z miodem.",
+      "answer": "In the evening you had hot tea with honey."
+    },
+    {
+      "hint": "Dzieci przygotowały rano śniadanie do łóżka.",
+      "answer": "The kids made breakfast in bed this morning."
+    },
+    {
+      "hint": "Dziś zasnąłem podczas czytania książki po obiedzie.",
+      "answer": "I fell asleep while reading a book after lunch today."
+    }
+  ],
+  "count": 70
+}

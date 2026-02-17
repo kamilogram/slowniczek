@@ -69,13 +69,9 @@ export function useGameLogic() {
   // --- Remote Sets ---
   const refreshRemoteSets = useCallback(async () => {
     try {
-      const cached = loadFromStorage('slowkaRemoteSetsCache');
-      if (cached && cached.sets) setRemoteSets(cached.sets);
-
       const data = await getSets();
       if (data && data.sets) {
         setRemoteSets(data.sets);
-        saveToStorage('slowkaRemoteSetsCache', { sets: data.sets, timestamp: Date.now() });
       }
     } catch (e) {
       console.error("Failed to refresh remote sets", e);

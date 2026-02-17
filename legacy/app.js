@@ -485,22 +485,9 @@ function clearUsed() {
 async function refreshRemoteSetsList() {
     const currentFilter = document.getElementById('remote-search').value;
     try {
-        const cachedData = loadFromStorage('slowkaRemoteSetsCache');
-        if (cachedData && Array.isArray(cachedData.sets)) {
-            remoteSets = cachedData.sets;
-            filterRemoteSets(currentFilter);
-        }
-    } catch (e) {
-        console.warn("Could not load remote sets from cache", e);
-    }
-
-    try {
         const data = await getSets();
-        const hasNewData = Array.isArray(data.sets) && JSON.stringify(data.sets) !== JSON.stringify(remoteSets);
-
-        if (hasNewData) {
+        if (Array.isArray(data.sets)) {
             remoteSets = data.sets;
-            saveToStorage('slowkaRemoteSetsCache', { sets: remoteSets, timestamp: Date.now() });
             filterRemoteSets(currentFilter);
         }
     } catch (e) {

@@ -1,0 +1,288 @@
+{
+  "name": "Opowiadanie nieinfantylne z Comet",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Pewnego poniedziałkowego poranka obudziłem się z dziwnie klarownym planem na dzień.",
+      "answer": "One Monday morning, I woke up with an unusually clear plan for the day."
+    },
+    {
+      "hint": "Zaparzyłem kawę, która pachniała obietnicą produktywności.",
+      "answer": "I brewed coffee that smelled like a promise of productivity."
+    },
+    {
+      "hint": "Laptop czekał na biurku niczym wierny pies, gotowy do pracy.",
+      "answer": "The laptop was waiting on my desk like a loyal dog, ready to work."
+    },
+    {
+      "hint": "Otworzyłem przeglądarkę, a tam dwadzieścia siedem zakładek z wczoraj.",
+      "answer": "I opened my browser to discover twenty-seven tabs from yesterday."
+    },
+    {
+      "hint": "Każda z nich wydawała się równie pilna, co niejasna.",
+      "answer": "Each one seemed just as urgent as it was vague."
+    },
+    {
+      "hint": "Postanowiłem, że dziś nie dam się rozproszyć.",
+      "answer": "I decided that today, I wouldn’t let myself get distracted."
+    },
+    {
+      "hint": "Ustawiłem timer na czterdzieści pięć minut skupienia.",
+      "answer": "I set a timer for forty-five minutes of focus."
+    },
+    {
+      "hint": "Już po dwóch minutach telefon przypomniał mi, że mam zaległe powiadomienia.",
+      "answer": "After just two minutes, my phone reminded me of overdue notifications."
+    },
+    {
+      "hint": "Zignorowałem go z dumą stoika.",
+      "answer": "I ignored it with the pride of a stoic."
+    },
+    {
+      "hint": "I wtedy przypomniałem sobie, że czajnik nadal stoi na gazie.",
+      "answer": "And then I remembered the kettle was still on the stove."
+    },
+    {
+      "hint": "Wpadłem do kuchni jak bohater akcji w ostatniej scenie.",
+      "answer": "I dashed into the kitchen like an action hero in the final scene."
+    },
+    {
+      "hint": "Na szczęście czajnik był tylko ciepły, nie tragiczny.",
+      "answer": "Luckily, the kettle was only warm, not disastrous."
+    },
+    {
+      "hint": "Z powrotem usiadłem, gotów znów podbić świat kodu.",
+      "answer": "I sat back down, ready to conquer the world of code again."
+    },
+    {
+      "hint": "Moje IDE przywitało mnie błędem, który zostawiłem tam trzy dni temu.",
+      "answer": "My IDE greeted me with an error I had left there three days ago."
+    },
+    {
+      "hint": "Napisałem w notatkach: \"Naprawić jutro\", co już dziś brzmiało jak ironia.",
+      "answer": "I wrote in my notes: \"Fix tomorrow,\" which already sounded ironic."
+    },
+    {
+      "hint": "Postanowiłem przekierować energię na coś prostego.",
+      "answer": "I decided to redirect my energy to something simple."
+    },
+    {
+      "hint": "Może mały skrypt do sortowania ulubionych zdjęć?",
+      "answer": "Maybe a small script to sort my favorite photos?"
+    },
+    {
+      "hint": "Po godzinie miałem algorytm, który losował je w kolejności emocjonalnej.",
+      "answer": "After an hour, I had an algorithm that sorted them by emotional order."
+    },
+    {
+      "hint": "Nie zrozumiałem dokładnie jak, ale działało.",
+      "answer": "I didn’t quite understand how, but it worked."
+    },
+    {
+      "hint": "Uznałem to za sukces twórczy.",
+      "answer": "I counted it as a creative success."
+    },
+    {
+      "hint": "Wtem stuknęło w drzwi.",
+      "answer": "Then there was a knock at the door."
+    },
+    {
+      "hint": "Sąsiad przyszedł z prośbą, żebym mu coś „ustawił w internecie”.",
+      "answer": "My neighbor came to ask if I could ‘set something up on the internet’ for him."
+    },
+    {
+      "hint": "Po chwili zorientowałem się, że chodzi o Google Maps.",
+      "answer": "Turns out he meant Google Maps."
+    },
+    {
+      "hint": "Pół godziny później wiedział już, jak znaleźć aptekę i gdzie zostawić opinię o piekarni.",
+      "answer": "Half an hour later, he knew how to find the pharmacy and where to leave a review for the bakery."
+    },
+    {
+      "hint": "W podziękowaniu przyniósł mi kawałek sernika.",
+      "answer": "In thanks, he brought me a piece of cheesecake."
+    },
+    {
+      "hint": "Sernik był wybitny, więc dzień nabrał sensu.",
+      "answer": "The cheesecake was excellent, so the day finally made sense."
+    },
+    {
+      "hint": "Postanowiłem zrobić przerwę i wyjść na spacer.",
+      "answer": "I decided to take a break and go for a walk."
+    },
+    {
+      "hint": "Powietrze pachniało jesienią i wilgotnymi liśćmi.",
+      "answer": "The air smelled of autumn and wet leaves."
+    },
+    {
+      "hint": "Zauważyłem w parku starszego mężczyznę karmiącego gołębie.",
+      "answer": "I noticed an elderly man feeding pigeons in the park."
+    },
+    {
+      "hint": "Mówił do nich z czułością, jak do dawnych przyjaciół.",
+      "answer": "He spoke to them tenderly, as if to old friends."
+    },
+    {
+      "hint": "Jeden z ptaków usiadł mu na ramieniu z zaufaniem, które trudno zdobyć.",
+      "answer": "One bird sat on his shoulder with a trust that’s hard to win."
+    },
+    {
+      "hint": "Zdałem sobie sprawę, jak rzadko coś naprawdę mnie zatrzymuje.",
+      "answer": "I realized how rarely something truly stops me."
+    },
+    {
+      "hint": "W tym momencie zadzwonił telefon.",
+      "answer": "At that moment, the phone rang."
+    },
+    {
+      "hint": "To był kolega z pracy, pytający, czy już „wrzuciłem poprawkę”.",
+      "answer": "It was a colleague from work, asking if I had already \"pushed the fix\"."
+    },
+    {
+      "hint": "Poprawkę? Nie wiedziałem, o czym mówi.",
+      "answer": "A fix? I had no idea what he was talking about."
+    },
+    {
+      "hint": "Otworzyłem notatki i zobaczyłem ironiczne „Naprawić jutro”.",
+      "answer": "I opened my notes and saw the ironic “Fix tomorrow.”"
+    },
+    {
+      "hint": "Poczułem się jak postać z własnego mema.",
+      "answer": "I felt like a character from my own meme."
+    },
+    {
+      "hint": "Wróciłem do domu w tempie adekwatnym do poziomu paniki.",
+      "answer": "I headed home at a speed fitting my level of panic."
+    },
+    {
+      "hint": "Włączyłem laptop i zacząłem desperacko kompilować.",
+      "answer": "I turned on my laptop and started compiling in desperation."
+    },
+    {
+      "hint": "Kompilator oczywiście odmówił współpracy.",
+      "answer": "The compiler, of course, refused to cooperate."
+    },
+    {
+      "hint": "Po czwartej próbie zrozumiałem, że to nie bug, tylko moja literówka.",
+      "answer": "After the fourth attempt, I realized it wasn’t a bug, just a typo."
+    },
+    {
+      "hint": "Jedna litera, a pół dnia w plecy.",
+      "answer": "One letter, half the day gone."
+    },
+    {
+      "hint": "Uśmiałem się z samego siebie głośniej, niż wypadało.",
+      "answer": "I laughed at myself louder than was appropriate."
+    },
+    {
+      "hint": "Skończyłem poprawkę dokładnie o 16:59.",
+      "answer": "I finished the fix at exactly 4:59 PM."
+    },
+    {
+      "hint": "Kolega wysłał wiadomość: „Super, jutro dopieszczamy detale”.",
+      "answer": "My colleague sent a message: \"Great, we’ll polish the details tomorrow.\""
+    },
+    {
+      "hint": "Słowo „jutro” zabrzmiało znów jak refren życia.",
+      "answer": "The word ‘tomorrow’ sounded once again like a life refrain."
+    },
+    {
+      "hint": "Zamknąłem laptopa i po raz pierwszy tego dnia poczułem lekkość.",
+      "answer": "I closed my laptop and for the first time that day felt lightness."
+    },
+    {
+      "hint": "Zaparzyłem drugą kawę, bez pośpiechu.",
+      "answer": "I brewed a second coffee, without any rush."
+    },
+    {
+      "hint": "Włączyłem spokojną muzykę jazzową.",
+      "answer": "I put on some peaceful jazz music."
+    },
+    {
+      "hint": "Na biurku leżał sernik od sąsiada – ostatni kawałek.",
+      "answer": "On my desk lay the last piece of cheesecake from my neighbor."
+    },
+    {
+      "hint": "Zjadłem go z wdzięcznością, jakby to był deser po maratonie.",
+      "answer": "I ate it with gratitude, as if it was dessert after a marathon."
+    },
+    {
+      "hint": "W tle słońce zaczynało chować się za dachami.",
+      "answer": "The sun began to set behind the rooftops."
+    },
+    {
+      "hint": "Pomyślałem, że każdy dzień jest trochę jak kod – nigdy nie skończony.",
+      "answer": "I thought every day is a bit like code — never really finished."
+    },
+    {
+      "hint": "Czasem działa mimo błędów.",
+      "answer": "Sometimes it works despite the errors."
+    },
+    {
+      "hint": "Czasem błędy tworzą coś ciekawszego niż plan.",
+      "answer": "Sometimes the errors create something more interesting than the plan."
+    },
+    {
+      "hint": "Uśmiechnąłem się do własnych myśli.",
+      "answer": "I smiled at my own thoughts."
+    },
+    {
+      "hint": "Z notatnika wystawała kartka z napisem „naprawić jutro”.",
+      "answer": "My notebook had a page peeking out with the note “Fix tomorrow.”"
+    },
+    {
+      "hint": "Dodałem obok: „albo zostawić w spokoju”.",
+      "answer": "I added next to it: “Or just leave it alone.”"
+    },
+    {
+      "hint": "Zgasiłem światło i wyszedłem na balkon.",
+      "answer": "I turned off the light and went out on the balcony."
+    },
+    {
+      "hint": "Miasto brzmiało jak spokojny kod nocnego życia.",
+      "answer": "The city sounded like the calm code of nighttime life."
+    },
+    {
+      "hint": "Ktoś grał na gitarze w oddali.",
+      "answer": "Someone was playing guitar in the distance."
+    },
+    {
+      "hint": "Kot sąsiadki obserwował świat z parapetu z powagą filozofa.",
+      "answer": "The neighbor’s cat watched the world from the windowsill with the seriousness of a philosopher."
+    },
+    {
+      "hint": "Gwiazdy pojawiały się powoli, jak loading bar na starym komputerze.",
+      "answer": "The stars appeared slowly, like a loading bar on an old computer."
+    },
+    {
+      "hint": "Westchnąłem, czując dziwne ukojenie.",
+      "answer": "I sighed, feeling a strange sense of calm."
+    },
+    {
+      "hint": "Ten dzień nie był wielki, ale był prawdziwy.",
+      "answer": "The day wasn’t great, but it was real."
+    },
+    {
+      "hint": "Może właśnie to jest wystarczające.",
+      "answer": "Maybe that’s enough."
+    },
+    {
+      "hint": "Bo czasami sens tkwi w szczegółach, które łatwo przeoczyć.",
+      "answer": "Because sometimes the meaning lies in the details that are easy to miss."
+    },
+    {
+      "hint": "W parze kawy, rozmowie o piekarni, drobnym błędzie w kodzie.",
+      "answer": "In a cup of coffee, a bakery review, a small bug in the code."
+    },
+    {
+      "hint": "W tych zwykłych momentach, z których składa się życie.",
+      "answer": "In these ordinary moments that make up a life."
+    },
+    {
+      "hint": "I w serniku, którego nigdy nie miało być, a który wszystko dopełnił.",
+      "answer": "And in a cheesecake that never should have been, yet completed everything."
+    }
+  ],
+  "count": 70
+}

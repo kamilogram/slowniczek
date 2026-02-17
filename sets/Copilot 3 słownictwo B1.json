@@ -1,0 +1,424 @@
+{
+  "name": "Copilot 3 słownictwo B1",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Musisz wstać wcześnie jutro, żeby zdążyć na pociąg.",
+      "answer": "You need to get up early tomorrow to catch the train."
+    },
+    {
+      "hint": "Czy mógłbyś się zaopiekować moim psem, kiedy będę na wakacjach?",
+      "answer": "Could you look after my dog while I am on holiday?"
+    },
+    {
+      "hint": "Ona teraz rozmawia przez telefon ze swoim szefem.",
+      "answer": "She is talking to her boss on the phone right now."
+    },
+    {
+      "hint": "Zwykle chodzimy na siłownię trzy razy w tygodniu.",
+      "answer": "We usually go to the gym three times a week."
+    },
+    {
+      "hint": "Musimy opóźnić spotkanie z powodu problemów z transportem.",
+      "answer": "We have to delay the meeting due to transport issues."
+    },
+    {
+      "hint": "Czy masz jakieś doświadczenie w zarządzaniu zespołem?",
+      "answer": "Do you have any experience in managing a team?"
+    },
+    {
+      "hint": "Cały nasz plan zależy od Twojej decyzji.",
+      "answer": "Our whole plan depends on your decision."
+    },
+    {
+      "hint": "Przeprowadziłem się tutaj dwa lata temu i bardzo mi się podoba.",
+      "answer": "I moved here two years ago, and I really enjoy it."
+    },
+    {
+      "hint": "Chciałbym pojechać do Włoch, gdybym miał więcej pieniędzy.",
+      "answer": "I would like to travel to Italy if I had more money."
+    },
+    {
+      "hint": "Ten raport został ukończony przez mojego kolegę wczoraj.",
+      "answer": "This report was completed by my colleague yesterday."
+    },
+    {
+      "hint": "Jak długo mieszkasz w tym mieście?",
+      "answer": "How long have you been living in this city?"
+    },
+    {
+      "hint": "Ona zawsze denerwuje się przed ważnymi prezentacjami.",
+      "answer": "She always gets nervous before important presentations."
+    },
+    {
+      "hint": "Wolałbym zjeść obiad w domu niż w drogiej restauracji.",
+      "answer": "I would rather have dinner at home than at an expensive restaurant."
+    },
+    {
+      "hint": "Czy mógłbyś mi pomóc znaleźć te zagubione klucze?",
+      "answer": "Could you help me find the keys that I lost?"
+    },
+    {
+      "hint": "Powinniśmy zachęcać uczniów do czytania większej liczby książek.",
+      "answer": "We should encourage students to read more books."
+    },
+    {
+      "hint": "Nie mogę sobie pozwolić na kupno tak drogiego samochodu.",
+      "answer": "I cannot afford to buy such an expensive car."
+    },
+    {
+      "hint": "Warto docenić ciężką pracę całego zespołu.",
+      "answer": "It is important to appreciate the hard work of the entire team."
+    },
+    {
+      "hint": "Główny powód jego nieobecności był mi nieznany.",
+      "answer": "The main reason for his absence was unknown to me."
+    },
+    {
+      "hint": "Żałuję, że nie uczyłem się hiszpańskiego, gdy byłem młodszy.",
+      "answer": "I regret not learning Spanish when I was younger."
+    },
+    {
+      "hint": "Musimy szybko znaleźć alternatywne rozwiązanie dla tego problemu.",
+      "answer": "We need to find an alternative solution to this problem quickly."
+    },
+    {
+      "hint": "Czy możesz mi zagwarantować, że to zadziała?",
+      "answer": "Can you guarantee me that this will work?"
+    },
+    {
+      "hint": "Zawsze staram się unikać wszelkich konfliktów w pracy.",
+      "answer": "I always try to avoid any conflicts at work."
+    },
+    {
+      "hint": "Nikt nie spodziewał się tak nagłego sukcesu.",
+      "answer": "Nobody anticipated such a sudden success."
+    },
+    {
+      "hint": "To jest zbyt trudne; musisz to uprościć.",
+      "answer": "This is too complicated; you need to simplify it."
+    },
+    {
+      "hint": "Nie mamy wyboru, musimy zaakceptować te warunki.",
+      "answer": "We have no choice; we must accept these conditions."
+    },
+    {
+      "hint": "Czy potrafisz odróżnić te dwa, podobnie wyglądające, produkty?",
+      "answer": "Can you distinguish between these two similar-looking products?"
+    },
+    {
+      "hint": "Ważne jest, aby zachować równowagę między pracą a życiem.",
+      "answer": "It is important to maintain a work-life balance."
+    },
+    {
+      "hint": "Mamy nadzieję osiągnąć ten cel przed końcem roku.",
+      "answer": "We hope to achieve this goal before the end of the year."
+    },
+    {
+      "hint": "Nie wiedziałem, jak przetłumaczyć to trudne słowo.",
+      "answer": "I didn't know how to translate that difficult word."
+    },
+    {
+      "hint": "Uważam, że powinniśmy powstrzymać się od wydawania osądów.",
+      "answer": "I believe we should refrain from making judgments."
+    },
+    {
+      "hint": "Jego pomysł został odrzucony przez cały zarząd.",
+      "answer": "His idea was rejected by the entire board."
+    },
+    {
+      "hint": "Musimy skoncentrować się na naszych najważniejszych klientach.",
+      "answer": "We must concentrate on our most important clients."
+    },
+    {
+      "hint": "Nie mogę się doczekać, aż będę mógł w końcu podróżować.",
+      "answer": "I am looking forward to being able to travel finally."
+    },
+    {
+      "hint": "Zauważyłem, że masz problem z tym zadaniem.",
+      "answer": "I noticed that you are having trouble with this task."
+    },
+    {
+      "hint": "Postanowił poświęcić swój czas na wolontariat.",
+      "answer": "He decided to devote his time to volunteering."
+    },
+    {
+      "hint": "Nie ma dowodów na poparcie Twojego twierdzenia.",
+      "answer": "There is no evidence to support your claim."
+    },
+    {
+      "hint": "Czy możesz mi wyjaśnić, co oznaczają te skróty?",
+      "answer": "Can you clarify what these abbreviations stand for?"
+    },
+    {
+      "hint": "Powinieneś zignorować tę negatywną opinię.",
+      "answer": "You should disregard that negative opinion."
+    },
+    {
+      "hint": "Nigdy nie będę w stanie Ci się w pełni odwdzięczyć.",
+      "answer": "I will never be able to fully repay you."
+    },
+    {
+      "hint": "Uważam, że należy zreformować system edukacji.",
+      "answer": "I believe the education system needs to be reformed."
+    },
+    {
+      "hint": "Musimy oszacować koszty przed rozpoczęciem prac.",
+      "answer": "We have to estimate the costs before starting the work."
+    },
+    {
+      "hint": "Wielu ludzi błędnie interpretuje te zasady.",
+      "answer": "Many people misinterpret these rules."
+    },
+    {
+      "hint": "Czy możesz mi pomóc w organizacji tej imprezy?",
+      "answer": "Can you assist me with the arrangement of this event?"
+    },
+    {
+      "hint": "Proszę, upewnij się, że ten błąd nie powtórzy się.",
+      "answer": "Please ensure that this mistake does not recur."
+    },
+    {
+      "hint": "Nie rozumiem ich podejścia do tego problemu.",
+      "answer": "I don't understand their approach to this issue."
+    },
+    {
+      "hint": "To jest jedyny sposób, aby rozwiązać ten konflikt.",
+      "answer": "This is the only way to resolve this conflict."
+    },
+    {
+      "hint": "Odmówił udziału w dyskusji bez podania powodu.",
+      "answer": "He refused to participate in the discussion without giving a reason."
+    },
+    {
+      "hint": "Musimy brać pod uwagę potrzeby wszystkich naszych klientów.",
+      "answer": "We must take into account the needs of all our customers."
+    },
+    {
+      "hint": "Mam wrażenie, że ona celowo unika kontaktu.",
+      "answer": "I have the impression that she is deliberately avoiding contact."
+    },
+    {
+      "hint": "Czy on złożył rezygnację ze swojego stanowiska?",
+      "answer": "Did he hand in his resignation from his position?"
+    },
+    {
+      "hint": "Nie mogę znieść tego hałasu w biurze.",
+      "answer": "I can't put up with this noise in the office."
+    },
+    {
+      "hint": "Musimy dokładnie zbadać wszystkie dostępne opcje.",
+      "answer": "We need to investigate all available options thoroughly."
+    },
+    {
+      "hint": "Właśnie się dowiedziałem o Twoim niesamowitym sukcesie.",
+      "answer": "I have just found out about your incredible success."
+    },
+    {
+      "hint": "Jesteśmy zobowiązani do przestrzegania wszystkich zasad.",
+      "answer": "We are obliged to adhere to all the rules."
+    },
+    {
+      "hint": "Jego zdolność do nauki jest naprawdę imponująca.",
+      "answer": "His ability to learn is truly impressive."
+    },
+    {
+      "hint": "Wielu ludzi cierpi z powodu braku motywacji.",
+      "answer": "Many people suffer from a lack of motivation."
+    },
+    {
+      "hint": "Warto wdrożyć tę metodę w naszej firmie.",
+      "answer": "It is worthwhile to implement this method in our company."
+    },
+    {
+      "hint": "Nie powinieneś lekceważyć jego ostrzeżeń.",
+      "answer": "You shouldn't dismiss his warnings."
+    },
+    {
+      "hint": "W rezultacie, straciliśmy dużą część naszych zysków.",
+      "answer": "As a result, we lost a large portion of our profits."
+    },
+    {
+      "hint": "Musimy natychmiast skorygować ten poważny błąd.",
+      "answer": "We must rectify this serious error immediately."
+    },
+    {
+      "hint": "Czy potrafisz przewidzieć, co się stanie dalej?",
+      "answer": "Can you predict what will happen next?"
+    },
+    {
+      "hint": "Mam zamiar zrezygnować z tej subskrypcji w przyszłym miesiącu.",
+      "answer": "I intend to cancel this subscription next month."
+    },
+    {
+      "hint": "To zjawisko występuje regularnie w tym regionie.",
+      "answer": "This phenomenon occurs regularly in this region."
+    },
+    {
+      "hint": "On ciągle unika kontaktu wzrokowego podczas rozmowy.",
+      "answer": "He constantly avoids eye contact during the conversation."
+    },
+    {
+      "hint": "Uważam, że jest to całkowicie uzasadniona obawa.",
+      "answer": "I believe this is a completely justified concern."
+    },
+    {
+      "hint": "Wszyscy zgadzają się co do naszej strategii.",
+      "answer": "Everyone is in agreement regarding our strategy."
+    },
+    {
+      "hint": "Musimy przeanalizować powód tej porażki.",
+      "answer": "We need to analyse the reason for this failure."
+    },
+    {
+      "hint": "Czy wierzysz, że możesz mnie przekonać do swojej idei?",
+      "answer": "Do you believe you can convince me of your idea?"
+    },
+    {
+      "hint": "Firma musi dostosować się do zmieniających się warunków rynkowych.",
+      "answer": "The company must adapt to changing market conditions."
+    },
+    {
+      "hint": "Będę nadzorować postęp prac osobiście.",
+      "answer": "I will supervise the progress of the work myself."
+    },
+    {
+      "hint": "Nie musisz się martwić, zajmiemy się tym problemem.",
+      "answer": "You don't need to worry, we will deal with this issue."
+    },
+    {
+      "hint": "Ona jest niezwykle utalentowana w rysowaniu portretów.",
+      "answer": "She is extremely talented at drawing portraits."
+    },
+    {
+      "hint": "Naszym celem jest znaczne zmniejszenie wydatków.",
+      "answer": "Our goal is to significantly reduce expenditures."
+    },
+    {
+      "hint": "Spróbuję skontaktować się z nim jeszcze raz dziś wieczorem.",
+      "answer": "I will attempt to contact him once again tonight."
+    },
+    {
+      "hint": "Proszę, zachowaj wszelkie paragony jako dowód zakupu.",
+      "answer": "Please retain all receipts as proof of purchase."
+    },
+    {
+      "hint": "Ta książka porusza bardzo kontrowersyjne tematy.",
+      "answer": "This book addresses very controversial subjects."
+    },
+    {
+      "hint": "Zawsze staramy się dostarczać usługi najwyższej jakości.",
+      "answer": "We always aim to provide services of the highest quality."
+    },
+    {
+      "hint": "Wszyscy pracownicy zostali poinformowani o zmianach.",
+      "answer": "All employees were notified of the changes."
+    },
+    {
+      "hint": "To jest niezapomniane doświadczenie dla każdego.",
+      "answer": "This is an unforgettable experience for everyone."
+    },
+    {
+      "hint": "Czy możesz zidentyfikować tę osobę na zdjęciu?",
+      "answer": "Can you identify this person in the photograph?"
+    },
+    {
+      "hint": "Musimy podsumować główne punkty dyskusji.",
+      "answer": "We need to summarize the main points of the discussion."
+    },
+    {
+      "hint": "Nie powinniśmy lekceważyć jej wiedzy i doświadczenia.",
+      "answer": "We shouldn't underestimate her knowledge and experience."
+    },
+    {
+      "hint": "Zauważyłem, że masz problemy z organizacją czasu.",
+      "answer": "I observed that you have trouble with time management."
+    },
+    {
+      "hint": "Otrzymaliśmy dużą dotację na rozwój projektu.",
+      "answer": "We received a large grant for the project's development."
+    },
+    {
+      "hint": "Chciałbym podkreślić znaczenie tej daty.",
+      "answer": "I would like to emphasise the importance of this date."
+    },
+    {
+      "hint": "Musimy uwzględnić różne perspektywy w naszej analizie.",
+      "answer": "We must consider different perspectives in our analysis."
+    },
+    {
+      "hint": "Nikt nie mógł przewidzieć tej nagłej zmiany pogody.",
+      "answer": "Nobody could foresee this sudden change in weather."
+    },
+    {
+      "hint": "Warto jest uczyć się języków obcych, aby poszerzyć horyzonty.",
+      "answer": "It is worthwhile to learn foreign languages to broaden your horizons."
+    },
+    {
+      "hint": "Nie mogłem uwierzyć, że tak się zachowała.",
+      "answer": "I couldn't believe she behaved like that."
+    },
+    {
+      "hint": "Wszelkie krytyczne uwagi są mile widziane.",
+      "answer": "All critical comments are welcome."
+    },
+    {
+      "hint": "Powinieneś zająć się tym problemem od razu.",
+      "answer": "You should attend to this matter immediately."
+    },
+    {
+      "hint": "Musimy sprawdzić, czy dokumenty są kompletne.",
+      "answer": "We need to verify if the documents are complete."
+    },
+    {
+      "hint": "Mam nadzieję, że uda nam się utrzymać ten wysoki poziom.",
+      "answer": "I hope we manage to maintain this high standard."
+    },
+    {
+      "hint": "Nie mogę znaleźć logicznego uzasadnienia dla jego działań.",
+      "answer": "I can't find a logical justification for his actions."
+    },
+    {
+      "hint": "Warto jest przeznaczyć czas na relaks i odpoczynek.",
+      "answer": "It is worth dedicating time for relaxation and rest."
+    },
+    {
+      "hint": "Proszę, nie zapomnij o tym, że liczę na Twoją pomoc.",
+      "answer": "Please, don't forget that I rely on your help."
+    },
+    {
+      "hint": "Jego pomysł wywołał wiele kontrowersji w zespole.",
+      "answer": "His idea caused a lot of controversy within the team."
+    },
+    {
+      "hint": "Moglibyśmy użyć tego sprzętu do naszego eksperymentu.",
+      "answer": "We could utilize this equipment for our experiment."
+    },
+    {
+      "hint": "Musimy zająć się tym zadaniem, zanim będzie za późno.",
+      "answer": "We need to tackle this task before it is too late."
+    },
+    {
+      "hint": "Ona jest bardzo zaangażowana w ochronę środowiska.",
+      "answer": "She is very committed to environmental protection."
+    },
+    {
+      "hint": "Jesteśmy zmuszeni do odwołania naszych planów na weekend.",
+      "answer": "We are obliged to cancel our plans for the weekend."
+    },
+    {
+      "hint": "Zostawiłem Ci szczegółową instrukcję na biurku.",
+      "answer": "I left you a detailed instruction on the desk."
+    },
+    {
+      "hint": "Cenimy sobie Twoją szczerość i otwartość.",
+      "answer": "We value your honesty and openness."
+    },
+    {
+      "hint": "Ona ma niezwykłą zdolność do szybkiego przyswajania wiedzy.",
+      "answer": "She has an unusual ability to absorb knowledge quickly."
+    }
+  ],
+  "count": 104
+}

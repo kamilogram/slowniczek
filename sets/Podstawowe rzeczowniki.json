@@ -1,0 +1,208 @@
+{
+  "name": "Podstawowe rzeczowniki",
+  "language": "fr",
+  "type": "word",
+  "words": [
+    {
+      "hint": "kobieta",
+      "answer": "femme"
+    },
+    {
+      "hint": "mężczyzna",
+      "answer": "homme"
+    },
+    {
+      "hint": "dziecko",
+      "answer": "enfant"
+    },
+    {
+      "hint": "dom",
+      "answer": "maison"
+    },
+    {
+      "hint": "pies",
+      "answer": "chien"
+    },
+    {
+      "hint": "kot",
+      "answer": "chat"
+    },
+    {
+      "hint": "stół",
+      "answer": "table"
+    },
+    {
+      "hint": "krzesło",
+      "answer": "chaise"
+    },
+    {
+      "hint": "samochód",
+      "answer": "voiture"
+    },
+    {
+      "hint": "rower",
+      "answer": "vélo"
+    },
+    {
+      "hint": "książka",
+      "answer": "livre"
+    },
+    {
+      "hint": "okno",
+      "answer": "fenêtre"
+    },
+    {
+      "hint": "drzwi",
+      "answer": "porte"
+    },
+    {
+      "hint": "szkoła",
+      "answer": "école"
+    },
+    {
+      "hint": "miasto",
+      "answer": "ville"
+    },
+    {
+      "hint": "kwiat",
+      "answer": "fleur"
+    },
+    {
+      "hint": "chleb",
+      "answer": "pain"
+    },
+    {
+      "hint": "woda",
+      "answer": "eau"
+    },
+    {
+      "hint": "jabłko",
+      "answer": "pomme"
+    },
+    {
+      "hint": "dzień",
+      "answer": "jour"
+    },
+    {
+      "hint": "noc",
+      "answer": "nuit"
+    },
+    {
+      "hint": "mama",
+      "answer": "maman"
+    },
+    {
+      "hint": "tata",
+      "answer": "papa"
+    },
+    {
+      "hint": "nauczyciel",
+      "answer": "professeur"
+    },
+    {
+      "hint": "uczeń",
+      "answer": "élève"
+    },
+    {
+      "hint": "przyjaciel",
+      "answer": "ami"
+    },
+    {
+      "hint": "ręka",
+      "answer": "main"
+    },
+    {
+      "hint": "oko",
+      "answer": "œil"
+    },
+    {
+      "hint": "nos",
+      "answer": "nez"
+    },
+    {
+      "hint": "ucho",
+      "answer": "oreille"
+    },
+    {
+      "hint": "głowa",
+      "answer": "tête"
+    },
+    {
+      "hint": "noga",
+      "answer": "jambe"
+    },
+    {
+      "hint": "but",
+      "answer": "chaussure"
+    },
+    {
+      "hint": "koszula",
+      "answer": "chemise"
+    },
+    {
+      "hint": "spodnie",
+      "answer": "pantalon"
+    },
+    {
+      "hint": "słońce",
+      "answer": "soleil"
+    },
+    {
+      "hint": "księżyc",
+      "answer": "lune"
+    },
+    {
+      "hint": "gwiazda",
+      "answer": "étoile"
+    },
+    {
+      "hint": "las",
+      "answer": "forêt"
+    },
+    {
+      "hint": "drzewo",
+      "answer": "arbre"
+    },
+    {
+      "hint": "morze",
+      "answer": "mer"
+    },
+    {
+      "hint": "góra",
+      "answer": "montagne"
+    },
+    {
+      "hint": "droga",
+      "answer": "route"
+    },
+    {
+      "hint": "miłość",
+      "answer": "amour"
+    },
+    {
+      "hint": "czas",
+      "answer": "temps"
+    },
+    {
+      "hint": "dziecko (niemowlę)",
+      "answer": "bébé"
+    },
+    {
+      "hint": "ptak",
+      "answer": "oiseau"
+    },
+    {
+      "hint": "ryba",
+      "answer": "poisson"
+    },
+    {
+      "hint": "serce",
+      "answer": "cœur"
+    },
+    {
+      "hint": "imię",
+      "answer": "nom"
+    }
+  ],
+  "count": 50
+}

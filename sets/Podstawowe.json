@@ -1,0 +1,312 @@
+{
+  "name": "Podstawowe",
+  "language": "it",
+  "type": "word",
+  "words": [
+    {
+      "hint": "dom",
+      "answer": "casa"
+    },
+    {
+      "hint": "człowiek",
+      "answer": "uomo"
+    },
+    {
+      "hint": "dziecko",
+      "answer": "bambino"
+    },
+    {
+      "hint": "kobieta",
+      "answer": "donna"
+    },
+    {
+      "hint": "mężczyzna",
+      "answer": "uomo"
+    },
+    {
+      "hint": "dziewczyna",
+      "answer": "ragazza"
+    },
+    {
+      "hint": "chłopak",
+      "answer": "ragazzo"
+    },
+    {
+      "hint": "matka",
+      "answer": "madre"
+    },
+    {
+      "hint": "ojciec",
+      "answer": "padre"
+    },
+    {
+      "hint": "rodzina",
+      "answer": "famiglia"
+    },
+    {
+      "hint": "dzień",
+      "answer": "giorno"
+    },
+    {
+      "hint": "noc",
+      "answer": "notte"
+    },
+    {
+      "hint": "rok",
+      "answer": "anno"
+    },
+    {
+      "hint": "godzina",
+      "answer": "ora"
+    },
+    {
+      "hint": "czas",
+      "answer": "tempo"
+    },
+    {
+      "hint": "szkoła",
+      "answer": "scuola"
+    },
+    {
+      "hint": "praca",
+      "answer": "lavoro"
+    },
+    {
+      "hint": "miasto",
+      "answer": "città"
+    },
+    {
+      "hint": "ulica",
+      "answer": "strada"
+    },
+    {
+      "hint": "kraj",
+      "answer": "paese"
+    },
+    {
+      "hint": "język",
+      "answer": "lingua"
+    },
+    {
+      "hint": "przyjaciel",
+      "answer": "amico"
+    },
+    {
+      "hint": "dziecko",
+      "answer": "figlio"
+    },
+    {
+      "hint": "samochód",
+      "answer": "macchina"
+    },
+    {
+      "hint": "rower",
+      "answer": "bicicletta"
+    },
+    {
+      "hint": "pociąg",
+      "answer": "treno"
+    },
+    {
+      "hint": "samolot",
+      "answer": "aereo"
+    },
+    {
+      "hint": "dom",
+      "answer": "abitazione"
+    },
+    {
+      "hint": "pokój",
+      "answer": "stanza"
+    },
+    {
+      "hint": "kuchnia",
+      "answer": "cucina"
+    },
+    {
+      "hint": "łazienka",
+      "answer": "bagno"
+    },
+    {
+      "hint": "okno",
+      "answer": "finestra"
+    },
+    {
+      "hint": "drzwi",
+      "answer": "porta"
+    },
+    {
+      "hint": "łóżko",
+      "answer": "letto"
+    },
+    {
+      "hint": "stół",
+      "answer": "tavolo"
+    },
+    {
+      "hint": "krzesło",
+      "answer": "sedia"
+    },
+    {
+      "hint": "telefon",
+      "answer": "telefono"
+    },
+    {
+      "hint": "książka",
+      "answer": "libro"
+    },
+    {
+      "hint": "gazeta",
+      "answer": "giornale"
+    },
+    {
+      "hint": "gazeta",
+      "answer": "rivista"
+    },
+    {
+      "hint": "pieniądze",
+      "answer": "soldi"
+    },
+    {
+      "hint": "sklep",
+      "answer": "negozio"
+    },
+    {
+      "hint": "jedzenie",
+      "answer": "cibo"
+    },
+    {
+      "hint": "woda",
+      "answer": "acqua"
+    },
+    {
+      "hint": "chleb",
+      "answer": "pane"
+    },
+    {
+      "hint": "mleko",
+      "answer": "latte"
+    },
+    {
+      "hint": "kawa",
+      "answer": "caffè"
+    },
+    {
+      "hint": "mięso",
+      "answer": "carne"
+    },
+    {
+      "hint": "ryba",
+      "answer": "pesce"
+    },
+    {
+      "hint": "owoce",
+      "answer": "frutta"
+    },
+    {
+      "hint": "warzywa",
+      "answer": "verdura"
+    },
+    {
+      "hint": "jabłko",
+      "answer": "mela"
+    },
+    {
+      "hint": "pomarańcza",
+      "answer": "arancia"
+    },
+    {
+      "hint": "banan",
+      "answer": "banana"
+    },
+    {
+      "hint": "ser",
+      "answer": "formaggio"
+    },
+    {
+      "hint": "jajko",
+      "answer": "uovo"
+    },
+    {
+      "hint": "cukier",
+      "answer": "zucchero"
+    },
+    {
+      "hint": "wino",
+      "answer": "vino"
+    },
+    {
+      "hint": "piwo",
+      "answer": "birra"
+    },
+    {
+      "hint": "ciasto",
+      "answer": "torta"
+    },
+    {
+      "hint": "talerz",
+      "answer": "piatto"
+    },
+    {
+      "hint": "szklanka",
+      "answer": "bicchiere"
+    },
+    {
+      "hint": "widelec",
+      "answer": "forchetta"
+    },
+    {
+      "hint": "nóż",
+      "answer": "coltello"
+    },
+    {
+      "hint": "łyżka",
+      "answer": "cucchiaio"
+    },
+    {
+      "hint": "ręka",
+      "answer": "mano"
+    },
+    {
+      "hint": "noga",
+      "answer": "gamba"
+    },
+    {
+      "hint": "głowa",
+      "answer": "testa"
+    },
+    {
+      "hint": "oko",
+      "answer": "occhio"
+    },
+    {
+      "hint": "ucho",
+      "answer": "orecchio"
+    },
+    {
+      "hint": "nos",
+      "answer": "naso"
+    },
+    {
+      "hint": "usta",
+      "answer": "bocca"
+    },
+    {
+      "hint": "włosy",
+      "answer": "capelli"
+    },
+    {
+      "hint": "pies",
+      "answer": "cane"
+    },
+    {
+      "hint": "kot",
+      "answer": "gatto"
+    },
+    {
+      "hint": "ptak",
+      "answer": "uccello"
+    }
+  ],
+  "count": 76
+}

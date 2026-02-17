@@ -1,0 +1,436 @@
+{
+  "name": "hiszpański - słówka podstawowe 2",
+  "language": "es",
+  "type": "word",
+  "words": [
+    {
+      "hint": "głowa",
+      "answer": "cabeza"
+    },
+    {
+      "hint": "ręka",
+      "answer": "mano"
+    },
+    {
+      "hint": "noga",
+      "answer": "pierna"
+    },
+    {
+      "hint": "oko",
+      "answer": "ojo"
+    },
+    {
+      "hint": "ucho",
+      "answer": "oreja"
+    },
+    {
+      "hint": "nos",
+      "answer": "nariz"
+    },
+    {
+      "hint": "usta",
+      "answer": "boca"
+    },
+    {
+      "hint": "serce",
+      "answer": "corazón"
+    },
+    {
+      "hint": "ból",
+      "answer": "dolor"
+    },
+    {
+      "hint": "zdrowie",
+      "answer": "salud"
+    },
+    {
+      "hint": "szczęście",
+      "answer": "felicidad"
+    },
+    {
+      "hint": "smutek",
+      "answer": "tristeza"
+    },
+    {
+      "hint": "strach",
+      "answer": "miedo"
+    },
+    {
+      "hint": "złość",
+      "answer": "ira"
+    },
+    {
+      "hint": "miłość",
+      "answer": "amor"
+    },
+    {
+      "hint": "przyjaciel",
+      "answer": "amigo"
+    },
+    {
+      "hint": "rodzina",
+      "answer": "familia"
+    },
+    {
+      "hint": "matka",
+      "answer": "madre"
+    },
+    {
+      "hint": "ojciec",
+      "answer": "padre"
+    },
+    {
+      "hint": "brat",
+      "answer": "hermano"
+    },
+    {
+      "hint": "siostra",
+      "answer": "hermana"
+    },
+    {
+      "hint": "babcia",
+      "answer": "abuela"
+    },
+    {
+      "hint": "dziadek",
+      "answer": "abuelo"
+    },
+    {
+      "hint": "dziecko",
+      "answer": "hijo"
+    },
+    {
+      "hint": "żona",
+      "answer": "esposa"
+    },
+    {
+      "hint": "mąż",
+      "answer": "esposo"
+    },
+    {
+      "hint": "czas",
+      "answer": "tiempo"
+    },
+    {
+      "hint": "godzina",
+      "answer": "hora"
+    },
+    {
+      "hint": "minuta",
+      "answer": "minuto"
+    },
+    {
+      "hint": "sekunda",
+      "answer": "segundo"
+    },
+    {
+      "hint": "tydzień",
+      "answer": "semana"
+    },
+    {
+      "hint": "miesiąc",
+      "answer": "mes"
+    },
+    {
+      "hint": "rok",
+      "answer": "año"
+    },
+    {
+      "hint": "poniedziałek",
+      "answer": "lunes"
+    },
+    {
+      "hint": "wtorek",
+      "answer": "martes"
+    },
+    {
+      "hint": "środa",
+      "answer": "miércoles"
+    },
+    {
+      "hint": "czwartek",
+      "answer": "jueves"
+    },
+    {
+      "hint": "piątek",
+      "answer": "viernes"
+    },
+    {
+      "hint": "sobota",
+      "answer": "sábado"
+    },
+    {
+      "hint": "niedziela",
+      "answer": "domingo"
+    },
+    {
+      "hint": "wiosna",
+      "answer": "primavera"
+    },
+    {
+      "hint": "lato",
+      "answer": "verano"
+    },
+    {
+      "hint": "jesień",
+      "answer": "otoño"
+    },
+    {
+      "hint": "zima",
+      "answer": "invierno"
+    },
+    {
+      "hint": "słońce",
+      "answer": "sol"
+    },
+    {
+      "hint": "księżyc",
+      "answer": "luna"
+    },
+    {
+      "hint": "gwiazda",
+      "answer": "estrella"
+    },
+    {
+      "hint": "niebo",
+      "answer": "cielo"
+    },
+    {
+      "hint": "ziemia",
+      "answer": "tierra"
+    },
+    {
+      "hint": "drzewo",
+      "answer": "árbol"
+    },
+    {
+      "hint": "kwiat",
+      "answer": "flor"
+    },
+    {
+      "hint": "liść",
+      "answer": "hoja"
+    },
+    {
+      "hint": "trawa",
+      "answer": "césped"
+    },
+    {
+      "hint": "kamień",
+      "answer": "piedra"
+    },
+    {
+      "hint": "góra",
+      "answer": "montaña"
+    },
+    {
+      "hint": "rzeka",
+      "answer": "río"
+    },
+    {
+      "hint": "morze",
+      "answer": "mar"
+    },
+    {
+      "hint": "jezioro",
+      "answer": "lago"
+    },
+    {
+      "hint": "las",
+      "answer": "bosque"
+    },
+    {
+      "hint": "droga",
+      "answer": "camino"
+    },
+    {
+      "hint": "ulica",
+      "answer": "calle"
+    },
+    {
+      "hint": "most",
+      "answer": "puente"
+    },
+    {
+      "hint": "okno",
+      "answer": "ventana"
+    },
+    {
+      "hint": "drzwi",
+      "answer": "puerta"
+    },
+    {
+      "hint": "krzesło",
+      "answer": "silla"
+    },
+    {
+      "hint": "stół",
+      "answer": "mesa"
+    },
+    {
+      "hint": "łóżko",
+      "answer": "cama"
+    },
+    {
+      "hint": "pokój",
+      "answer": "habitación"
+    },
+    {
+      "hint": "łazienka",
+      "answer": "baño"
+    },
+    {
+      "hint": "kuchnia",
+      "answer": "cocina"
+    },
+    {
+      "hint": "ubranie",
+      "answer": "ropa"
+    },
+    {
+      "hint": "koszula",
+      "answer": "camisa"
+    },
+    {
+      "hint": "spodnie",
+      "answer": "pantalones"
+    },
+    {
+      "hint": "buty",
+      "answer": "zapatos"
+    },
+    {
+      "hint": "czapka",
+      "answer": "gorra"
+    },
+    {
+      "hint": "płaszcz",
+      "answer": "abrigo"
+    },
+    {
+      "hint": "kolor",
+      "answer": "color"
+    },
+    {
+      "hint": "czerwony",
+      "answer": "rojo"
+    },
+    {
+      "hint": "niebieski",
+      "answer": "azul"
+    },
+    {
+      "hint": "zielony",
+      "answer": "verde"
+    },
+    {
+      "hint": "żółty",
+      "answer": "amarillo"
+    },
+    {
+      "hint": "czarny",
+      "answer": "negro"
+    },
+    {
+      "hint": "biały",
+      "answer": "blanco"
+    },
+    {
+      "hint": "brązowy",
+      "answer": "marrón"
+    },
+    {
+      "hint": "pomarańczowy",
+      "answer": "naranja"
+    },
+    {
+      "hint": "różowy",
+      "answer": "rosa"
+    },
+    {
+      "hint": "szary",
+      "answer": "gris"
+    },
+    {
+      "hint": "liczba",
+      "answer": "número"
+    },
+    {
+      "hint": "cztery",
+      "answer": "cuatro"
+    },
+    {
+      "hint": "pięć",
+      "answer": "cinco"
+    },
+    {
+      "hint": "sześć",
+      "answer": "seis"
+    },
+    {
+      "hint": "siedem",
+      "answer": "siete"
+    },
+    {
+      "hint": "osiem",
+      "answer": "ocho"
+    },
+    {
+      "hint": "dziewięć",
+      "answer": "nueve"
+    },
+    {
+      "hint": "dziesięć",
+      "answer": "diez"
+    },
+    {
+      "hint": "sto",
+      "answer": "cien"
+    },
+    {
+      "hint": "tysiąc",
+      "answer": "mil"
+    },
+    {
+      "hint": "dużo",
+      "answer": "mucho"
+    },
+    {
+      "hint": "mało",
+      "answer": "poco"
+    },
+    {
+      "hint": "wszystko",
+      "answer": "todo"
+    },
+    {
+      "hint": "nic",
+      "answer": "nada"
+    },
+    {
+      "hint": "gdzie",
+      "answer": "dónde"
+    },
+    {
+      "hint": "kiedy",
+      "answer": "cuándo"
+    },
+    {
+      "hint": "dlaczego",
+      "answer": "por qué"
+    },
+    {
+      "hint": "jak",
+      "answer": "cómo"
+    },
+    {
+      "hint": "kto",
+      "answer": "quién"
+    },
+    {
+      "hint": "co",
+      "answer": "qué"
+    }
+  ],
+  "count": 107
+}

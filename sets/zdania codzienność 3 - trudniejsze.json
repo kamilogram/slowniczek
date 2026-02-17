@@ -1,0 +1,368 @@
+{
+  "name": "zdania codzienność 3 - trudniejsze",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Gdybyśmy mieli więcej czasu, pojechalibyśmy w góry.",
+      "answer": "If we had more time, we would go to the mountains."
+    },
+    {
+      "hint": "Zawsze kiedy próbuję się zrelaksować, przypomina mi się, że coś mam do zrobienia.",
+      "answer": "Whenever I try to relax, I remember there’s something I need to do."
+    },
+    {
+      "hint": "Moglibyśmy ugotować coś nowego zamiast tego, co zawsze jemy.",
+      "answer": "We could cook something new instead of what we always eat."
+    },
+    {
+      "hint": "Nie zapominaj, że obiecałaś sobie więcej odpoczywać.",
+      "answer": "Don’t forget you promised yourself to rest more."
+    },
+    {
+      "hint": "Gdybyś mnie wcześniej uprzedziła, zrobiłbym zakupy.",
+      "answer": "If you had told me earlier, I would have done the shopping."
+    },
+    {
+      "hint": "Chciałbym, żebyśmy częściej chodzili do teatru.",
+      "answer": "I wish we went to the theater more often."
+    },
+    {
+      "hint": "Pamiętasz, jak spotkaliśmy się pierwszy raz?",
+      "answer": "Do you remember when we met for the first time?"
+    },
+    {
+      "hint": "Zanim pójdziemy spać, powinniśmy przygotować rzeczy na jutro.",
+      "answer": "Before we go to bed, we should prepare things for tomorrow."
+    },
+    {
+      "hint": "Zastanawiam się, czy nie lepiej byłoby pojechać pociągiem niż samochodem.",
+      "answer": "I wonder if it wouldn’t be better to go by train instead of by car."
+    },
+    {
+      "hint": "Gdybym miał wybierać, wolałbym dziś zostać w domu.",
+      "answer": "If I had to choose, I’d prefer to stay home today."
+    },
+    {
+      "hint": "Nie sądzisz, że powinniśmy ustalić budżet na przyszły miesiąc?",
+      "answer": "Don’t you think we should set a budget for next month?"
+    },
+    {
+      "hint": "Zawsze kiedy gotujesz, pachnie tak, jakbyśmy byli w restauracji.",
+      "answer": "Whenever you cook, it smells as if we were in a restaurant."
+    },
+    {
+      "hint": "Jeśli będzie padać, możemy zostać w domu i poczytać książkę.",
+      "answer": "If it rains, we can stay home and read a book."
+    },
+    {
+      "hint": "Czy moglibyśmy zaprosić twoich rodziców na kolację w przyszłym tygodniu?",
+      "answer": "Could we invite your parents for dinner next week?"
+    },
+    {
+      "hint": "Zawsze mam wrażenie, że zapominam o czymś ważnym.",
+      "answer": "I always feel like I’m forgetting something important."
+    },
+    {
+      "hint": "Może powinniśmy ustalić wspólne cele na ten rok.",
+      "answer": "Maybe we should set some goals for this year together."
+    },
+    {
+      "hint": "Nie mogę uwierzyć, jak szybko mija czas, odkąd się przeprowadziliśmy.",
+      "answer": "I can’t believe how fast time has gone since we moved."
+    },
+    {
+      "hint": "Chciałbym, żebyśmy spędzali mniej czasu przy telefonach.",
+      "answer": "I’d like us to spend less time on our phones."
+    },
+    {
+      "hint": "Kiedy tylko skończę pracę, pójdziemy razem na spacer.",
+      "answer": "As soon as I finish work, we’ll go for a walk together."
+    },
+    {
+      "hint": "Gdybyśmy mieli większy ogród, moglibyśmy posadzić więcej warzyw.",
+      "answer": "If we had a bigger garden, we could plant more vegetables."
+    },
+    {
+      "hint": "Mam nadzieję, że wkrótce znajdziemy czas na krótkie wakacje.",
+      "answer": "I hope we’ll soon find time for a short holiday."
+    },
+    {
+      "hint": "Ciągle obiecujemy sobie, że zaczniemy biegać i wciąż odkładamy to na później.",
+      "answer": "We keep promising ourselves to start jogging and keep putting it off."
+    },
+    {
+      "hint": "Może powinniśmy spróbować czegoś nowego w kuchni, na przykład kuchni tajskiej.",
+      "answer": "Maybe we should try something new in the kitchen, like Thai cuisine."
+    },
+    {
+      "hint": "Nie mam pojęcia, co moglibyśmy podarować twojemu bratu na urodziny.",
+      "answer": "I have no idea what we could give your brother for his birthday."
+    },
+    {
+      "hint": "Zawsze kiedy słucham tej piosenki, przypomina mi się nasza podróż.",
+      "answer": "Whenever I listen to this song, it reminds me of our trip."
+    },
+    {
+      "hint": "Byłoby cudownie, gdybyśmy mogli pracować mniej i mieć więcej czasu dla siebie.",
+      "answer": "It would be wonderful if we could work less and have more time for ourselves."
+    },
+    {
+      "hint": "Zanim zaczniemy oglądać film, może zrobimy popcorn?",
+      "answer": "Before we start the movie, shall we make some popcorn?"
+    },
+    {
+      "hint": "Nie uważasz, że powinniśmy częściej spotykać się ze znajomymi?",
+      "answer": "Don’t you think we should meet our friends more often?"
+    },
+    {
+      "hint": "Zawsze gdy rozmawiamy przy kolacji, dzień kończy się lepiej.",
+      "answer": "Whenever we talk over dinner, the day ends better."
+    },
+    {
+      "hint": "Może powinniśmy ustalić, kto co robi w domu, żeby było sprawiedliwie.",
+      "answer": "Maybe we should decide who does what at home, to make it fair."
+    },
+    {
+      "hint": "Chciałbym, żebyśmy więcej rozmawiali o naszych planach na przyszłość.",
+      "answer": "I’d like us to talk more about our plans for the future."
+    },
+    {
+      "hint": "Nie mogę się doczekać, aż wreszcie pojedziemy na wakacje.",
+      "answer": "I can’t wait until we finally go on holiday."
+    },
+    {
+      "hint": "Może powinniśmy spisywać wydatki, żeby lepiej je kontrolować.",
+      "answer": "Maybe we should write down our expenses to control them better."
+    },
+    {
+      "hint": "Zawsze kiedy wracam późno, czuję, że tracimy wspólny czas.",
+      "answer": "Whenever I come home late, I feel like we’re losing time together."
+    },
+    {
+      "hint": "Byłoby świetnie, gdybyśmy mieli psa, który chodzi z nami na spacery.",
+      "answer": "It would be great if we had a dog to walk with us."
+    },
+    {
+      "hint": "Nie sądzisz, że powinniśmy częściej robić coś spontanicznego?",
+      "answer": "Don’t you think we should do something spontaneous more often?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy nauczyli się razem nowego języka.",
+      "answer": "I’d like us to learn a new language together."
+    },
+    {
+      "hint": "Zanim zdecydujemy się na remont, musimy zrobić plan.",
+      "answer": "Before we decide on renovation, we need to make a plan."
+    },
+    {
+      "hint": "Zawsze kiedy oglądamy stare zdjęcia, poprawia mi się humor.",
+      "answer": "Whenever we look at old photos, it lifts my mood."
+    },
+    {
+      "hint": "Mam nadzieję, że w tym roku uda nam się odwiedzić nowe miejsce.",
+      "answer": "I hope this year we’ll manage to visit a new place."
+    },
+    {
+      "hint": "Może w weekend pójdziemy do muzeum albo na wystawę.",
+      "answer": "Maybe this weekend we could go to a museum or an exhibition."
+    },
+    {
+      "hint": "Nie mogę się zdecydować, co bardziej lubię – góry czy morze.",
+      "answer": "I can’t decide what I like more – the mountains or the sea."
+    },
+    {
+      "hint": "Zawsze kiedy gotujesz z przyprawami, pachnie jak w egzotycznym kraju.",
+      "answer": "Whenever you cook with spices, it smells like we’re in an exotic country."
+    },
+    {
+      "hint": "Byłoby cudownie, gdybyśmy częściej mieli czas tylko dla siebie.",
+      "answer": "It would be wonderful if we had more time just for ourselves."
+    },
+    {
+      "hint": "Zanim wyjedziemy, musimy upewnić się, że wszystkie okna są zamknięte.",
+      "answer": "Before we leave, we must make sure all the windows are closed."
+    },
+    {
+      "hint": "Mam wrażenie, że ostatnio ciągle jesteśmy w biegu.",
+      "answer": "I feel like we’re constantly rushing lately."
+    },
+    {
+      "hint": "Chciałbym, żebyśmy wprowadzili zdrowsze nawyki do naszej diety.",
+      "answer": "I’d like us to bring healthier habits into our diet."
+    },
+    {
+      "hint": "Może powinniśmy ograniczyć czas spędzany przed ekranem.",
+      "answer": "Maybe we should limit the time we spend in front of screens."
+    },
+    {
+      "hint": "Nie mogę uwierzyć, że już minął cały miesiąc od naszej podróży.",
+      "answer": "I can’t believe it’s already been a whole month since our trip."
+    },
+    {
+      "hint": "Zawsze kiedy pijemy kawę razem, rozmowa lepiej się klei.",
+      "answer": "Whenever we have coffee together, the conversation flows better."
+    },
+    {
+      "hint": "Może powinniśmy znaleźć nową pasję, którą moglibyśmy dzielić.",
+      "answer": "Maybe we should find a new hobby we could share."
+    },
+    {
+      "hint": "Nie sądzisz, że powinniśmy nauczyć się gotować więcej wegetariańskich potraw?",
+      "answer": "Don’t you think we should learn to cook more vegetarian dishes?"
+    },
+    {
+      "hint": "Gdybym miał wybór, spędziłbym każdą sobotę z tobą na świeżym powietrzu.",
+      "answer": "If I had a choice, I’d spend every Saturday with you outdoors."
+    },
+    {
+      "hint": "Zawsze kiedy słyszę tę melodię, przypomina mi się nasze wesele.",
+      "answer": "Whenever I hear this melody, it reminds me of our wedding."
+    },
+    {
+      "hint": "Może w tym roku spróbujemy czegoś zupełnie nowego na wakacje.",
+      "answer": "Maybe this year we’ll try something completely new for the holidays."
+    },
+    {
+      "hint": "Byłoby miło, gdybyśmy mieli więcej wspólnych zdjęć.",
+      "answer": "It would be nice if we had more photos together."
+    },
+    {
+      "hint": "Nie mogę się doczekać, aż zobaczymy pierwsze oznaki wiosny.",
+      "answer": "I can’t wait until we see the first signs of spring."
+    },
+    {
+      "hint": "Zanim pójdziemy na zakupy, powinniśmy sprawdzić, co mamy w lodówce.",
+      "answer": "Before we go shopping, we should check what we have in the fridge."
+    },
+    {
+      "hint": "Mam nadzieję, że nasze plany na weekend się nie pokrzyżują.",
+      "answer": "I hope our weekend plans won’t fall through."
+    },
+    {
+      "hint": "Chciałbym, żebyśmy częściej wspólnie gotowali obiady w tygodniu.",
+      "answer": "I’d like us to cook dinner together more often during the week."
+    },
+    {
+      "hint": "Zawsze kiedy wracamy z wycieczki, mam poczucie, że zbliżamy się do siebie.",
+      "answer": "Whenever we come back from a trip, I feel like we grow closer."
+    },
+    {
+      "hint": "Byłoby cudownie, gdybyśmy mogli mieszkać bliżej morza.",
+      "answer": "It would be wonderful if we could live closer to the sea."
+    },
+    {
+      "hint": "Nie mogę uwierzyć, jak szybko rosną dzieci twojej siostry.",
+      "answer": "I can’t believe how fast your sister’s kids are growing."
+    },
+    {
+      "hint": "Może powinniśmy zapisać się razem na jakieś zajęcia sportowe.",
+      "answer": "Maybe we should sign up for some sports classes together."
+    },
+    {
+      "hint": "Zawsze kiedy wychodzimy do restauracji, próbujesz czegoś nowego.",
+      "answer": "Whenever we go out to a restaurant, you try something new."
+    },
+    {
+      "hint": "Byłoby miło, gdybyśmy mogli częściej odwiedzać naszych przyjaciół.",
+      "answer": "It would be nice if we could visit our friends more often."
+    },
+    {
+      "hint": "Zanim podejmiemy decyzję, powinniśmy to dokładnie omówić.",
+      "answer": "Before we make a decision, we should discuss it thoroughly."
+    },
+    {
+      "hint": "Mam nadzieję, że jutro pogoda będzie lepsza niż dziś.",
+      "answer": "I hope the weather will be better tomorrow than today."
+    },
+    {
+      "hint": "Może w przyszłym roku spróbujemy nauczyć się tańczyć.",
+      "answer": "Maybe next year we’ll try to learn how to dance."
+    },
+    {
+      "hint": "Nie sądzisz, że nasz dom robi się coraz bardziej przytulny?",
+      "answer": "Don’t you think our home is getting cozier?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy więcej czasu spędzali z rodziną.",
+      "answer": "I’d like us to spend more time with our family."
+    },
+    {
+      "hint": "Zawsze kiedy jem twoje ciasto, zastanawiam się, czemu jeszcze nie otworzyłaś cukierni.",
+      "answer": "Whenever I eat your cake, I wonder why you haven’t opened a bakery yet."
+    },
+    {
+      "hint": "Byłoby świetnie, gdybyśmy nauczyli się razem grać na instrumencie.",
+      "answer": "It would be great if we learned to play an instrument together."
+    },
+    {
+      "hint": "Nie mogę się zdecydować, czy wolę wieczory w domu czy wyjścia na miasto.",
+      "answer": "I can’t decide whether I prefer evenings at home or going out."
+    },
+    {
+      "hint": "Zawsze kiedy rozmawiamy przed snem, łatwiej mi zasnąć.",
+      "answer": "Whenever we talk before bed, it’s easier for me to fall asleep."
+    },
+    {
+      "hint": "Może powinniśmy zaplanować większą podróż na naszą rocznicę.",
+      "answer": "Maybe we should plan a bigger trip for our anniversary."
+    },
+    {
+      "hint": "Byłoby cudownie, gdybyśmy mieli więcej czasu na nasze pasje.",
+      "answer": "It would be wonderful if we had more time for our hobbies."
+    },
+    {
+      "hint": "Nie mogę się doczekać, aż wypróbujemy nową kawiarnię na rogu.",
+      "answer": "I can’t wait until we try the new café on the corner."
+    },
+    {
+      "hint": "Zanim zaczniemy planować, powinniśmy ustalić budżet.",
+      "answer": "Before we start planning, we should set a budget."
+    },
+    {
+      "hint": "Mam nadzieję, że jutro uda nam się odpocząć trochę dłużej.",
+      "answer": "I hope tomorrow we’ll manage to rest a bit longer."
+    },
+    {
+      "hint": "Może w tym roku spróbujemy uprawiać coś na balkonie.",
+      "answer": "Maybe this year we’ll try to grow something on the balcony."
+    },
+    {
+      "hint": "Nie sądzisz, że nasze życie zrobiło się bardziej uporządkowane?",
+      "answer": "Don’t you think our life has become more organized?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy znaleźli więcej czasu na wspólne spacery.",
+      "answer": "I’d like us to find more time for walks together."
+    },
+    {
+      "hint": "Zawsze kiedy gotujesz, uczę się czegoś nowego.",
+      "answer": "Whenever you cook, I learn something new."
+    },
+    {
+      "hint": "Byłoby miło, gdybyśmy wprowadzili zwyczaj wspólnego śniadania w weekend.",
+      "answer": "It would be nice if we introduced a tradition of having breakfast together on weekends."
+    },
+    {
+      "hint": "Nie mogę się doczekać, aż pokażesz mi nowy przepis.",
+      "answer": "I can’t wait until you show me the new recipe."
+    },
+    {
+      "hint": "Może powinniśmy częściej wyłączać telefony wieczorem.",
+      "answer": "Maybe we should turn off our phones more often in the evening."
+    },
+    {
+      "hint": "Zanim kupimy nowy sprzęt, musimy sprawdzić opinie.",
+      "answer": "Before we buy new equipment, we need to check the reviews."
+    },
+    {
+      "hint": "Mam nadzieję, że uda nam się obejrzeć film, zanim zaśniemy.",
+      "answer": "I hope we’ll manage to watch the movie before we fall asleep."
+    },
+    {
+      "hint": "Chciałbym, żebyśmy zawsze znajdowali czas na wspólną kawę.",
+      "answer": "I’d like us to always find time for coffee together."
+    }
+  ],
+  "count": 90
+}

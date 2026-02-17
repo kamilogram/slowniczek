@@ -1,0 +1,208 @@
+{
+  "name": "Hiszpański zdania z podstawowymi słówkami 1",
+  "language": "es",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Tak, to jest dobre.",
+      "answer": "Sí, esto es bueno."
+    },
+    {
+      "hint": "Nie, nie chcę tego.",
+      "answer": "No, no quiero esto."
+    },
+    {
+      "hint": "Dzień jest słoneczny.",
+      "answer": "El día está soleado."
+    },
+    {
+      "hint": "Noc była bardzo zimna.",
+      "answer": "La noche fue muy fría."
+    },
+    {
+      "hint": "Ten człowiek jest miły.",
+      "answer": "Esta persona es amable."
+    },
+    {
+      "hint": "Kobieta mówi po hiszpańsku.",
+      "answer": "La mujer habla español."
+    },
+    {
+      "hint": "Mężczyzna czeka na autobus.",
+      "answer": "El hombre espera el autobús."
+    },
+    {
+      "hint": "Dziecko śpi w łóżku.",
+      "answer": "El niño duerme en la cama."
+    },
+    {
+      "hint": "Dom jest duży.",
+      "answer": "La casa es grande."
+    },
+    {
+      "hint": "Szkoła jest blisko.",
+      "answer": "La escuela está cerca."
+    },
+    {
+      "hint": "Miasto jest piękne.",
+      "answer": "La ciudad es bonita."
+    },
+    {
+      "hint": "Kraj jest mały.",
+      "answer": "El país es pequeño."
+    },
+    {
+      "hint": "Woda jest zimna.",
+      "answer": "El agua está fría."
+    },
+    {
+      "hint": "Jedzenie jest pyszne.",
+      "answer": "La comida está deliciosa."
+    },
+    {
+      "hint": "Chleb jest świeży.",
+      "answer": "El pan está fresco."
+    },
+    {
+      "hint": "Jabłko jest czerwone.",
+      "answer": "La manzana es roja."
+    },
+    {
+      "hint": "Pies biega szybko.",
+      "answer": "El perro corre rápido."
+    },
+    {
+      "hint": "Kot śpi na krześle.",
+      "answer": "El gato duerme en la silla."
+    },
+    {
+      "hint": "Samochód jest nowy.",
+      "answer": "El coche es nuevo."
+    },
+    {
+      "hint": "Rower jest zielony.",
+      "answer": "La bicicleta es verde."
+    },
+    {
+      "hint": "Dzień dobry, jak się masz?",
+      "answer": "Buenos días, ¿cómo estás?"
+    },
+    {
+      "hint": "Dobry wieczór, panie.",
+      "answer": "Buenas noches, señor."
+    },
+    {
+      "hint": "Do widzenia, do jutra!",
+      "answer": "Adiós, ¡hasta mañana!"
+    },
+    {
+      "hint": "Proszę, oto twoja kawa.",
+      "answer": "Por favor, aquí está tu café."
+    },
+    {
+      "hint": "Dziękuję za pomoc.",
+      "answer": "Gracias por la ayuda."
+    },
+    {
+      "hint": "Przepraszam, gdzie jest toaleta?",
+      "answer": "Perdón, ¿dónde está el baño?"
+    },
+    {
+      "hint": "Jak się masz dzisiaj?",
+      "answer": "¿Cómo estás hoy?"
+    },
+    {
+      "hint": "Dobrze, wszystko w porządku.",
+      "answer": "Bien, todo está bien."
+    },
+    {
+      "hint": "Źle się czuję.",
+      "answer": "Me siento mal."
+    },
+    {
+      "hint": "Może pójdziemy jutro.",
+      "answer": "Quizás vayamos mañana."
+    },
+    {
+      "hint": "Zawsze piję kawę rano.",
+      "answer": "Siempre tomo café por la mañana."
+    },
+    {
+      "hint": "Nigdy nie jem mięsa.",
+      "answer": "Nunca como carne."
+    },
+    {
+      "hint": "Teraz jestem zajęty.",
+      "answer": "Ahora estoy ocupado."
+    },
+    {
+      "hint": "Później zadzwonię.",
+      "answer": "Después llamaré."
+    },
+    {
+      "hint": "Wczoraj padał deszcz.",
+      "answer": "Ayer llovió."
+    },
+    {
+      "hint": "Dzisiaj jest poniedziałek.",
+      "answer": "Hoy es lunes."
+    },
+    {
+      "hint": "Jutro będzie lepiej.",
+      "answer": "Mañana será mejor."
+    },
+    {
+      "hint": "Mam jeden bilet.",
+      "answer": "Tengo un billete."
+    },
+    {
+      "hint": "Potrzebuję dwa ręczniki.",
+      "answer": "Necesito dos toallas."
+    },
+    {
+      "hint": "Mam trzy pytania.",
+      "answer": "Tengo tres preguntas."
+    },
+    {
+      "hint": "To jest duży hotel.",
+      "answer": "Este es un hotel grande."
+    },
+    {
+      "hint": "To jest mały pokój.",
+      "answer": "Esta es una habitación pequeña."
+    },
+    {
+      "hint": "Kawa jest gorąca.",
+      "answer": "El café está caliente."
+    },
+    {
+      "hint": "Woda jest zimna.",
+      "answer": "El agua está fría."
+    },
+    {
+      "hint": "To jest ładne miejsce.",
+      "answer": "Este es un lugar bonito."
+    },
+    {
+      "hint": "To jest brzydka pogoda.",
+      "answer": "Este es un clima feo."
+    },
+    {
+      "hint": "Samolot jest szybki.",
+      "answer": "El avión es rápido."
+    },
+    {
+      "hint": "Pociąg jest wolny.",
+      "answer": "El tren es lento."
+    },
+    {
+      "hint": "Sklep jest otwarty.",
+      "answer": "La tienda está abierta."
+    },
+    {
+      "hint": "Restauracja jest zamknięta.",
+      "answer": "El restaurante está cerrado."
+    }
+  ],
+  "count": 50
+}

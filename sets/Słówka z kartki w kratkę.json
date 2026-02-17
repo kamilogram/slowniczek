@@ -1,0 +1,540 @@
+{
+  "name": "Słówka z kartki w kratkę",
+  "language": "en",
+  "type": "word",
+  "words": [
+    {
+      "hint": "dołączyć",
+      "answer": "attach"
+    },
+    {
+      "hint": "dopisać",
+      "answer": "append"
+    },
+    {
+      "hint": "powiązany",
+      "answer": "associated"
+    },
+    {
+      "hint": "przypisać",
+      "answer": "assign"
+    },
+    {
+      "hint": "wpływać",
+      "answer": "affect"
+    },
+    {
+      "hint": "przodek",
+      "answer": "ancestor"
+    },
+    {
+      "hint": "podejście",
+      "answer": "approach"
+    },
+    {
+      "hint": "próba",
+      "answer": "attempt"
+    },
+    {
+      "hint": "akordeon",
+      "answer": "accordion"
+    },
+    {
+      "hint": "zasób",
+      "answer": "asset"
+    },
+    {
+      "hint": "zakładać",
+      "answer": "assume"
+    },
+    {
+      "hint": "osiągnąć",
+      "answer": "accomplish"
+    },
+    {
+      "hint": "dostosować",
+      "answer": "adjust"
+    },
+    {
+      "hint": "pozwalać",
+      "answer": "allow"
+    },
+    {
+      "hint": "kotwica",
+      "answer": "anchor"
+    },
+    {
+      "hint": "elastyczny",
+      "answer": "adaptable"
+    },
+    {
+      "hint": "wiązać",
+      "answer": "bind"
+    },
+    {
+      "hint": "uważaj",
+      "answer": "beware"
+    },
+    {
+      "hint": "pakiet",
+      "answer": "bundle"
+    },
+    {
+      "hint": "krótko",
+      "answer": "briefly"
+    },
+    {
+      "hint": "bootstrapować",
+      "answer": "bootstrap"
+    },
+    {
+      "hint": "koraliki",
+      "answer": "beads"
+    },
+    {
+      "hint": "wezwać",
+      "answer": "call on"
+    },
+    {
+      "hint": "domknięcie",
+      "answer": "closure"
+    },
+    {
+      "hint": "rozważać",
+      "answer": "consider"
+    },
+    {
+      "hint": "wklęsły",
+      "answer": "concave"
+    },
+    {
+      "hint": "wypukły",
+      "answer": "convex"
+    },
+    {
+      "hint": "pewny siebie",
+      "answer": "confident"
+    },
+    {
+      "hint": "tworzyć",
+      "answer": "craft"
+    },
+    {
+      "hint": "różnica",
+      "answer": "distinction"
+    },
+    {
+      "hint": "rozróżniać",
+      "answer": "distinguish"
+    },
+    {
+      "hint": "opóźnienie",
+      "answer": "delay"
+    },
+    {
+      "hint": "zrzut",
+      "answer": "dump"
+    },
+    {
+      "hint": "czas trwania",
+      "answer": "duration"
+    },
+    {
+      "hint": "rozpuścić",
+      "answer": "dissolve"
+    },
+    {
+      "hint": "wysłać",
+      "answer": "dispatch"
+    },
+    {
+      "hint": "pozbyć się",
+      "answer": "dispose"
+    },
+    {
+      "hint": "zapewnić",
+      "answer": "ensure"
+    },
+    {
+      "hint": "wykonany",
+      "answer": "executed"
+    },
+    {
+      "hint": "ujawnić",
+      "answer": "expose"
+    },
+    {
+      "hint": "wykluczyć",
+      "answer": "exclude"
+    },
+    {
+      "hint": "wykorzystać",
+      "answer": "exploit"
+    },
+    {
+      "hint": "wytłoczyć",
+      "answer": "extrude"
+    },
+    {
+      "hint": "podstawy",
+      "answer": "essentials"
+    },
+    {
+      "hint": "pobrać",
+      "answer": "fetch"
+    },
+    {
+      "hint": "opłata",
+      "answer": "fee"
+    },
+    {
+      "hint": "prognoza",
+      "answer": "forecast"
+    },
+    {
+      "hint": "zanikać",
+      "answer": "fade"
+    },
+    {
+      "hint": "smak",
+      "answer": "flavour"
+    },
+    {
+      "hint": "karmić",
+      "answer": "feed"
+    },
+    {
+      "hint": "wierność",
+      "answer": "fidelity"
+    },
+    {
+      "hint": "chwycić",
+      "answer": "grab"
+    },
+    {
+      "hint": "blask",
+      "answer": "glow"
+    },
+    {
+      "hint": "biodro",
+      "answer": "hip"
+    },
+    {
+      "hint": "dzielenie wyrazów",
+      "answer": "hyphenation"
+    },
+    {
+      "hint": "wywołać",
+      "answer": "invoke"
+    },
+    {
+      "hint": "problem",
+      "answer": "issue"
+    },
+    {
+      "hint": "dziedziczyć",
+      "answer": "inherit"
+    },
+    {
+      "hint": "branża",
+      "answer": "industry"
+    },
+    {
+      "hint": "wcięcie",
+      "answer": "indent"
+    },
+    {
+      "hint": "przecinać się",
+      "answer": "intersect"
+    },
+    {
+      "hint": "co ciekawe",
+      "answer": "interestingly"
+    },
+    {
+      "hint": "przeplatany",
+      "answer": "interlaced"
+    },
+    {
+      "hint": "dziedzictwo",
+      "answer": "legacy"
+    },
+    {
+      "hint": "zaledwie",
+      "answer": "merely"
+    },
+    {
+      "hint": "obowiązkowy",
+      "answer": "mandatory"
+    },
+    {
+      "hint": "znaczniki",
+      "answer": "markup"
+    },
+    {
+      "hint": "zachwyt",
+      "answer": "marvel"
+    },
+    {
+      "hint": "zagnieżdżony",
+      "answer": "nested"
+    },
+    {
+      "hint": "w skrócie",
+      "answer": "nutshell"
+    },
+    {
+      "hint": "nakładka",
+      "answer": "overlay"
+    },
+    {
+      "hint": "przestrzegać",
+      "answer": "obey"
+    },
+    {
+      "hint": "naprzód",
+      "answer": "onward"
+    },
+    {
+      "hint": "uzyskać",
+      "answer": "obtain"
+    },
+    {
+      "hint": "jest przekazywany",
+      "answer": "is passed"
+    },
+    {
+      "hint": "wcześniejszy",
+      "answer": "prior"
+    },
+    {
+      "hint": "głęboki",
+      "answer": "profound"
+    },
+    {
+      "hint": "poprzedzać",
+      "answer": "precede"
+    },
+    {
+      "hint": "poprzedzić",
+      "answer": "prepend"
+    },
+    {
+      "hint": "uszczypnąć",
+      "answer": "pinch"
+    },
+    {
+      "hint": "właściwość",
+      "answer": "property"
+    },
+    {
+      "hint": "szczytowy",
+      "answer": "peaky"
+    },
+    {
+      "hint": "cel",
+      "answer": "purpose"
+    },
+    {
+      "hint": "trwały",
+      "answer": "persistent"
+    },
+    {
+      "hint": "podnieść",
+      "answer": "pick up"
+    },
+    {
+      "hint": "wystawić",
+      "answer": "put up"
+    },
+    {
+      "hint": "zapytanie",
+      "answer": "query"
+    },
+    {
+      "hint": "responsywny",
+      "answer": "responsive"
+    },
+    {
+      "hint": "podsumowanie",
+      "answer": "recap"
+    },
+    {
+      "hint": "udoskonalanie",
+      "answer": "refining"
+    },
+    {
+      "hint": "przywrócić",
+      "answer": "restore"
+    },
+    {
+      "hint": "odzyskać",
+      "answer": "retrieve"
+    },
+    {
+      "hint": "odwrócić",
+      "answer": "reverse"
+    },
+    {
+      "hint": "rozwiązać",
+      "answer": "resolve"
+    },
+    {
+      "hint": "wydanie",
+      "answer": "release"
+    },
+    {
+      "hint": "udoskonalić",
+      "answer": "refine"
+    },
+    {
+      "hint": "niezawodny",
+      "answer": "reliable"
+    },
+    {
+      "hint": "ujawnić",
+      "answer": "reveal"
+    },
+    {
+      "hint": "handel detaliczny",
+      "answer": "retail"
+    },
+    {
+      "hint": "solidny",
+      "answer": "robust"
+    },
+    {
+      "hint": "odkupienie",
+      "answer": "redemption"
+    },
+    {
+      "hint": "rekurencja",
+      "answer": "recursion"
+    },
+    {
+      "hint": "zakres",
+      "answer": "scope"
+    },
+    {
+      "hint": "dostarczony",
+      "answer": "supplied"
+    },
+    {
+      "hint": "podkładka",
+      "answer": "shim"
+    },
+    {
+      "hint": "fragment",
+      "answer": "snippet"
+    },
+    {
+      "hint": "paskowany",
+      "answer": "striped"
+    },
+    {
+      "hint": "od zera",
+      "answer": "scratch"
+    },
+    {
+      "hint": "plusk",
+      "answer": "splash"
+    },
+    {
+      "hint": "zatrzasnąć",
+      "answer": "snap"
+    },
+    {
+      "hint": "podstępny",
+      "answer": "sneaky"
+    },
+    {
+      "hint": "stos",
+      "answer": "stack"
+    },
+    {
+      "hint": "próbki kolorów",
+      "answer": "swatches"
+    },
+    {
+      "hint": "nachylenie",
+      "answer": "slope"
+    },
+    {
+      "hint": "pochylić",
+      "answer": "skew"
+    },
+    {
+      "hint": "przełącznik",
+      "answer": "toggle"
+    },
+    {
+      "hint": "przejście",
+      "answer": "transition"
+    },
+    {
+      "hint": "wyzwalacz",
+      "answer": "trigger"
+    },
+    {
+      "hint": "drobna zmiana",
+      "answer": "tweak"
+    },
+    {
+      "hint": "związany",
+      "answer": "tied"
+    },
+    {
+      "hint": "skuszony",
+      "answer": "tempted"
+    },
+    {
+      "hint": "narzędzie",
+      "answer": "utility"
+    },
+    {
+      "hint": "rozpakować",
+      "answer": "unwrap"
+    },
+    {
+      "hint": "w górę",
+      "answer": "upward"
+    },
+    {
+      "hint": "ostateczny",
+      "answer": "ultimate"
+    },
+    {
+      "hint": "różnić się",
+      "answer": "vary"
+    },
+    {
+      "hint": "sprzedawca",
+      "answer": "vendor"
+    },
+    {
+      "hint": "opakowanie",
+      "answer": "wrapper"
+    },
+    {
+      "hint": "owinąć",
+      "answer": "wrap"
+    },
+    {
+      "hint": "mądry",
+      "answer": "wise"
+    },
+    {
+      "hint": "chwast",
+      "answer": "weed"
+    },
+    {
+      "hint": "towar",
+      "answer": "ware"
+    },
+    {
+      "hint": "plon",
+      "answer": "yield"
+    }
+  ],
+  "count": 133
+}

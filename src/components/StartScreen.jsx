@@ -485,7 +485,7 @@ export default function StartScreen({
             )}
           </button>
           <p className="selected-info">
-            {selectedPackages.length > 0 || customWordsInput ? `Wybrano ${selectedPackages.length + (customWordsInput ? 1 : 0)} pakiet(ów).` : 'Wybierz co najmniej jeden pakiet'}
+            {selectedPackages.length > 0 || customWordsInput ? `Wybrano ${selectedPackages.length} pakiet(ów)${customWordsInput ? ' + własne słówka' : ''}.` : 'Wybierz co najmniej jeden pakiet'}
           </p>
         </div>
       </div>

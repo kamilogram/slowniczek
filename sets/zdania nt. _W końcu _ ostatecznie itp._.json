@@ -1,0 +1,168 @@
+{
+  "name": "zdania nt. \"W końcu / ostatecznie itp.\"",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "W końcu dotarliśmy na szczyt góry.",
+      "answer": "Finally, we reached the top of the mountain."
+    },
+    {
+      "hint": "Po wielu próbach, w końcu zdała egzamin.",
+      "answer": "Eventually, she passed the exam after many attempts."
+    },
+    {
+      "hint": "Ostatecznie zdecydowaliśmy się nie jechać.",
+      "answer": "In the end, we decided not to go."
+    },
+    {
+      "hint": "Na końcu filmu wszyscy płakali.",
+      "answer": "At the end of the movie, everyone was crying."
+    },
+    {
+      "hint": "Wreszcie mogę odpocząć po długim dniu.",
+      "answer": "At last, I can rest after a long day."
+    },
+    {
+      "hint": "Ostatecznie to była dobra decyzja.",
+      "answer": "Ultimately, it was a good decision."
+    },
+    {
+      "hint": "Na koniec chciałbym podziękować wszystkim obecnym.",
+      "answer": "Lastly, I would like to thank everyone present."
+    },
+    {
+      "hint": "Zostaliśmy w domu — w końcu padało.",
+      "answer": "We stayed home — after all, it was raining."
+    },
+    {
+      "hint": "Podsumowując, projekt zakończył się sukcesem.",
+      "answer": "In conclusion, the project was a success."
+    },
+    {
+      "hint": "W końcu znalazłem klucze pod kanapą.",
+      "answer": "Finally, I found the keys under the couch."
+    },
+    {
+      "hint": "Po długim oczekiwaniu, wreszcie przyszła przesyłka.",
+      "answer": "At last, the package finally arrived."
+    },
+    {
+      "hint": "Ostatecznie wybraliśmy mniejszy dom.",
+      "answer": "Ultimately, we chose the smaller house."
+    },
+    {
+      "hint": "Na końcu książki jest niespodziewany zwrot akcji.",
+      "answer": "At the end of the book, there's an unexpected twist."
+    },
+    {
+      "hint": "W końcu zrozumiałem, o co chodziło.",
+      "answer": "Eventually, I understood what it was all about."
+    },
+    {
+      "hint": "Na koniec dodaj sól do zupy.",
+      "answer": "Lastly, add salt to the soup."
+    },
+    {
+      "hint": "W końcu zdecydowali się na adopcję psa.",
+      "answer": "In the end, they decided to adopt a dog."
+    },
+    {
+      "hint": "Wreszcie mogę się zrelaksować po egzaminach.",
+      "answer": "At last, I can relax after the exams."
+    },
+    {
+      "hint": "Po wielu latach, w końcu się pogodzili.",
+      "answer": "Eventually, they reconciled after many years."
+    },
+    {
+      "hint": "Ostatecznie to była jego decyzja.",
+      "answer": "Ultimately, it was his decision."
+    },
+    {
+      "hint": "Na końcu ulicy znajduje się piekarnia.",
+      "answer": "At the end of the street, there's a bakery."
+    },
+    {
+      "hint": "W końcu przestało padać.",
+      "answer": "Finally, it stopped raining."
+    },
+    {
+      "hint": "Zdecydowaliśmy się nie wychodzić — w końcu było późno.",
+      "answer": "We decided not to go out — after all, it was late."
+    },
+    {
+      "hint": "Podsumowując, musimy działać szybko.",
+      "answer": "In conclusion, we must act quickly."
+    },
+    {
+      "hint": "Na koniec prezentacji pokażę wykres.",
+      "answer": "Lastly, I will show a chart at the end of the presentation."
+    },
+    {
+      "hint": "W końcu nauczyłem się jeździć na rowerze.",
+      "answer": "Eventually, I learned how to ride a bike."
+    },
+    {
+      "hint": "Wreszcie nadszedł dzień ślubu.",
+      "answer": "At last, the wedding day arrived."
+    },
+    {
+      "hint": "Ostatecznie wybraliśmy ofertę z Londynu.",
+      "answer": "Ultimately, we chose the offer from London."
+    },
+    {
+      "hint": "Na końcu dnia byłem wykończony.",
+      "answer": "At the end of the day, I was exhausted."
+    },
+    {
+      "hint": "W końcu zrozumiałem, że to nie dla mnie.",
+      "answer": "In the end, I realized it wasn't for me."
+    },
+    {
+      "hint": "W końcu przyszedł czas na odpoczynek.",
+      "answer": "Finally, it was time to rest."
+    },
+    {
+      "hint": "Po wielu próbach, w końcu udało się uruchomić komputer.",
+      "answer": "Eventually, we managed to start the computer."
+    },
+    {
+      "hint": "Na koniec dodajemy przyprawy.",
+      "answer": "Lastly, we add the spices."
+    },
+    {
+      "hint": "Zostaliśmy w domu — w końcu byliśmy zmęczeni.",
+      "answer": "We stayed home — after all, we were tired."
+    },
+    {
+      "hint": "Podsumowując, warto było spróbować.",
+      "answer": "In conclusion, it was worth trying."
+    },
+    {
+      "hint": "Wreszcie mogę powiedzieć, że jestem szczęśliwy.",
+      "answer": "At last, I can say I'm happy."
+    },
+    {
+      "hint": "Ostatecznie wszystko się ułożyło.",
+      "answer": "Ultimately, everything worked out."
+    },
+    {
+      "hint": "Na końcu filmu bohater się zmienia.",
+      "answer": "At the end of the movie, the hero changes."
+    },
+    {
+      "hint": "W końcu zrozumieliśmy, że to była pomyłka.",
+      "answer": "In the end, we realized it was a mistake."
+    },
+    {
+      "hint": "W końcu dotarliśmy do celu.",
+      "answer": "Finally, we reached our destination."
+    },
+    {
+      "hint": "Po wielu latach, w końcu się spotkaliśmy.",
+      "answer": "Eventually, we met after many years."
+    }
+  ],
+  "count": 40
+}

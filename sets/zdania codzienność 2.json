@@ -1,0 +1,328 @@
+{
+  "name": "zdania codzienność 2",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Czy mogłabyś podać mi sól ze stołu?",
+      "answer": "Could you pass me the salt from the table?"
+    },
+    {
+      "hint": "Myślę, że powinniśmy zrobić listę zakupów na jutro.",
+      "answer": "I think we should make a shopping list for tomorrow."
+    },
+    {
+      "hint": "Możesz sprawdzić, czy pralka skończyła?",
+      "answer": "Can you check if the washing machine is done?"
+    },
+    {
+      "hint": "Chciałbym dziś obejrzeć razem film.",
+      "answer": "I’d like to watch a movie together today."
+    },
+    {
+      "hint": "Czy pamiętasz, gdzie zostawiłaś klucze?",
+      "answer": "Do you remember where you left the keys?"
+    },
+    {
+      "hint": "Może zjemy dziś kolację trochę wcześniej?",
+      "answer": "Maybe we should have dinner a bit earlier today?"
+    },
+    {
+      "hint": "Kawa smakuje dziś wyjątkowo dobrze.",
+      "answer": "The coffee tastes especially good today."
+    },
+    {
+      "hint": "Możesz otworzyć okno, trochę duszno.",
+      "answer": "Could you open the window, it’s a bit stuffy."
+    },
+    {
+      "hint": "Zapomniałem wyłączyć światło w łazience.",
+      "answer": "I forgot to turn off the light in the bathroom."
+    },
+    {
+      "hint": "Chciałabyś wyjść na spacer po obiedzie?",
+      "answer": "Would you like to go for a walk after lunch?"
+    },
+    {
+      "hint": "Może w weekend zrobimy coś wyjątkowego?",
+      "answer": "Maybe we should do something special this weekend?"
+    },
+    {
+      "hint": "Twoje naleśniki są naprawdę najlepsze.",
+      "answer": "Your pancakes are really the best."
+    },
+    {
+      "hint": "Czy mogłabyś zamówić taksówkę?",
+      "answer": "Could you order a taxi?"
+    },
+    {
+      "hint": "Nie mogę znaleźć mojego portfela.",
+      "answer": "I can’t find my wallet."
+    },
+    {
+      "hint": "Masz ochotę na herbatę czy kawę?",
+      "answer": "Do you feel like tea or coffee?"
+    },
+    {
+      "hint": "Pamiętaj, że dziś mamy spotkanie o 18.",
+      "answer": "Remember we have a meeting at six today."
+    },
+    {
+      "hint": "Możesz włączyć muzykę w tle?",
+      "answer": "Can you put some music on in the background?"
+    },
+    {
+      "hint": "Chciałbym spróbować tej nowej restauracji.",
+      "answer": "I’d like to try that new restaurant."
+    },
+    {
+      "hint": "Czy możesz mnie obudzić trochę wcześniej jutro?",
+      "answer": "Could you wake me up a bit earlier tomorrow?"
+    },
+    {
+      "hint": "Dziś było naprawdę męcząco w pracy.",
+      "answer": "Today was really exhausting at work."
+    },
+    {
+      "hint": "Możemy razem posprzątać kuchnię?",
+      "answer": "Can we clean the kitchen together?"
+    },
+    {
+      "hint": "Chciałbym kupić ci coś miłego.",
+      "answer": "I’d like to buy you something nice."
+    },
+    {
+      "hint": "Pamiętasz, że jutro mamy wizytę u lekarza?",
+      "answer": "Do you remember we have a doctor’s appointment tomorrow?"
+    },
+    {
+      "hint": "Możesz zamknąć drzwi na klucz?",
+      "answer": "Can you lock the door?"
+    },
+    {
+      "hint": "Chciałbym wyjść na rower, pójdziesz ze mną?",
+      "answer": "I’d like to go cycling, will you join me?"
+    },
+    {
+      "hint": "Dziś pachnie u nas jak w cukierni.",
+      "answer": "It smells like a bakery here today."
+    },
+    {
+      "hint": "Możesz wytrzeć stół przed kolacją?",
+      "answer": "Could you wipe the table before dinner?"
+    },
+    {
+      "hint": "Twoja kawa zawsze smakuje najlepiej.",
+      "answer": "Your coffee always tastes the best."
+    },
+    {
+      "hint": "Może obejrzymy dziś odcinek tego serialu?",
+      "answer": "Shall we watch an episode of that series today?"
+    },
+    {
+      "hint": "Czy zrobiłaś rezerwację w hotelu?",
+      "answer": "Did you make the reservation at the hotel?"
+    },
+    {
+      "hint": "Nie zapomnij zabrać parasola, może padać.",
+      "answer": "Don’t forget to take an umbrella, it might rain."
+    },
+    {
+      "hint": "Możesz sprawdzić, czy mamy jeszcze mleko?",
+      "answer": "Can you check if we still have milk?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy częściej wyjeżdżali razem.",
+      "answer": "I’d like us to travel together more often."
+    },
+    {
+      "hint": "Masz ochotę na coś słodkiego po obiedzie?",
+      "answer": "Do you feel like something sweet after lunch?"
+    },
+    {
+      "hint": "Zrobiłem ci herbatę, jest na stole.",
+      "answer": "I made you some tea, it’s on the table."
+    },
+    {
+      "hint": "Możesz sprawdzić pocztę?",
+      "answer": "Could you check the mail?"
+    },
+    {
+      "hint": "Chciałbym wyjść dziś wcześniej z pracy.",
+      "answer": "I’d like to leave work earlier today."
+    },
+    {
+      "hint": "Może pójdziemy razem na zakupy?",
+      "answer": "Shall we go shopping together?"
+    },
+    {
+      "hint": "Dziś wieczorem chciałbym po prostu odpocząć.",
+      "answer": "Tonight I just want to relax."
+    },
+    {
+      "hint": "Czy mogłabyś zadzwonić do twojej mamy?",
+      "answer": "Could you call your mom?"
+    },
+    {
+      "hint": "Zamkniesz okno przed snem?",
+      "answer": "Will you close the window before bed?"
+    },
+    {
+      "hint": "Twoje ciasto wyszło naprawdę pyszne.",
+      "answer": "Your cake turned out really delicious."
+    },
+    {
+      "hint": "Możesz sprawdzić, czy światła w samochodzie działają?",
+      "answer": "Can you check if the car lights work?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy razem ugotowali coś nowego.",
+      "answer": "I’d like us to cook something new together."
+    },
+    {
+      "hint": "Nie mogę znaleźć pilota do telewizora.",
+      "answer": "I can’t find the TV remote."
+    },
+    {
+      "hint": "Masz ochotę posłuchać trochę muzyki?",
+      "answer": "Do you feel like listening to some music?"
+    },
+    {
+      "hint": "Możesz wyłączyć komputer na noc?",
+      "answer": "Can you turn off the computer for the night?"
+    },
+    {
+      "hint": "Pomyślałem, że fajnie byłoby zrobić zdjęcia w parku.",
+      "answer": "I thought it would be nice to take pictures in the park."
+    },
+    {
+      "hint": "Chciałbym cię gdzieś zaprosić w sobotę.",
+      "answer": "I’d like to take you out somewhere on Saturday."
+    },
+    {
+      "hint": "Możesz przygotować śniadanie jutro rano?",
+      "answer": "Could you prepare breakfast tomorrow morning?"
+    },
+    {
+      "hint": "Twoja kawa postawiła mnie na nogi.",
+      "answer": "Your coffee really woke me up."
+    },
+    {
+      "hint": "Może w tym tygodniu zrobimy porządki w garażu?",
+      "answer": "Maybe we should clean the garage this week?"
+    },
+    {
+      "hint": "Zrobiłem dla nas rezerwację w restauracji.",
+      "answer": "I made a reservation for us at the restaurant."
+    },
+    {
+      "hint": "Możesz zostawić mi trochę miejsca w szafie?",
+      "answer": "Could you leave me some space in the closet?"
+    },
+    {
+      "hint": "Dziś czuję, że potrzebuję chwili ciszy.",
+      "answer": "Today I feel like I need a moment of silence."
+    },
+    {
+      "hint": "Może jutro pojedziemy do twoich rodziców?",
+      "answer": "Maybe we should visit your parents tomorrow?"
+    },
+    {
+      "hint": "Pamiętaj, żeby zamknąć okna przed wyjazdem.",
+      "answer": "Remember to close the windows before we leave."
+    },
+    {
+      "hint": "Masz ochotę pójść do kina?",
+      "answer": "Do you feel like going to the cinema?"
+    },
+    {
+      "hint": "Zrobiłem ci herbatę z cytryną, tak jak lubisz.",
+      "answer": "I made you tea with lemon, just how you like it."
+    },
+    {
+      "hint": "Możesz mi przypomnieć o tym spotkaniu?",
+      "answer": "Could you remind me about that meeting?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy częściej gotowali razem.",
+      "answer": "I’d like us to cook together more often."
+    },
+    {
+      "hint": "Może wyjdziemy na lody po obiedzie?",
+      "answer": "Shall we go out for ice cream after lunch?"
+    },
+    {
+      "hint": "Twoja zupa była naprawdę aromatyczna.",
+      "answer": "Your soup was really flavorful."
+    },
+    {
+      "hint": "Możesz sprawdzić, czy drzwi są zamknięte?",
+      "answer": "Can you check if the door is locked?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy wieczorem poczytali książkę.",
+      "answer": "I’d like us to read a book tonight."
+    },
+    {
+      "hint": "Nie mogę znaleźć ładowarki do telefonu.",
+      "answer": "I can’t find the phone charger."
+    },
+    {
+      "hint": "Masz ochotę pograć w coś razem?",
+      "answer": "Do you feel like playing something together?"
+    },
+    {
+      "hint": "Możesz nastawić budzik na siódmą?",
+      "answer": "Could you set the alarm for seven?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy spędzili niedzielę na świeżym powietrzu.",
+      "answer": "I’d like us to spend Sunday outdoors."
+    },
+    {
+      "hint": "Może w przyszłym tygodniu pojedziemy nad jezioro?",
+      "answer": "Maybe we should go to the lake next week?"
+    },
+    {
+      "hint": "Twoja kawa zawsze poprawia mi humor.",
+      "answer": "Your coffee always cheers me up."
+    },
+    {
+      "hint": "Możesz wytrzeć kurze w salonie?",
+      "answer": "Could you dust the living room?"
+    },
+    {
+      "hint": "Zrobiłem zakupy, ale zapomniałem chleba.",
+      "answer": "I did the shopping, but I forgot the bread."
+    },
+    {
+      "hint": "Chciałbym ci pokazać coś ciekawego w internecie.",
+      "answer": "I’d like to show you something interesting online."
+    },
+    {
+      "hint": "Możesz pomóc mi z tym przepisem?",
+      "answer": "Can you help me with this recipe?"
+    },
+    {
+      "hint": "Nie mogę się zdecydować, co dziś ugotować.",
+      "answer": "I can’t decide what to cook today."
+    },
+    {
+      "hint": "Masz ochotę posłuchać podcastu razem?",
+      "answer": "Do you feel like listening to a podcast together?"
+    },
+    {
+      "hint": "Może jutro pójdziemy pobiegać?",
+      "answer": "Shall we go jogging tomorrow?"
+    },
+    {
+      "hint": "Twoje spaghetti wyszło idealne.",
+      "answer": "Your spaghetti turned out perfect."
+    },
+    {
+      "hint": "Możesz zamknąć balkon przed snem?",
+      "answer": "Can you close the balcony before bed?"
+    }
+  ],
+  "count": 80
+}

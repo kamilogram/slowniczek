@@ -3,21 +3,32 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import cors from 'cors';
-import { createClient } from '@supabase/supabase-js';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Inicjalizacja aplikacji Express
 const app = express();
 app.use(cors()); // Włączenie CORS, aby frontend mógł komunikować się z backendem
 app.use(express.json()); // Umożliwia parsowanie ciała żądań w formacie JSON
 
-// Sprawdzenie, czy klucze API do Supabase są dostępne
-if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
-  console.error('Błąd: Zmienne środowiskowe SUPABASE_URL i SUPABASE_ANON_KEY muszą być ustawione.');
-  process.exit(1); // Zakończ proces, jeśli brakuje kluczy
+// Ścieżka do folderu z zestawami
+const SETS_FOLDER = path.join(__dirname, '..', 'public', 'sets');
+
+// Upewnij się, że folder istnieje
+if (!fs.existsSync(SETS_FOLDER)) {
+  fs.mkdirSync(SETS_FOLDER, { recursive: true });
+  console.log(`✓ Utworzono folder: ${SETS_FOLDER}`);
 }
 
-// Inicjalizacja klienta Supabase
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
+// Helper do sanitacji nazw plików
+const sanitizeName = (name) => {
+  return name.replace(/[<>:"|?*\\/]/g, '_').replace(/^\.+|\.+$/g, '').trim();
+};
 
 // Endpoint główny - do testowania, czy serwer działa
 app.get('/', (req, res) => {
@@ -25,14 +36,27 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint do pobierania listy wszystkich zestawów
-app.get('/api/sets', async (req, res) => {
+app.get('/api/sets', (req, res) => {
   try {
-    // Pobieramy tylko potrzebne dane, aby zmniejszyć transfer
-    const { data, error } = await supabase
-      .from('word_sets')
-      .select('name, language, type, created_at, count')
-    if (error) throw error;
-    res.json({ sets: data || [] });
+    const files = fs.readdirSync(SETS_FOLDER);
+    const sets = [];
+
+    files.forEach((file) => {
+      if (file.endsWith('.json')) {
+        const filePath = path.join(SETS_FOLDER, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const data = JSON.parse(content);
+
+        sets.push({
+          name: data.name || file.replace('.json', ''),
+          language: data.language || 'Unknown',
+          type: data.type || 'word',
+          count: data.count || (data.words ? data.words.length : 0),
+        });
+      }
+    });
+
+    res.json({ sets });
   } catch (error) {
     console.error('Błąd przy pobieraniu listy zestawów:', error);
     res.status(500).json({ error: error.message });
@@ -40,23 +64,28 @@ app.get('/api/sets', async (req, res) => {
 });
 
 // Endpoint do pobierania konkretnego zestawu po nazwie
-app.get('/api/sets/:name', async (req, res) => {
+app.get('/api/sets/:name', (req, res) => {
   const { name } = req.params;
   try {
-    const { data, error } = await supabase
-      .from('word_sets')
-      .select('words')
-      .eq('name', name)
-      .single(); // .single() zwraca jeden obiekt zamiast tablicy
+    // Spróbuj obie wersje nazwy - oryginalną i sanityzowaną
+    const originalPath = path.join(SETS_FOLDER, `${name}.json`);
+    const sanitizedName = sanitizeName(name);
+    const sanitizedPath = path.join(SETS_FOLDER, `${sanitizedName}.json`);
 
-    if (error) {
-      // Jeśli zestaw nie istnieje, Supabase zwróci błąd, ale my chcemy 404
-      if (error.code === 'PGRST116') {
-        return res.status(404).json({ error: 'Zestaw nie został znaleziony' });
-      }
-      throw error;
+    let filePath = null;
+    if (fs.existsSync(originalPath)) {
+      filePath = originalPath;
+    } else if (fs.existsSync(sanitizedPath)) {
+      filePath = sanitizedPath;
     }
-    res.json({ words: data ? data.words : [] });
+
+    if (!filePath) {
+      return res.status(404).json({ error: 'Zestaw nie został znaleziony' });
+    }
+
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const data = JSON.parse(content);
+    res.json(data);
   } catch (error) {
     console.error(`Błąd przy pobieraniu zestawu "${name}":`, error);
     res.status(500).json({ error: error.message });
@@ -64,7 +93,7 @@ app.get('/api/sets/:name', async (req, res) => {
 });
 
 // Endpoint do zapisywania lub aktualizowania zestawu
-app.post('/api/sets/:name', async (req, res) => {
+app.post('/api/sets/:name', (req, res) => {
   const { name } = req.params;
   const { words, language, type } = req.body;
 
@@ -76,29 +105,19 @@ app.post('/api/sets/:name', async (req, res) => {
   }
 
   try {
-    // Check if record exists
-    const { data: existing } = await supabase
-      .from('word_sets')
-      .select('created_at')
-      .eq('name', name)
-      .single();
+    const sanitizedName = sanitizeName(name);
+    const filePath = path.join(SETS_FOLDER, `${sanitizedName}.json`);
 
-    const { data, error } = await supabase
-      .from('word_sets')
-      .upsert({
-        name,
-        words,
-        count: words.length,
-        language,
-        type,
-        ...(existing?.created_at && { created_at: existing.created_at })
-      }, {
-        onConflict: 'name'
-      })
-      .select()
-      .single();
+    const setData = {
+      name,
+      language,
+      type,
+      words,
+      count: words.length,
+    };
 
-    if (error) throw error;
+    fs.writeFileSync(filePath, JSON.stringify(setData, null, 2));
+    console.log(`✓ Pakiet "${name}" zapisany do ${filePath}`);
     res.status(201).json({ message: 'Zestaw zapisany pomyślnie', count: words.length });
   } catch (error) {
     console.error(`Błąd przy zapisywaniu zestawu "${name}":`, error);
@@ -107,15 +126,27 @@ app.post('/api/sets/:name', async (req, res) => {
 });
 
 // Endpoint do usuwania zestawu
-app.delete('/api/sets/:name', async (req, res) => {
+app.delete('/api/sets/:name', (req, res) => {
   const { name } = req.params;
   try {
-    const { error } = await supabase
-      .from('word_sets')
-      .delete()
-      .eq('name', name);
+    // Spróbuj obie wersje nazwy
+    const originalPath = path.join(SETS_FOLDER, `${name}.json`);
+    const sanitizedName = sanitizeName(name);
+    const sanitizedPath = path.join(SETS_FOLDER, `${sanitizedName}.json`);
 
-    if (error) throw error;
+    let filePath = null;
+    if (fs.existsSync(originalPath)) {
+      filePath = originalPath;
+    } else if (fs.existsSync(sanitizedPath)) {
+      filePath = sanitizedPath;
+    }
+
+    if (!filePath) {
+      return res.status(404).json({ error: 'Zestaw nie został znaleziony' });
+    }
+
+    fs.unlinkSync(filePath);
+    console.log(`✓ Pakiet "${name}" usunięty z ${filePath}`);
     res.status(200).json({ message: `Zestaw "${name}" został usunięty.` });
   } catch (error) {
     console.error(`Błąd przy usuwaniu zestawu "${name}":`, error);

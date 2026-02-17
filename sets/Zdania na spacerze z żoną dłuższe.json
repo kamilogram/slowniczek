@@ -1,0 +1,300 @@
+{
+  "name": "Zdania na spacerze z żoną dłuższe",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Zauważyłaś jak pięknie dziś pachnie powietrze po deszczu?",
+      "answer": "Have you noticed how wonderful the air smells after the rain today?"
+    },
+    {
+      "hint": "Może następnym razem pójdziemy inną trasą, żeby zobaczyć coś nowego?",
+      "answer": "Maybe next time we could take a different route to see something new?"
+    },
+    {
+      "hint": "Lubię te chwile, kiedy możemy tak po prostu razem iść i rozmawiać.",
+      "answer": "I love these moments when we can just walk and talk together."
+    },
+    {
+      "hint": "Zastanawiałem się ostatnio, jak moglibyśmy razem spędzić najbliższy weekend.",
+      "answer": "I was thinking lately about how we could spend the upcoming weekend together."
+    },
+    {
+      "hint": "Chciałbym częściej wychodzić z Tobą na spacery, bo to daje mi dużo radości.",
+      "answer": "I'd like to go for walks with you more often because it brings me so much joy."
+    },
+    {
+      "hint": "Słyszałaś ten śpiew ptaków? Ciekawe jaki to gatunek.",
+      "answer": "Did you hear that bird singing? I wonder what species it is."
+    },
+    {
+      "hint": "Patrz, jak pięknie wygląda dzisiaj zachód słońca.",
+      "answer": "Look how beautiful the sunset is today."
+    },
+    {
+      "hint": "Gdy chodzimy razem, mam poczucie, że wszystko jest na swoim miejscu.",
+      "answer": "When we walk together, I feel like everything is just right."
+    },
+    {
+      "hint": "Czy pamiętasz nasz pierwszy wspólny spacer?",
+      "answer": "Do you remember our first walk together?"
+    },
+    {
+      "hint": "Masz ochotę po drodze zatrzymać się na lody albo kawę?",
+      "answer": "Would you like to stop for ice cream or coffee along the way?"
+    },
+    {
+      "hint": "Jak się dzisiaj czujesz? Długo pracowałaś i chciałbym wiedzieć, czy wszystko w porządku.",
+      "answer": "How are you feeling today? You worked long, and I want to know if everything is alright."
+    },
+    {
+      "hint": "Z każdą taką chwilą czuję, że jesteśmy coraz bliżej siebie.",
+      "answer": "With every moment like this, I feel we're getting closer to each other."
+    },
+    {
+      "hint": "Kiedy patrzę na Ciebie w tym świetle, myślę sobie, że jestem bardzo szczęśliwy.",
+      "answer": "When I look at you in this light, I realize how happy I am."
+    },
+    {
+      "hint": "Lubię nasze wspólne spacery, bo wtedy możemy spokojnie pogadać bez pośpiechu.",
+      "answer": "I like our walks because we can talk in peace, without any rush."
+    },
+    {
+      "hint": "Czy jest coś, o czym chciałabyś dzisiaj porozmawiać?",
+      "answer": "Is there anything you'd like to talk about today?"
+    },
+    {
+      "hint": "Zastanawiałem się, gdzie pojedziemy w kolejne wakacje.",
+      "answer": "I was wondering where we'll go on our next vacation."
+    },
+    {
+      "hint": "Spacer z Tobą pozwala mi się zrelaksować po ciężkim dniu.",
+      "answer": "Walking with you helps me relax after a tough day."
+    },
+    {
+      "hint": "Które miejsce w naszym mieście podoba Ci się najbardziej?",
+      "answer": "Which place in our city do you like the most?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy zawsze mieli dla siebie taki czas.",
+      "answer": "I wish we could always have this time just for us."
+    },
+    {
+      "hint": "Opowiedz mi, co dzisiaj najbardziej Cię ucieszyło.",
+      "answer": "Tell me, what made you happiest today?"
+    },
+    {
+      "hint": "Widziałem ostatnio ciekawą kawiarnię, może tam kiedyś pójdziemy razem?",
+      "answer": "I saw an interesting café recently, maybe we could go there together one day?"
+    },
+    {
+      "hint": "Jak to jest dla Ciebie, gdy wracamy do naszych ulubionych miejsc?",
+      "answer": "How does it feel for you when we return to our favorite places?"
+    },
+    {
+      "hint": "Czasami marzę, żebyśmy mogli chodzić tak codziennie, trzymając się za ręce.",
+      "answer": "Sometimes I dream that we could do this every day, holding hands."
+    },
+    {
+      "hint": "Uwielbiam, gdy opowiadasz mi różne historie podczas spaceru.",
+      "answer": "I love it when you tell me stories during our walks."
+    },
+    {
+      "hint": "Jesteś dla mnie największym wsparciem.",
+      "answer": "You are the greatest support for me."
+    },
+    {
+      "hint": "Czego najbardziej potrzebujesz teraz od życia?",
+      "answer": "What do you need most in life right now?"
+    },
+    {
+      "hint": "Czuję, że mogę się przy Tobie otworzyć jak przy nikim innym.",
+      "answer": "I feel like I can open up to you like to no one else."
+    },
+    {
+      "hint": "Patrz, ile nowych kwiatów zakwitło od naszej ostatniej wizyty tutaj.",
+      "answer": "Look, so many new flowers have bloomed since we last visited."
+    },
+    {
+      "hint": "Czy masz jakieś nowe pomysły, które chciałabyś zrealizować w najbliższym czasie?",
+      "answer": "Do you have any new ideas you'd like to realize soon?"
+    },
+    {
+      "hint": "Lubię patrzeć, jak się śmiejesz, nawet w tak zwykłych chwilach.",
+      "answer": "I like to see you laugh, even in these ordinary moments."
+    },
+    {
+      "hint": "Jaką muzykę najchętniej puściłabyś podczas tego spaceru?",
+      "answer": "What music would you most like to play during this walk?"
+    },
+    {
+      "hint": "Możemy jeszcze trochę się przejść, jeśli tylko masz ochotę.",
+      "answer": "We can walk a bit more if you'd like."
+    },
+    {
+      "hint": "Pamiętasz, co powiedziałaś mi na zeszłym spacerze? To było dla mnie bardzo ważne.",
+      "answer": "Do you remember what you told me on our last walk? It meant a lot to me."
+    },
+    {
+      "hint": "Może wymyślimy sobie jakieś nowe wspólne hobby?",
+      "answer": "Maybe we can find a new hobby to enjoy together?"
+    },
+    {
+      "hint": "Chętnie bym się dowiedział, co jeszcze sprawia Ci największą przyjemność.",
+      "answer": "I'd love to know what brings you the most pleasure."
+    },
+    {
+      "hint": "Jak się czujesz w tej okolicy? Dobra energia, prawda?",
+      "answer": "How do you feel in this area? Good vibes, right?"
+    },
+    {
+      "hint": "Fajnie, że jesteśmy tu razem, po prostu tak – bez pośpiechu.",
+      "answer": "It's nice that we're here together, just like this – no rush."
+    },
+    {
+      "hint": "Czy jest jakaś rzecz, którą chciałabyś zmienić w naszej codzienności?",
+      "answer": "Is there anything you'd like to change in our daily life?"
+    },
+    {
+      "hint": "Gdybyś mogła wybrać dowolne miejsce na świecie, gdzie poszłabyś ze mną na spacer?",
+      "answer": "If you could choose any place in the world, where would you like to walk with me?"
+    },
+    {
+      "hint": "Czuję się przy Tobie bezpiecznie – nawet w obcym otoczeniu.",
+      "answer": "I feel safe with you – even in unfamiliar surroundings."
+    },
+    {
+      "hint": "Co najbardziej cenisz w naszych wspólnych chwilach?",
+      "answer": "What do you value most in our time together?"
+    },
+    {
+      "hint": "Jak myślisz, czym nasz związek się wyróżnia na tle innych?",
+      "answer": "What do you think makes our relationship special compared to others?"
+    },
+    {
+      "hint": "Patrz na te chmury – każda wygląda inaczej.",
+      "answer": "Look at those clouds – each one looks different."
+    },
+    {
+      "hint": "Czy pamiętasz swój ulubiony spacer z dzieciństwa?",
+      "answer": "Do you remember your favorite walk from childhood?"
+    },
+    {
+      "hint": "Gdybyś mogła na chwilę być gdziekolwiek, to gdzie byś teraz poszła?",
+      "answer": "If you could be anywhere right now, where would you go?"
+    },
+    {
+      "hint": "Lubię, kiedy opowiadasz mi o swoich marzeniach.",
+      "answer": "I love when you tell me about your dreams."
+    },
+    {
+      "hint": "Jakie są Twoje plany na resztę tygodnia?",
+      "answer": "What are your plans for the rest of the week?"
+    },
+    {
+      "hint": "Zawsze inspirujesz mnie do robienia czegoś nowego.",
+      "answer": "You always inspire me to try something new."
+    },
+    {
+      "hint": "Co ciekawego ostatnio czytałaś lub oglądałaś?",
+      "answer": "What interesting have you read or watched recently?"
+    },
+    {
+      "hint": "Które miejsce odwiedzone razem wspominasz najmilej?",
+      "answer": "Which place that we've visited together do you remember most fondly?"
+    },
+    {
+      "hint": "Spacer z Tobą to jak najlepsza forma resetu od codzienności.",
+      "answer": "A walk with you is the best way to reset from everyday life."
+    },
+    {
+      "hint": "Masz swoje ulubione drzewo lub miejsce na tej trasie?",
+      "answer": "Do you have a favorite tree or spot on this route?"
+    },
+    {
+      "hint": "Może następnym razem zabierzemy ze sobą aparat i porobimy zdjęcia?",
+      "answer": "Maybe next time we can bring a camera and take some photos?"
+    },
+    {
+      "hint": "Jakie emocje budzi w Tobie to miejsce?",
+      "answer": "What emotions does this place bring up for you?"
+    },
+    {
+      "hint": "Uwielbiam, kiedy możemy iść obok siebie w ciszy i wszystko jest w porządku.",
+      "answer": "I love when we can walk side by side in silence and everything feels right."
+    },
+    {
+      "hint": "Możemy zaplanować taki spacer częściej, bo działa na mnie bardzo odprężająco.",
+      "answer": "We could plan walks like this more often, because it's very relaxing for me."
+    },
+    {
+      "hint": "Co chciałabyś, żebyśmy razem odkryli lub spróbowali tej wiosny?",
+      "answer": "What would you like us to discover or try together this spring?"
+    },
+    {
+      "hint": "Czy masz jakieś marzenia, które zostawiłaś 'na później', a może warto je spełnić już teraz?",
+      "answer": "Do you have dreams that you postponed for 'later'? Maybe it's worth fulfilling them now?"
+    },
+    {
+      "hint": "Jakbyś mogła opisać nasz związek w jednym słowie, co by to było?",
+      "answer": "If you could describe our relationship in one word, what would it be?"
+    },
+    {
+      "hint": "Jestem dumny, że możemy iść przez życie razem, krok po kroku.",
+      "answer": "I'm proud that we can walk through life together, step by step."
+    },
+    {
+      "hint": "Czy są rzeczy, których jeszcze o mnie nie wiesz, a chciałabyś się dowiedzieć?",
+      "answer": "Are there things about me that you still don't know but would like to?"
+    },
+    {
+      "hint": "Lubię czuć Twoją dłoń, kiedy idziemy razem – od razu jest mi cieplej.",
+      "answer": "I love the feeling of your hand when we walk together – it always warms me."
+    },
+    {
+      "hint": "Jaką jedną rzecz chciałabyś zrealizować w tym roku?",
+      "answer": "What's one thing you'd like to accomplish this year?"
+    },
+    {
+      "hint": "Gdybyśmy mogli zmienić jedną rzecz w naszym otoczeniu, co by to było?",
+      "answer": "If we could change one thing in our surroundings, what would it be?"
+    },
+    {
+      "hint": "Czy jest miejsce, do którego chciałabyś wrócić tylko z powodu wspomnień?",
+      "answer": "Is there a place you'd like to return to, just for the memories?"
+    },
+    {
+      "hint": "Jak czujesz się teraz, tutaj, ze mną?",
+      "answer": "How do you feel right now, here with me?"
+    },
+    {
+      "hint": "Wiem, że spacery sprawiają Ci przyjemność, co jeszcze mogłoby Cię uszczęśliwić dzisiaj?",
+      "answer": "I know you enjoy walks, what else could make you happy today?"
+    },
+    {
+      "hint": "Czy jest coś, o czym marzysz i mogę pomóc Ci to zrealizować?",
+      "answer": "Is there anything you dream about that I could help make come true?"
+    },
+    {
+      "hint": "Pozwól, że będę Twoim wsparciem, tak jak Ty jesteś dla mnie.",
+      "answer": "Let me be your support, just as you are for me."
+    },
+    {
+      "hint": "Jak lubisz spędzać czas, kiedy naprawdę chcesz się zrelaksować?",
+      "answer": "How do you like to spend time when you really want to relax?"
+    },
+    {
+      "hint": "Czy jest coś, co moglibyśmy zrobić razem po tym spacerze?",
+      "answer": "Is there something we could do together after this walk?"
+    },
+    {
+      "hint": "Spacerując z Tobą, czuję, że wszystko jest możliwe.",
+      "answer": "Walking with you, I feel anything is possible."
+    },
+    {
+      "hint": "Lubię rozmawiać z Tobą o małych i dużych sprawach – to dla mnie bardzo ważne.",
+      "answer": "I love talking with you about both little and big things – it's very important to me."
+    }
+  ],
+  "count": 73
+}

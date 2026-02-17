@@ -1,0 +1,20 @@
+{
+  "name": "Test zdania - podstawowe pytania",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Jak się masz?",
+      "answer": "How are you?"
+    },
+    {
+      "hint": "Co robisz?",
+      "answer": "What are you doing?"
+    },
+    {
+      "hint": "Gdzie mieszkasz?",
+      "answer": "Where do you live?"
+    }
+  ],
+  "count": 3
+}

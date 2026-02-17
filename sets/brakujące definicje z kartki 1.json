@@ -1,0 +1,252 @@
+{
+  "name": "brakujące definicje z kartki 1",
+  "language": "Polski",
+  "type": "word",
+  "words": [
+    {
+      "hint": "Rodzaj ryby morskiej używanej często do sushi lub sałatek.",
+      "answer": "tuńczyk"
+    },
+    {
+      "hint": "Naczynie kuchenne z otworami do odcedzania wody.",
+      "answer": "durszlak"
+    },
+    {
+      "hint": "Słodki deser z ciasta filo, orzechów i miodu, popularny na Bliskim Wschodzie.",
+      "answer": "baklawa"
+    },
+    {
+      "hint": "Tradycyjna potrawa z krwi i kaszy gryczanej lub jęczmiennej.",
+      "answer": "kaszanka"
+    },
+    {
+      "hint": "Zwyrodnienie lub uszkodzenie tkanek, zwykle w wyniku choroby lub starzenia się.",
+      "answer": "zwyrodnienie"
+    },
+    {
+      "hint": "Choroba polegająca na przemieszczeniu narządu lub tkanki przez osłabione miejsce w ścianie jamy ciała.",
+      "answer": "przepuklina"
+    },
+    {
+      "hint": "Zwyrodnieniowa choroba kręgosłupa prowadząca do bólu i ograniczenia ruchu.",
+      "answer": "dyskopatia"
+    },
+    {
+      "hint": "Określenie leczenia lub metody mającej działanie lecznicze.",
+      "answer": "terapeutyczny"
+    },
+    {
+      "hint": "Przetaczanie krwi lub jej składników z jednej osoby do drugiej.",
+      "answer": "transfuzja"
+    },
+    {
+      "hint": "Ustalić przyczynę choroby lub problemu poprzez badanie i analizę.",
+      "answer": "diagnozować"
+    },
+    {
+      "hint": "Badanie obrazowe ciała z użyciem promieni rentgenowskich lub komputerowych metod przetwarzania obrazu.",
+      "answer": "tomografia"
+    },
+    {
+      "hint": "Usuwanie drobnoustrojów z powierzchni lub narzędzi w celu zachowania sterylności.",
+      "answer": "sterylizować"
+    },
+    {
+      "hint": "Odczuwający zakłopotanie lub niepewność w danej sytuacji.",
+      "answer": "zakłopotany"
+    },
+    {
+      "hint": "Słowo używane w języku oficjalnym zamiast 'oraz' lub 'a także'.",
+      "answer": "tudzież"
+    },
+    {
+      "hint": "Notatka lub zbiór materiałów do nauki wykładanej na uczelni.",
+      "answer": "skrypt"
+    },
+    {
+      "hint": "Strój używany w teatrze, filmie lub na balu przebierańców.",
+      "answer": "kostium"
+    },
+    {
+      "hint": "Kontynuacja filmu lub książki przedstawiająca dalsze losy bohaterów.",
+      "answer": "sequel"
+    },
+    {
+      "hint": "Przedmiot używany podczas realizacji filmu lub przedstawienia teatralnego.",
+      "answer": "rekwizyt"
+    },
+    {
+      "hint": "Nagła zmiana kierunku akcji lub emocji w fabule.",
+      "answer": "wolta"
+    },
+    {
+      "hint": "Polski serial komediowy będący parodią programów telewizyjnych.",
+      "answer": "Spadkobiercy"
+    },
+    {
+      "hint": "Technika zapamiętywania poprzez skojarzenia, rytm lub obrazy mentalne.",
+      "answer": "mnemonotechnika"
+    },
+    {
+      "hint": "Związany z procesami poznawczymi, takimi jak myślenie i pamięć.",
+      "answer": "kognitywny"
+    },
+    {
+      "hint": "Dotyczący badań nad społeczeństwem i jego strukturą.",
+      "answer": "socjologiczny"
+    },
+    {
+      "hint": "Gorzka roślina używana do sałatek i jako zamiennik kawy.",
+      "answer": "cykoria"
+    },
+    {
+      "hint": "Wewnętrzne wahanie między sprzecznymi uczuciami lub decyzjami.",
+      "answer": "rozterki"
+    },
+    {
+      "hint": "Zmartwienia lub problemy, które ktoś rozważa lub przeżywa emocjonalnie.",
+      "answer": "troski"
+    },
+    {
+      "hint": "Stan, w którym ciało traci zdolność ruchu, mimo zachowania świadomości.",
+      "answer": "paraliż"
+    },
+    {
+      "hint": "Zaburzenie psychiczne objawiające się nieodpartą potrzebą kradzieży.",
+      "answer": "kleptomania"
+    },
+    {
+      "hint": "Choroba powodująca nagłe napady snu niezależnie od sytuacji.",
+      "answer": "narkolepsja"
+    },
+    {
+      "hint": "Osoba z ograniczonymi zdolnościami fizycznymi lub umysłowymi.",
+      "answer": "upośledzone"
+    },
+    {
+      "hint": "Naczynie z uchwytem do nalewania płynów, zwykle ceramiczne.",
+      "answer": "dzbanek"
+    },
+    {
+      "hint": "Sztuczny element zastępujący utracony fragment ciała, np. nogę lub ząb.",
+      "answer": "proteza"
+    },
+    {
+      "hint": "Przeszczepienie narządu lub tkanki z jednego organizmu do drugiego.",
+      "answer": "transplantacja"
+    },
+    {
+      "hint": "Samopoznanie poprzez analizę własnych myśli i uczuć.",
+      "answer": "introspekcja"
+    },
+    {
+      "hint": "Powtarzana fraza lub dźwięk używany w medytacji do koncentracji umysłu.",
+      "answer": "mantra"
+    },
+    {
+      "hint": "Ćwiczenie umysłowe polegające na skupieniu się i wyciszeniu myśli.",
+      "answer": "medytacja"
+    },
+    {
+      "hint": "Osoba działająca z desperacji, pozbawiona nadziei i zdeterminowana.",
+      "answer": "zdesperowany"
+    },
+    {
+      "hint": "Tęskniący za przeszłością, pełen melancholii i wspomnień.",
+      "answer": "nostalgiczny"
+    },
+    {
+      "hint": "System tworzenia i ustalania nazw w danej dziedzinie nauki lub języka.",
+      "answer": "nazewnictwo"
+    },
+    {
+      "hint": "Środek dezynfekujący stosowany do odkażania ran i skóry.",
+      "answer": "octenisept"
+    },
+    {
+      "hint": "Hormon regulujący rytm snu i czuwania.",
+      "answer": "melatonina"
+    },
+    {
+      "hint": "Hormon nazywany „hormonem miłości”, wpływający na więzi społeczne i przywiązanie.",
+      "answer": "oksytocyna"
+    },
+    {
+      "hint": "Neuroprzekaźnik odpowiedzialny za nastrój i samopoczucie.",
+      "answer": "serotonina"
+    },
+    {
+      "hint": "Neuroprzekaźnik związany z motywacją, przyjemnością i nagrodą.",
+      "answer": "dopamina"
+    },
+    {
+      "hint": "Substancje chemiczne wytwarzane przez gruczoły, regulujące procesy w organizmie.",
+      "answer": "hormony"
+    },
+    {
+      "hint": "Białka przyspieszające reakcje chemiczne w organizmach żywych.",
+      "answer": "enzymy"
+    },
+    {
+      "hint": "Gęsty, ciemny syrop powstały podczas produkcji cukru.",
+      "answer": "melasa"
+    },
+    {
+      "hint": "Postawa wyrażająca ukryty gniew lub wrogość poprzez bierne zachowanie.",
+      "answer": "passive-aggressive"
+    },
+    {
+      "hint": "Syndrom oszusta – poczucie, że własne osiągnięcia są niezasłużone.",
+      "answer": "impostor-syndrome"
+    },
+    {
+      "hint": "Czapka z daszkiem, często noszona przez mężczyzn jako element eleganckiego ubioru.",
+      "answer": "kaszkiet"
+    },
+    {
+      "hint": "Napięcie i niepewność utrzymywane w fabule, by wzbudzić ciekawość widza.",
+      "answer": "suspens"
+    },
+    {
+      "hint": "Sposób opowiadania historii, układ zdarzeń i sposób ich prezentacji.",
+      "answer": "narracja"
+    },
+    {
+      "hint": "Miejsce akcji wydarzeń w filmie, książce lub grze.",
+      "answer": "sceneria"
+    },
+    {
+      "hint": "Odcinek próbny programu lub serialu tworzony w celu testowania koncepcji.",
+      "answer": "pilotażowy"
+    },
+    {
+      "hint": "Sposób organizacji i dekoracji przestrzeni filmowej lub teatralnej.",
+      "answer": "scenografia"
+    },
+    {
+      "hint": "Film lub książka przedstawiająca wydarzenia poprzedzające oryginalną historię.",
+      "answer": "prequel"
+    },
+    {
+      "hint": "Dziedzina nauki zajmująca się badaniem śladów i dowodów przestępstw.",
+      "answer": "kryminalistyka"
+    },
+    {
+      "hint": "Koncepcja zakładająca rozwój człowieka dzięki technologii i ulepszaniu ciała.",
+      "answer": "transhumanizm"
+    },
+    {
+      "hint": "Nauka o ptakach, ich zwyczajach i budowie.",
+      "answer": "ornitologia"
+    },
+    {
+      "hint": "Nauka zajmująca się opisem i pomiarem ukształtowania terenu.",
+      "answer": "topografia"
+    },
+    {
+      "hint": "Związany z naukami o kulturze, języku, filozofii i sztuce.",
+      "answer": "humanistyczny"
+    }
+  ],
+  "count": 61
+}

@@ -1,0 +1,208 @@
+{
+  "name": "słówka - części ciała",
+  "language": "en",
+  "type": "word",
+  "words": [
+    {
+      "hint": "głowa",
+      "answer": "head"
+    },
+    {
+      "hint": "szyja",
+      "answer": "neck"
+    },
+    {
+      "hint": "ramię",
+      "answer": "shoulder"
+    },
+    {
+      "hint": "ręka",
+      "answer": "arm"
+    },
+    {
+      "hint": "łokieć",
+      "answer": "elbow"
+    },
+    {
+      "hint": "dłoń",
+      "answer": "hand"
+    },
+    {
+      "hint": "palec",
+      "answer": "finger"
+    },
+    {
+      "hint": "kciuk",
+      "answer": "thumb"
+    },
+    {
+      "hint": "klatka piersiowa",
+      "answer": "chest"
+    },
+    {
+      "hint": "plecy",
+      "answer": "back"
+    },
+    {
+      "hint": "brzuch",
+      "answer": "belly"
+    },
+    {
+      "hint": "talia",
+      "answer": "waist"
+    },
+    {
+      "hint": "biodro",
+      "answer": "hip"
+    },
+    {
+      "hint": "noga",
+      "answer": "leg"
+    },
+    {
+      "hint": "udo",
+      "answer": "thigh"
+    },
+    {
+      "hint": "kolano",
+      "answer": "knee"
+    },
+    {
+      "hint": "łydka",
+      "answer": "calf"
+    },
+    {
+      "hint": "kostka",
+      "answer": "ankle"
+    },
+    {
+      "hint": "stopa",
+      "answer": "foot"
+    },
+    {
+      "hint": "palec u nogi",
+      "answer": "toe"
+    },
+    {
+      "hint": "pięta",
+      "answer": "heel"
+    },
+    {
+      "hint": "głowa",
+      "answer": "head"
+    },
+    {
+      "hint": "włosy",
+      "answer": "hair"
+    },
+    {
+      "hint": "czoło",
+      "answer": "forehead"
+    },
+    {
+      "hint": "brew",
+      "answer": "eyebrow"
+    },
+    {
+      "hint": "oko",
+      "answer": "eye"
+    },
+    {
+      "hint": "powieka",
+      "answer": "eyelid"
+    },
+    {
+      "hint": "rzęsa",
+      "answer": "eyelash"
+    },
+    {
+      "hint": "nos",
+      "answer": "nose"
+    },
+    {
+      "hint": "policzek",
+      "answer": "cheek"
+    },
+    {
+      "hint": "usta",
+      "answer": "mouth"
+    },
+    {
+      "hint": "warga",
+      "answer": "lip"
+    },
+    {
+      "hint": "język",
+      "answer": "tongue"
+    },
+    {
+      "hint": "ząb",
+      "answer": "tooth"
+    },
+    {
+      "hint": "broda",
+      "answer": "chin"
+    },
+    {
+      "hint": "szyja",
+      "answer": "neck"
+    },
+    {
+      "hint": "gardło",
+      "answer": "throat"
+    },
+    {
+      "hint": "serce",
+      "answer": "heart"
+    },
+    {
+      "hint": "płuco",
+      "answer": "lung"
+    },
+    {
+      "hint": "żołądek",
+      "answer": "stomach"
+    },
+    {
+      "hint": "nerka",
+      "answer": "kidney"
+    },
+    {
+      "hint": "wątroba",
+      "answer": "liver"
+    },
+    {
+      "hint": "skóra",
+      "answer": "skin"
+    },
+    {
+      "hint": "kość",
+      "answer": "bone"
+    },
+    {
+      "hint": "mięsień",
+      "answer": "muscle"
+    },
+    {
+      "hint": "żyła",
+      "answer": "vein"
+    },
+    {
+      "hint": "krew",
+      "answer": "blood"
+    },
+    {
+      "hint": "mózg",
+      "answer": "brain"
+    },
+    {
+      "hint": "paznokieć",
+      "answer": "nail"
+    },
+    {
+      "hint": "pępek",
+      "answer": "navel"
+    }
+  ],
+  "count": 50
+}

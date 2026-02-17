@@ -1,0 +1,292 @@
+{
+  "name": "Rozmowa przy obiedzie zdania",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Jak minął Ci dzień?",
+      "answer": "How was your day?"
+    },
+    {
+      "hint": "Co chciałabyś jutro zjeść na obiad?",
+      "answer": "What would you like for dinner tomorrow?"
+    },
+    {
+      "hint": "Dobrze smakuje?",
+      "answer": "Does it taste good?"
+    },
+    {
+      "hint": "Opowiedz mi coś ciekawego z pracy.",
+      "answer": "Tell me something interesting from work."
+    },
+    {
+      "hint": "Masz dziś jakieś plany po obiedzie?",
+      "answer": "Do you have any plans after dinner today?"
+    },
+    {
+      "hint": "Czy dzieci odrobiły lekcje?",
+      "answer": "Did the kids do their homework?"
+    },
+    {
+      "hint": "Potrzebujesz pomocy w kuchni?",
+      "answer": "Do you need help in the kitchen?"
+    },
+    {
+      "hint": "Kto dzisiaj zmywa naczynia?",
+      "answer": "Who is doing the dishes today?"
+    },
+    {
+      "hint": "Podoba Ci się ten przepis?",
+      "answer": "Do you like this recipe?"
+    },
+    {
+      "hint": "Chciałabyś obejrzeć wieczorem jakiś film?",
+      "answer": "Would you like to watch a movie tonight?"
+    },
+    {
+      "hint": "Jak się czujesz?",
+      "answer": "How do you feel?"
+    },
+    {
+      "hint": "Jak minął dzień w pracy?",
+      "answer": "How was your day at work?"
+    },
+    {
+      "hint": "O której masz spotkanie jutro?",
+      "answer": "What time is your meeting tomorrow?"
+    },
+    {
+      "hint": "Jak poszło dzieciom w szkole?",
+      "answer": "How did the kids do at school?"
+    },
+    {
+      "hint": "Potrzebujemy coś kupić na jutro?",
+      "answer": "Do we need to buy anything for tomorrow?"
+    },
+    {
+      "hint": "Co sądzisz o tym daniu?",
+      "answer": "What do you think about this dish?"
+    },
+    {
+      "hint": "Spróbujesz jeszcze trochę?",
+      "answer": "Would you like a bit more?"
+    },
+    {
+      "hint": "Może zaprosimy kogoś na kolację w weekend?",
+      "answer": "Shall we invite someone for dinner this weekend?"
+    },
+    {
+      "hint": "Czy pamiętałaś o rachunkach?",
+      "answer": "Did you remember about the bills?"
+    },
+    {
+      "hint": "Masz ochotę na deser?",
+      "answer": "Would you like some dessert?"
+    },
+    {
+      "hint": "Czy mogę Ci w czymś pomóc?",
+      "answer": "Can I help you with anything?"
+    },
+    {
+      "hint": "Jak Ci smakował obiad?",
+      "answer": "Did you like the dinner?"
+    },
+    {
+      "hint": "Jaki był Twój ulubiony moment dnia?",
+      "answer": "What was your favorite moment of the day?"
+    },
+    {
+      "hint": "Chcesz spróbować nowego przepisu w tym tygodniu?",
+      "answer": "Would you like to try a new recipe this week?"
+    },
+    {
+      "hint": "Widziałeś nową wiadomość od sąsiadów?",
+      "answer": "Did you see the new message from our neighbors?"
+    },
+    {
+      "hint": "Czy mogę nalać Ci jeszcze napoju?",
+      "answer": "Can I pour you some more to drink?"
+    },
+    {
+      "hint": "O której wrócisz jutro do domu?",
+      "answer": "What time will you come home tomorrow?"
+    },
+    {
+      "hint": "Czy zrobimy zakupy razem w weekend?",
+      "answer": "Shall we do the shopping together this weekend?"
+    },
+    {
+      "hint": "Jakie masz plany na weekend?",
+      "answer": "What are your plans for the weekend?"
+    },
+    {
+      "hint": "Czy coś Ci przeszkadzało dziś w pracy?",
+      "answer": "Did anything bother you at work today?"
+    },
+    {
+      "hint": "Czego spróbujemy następnym razem?",
+      "answer": "What shall we try next time?"
+    },
+    {
+      "hint": "Lubisz takie potrawy?",
+      "answer": "Do you like such dishes?"
+    },
+    {
+      "hint": "O której musisz jutro wstać?",
+      "answer": "What time do you have to get up tomorrow?"
+    },
+    {
+      "hint": "Ktoś dzwonił dziś do Ciebie?",
+      "answer": "Did anyone call you today?"
+    },
+    {
+      "hint": "Chcesz zagrać w coś po kolacji?",
+      "answer": "Would you like to play something after dinner?"
+    },
+    {
+      "hint": "Jak Ci się podoba nasza jadalnia?",
+      "answer": "How do you like our dining room?"
+    },
+    {
+      "hint": "Często tak rozmawiamy przy stole.",
+      "answer": "We often talk like this at the table."
+    },
+    {
+      "hint": "Co nowego u Twoich rodziców?",
+      "answer": "What's new with your parents?"
+    },
+    {
+      "hint": "Brakuje mi takiego wieczoru.",
+      "answer": "I miss evenings like this."
+    },
+    {
+      "hint": "Zostawiłaś coś w samochodzie?",
+      "answer": "Did you leave anything in the car?"
+    },
+    {
+      "hint": "Czy rozmawiałaś z kimś z pracy dziś?",
+      "answer": "Did you talk with anyone from work today?"
+    },
+    {
+      "hint": "Co chciałabyś zrobić w niedzielę?",
+      "answer": "What would you like to do on Sunday?"
+    },
+    {
+      "hint": "Może wyjdziemy gdzieś w sobotę?",
+      "answer": "Maybe we will go out somewhere on Saturday?"
+    },
+    {
+      "hint": "Czy dużo było dziś obowiązków?",
+      "answer": "Did you have a lot of duties today?"
+    },
+    {
+      "hint": "Jaką książkę ostatnio czytasz?",
+      "answer": "What book are you reading recently?"
+    },
+    {
+      "hint": "Możemy dziś wcześniej położyć się spać.",
+      "answer": "We can go to bed earlier today."
+    },
+    {
+      "hint": "Co polecasz na kolację jutro?",
+      "answer": "What do you recommend for dinner tomorrow?"
+    },
+    {
+      "hint": "Czy dzieci jadły dziś coś słodkiego?",
+      "answer": "Did the kids eat anything sweet today?"
+    },
+    {
+      "hint": "Jakie plany na jutrzejszy wieczór?",
+      "answer": "Any plans for tomorrow evening?"
+    },
+    {
+      "hint": "Spróbujesz mojego dania?",
+      "answer": "Will you try my dish?"
+    },
+    {
+      "hint": "Czy coś jeszcze podać do stołu?",
+      "answer": "Shall I serve anything else?"
+    },
+    {
+      "hint": "Chcesz kawę po obiedzie?",
+      "answer": "Would you like coffee after dinner?"
+    },
+    {
+      "hint": "Chciałabyś wyjść na spacer po obiedzie?",
+      "answer": "Would you like to go for a walk after dinner?"
+    },
+    {
+      "hint": "Kto wyniesie śmieci?",
+      "answer": "Who is going to take out the trash?"
+    },
+    {
+      "hint": "Czy potrzebujemy więcej mleka?",
+      "answer": "Do we need more milk?"
+    },
+    {
+      "hint": "Widziałeś dzisiaj coś ciekawego?",
+      "answer": "Did you see anything interesting today?"
+    },
+    {
+      "hint": "Może zjemy obiad przy świecach?",
+      "answer": "Maybe we should have dinner by candlelight?"
+    },
+    {
+      "hint": "Która potrawa smakowała Ci najbardziej?",
+      "answer": "Which dish did you like the most?"
+    },
+    {
+      "hint": "Czy mogę Ci nalać jeszcze trochę wina?",
+      "answer": "Can I pour you some more wine?"
+    },
+    {
+      "hint": "Masz ochotę na herbatę czy kawę?",
+      "answer": "Would you like tea or coffee?"
+    },
+    {
+      "hint": "Jaki był Twój dzień?",
+      "answer": "How was your day?"
+    },
+    {
+      "hint": "Czy coś się wydarzyło dziś ciekawego?",
+      "answer": "Did something interesting happen today?"
+    },
+    {
+      "hint": "Chciałabyś posłuchać muzyki podczas obiadu?",
+      "answer": "Would you like to listen to music during dinner?"
+    },
+    {
+      "hint": "Co przygotować na jutro do pracy?",
+      "answer": "What should I prepare for tomorrow at work?"
+    },
+    {
+      "hint": "Jakie masz pomysły na weekend?",
+      "answer": "What are your ideas for the weekend?"
+    },
+    {
+      "hint": "Czy zamówić coś do jedzenia na piątek?",
+      "answer": "Should we order something to eat for Friday?"
+    },
+    {
+      "hint": "Jak się dziś czujesz fizycznie?",
+      "answer": "How do you feel physically today?"
+    },
+    {
+      "hint": "Czy podoba Ci się dzisiejszy wieczór?",
+      "answer": "Do you like this evening?"
+    },
+    {
+      "hint": "Cieszyłam się na wspólny obiad.",
+      "answer": "I was looking forward to our dinner together."
+    },
+    {
+      "hint": "Czy dzieci były dziś grzeczne?",
+      "answer": "Were the kids well-behaved today?"
+    },
+    {
+      "hint": "Zjedz jeszcze trochę, proszę.",
+      "answer": "Please eat some more."
+    }
+  ],
+  "count": 71
+}

@@ -1,0 +1,204 @@
+{
+  "name": "Zdania z perplexity",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Czy możesz mi powiedzieć, co dziś robimy na obiad?",
+      "answer": "Can you tell me what we're having for dinner today?"
+    },
+    {
+      "hint": "Nie mogę znaleźć moich kluczy, widziałeś je gdzieś?",
+      "answer": "I can't find my keys, have you seen them anywhere?"
+    },
+    {
+      "hint": "Chciałbym obejrzeć dzisiaj jakiś film, masz ochotę dołączyć?",
+      "answer": "I'd like to watch a movie today, do you want to join?"
+    },
+    {
+      "hint": "Jeśli wychodzisz, czy możesz zabrać śmieci ze sobą?",
+      "answer": "If you are going out, can you take the trash with you?"
+    },
+    {
+      "hint": "Możesz mi przynieść szklankę wody, proszę?",
+      "answer": "Can you bring me a glass of water, please?"
+    },
+    {
+      "hint": "W jakiej godzinie planujesz dziś wrócić do domu?",
+      "answer": "What time do you plan to come home today?"
+    },
+    {
+      "hint": "Zrobisz mi rano kawę, gdy się obudzisz?",
+      "answer": "Will you make me coffee in the morning when you wake up?"
+    },
+    {
+      "hint": "Kiedy ostatnio rozmawiałeś z mamą przez telefon?",
+      "answer": "When did you last talk to mom on the phone?"
+    },
+    {
+      "hint": "Czy zostanie ci trochę miejsca w lodówce na moje zakupy?",
+      "answer": "Will you have some space left in the fridge for my groceries?"
+    },
+    {
+      "hint": "Zagrajmy razem w jakąś grę planszową wieczorem.",
+      "answer": "Let's play a board game together this evening."
+    },
+    {
+      "hint": "Zostawiłem ważny dokument na stole, proszę nie ruszaj go.",
+      "answer": "I left an important document on the table, please don't move it."
+    },
+    {
+      "hint": "Przepraszam, że nie zdążyłem dzisiaj posprzątać w kuchni.",
+      "answer": "Sorry that I didn't get around to cleaning the kitchen today."
+    },
+    {
+      "hint": "Cieszę się, że spędzamy razem ten czas w domu.",
+      "answer": "I'm glad we are spending this time together at home."
+    },
+    {
+      "hint": "Czy możesz pokazać mi, jak działa ta nowa pralka?",
+      "answer": "Can you show me how this new washing machine works?"
+    },
+    {
+      "hint": "Jeśli będziesz gotował, mogę ci jakoś pomóc?",
+      "answer": "If you're cooking, can I help you somehow?"
+    },
+    {
+      "hint": "Włącz, proszę, światło w przedpokoju – jest już ciemno.",
+      "answer": "Turn on the light in the hallway, please – it's already dark."
+    },
+    {
+      "hint": "Jeśli będzie ci zimno, mam jeszcze jeden koc w szafie.",
+      "answer": "If you get cold, I have another blanket in the closet."
+    },
+    {
+      "hint": "Zanim pójdziesz spać, nie zapomnij umyć zębów.",
+      "answer": "Before you go to bed, don't forget to brush your teeth."
+    },
+    {
+      "hint": "Bardzo lubię, gdy rano słuchamy razem muzyki.",
+      "answer": "I really like when we listen to music together in the morning."
+    },
+    {
+      "hint": "Masz ochotę na spacer po obiedzie?",
+      "answer": "Would you like to go for a walk after lunch?"
+    },
+    {
+      "hint": "Możesz zostawić listę zakupów na stole, żebym jej nie zgubił.",
+      "answer": "Can you leave the shopping list on the table so I don’t lose it?"
+    },
+    {
+      "hint": "Zawsze zapominasz zamknąć okno w łazience.",
+      "answer": "You always forget to close the window in the bathroom."
+    },
+    {
+      "hint": "Podaj mi proszę sól i pieprz ze stołu.",
+      "answer": "Please pass me the salt and pepper from the table."
+    },
+    {
+      "hint": "Czy wiesz, gdzie położyłem pilot do telewizora?",
+      "answer": "Do you know where I put the TV remote?"
+    },
+    {
+      "hint": "Kto dzisiaj wyprowadza psa na spacer?",
+      "answer": "Who's taking the dog for a walk today?"
+    },
+    {
+      "hint": "Czy możesz przypomnieć mi o spotkaniu jutro rano?",
+      "answer": "Can you remind me about the meeting tomorrow morning?"
+    },
+    {
+      "hint": "Możesz chwilę ściszyć muzykę, muszę zadzwonić.",
+      "answer": "Can you turn down the music for a moment? I need to make a call."
+    },
+    {
+      "hint": "Jeśli chcesz, przygotuję ci śniadanie do łóżka.",
+      "answer": "If you want, I'll make you breakfast in bed."
+    },
+    {
+      "hint": "Proszę, nie zostawiaj butów na środku pokoju.",
+      "answer": "Please, don’t leave your shoes in the middle of the room."
+    },
+    {
+      "hint": "Zgasisz światło w łazience, jak będziesz wychodzić?",
+      "answer": "Will you turn off the bathroom light when you leave?"
+    },
+    {
+      "hint": "Możemy dziś zjeść kolację razem przy stole?",
+      "answer": "Can we have dinner together at the table today?"
+    },
+    {
+      "hint": "Jak minął ci dzień w pracy?",
+      "answer": "How was your day at work?"
+    },
+    {
+      "hint": "Daj mi znać, jeśli będziesz potrzebować pomocy.",
+      "answer": "Let me know if you need any help."
+    },
+    {
+      "hint": "Czy możesz rozładować zmywarkę po obiedzie?",
+      "answer": "Can you unload the dishwasher after dinner?"
+    },
+    {
+      "hint": "Dobrze, że mamy zapas kawy na poranki.",
+      "answer": "It’s good we have a supply of coffee for the mornings."
+    },
+    {
+      "hint": "Wolałbyś obejrzeć coś razem czy sam?",
+      "answer": "Would you prefer to watch something together or alone?"
+    },
+    {
+      "hint": "Muszę wkrótce wyjść do sklepu, coś ci kupić?",
+      "answer": "I need to go shopping soon, should I get you something?"
+    },
+    {
+      "hint": "Czy możesz sprawdzić, kto dzwonił do drzwi?",
+      "answer": "Can you check who was at the door?"
+    },
+    {
+      "hint": "Chyba czas wymienić żarówkę w kuchni.",
+      "answer": "I think it’s time to change the light bulb in the kitchen."
+    },
+    {
+      "hint": "Nie zapomnij wziąć parasola, bo może padać.",
+      "answer": "Don't forget to take an umbrella, it might rain."
+    },
+    {
+      "hint": "Zamknij proszę drzwi balkonowe, robi się chłodno.",
+      "answer": "Please close the balcony door, it's getting cold."
+    },
+    {
+      "hint": "Jeśli ktoś zadzwoni, powiedz, że zaraz oddzwonię.",
+      "answer": "If someone calls, tell them I'll call back soon."
+    },
+    {
+      "hint": "Czy chcesz, żebym przygotował twoje ulubione danie?",
+      "answer": "Do you want me to make your favorite dish?"
+    },
+    {
+      "hint": "Masz jeszcze ochotę na deser po kolacji?",
+      "answer": "Do you still feel like having dessert after dinner?"
+    },
+    {
+      "hint": "Chętnie posłuchałbym jakiejś spokojnej muzyki wieczorem.",
+      "answer": "I'd love to listen to some calm music this evening."
+    },
+    {
+      "hint": "Kiedy znajdziesz chwilę, czy możesz podlać kwiaty?",
+      "answer": "When you have a moment, can you water the plants?"
+    },
+    {
+      "hint": "Nie martw się, wszystkim się zajmę.",
+      "answer": "Don't worry, I'll take care of everything."
+    },
+    {
+      "hint": "Dobrze byłoby dzisiaj trochę przewietrzyć mieszkanie.",
+      "answer": "It would be good to air out the apartment today."
+    },
+    {
+      "hint": "Zostawiłem ci wiadomość na kuchennym stole.",
+      "answer": "I left you a note on the kitchen table."
+    }
+  ],
+  "count": 49
+}

@@ -1,0 +1,204 @@
+{
+  "name": "zdania - rodzina",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Mój tata uwielbia gotować w weekendy.",
+      "answer": "My dad loves cooking on weekends."
+    },
+    {
+      "hint": "Mama zawsze robi najlepsze naleśniki.",
+      "answer": "Mom always makes the best pancakes."
+    },
+    {
+      "hint": "Brat gra na gitarze w zespole.",
+      "answer": "My brother plays guitar in a band."
+    },
+    {
+      "hint": "Siostra właśnie zdała egzamin na prawo jazdy.",
+      "answer": "My sister just passed her driving test."
+    },
+    {
+      "hint": "Dziadek opowiadał mi historię z wojny.",
+      "answer": "Grandpa told me a story from the war."
+    },
+    {
+      "hint": "Babcia piecze pyszne ciasta.",
+      "answer": "Grandma bakes delicious cakes."
+    },
+    {
+      "hint": "Mój wujek mieszka w Kanadzie.",
+      "answer": "My uncle lives in Canada."
+    },
+    {
+      "hint": "Ciocia pracuje jako nauczycielka.",
+      "answer": "My aunt works as a teacher."
+    },
+    {
+      "hint": "Kuzyn gra w piłkę nożną w lokalnym klubie.",
+      "answer": "My cousin plays football in a local club."
+    },
+    {
+      "hint": "Kuzynka studiuje medycynę.",
+      "answer": "My cousin is studying medicine."
+    },
+    {
+      "hint": "Mój syn uwielbia budować z klocków.",
+      "answer": "My son loves building with blocks."
+    },
+    {
+      "hint": "Córka nauczyła się jeździć na rowerze.",
+      "answer": "My daughter learned to ride a bike."
+    },
+    {
+      "hint": "Ojczym zabrał nas na wycieczkę w góry.",
+      "answer": "My stepfather took us on a trip to the mountains."
+    },
+    {
+      "hint": "Macocha kupiła mi nową książkę.",
+      "answer": "My stepmother bought me a new book."
+    },
+    {
+      "hint": "Teść pomaga nam w ogrodzie.",
+      "answer": "My father-in-law helps us in the garden."
+    },
+    {
+      "hint": "Teściowa przygotowała obiad dla całej rodziny.",
+      "answer": "My mother-in-law prepared dinner for the whole family."
+    },
+    {
+      "hint": "Zięć właśnie dostał awans w pracy.",
+      "answer": "My son-in-law just got a promotion at work."
+    },
+    {
+      "hint": "Synowa jest bardzo miła i pomocna.",
+      "answer": "My daughter-in-law is very kind and helpful."
+    },
+    {
+      "hint": "Mój pasierb chodzi do tej samej szkoły co ja.",
+      "answer": "My stepson goes to the same school as me."
+    },
+    {
+      "hint": "Pasierbica uwielbia tańczyć.",
+      "answer": "My stepdaughter loves dancing."
+    },
+    {
+      "hint": "Mój pradziadek był stolarzem.",
+      "answer": "My great-grandfather was a carpenter."
+    },
+    {
+      "hint": "Prababcia żyła ponad sto lat.",
+      "answer": "My great-grandmother lived over a hundred years."
+    },
+    {
+      "hint": "Mój chrzestny zawsze daje mi dobre rady.",
+      "answer": "My godfather always gives me good advice."
+    },
+    {
+      "hint": "Chrzestna przyniosła mi prezent na urodziny.",
+      "answer": "My godmother brought me a birthday gift."
+    },
+    {
+      "hint": "Mój brat cioteczny mieszka w Krakowie.",
+      "answer": "My cousin lives in Kraków."
+    },
+    {
+      "hint": "Siostra cioteczna zaprosiła mnie na wesele.",
+      "answer": "My cousin invited me to her wedding."
+    },
+    {
+      "hint": "Mąż wrócił późno z pracy.",
+      "answer": "My husband came home late from work."
+    },
+    {
+      "hint": "Żona przygotowała kolację.",
+      "answer": "My wife prepared dinner."
+    },
+    {
+      "hint": "Ojciec mojego przyjaciela jest lekarzem.",
+      "answer": "My friend's father is a doctor."
+    },
+    {
+      "hint": "Matka koleżanki pracuje w banku.",
+      "answer": "My friend's mother works at a bank."
+    },
+    {
+      "hint": "Brat mojego chłopaka jest bardzo zabawny.",
+      "answer": "My boyfriend's brother is very funny."
+    },
+    {
+      "hint": "Siostra mojej dziewczyny studiuje za granicą.",
+      "answer": "My girlfriend's sister studies abroad."
+    },
+    {
+      "hint": "Dzieci mojej kuzynki są bardzo grzeczne.",
+      "answer": "My cousin's children are very well-behaved."
+    },
+    {
+      "hint": "Rodzice mojej żony są bardzo uprzejmi.",
+      "answer": "My wife's parents are very polite."
+    },
+    {
+      "hint": "Rodzeństwo mojego męża mieszka w Niemczech.",
+      "answer": "My husband's siblings live in Germany."
+    },
+    {
+      "hint": "Mój wnuk właśnie zaczął chodzić.",
+      "answer": "My grandson just started walking."
+    },
+    {
+      "hint": "Wnuczka uwielbia rysować.",
+      "answer": "My granddaughter loves drawing."
+    },
+    {
+      "hint": "Bratanek gra w szachy.",
+      "answer": "My nephew plays chess."
+    },
+    {
+      "hint": "Bratanica śpiewa w chórze.",
+      "answer": "My niece sings in a choir."
+    },
+    {
+      "hint": "Ojciec chrzestny przyszedł na komunię.",
+      "answer": "My godfather came to the communion."
+    },
+    {
+      "hint": "Matka chrzestna podarowała mi medalik.",
+      "answer": "My godmother gave me a medal."
+    },
+    {
+      "hint": "Rodzina spotkała się na święta.",
+      "answer": "The family gathered for the holidays."
+    },
+    {
+      "hint": "Rodzice zawsze wspierają swoje dzieci.",
+      "answer": "Parents always support their children."
+    },
+    {
+      "hint": "Dzieci bawiły się w ogrodzie.",
+      "answer": "The children were playing in the garden."
+    },
+    {
+      "hint": "Rodzeństwo często się kłóci, ale też wspiera.",
+      "answer": "Siblings often argue but also support each other."
+    },
+    {
+      "hint": "Małżonkowie wyjechali na wakacje.",
+      "answer": "The spouses went on vacation."
+    },
+    {
+      "hint": "Krewni przyjechali z daleka na uroczystość.",
+      "answer": "Relatives came from afar for the ceremony."
+    },
+    {
+      "hint": "Mój tata i mama poznali się na studiach.",
+      "answer": "My dad and mom met in college."
+    },
+    {
+      "hint": "Dziadkowie opiekują się wnukami w weekendy.",
+      "answer": "Grandparents take care of the grandchildren on weekends."
+    }
+  ],
+  "count": 49
+}

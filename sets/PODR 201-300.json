@@ -1,0 +1,396 @@
+{
+  "name": "PODR 201-300",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Wstrzyknięcie podskórne było szybkie, ale pacjent odczuwał lekki dyskomfort.",
+      "answer": "The hypodermic injection was quick, but the patient felt slight discomfort."
+    },
+    {
+      "hint": "Pielęgniarka napełniła strzykawkę lekiem i przygotowała ją do użycia.",
+      "answer": "The nurse filled the syringe with medicine and prepared it for use."
+    },
+    {
+      "hint": "Rachunek za kolację przyniesiono dopiero po zakończeniu posiłku.",
+      "answer": "The bill for dinner was brought only after the meal was finished."
+    },
+    {
+      "hint": "Upewnij się, że dokonasz płatności na czas, aby uniknąć dodatkowych opłat.",
+      "answer": "Make sure to complete the payment on time to avoid extra charges."
+    },
+    {
+      "hint": "Proszę podpisać dokumenty tutaj, aby potwierdzić swoją zgodę na warunki.",
+      "answer": "Please sign the documents here to confirm your agreement with the terms."
+    },
+    {
+      "hint": "Nie dziwi mnie, że spóźnił się na spotkanie z powodu korków.",
+      "answer": "No wonder he was late for the meeting because of the traffic jams."
+    },
+    {
+      "hint": "To wyjaśnienie ma sens, zwłaszcza jeśli weźmiemy pod uwagę wszystkie fakty.",
+      "answer": "This explanation makes sense, especially if we take all the facts into account."
+    },
+    {
+      "hint": "Czerwony kwiat może przekształcić się w piękny bukiet na specjalną okazję.",
+      "answer": "The red flower can turn into a beautiful bouquet for a special occasion."
+    },
+    {
+      "hint": "Nie chcę rozdawać tych książek za darmo, ponieważ są bardzo cenne.",
+      "answer": "I don’t want to give away these books for free because they are very valuable."
+    },
+    {
+      "hint": "Potrzebujemy solidnego dowodu, aby udowodnić jego obecność na miejscu.",
+      "answer": "We need solid proof to demonstrate his presence at the scene."
+    },
+    {
+      "hint": "Schował twarz w dłoniach, czując ogromny wstyd i zawstydzenie.",
+      "answer": "He buried his face in his hands, feeling deep shame and embarrassment."
+    },
+    {
+      "hint": "To jest niewiarygodne, że udało im się to zrobić w jeden dzień.",
+      "answer": "It is unbelievable that they managed to do it in one day."
+    },
+    {
+      "hint": "Jest bardzo inteligentny i szybko uczy się nowych rzeczy.",
+      "answer": "He is very intelligent and learns new things quickly."
+    },
+    {
+      "hint": "Był całkowicie nieświadomy niebezpieczeństwa, które go czekało.",
+      "answer": "He was entirely unaware of the danger that awaited him."
+    },
+    {
+      "hint": "Zdecydowali się uciec przed nadchodzącą burzą, zanim zrobiło się gorzej.",
+      "answer": "They decided to flee from the approaching storm before it got worse."
+    },
+    {
+      "hint": "Lekarz stracił prawo do wykonywania zawodu po poważnym błędzie.",
+      "answer": "The doctor lost his medical licence after a serious mistake."
+    },
+    {
+      "hint": "Chirurg będzie operować pacjenta jutro rano w szpitalu.",
+      "answer": "The surgeon will operate on the patient tomorrow morning in the hospital."
+    },
+    {
+      "hint": "W laboratorium badano nowe próbki, aby uzyskać dokładne wyniki.",
+      "answer": "The new samples were examined in the laboratory to obtain accurate results."
+    },
+    {
+      "hint": "Firma produkuje leki od wielu lat w dużych ilościach.",
+      "answer": "The company has been manufacturing medicines in large quantities for years."
+    },
+    {
+      "hint": "Trudno całkowicie odwrócić skutki naturalnego procesu starzenia.",
+      "answer": "It is difficult to completely reverse the effects of the natural ageing process."
+    },
+    {
+      "hint": "Była zdesperowana i potrzebowała natychmiastowej pomocy.",
+      "answer": "She was desperate and needed immediate assistance."
+    },
+    {
+      "hint": "Musisz wykorzystać okazję, gdy nadarzy się odpowiedni moment.",
+      "answer": "You must take advantage of the opportunity when the right moment comes."
+    },
+    {
+      "hint": "Dokumenty muszą zawierać wszystkie informacje, aby były kompletne.",
+      "answer": "The documents must include all information to be complete."
+    },
+    {
+      "hint": "Sąd skazał przestępcę na pięć lat więzienia za kradzież.",
+      "answer": "The court decided to convict the criminal for five years for theft."
+    },
+    {
+      "hint": "Nigdy nie postawili stopy w tym domu, chociaż przechodzili obok.",
+      "answer": "They never set foot in that house, even though they walked past it."
+    },
+    {
+      "hint": "Gleba w ogrodzie była bardzo żyzna i idealna do sadzenia warzyw.",
+      "answer": "The soil in the garden was very fertile and perfect for planting vegetables."
+    },
+    {
+      "hint": "Poczuli ogromną ulgę, gdy burza w końcu minęła.",
+      "answer": "They felt great relief when the storm finally passed."
+    },
+    {
+      "hint": "Życzę ci wszystkiego najlepszego w nowej pracy i szczęścia.",
+      "answer": "I wish you all the best in your new job and happiness."
+    },
+    {
+      "hint": "Policja chciała wymierzyć sprawiedliwość przestępcom za ich czyny.",
+      "answer": "The police wanted to bring the criminals to justice for their actions."
+    },
+    {
+      "hint": "Upewnij się, że zamknąłeś drzwi na klucz przed wyjściem.",
+      "answer": "Make sure you locked the door before leaving the house."
+    },
+    {
+      "hint": "Musiałem się szybko pozbierać po wypadku, aby wrócić do pracy.",
+      "answer": "I needed to recover quickly after the accident to return to work."
+    },
+    {
+      "hint": "Spędzili wakacje za granicą, odwiedzając kilka różnych krajów.",
+      "answer": "They spent their holidays abroad, visiting several different countries."
+    },
+    {
+      "hint": "Ślub odbędzie się w przyszłym miesiącu w pięknym kościele.",
+      "answer": "The wedding will take place next month in a beautiful church."
+    },
+    {
+      "hint": "Całkowicie zgadzam się z tym pomysłem, bo wydaje się rozsądny.",
+      "answer": "I entirely agree with this idea because it seems reasonable."
+    },
+    {
+      "hint": "To było przewidywalne zakończenie filmu, które wszyscy znali wcześniej.",
+      "answer": "It was a predictable ending to the movie that everyone knew beforehand."
+    },
+    {
+      "hint": "On jest bardzo chciwy i nigdy nie dzieli się z innymi.",
+      "answer": "He is very greedy and never shares anything with others."
+    },
+    {
+      "hint": "Chcę zmotywować cię do nauki przed egzaminem.",
+      "answer": "I want to motivate you to study before the exam."
+    },
+    {
+      "hint": "Nie mogę zgodzić się na ten przedmiot, ponieważ jest niebezpieczny.",
+      "answer": "I object to this item because it is dangerous."
+    },
+    {
+      "hint": "Twoja historia brzmi całkiem wiarygodnie, ale trzeba to sprawdzić.",
+      "answer": "Your story sounds believable, but it needs to be checked."
+    },
+    {
+      "hint": "To był trudny wybór, ale zdecydowała się go zaakceptować.",
+      "answer": "It was a difficult choice, but she decided to accept it."
+    },
+    {
+      "hint": "Przestępstwo zostało szybko wykryte dzięki czujności sąsiadów.",
+      "answer": "The crime was quickly discovered thanks to the neighbors’ vigilance."
+    },
+    {
+      "hint": "Sprawa może obejmować więcej osób niż początkowo zakładano.",
+      "answer": "The case may involve more people than initially expected."
+    },
+    {
+      "hint": "Woda jest niezbędna do życia i zdrowia każdego człowieka.",
+      "answer": "Water is vital for the life and health of every human being."
+    },
+    {
+      "hint": "Zwróć uwagę na te szczegóły podczas przygotowywania raportu.",
+      "answer": "Take note of these details while preparing the report."
+    },
+    {
+      "hint": "Nie ryzykuj bezpieczeństwa innych dla własnej korzyści.",
+      "answer": "Do not put others at risk for your own benefit."
+    },
+    {
+      "hint": "Jak do diabła to się stało, że zgubiłeś klucze?",
+      "answer": "How on earth did you lose your keys?"
+    },
+    {
+      "hint": "Chcę, żebyś zrobił to dla mnie jutro rano, zanim wyjdę z domu.",
+      "answer": "I want to get you to do it for me tomorrow morning before I leave."
+    },
+    {
+      "hint": "Spędzili weekend na wsi, ciesząc się świeżym powietrzem i spokojem.",
+      "answer": "They spent the weekend in the countryside enjoying the fresh air and peace."
+    },
+    {
+      "hint": "Wyścig przebiegał bardzo szybko, a zawodnicy byli zmęczeni po starcie.",
+      "answer": "The race passed by very quickly, and the runners were tired after the start."
+    },
+    {
+      "hint": "Był zaangażowany w projekt od samego początku, pomagając każdemu.",
+      "answer": "He was involved in the project from the very beginning, helping everyone."
+    },
+    {
+      "hint": "To było ryzykowne przedsięwzięcie, ale udało się osiągnąć cel.",
+      "answer": "It was a risky venture, but they managed to achieve the goal."
+    },
+    {
+      "hint": "Wiara daje ludziom nadzieję i siłę do działania w trudnych czasach.",
+      "answer": "Faith gives people hope and strength to act in difficult times."
+    },
+    {
+      "hint": "Został za kratami po wielu latach przestępstw i oszustw.",
+      "answer": "He is behind bars after many years of crimes and frauds."
+    },
+    {
+      "hint": "Musimy oddzielić te dokumenty i uporządkować je według daty.",
+      "answer": "We need to separate these documents and organize them by date."
+    },
+    {
+      "hint": "Muszę przejrzeć te papiery, aby znaleźć wszystkie potrzebne informacje.",
+      "answer": "I need to sort through these papers to find all the necessary information."
+    },
+    {
+      "hint": "Ustaliłem harmonogram spotkań na cały tydzień, aby wszystko było jasne.",
+      "answer": "I scheduled the meetings for the whole week to keep everything clear."
+    },
+    {
+      "hint": "Zegarek kieszonkowy należał do mojego dziadka i był bardzo cenny.",
+      "answer": "The pocket watch belonged to my grandfather and was very valuable."
+    },
+    {
+      "hint": "Rozmawiali swobodnie o planach na weekend, siedząc w kawiarni.",
+      "answer": "They chatted casually about their weekend plans while sitting in the café."
+    },
+    {
+      "hint": "To było dziwne zachowanie, które zaskoczyło wszystkich w pokoju.",
+      "answer": "That was an odd behavior that surprised everyone in the room."
+    },
+    {
+      "hint": "On mamrotał coś pod nosem, kiedy nikt nie zwracał uwagi.",
+      "answer": "He muttered something under his breath when no one was paying attention."
+    },
+    {
+      "hint": "Musimy zachować dystans od niebezpiecznej strefy, aby było bezpiecznie.",
+      "answer": "We need to keep our distance from the dangerous area to stay safe."
+    },
+    {
+      "hint": "Słyszałem czyjeś kroki za sobą i zrobiło mi się zimno.",
+      "answer": "I heard someone’s footstep behind me and felt a chill."
+    },
+    {
+      "hint": "Musiał szybko odejść, aby zdążyć na ważne spotkanie.",
+      "answer": "He had to hurry off to make it to the important meeting."
+    },
+    {
+      "hint": "Upiekliśmy kurczaka na obiad, używając świeżych przypraw i ziół.",
+      "answer": "We roast the chicken for dinner using fresh spices and herbs."
+    },
+    {
+      "hint": "To wskazuje na właściwy kierunek i pomaga uniknąć pomyłek.",
+      "answer": "This point indicates the right direction and helps avoid mistakes."
+    },
+    {
+      "hint": "Na stole leżała sterta książek, które trzeba było uporządkować.",
+      "answer": "There was a pile of books on the table that needed organizing."
+    },
+    {
+      "hint": "Lekarz przepisał mi leki, aby szybciej wrócić do zdrowia.",
+      "answer": "The doctor will prescribe me some medicine to recover faster."
+    },
+    {
+      "hint": "To było nowe doświadczenie, które nauczyło mnie wielu rzeczy.",
+      "answer": "It was a new experience that taught me many things."
+    },
+    {
+      "hint": "Każdy powinien zajmować się własnymi sprawami i nie wtrącać się.",
+      "answer": "Everyone should mind their own business and not interfere."
+    },
+    {
+      "hint": "Badania trwały kilka miesięcy, zanim uzyskano wiarygodne wyniki.",
+      "answer": "The research lasted several months before reliable results were obtained."
+    },
+    {
+      "hint": "Cel spotkania był jasny i wszyscy wiedzieli, co trzeba zrobić.",
+      "answer": "The purpose of the meeting was clear, and everyone knew what to do."
+    },
+    {
+      "hint": "Alarmował ich o nadchodzącym niebezpieczeństwie, aby mogli się przygotować.",
+      "answer": "He alarmed them about the approaching danger so they could prepare."
+    },
+    {
+      "hint": "Władze podjęły decyzję, aby wprowadzić nowe przepisy w mieście.",
+      "answer": "The authorities made a decision to introduce new regulations in the city."
+    },
+    {
+      "hint": "Musisz odpowiedzieć szybko, zanim sprawa się skomplikuje.",
+      "answer": "You need to respond quickly before the matter gets complicated."
+    },
+    {
+      "hint": "Krzyk przeraził wszystkich ludzi w pokoju i wywołał zamieszanie.",
+      "answer": "The scream scared everyone in the room and caused confusion."
+    },
+    {
+      "hint": "Wybiegli z budynku, kiedy usłyszeli alarm pożarowy.",
+      "answer": "They rushed out of the building when they heard the fire alarm."
+    },
+    {
+      "hint": "Panowała histeria w tłumie, gdy ogłoszono złe wiadomości.",
+      "answer": "There was hysteria among the crowd when the bad news was announced."
+    },
+    {
+      "hint": "Usiedliśmy na tarasie, aby podziwiać widok na morze.",
+      "answer": "We sat on the terrace to admire the view of the sea."
+    },
+    {
+      "hint": "Musieliśmy otworzyć drzwi siłą, ponieważ były zamknięte od środka.",
+      "answer": "We had to force the door open because it was locked from inside."
+    },
+    {
+      "hint": "Błoto pokryło buty dzieci, gdy biegały po podwórku.",
+      "answer": "The muddy ground covered the children's shoes as they ran around the yard."
+    },
+    {
+      "hint": "Musimy się przygotować na spotkanie z klientem, aby wszystko było gotowe.",
+      "answer": "We need to prepare for the client meeting so everything is ready."
+    },
+    {
+      "hint": "Zajęli właściwą pozycję, aby móc obserwować całą scenę.",
+      "answer": "They took the correct position to observe the entire scene."
+    },
+    {
+      "hint": "Widok z góry był niesamowity, a krajobraz zapierał dech w piersiach.",
+      "answer": "The view from the top was amazing, and the landscape was breathtaking."
+    },
+    {
+      "hint": "Dokładnie zmierzyli odległość, aby uniknąć błędów w planie.",
+      "answer": "They measured the distance precisely to avoid errors in the plan."
+    },
+    {
+      "hint": "To było dla niego zaszczytem, że mógł reprezentować swoją szkołę.",
+      "answer": "It was an honour for him to represent his school."
+    },
+    {
+      "hint": "Rozmawialiśmy przez chwilę, zanim wróciliśmy do pracy.",
+      "answer": "We chatted briefly before returning to work."
+    },
+    {
+      "hint": "Egzamin był trudny, ale przystępny i dobrze przygotowany.",
+      "answer": "The examination was difficult but fair and well-prepared."
+    },
+    {
+      "hint": "Przejście było wąskie, ale wystarczająco szerokie, żeby przejść.",
+      "answer": "The passage was narrow but wide enough to walk through."
+    },
+    {
+      "hint": "Ukończył cały projekt zgodnie z harmonogramem i wymaganiami.",
+      "answer": "He completed the entire project according to the schedule and requirements."
+    },
+    {
+      "hint": "Złożyłem skargę w biurze i czekałem na odpowiedź.",
+      "answer": "I made a complaint at the office and waited for a response."
+    },
+    {
+      "hint": "Kandydat miał dobre kwalifikacje i doświadczenie potrzebne do pracy.",
+      "answer": "The candidate had good qualifications and the experience needed for the job."
+    },
+    {
+      "hint": "Stetoskop leżał na stole obok notatnika lekarza.",
+      "answer": "The stethoscope was on the table next to the doctor's notebook."
+    },
+    {
+      "hint": "Wynik testu był pozytywny, co oznaczało duży postęp.",
+      "answer": "The result of the test was positive, indicating significant progress."
+    },
+    {
+      "hint": "Dziecko czołgało się po podłodze, próbując złapać zabawkę.",
+      "answer": "The child began to crawl on the floor trying to reach the toy."
+    },
+    {
+      "hint": "Musiała wymyślić wymówkę, aby wyjść z niezręcznej sytuacji.",
+      "answer": "She had to make up an excuse to get out of the awkward situation."
+    },
+    {
+      "hint": "Zgłosiłem problem do nauczyciela, aby znaleźć odpowiednie rozwiązanie.",
+      "answer": "I reported the issue to the teacher to find a proper solution."
+    },
+    {
+      "hint": "Te dwa produkty są podobne pod względem jakości i ceny.",
+      "answer": "These two products are similar in terms of quality and price."
+    }
+  ],
+  "count": 97
+}

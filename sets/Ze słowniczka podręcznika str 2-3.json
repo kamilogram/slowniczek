@@ -1,0 +1,208 @@
+{
+  "name": "Ze słowniczka podręcznika str 2-3",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Gąbka może wchłonąć dużo wody.",
+      "answer": "A sponge can absorb a lot of water."
+    },
+    {
+      "hint": "Musisz pomyśleć, zanim odpowiesz.",
+      "answer": "You need to think before you answer."
+    },
+    {
+      "hint": "Spróbuj zapomnieć o tym, co się stało.",
+      "answer": "Try to forget what happened."
+    },
+    {
+      "hint": "Nie zgaduj, jeśli nie jesteś pewny.",
+      "answer": "Don’t guess if you’re not sure."
+    },
+    {
+      "hint": "Leonardo da Vinci wynalazł wiele urządzeń.",
+      "answer": "Leonardo da Vinci invented many devices."
+    },
+    {
+      "hint": "Odkryli nowe gatunki ryb w oceanie.",
+      "answer": "They discovered new species of fish in the ocean."
+    },
+    {
+      "hint": "Wziął jeden haust z papierosa i odłożył go.",
+      "answer": "He took a puff from his cigarette and put it down."
+    },
+    {
+      "hint": "Po długiej rozmowie doszli do wniosku.",
+      "answer": "After a long talk, they came to a conclusion."
+    },
+    {
+      "hint": "Czasem warto się zastanowić nad własnymi decyzjami.",
+      "answer": "Sometimes you should reflect on your own decisions."
+    },
+    {
+      "hint": "Właściciel sklepu był bardzo uprzejmy.",
+      "answer": "The owner of the shop was very kind."
+    },
+    {
+      "hint": "Co to ma znaczyć?",
+      "answer": "What does it mean?"
+    },
+    {
+      "hint": "Wzruszył ramionami, bo nie wiedział, co odpowiedzieć.",
+      "answer": "He shrugged because he didn’t know what to say."
+    },
+    {
+      "hint": "Masz rację, to naprawdę ważna sprawa.",
+      "answer": "You have a point, this is really important."
+    },
+    {
+      "hint": "Ledwo mogła wstać po całym dniu pracy.",
+      "answer": "She could hardly stand up after a long day."
+    },
+    {
+      "hint": "To jest udowodniony fakt naukowy.",
+      "answer": "That is a proven fact of science."
+    },
+    {
+      "hint": "Po prostu go zignoruj.",
+      "answer": "Just ignore him."
+    },
+    {
+      "hint": "Nie chcę tego komentować.",
+      "answer": "I don’t want to comment on that."
+    },
+    {
+      "hint": "Jaki był powód jego nieobecności?",
+      "answer": "What was the reason for his absence?"
+    },
+    {
+      "hint": "Ta historia odnosi się do prawdziwych wydarzeń.",
+      "answer": "This story relates to real events."
+    },
+    {
+      "hint": "Policja bada sprawę od tygodni.",
+      "answer": "The police have been investigating the case for weeks."
+    },
+    {
+      "hint": "Musimy to rozgryźć przed jutrem.",
+      "answer": "We need to figure it out before tomorrow."
+    },
+    {
+      "hint": "Profesor prowadził ciekawy wykład.",
+      "answer": "The professor gave an interesting lecture."
+    },
+    {
+      "hint": "Nie powinieneś nikogo atakować słownie.",
+      "answer": "You shouldn’t attack anyone verbally."
+    },
+    {
+      "hint": "Westchnęła z ulgą, gdy usłyszała wiadomość.",
+      "answer": "She sighed with relief when she heard the news."
+    },
+    {
+      "hint": "Lubią dyskutować o filmach.",
+      "answer": "They like to discuss movies."
+    },
+    {
+      "hint": "Uśmiechnął się zagadkowo i nic nie powiedział.",
+      "answer": "He smiled enigmatically and said nothing."
+    },
+    {
+      "hint": "Dokładnie tak myślałem.",
+      "answer": "That’s exactly what I thought."
+    },
+    {
+      "hint": "Muszę przyznać, że miał rację.",
+      "answer": "I must admit he was right."
+    },
+    {
+      "hint": "Wolałbym zostać w domu.",
+      "answer": "I would rather stay at home."
+    },
+    {
+      "hint": "To bardzo dziwne zachowanie.",
+      "answer": "That’s a rather strange behavior."
+    },
+    {
+      "hint": "Był to dobrze znany lekarz fizjolog.",
+      "answer": "He was a well-known physiologist."
+    },
+    {
+      "hint": "Wygłosił wykład o anatomii człowieka.",
+      "answer": "He gave a lecture on human anatomy."
+    },
+    {
+      "hint": "Wrócił po latach do rodzinnego miasta.",
+      "answer": "He returned to his hometown after years."
+    },
+    {
+      "hint": "Stała u jego boku podczas ceremonii.",
+      "answer": "She stood at his side during the ceremony."
+    },
+    {
+      "hint": "Był elegancko ubrany w garnitur.",
+      "answer": "He was well-dressed in a suit."
+    },
+    {
+      "hint": "Byłem naprawdę zaskoczony tą wiadomością.",
+      "answer": "I was truly surprised by the news."
+    },
+    {
+      "hint": "Porozmawiali na osobności.",
+      "answer": "They talked in private."
+    },
+    {
+      "hint": "Nie martw się, wszystko będzie dobrze.",
+      "answer": "Don’t worry, everything will be fine."
+    },
+    {
+      "hint": "Jest bardzo zaufanym przyjacielem.",
+      "answer": "He is a very trusted friend."
+    },
+    {
+      "hint": "Pomogłem jej przenieść pudła.",
+      "answer": "I assisted her in carrying the boxes."
+    },
+    {
+      "hint": "Jest zaręczona z lekarzem.",
+      "answer": "She is engaged to a doctor."
+    },
+    {
+      "hint": "Uścisnął jej dłoń na pożegnanie.",
+      "answer": "He shook her hand in farewell."
+    },
+    {
+      "hint": "To była prawdziwa przyjemność cię poznać.",
+      "answer": "It was a real pleasure to meet you."
+    },
+    {
+      "hint": "Usiądź, proszę.",
+      "answer": "Have a seat, please."
+    },
+    {
+      "hint": "Wyjaśnij mi to jeszcze raz.",
+      "answer": "Explain it to me once more."
+    },
+    {
+      "hint": "Przejrzała dokumenty w pośpiechu.",
+      "answer": "She looked through the documents in a hurry."
+    },
+    {
+      "hint": "Potrzebujemy dodatkowych informacji w tle.",
+      "answer": "We need more background information."
+    },
+    {
+      "hint": "Został wdowcem w młodym wieku.",
+      "answer": "He became a widower at a young age."
+    },
+    {
+      "hint": "Wspomniała o tym tylko raz.",
+      "answer": "She mentioned it only once."
+    },
+    {
+      "hint": "Był szanowanym człowiekiem w swojej społeczności.",
+      "answer": "He was a respected man in his community."
+    }
+  ],
+  "count": 50
+}

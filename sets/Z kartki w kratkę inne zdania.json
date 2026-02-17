@@ -1,0 +1,332 @@
+{
+  "name": "Z kartki w kratkę inne zdania",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Załącz plik i wyślij zapytanie do dostawcy.",
+      "answer": "Attach the file and query the vendor."
+    },
+    {
+      "hint": "Dodaj nowy element na koniec listy.",
+      "answer": "Append a new item to the list."
+    },
+    {
+      "hint": "Przypisz uprawnienia powiązanym użytkownikom.",
+      "answer": "Assign permissions to associated users."
+    },
+    {
+      "hint": "To podejście pozwoli nam osiągnąć cel.",
+      "answer": "This approach will allow us to accomplish the goal."
+    },
+    {
+      "hint": "Nie zakładaj sukcesu, jeśli nie podejmiesz próby.",
+      "answer": "Do not assume success if you do not attempt it."
+    },
+    {
+      "hint": "Główny atut firmy to niezawodny system.",
+      "answer": "The main asset of the company is its reliable system."
+    },
+    {
+      "hint": "Uważaj na złośliwe oprogramowanie, które wpływa na pliki.",
+      "answer": "Beware of malware that will affect files."
+    },
+    {
+      "hint": "Krótko wyreguluj koraliki, aby powiązać dane.",
+      "answer": "Briefly adjust the beads to bind the data."
+    },
+    {
+      "hint": "Wezwij zespół, aby rozważył zamknięcie projektu.",
+      "answer": "Call on the team to consider the project closure."
+    },
+    {
+      "hint": "Lustro wypukłe służy do rozróżniania obiektów.",
+      "answer": "A convex mirror is used to distinguish objects."
+    },
+    {
+      "hint": "Jeśli nie masz pewności, nie rób zamieszania.",
+      "answer": "If you are not confident, do not cause a splash."
+    },
+    {
+      "hint": "Z powodu opóźnienia, pozbądź się plików i wyślij nową partię.",
+      "answer": "Due to the delay, dispose of files and dispatch a new batch."
+    },
+    {
+      "hint": "Zapewnij, że czas trwania nie jest zbyt długi, aby nie eksploatować zasobów.",
+      "answer": "Ensure the duration is not too long to exploit resources."
+    },
+    {
+      "hint": "Program musi zostać wykonany i dane udostępnione, ale bez wyłączeń.",
+      "answer": "The program must be executed and data expose without exclusion."
+    },
+    {
+      "hint": "Pobierz wszystkie niezbędne elementy przed pójściem spać.",
+      "answer": "Fetch all the essentials prior to going to sleep."
+    },
+    {
+      "hint": "Opłata zależy od prognozy i będzie się zmieniać.",
+      "answer": "The fee depends on the forecast and may vary."
+    },
+    {
+      "hint": "Wierność marki ma pierwszeństwo, ale smak jest ważny.",
+      "answer": "Brand fidelity takes precedence, but flavour is important."
+    },
+    {
+      "hint": "Musisz podać wartość wcięcia w kodzie.",
+      "answer": "You must indent the code with a value."
+    },
+    {
+      "hint": "Ta branża odziedziczyła wiele od swoich przodków.",
+      "answer": "This industry has inherited a lot from its ancestors."
+    },
+    {
+      "hint": "Obszar ten leży obok skrzyżowania.",
+      "answer": "This area lies merely next to the intersection."
+    },
+    {
+      "hint": "Obowiązkowe jest sprawdzenie kodu zagnieżdżonego.",
+      "answer": "It is mandatory to check the nested code."
+    },
+    {
+      "hint": "Musisz przestrzegać zasad znaczników i nie nakładać elementów.",
+      "answer": "You must obey the markup rules and not overlay elements."
+    },
+    {
+      "hint": "Wiadomość musi poprzedzać definicję i ją dodamy na początku.",
+      "answer": "The message must precede the definition, and we will prepend it."
+    },
+    {
+      "hint": "Możesz uszczypnąć, aby rozpakować element i przywrócić go.",
+      "answer": "You can pinch to unwrap the element and restore it."
+    },
+    {
+      "hint": "Zdefiniuj tę właściwość jako trwałą dla systemu.",
+      "answer": "Define this property as persistent for the system."
+    },
+    {
+      "hint": "Naszym celem jest stworzenie solidnego systemu.",
+      "answer": "Our ultimate purpose is to create a robust system."
+    },
+    {
+      "hint": "Musimy odwrócić listę i ponownie sprawdzić jej cel.",
+      "answer": "We need to reverse the list and recap its purpose."
+    },
+    {
+      "hint": "Wydamy nową wersję z udoskonalonym kodem, aby rozwiązać problem.",
+      "answer": "We will release a new version with refined code to resolve the issue."
+    },
+    {
+      "hint": "Usuń chwasty, aby ujawnić ogród.",
+      "answer": "We need to weed the area to reveal the garden."
+    },
+    {
+      "hint": "To jest przejaw mądrych decyzji w zakresie projektowania.",
+      "answer": "This is a yield of wise design decisions."
+    },
+    {
+      "hint": "To, co dostarczono, było tylko małym fragmentem w zasięgu.",
+      "answer": "What was supplied was merely a small snippet in scope."
+    },
+    {
+      "hint": "Zacznij od zera, by upewnić się, że próbki są ułożone w stos.",
+      "answer": "Start from scratch to ensure swatches are stacked."
+    },
+    {
+      "hint": "Usuń pochylenie z logo i napraw dzielenie wyrazów.",
+      "answer": "Remove the skew from the logo and fix hyphenation."
+    },
+    {
+      "hint": "Użyj przełącznika, aby uruchomić przejście do skorygowanej funkcji.",
+      "answer": "Use the toggle to trigger the transition to the tweaked function."
+    },
+    {
+      "hint": "Możesz użyć narzędzia pomocniczego, aby owinąć komponent.",
+      "answer": "You can use the utility to wrap the component."
+    },
+    {
+      "hint": "Trend cenowy zmierza w górę.",
+      "answer": "The price trend has been trending upward."
+    },
+    {
+      "hint": "Naczynia to produkt zintegrowany z ramami firmy.",
+      "answer": "The kitchen ware is a product integrated within the bootstrap framework."
+    },
+    {
+      "hint": "Dodaj nowy element, aby był spójny z dziedzictwem projektu.",
+      "answer": "Append a new item to be consistent with the legacy."
+    },
+    {
+      "hint": "Użyliśmy kodu dostawcy, aby uniknąć tworzenia własnego elementu otaczającego.",
+      "answer": "We used vendor code to avoid crafting our own wrapper."
+    },
+    {
+      "hint": "Lustro wklęsłe jest cudem optyki.",
+      "answer": "A concave mirror is a marvel of optics."
+    },
+    {
+      "hint": "Musimy zrzucić wszystkie dane debugowania przed wydaniem.",
+      "answer": "We need to dump all the debugging data before the release."
+    },
+    {
+      "hint": "Cukier całkowicie rozpuścił się w herbacie.",
+      "answer": "The sugar completely dissolved in the tea."
+    },
+    {
+      "hint": "Maszyny wytłaczają metal pod ciśnieniem.",
+      "answer": "These machines extrude the metal under pressure."
+    },
+    {
+      "hint": "Musisz karmić algorytm danymi, by poprawić jego wydajność.",
+      "answer": "You must feed the algorithm with data to improve its performance."
+    },
+    {
+      "hint": "To małe światło emitowało delikatną poświatę.",
+      "answer": "The small light emitted a gentle glow."
+    },
+    {
+      "hint": "Nowe zasady są ściśle powiązane z tymi, które odziedziczyliśmy.",
+      "answer": "The new rules are tightly tied to the ones we inherit."
+    },
+    {
+      "hint": "Musisz wywołać tę funkcję z prawidłowymi parametrami.",
+      "answer": "You must invoke this function with the correct parameters."
+    },
+    {
+      "hint": "Wideo z przeplotem (interlaced) to zaledwie niewielka zmiana.",
+      "answer": "Interlaced video is merely a minor change."
+    },
+    {
+      "hint": "Zostawiamy przestarzały kod, który wymaga oznaczania.",
+      "answer": "We are leaving behind legacy code that requires markup."
+    },
+    {
+      "hint": "Ceny będą niższe od tego momentu.",
+      "answer": "Onward from this point, the prices will be lower."
+    },
+    {
+      "hint": "Jak możemy uzyskać dostęp do tych plików z naszego systemu?",
+      "answer": "How can we obtain access to these files from our system?"
+    },
+    {
+      "hint": "Ma głęboką wiedzę na temat historii miasta.",
+      "answer": "He has a profound knowledge of the city's history."
+    },
+    {
+      "hint": "Góra ma bardzo spiczasty szczyt.",
+      "answer": "The mountain has a very peaky summit."
+    },
+    {
+      "hint": "Odbiera paczki rano, a potem nocuje u rodziców.",
+      "answer": "He always pick up packages and then put up at his parents' place."
+    },
+    {
+      "hint": "Udało nam się odzyskać wszystkie pliki po awarii.",
+      "answer": "We managed to retrieve all the files after the failure."
+    },
+    {
+      "hint": "Spróbujemy rozwiązać problem i zweryfikować jego prawdziwą przyczynę.",
+      "answer": "We will try to resolve the issue and reveal its true cause."
+    },
+    {
+      "hint": "Ten sklep detaliczny oferuje kupony na wymianę z zakupów.",
+      "answer": "This retail store offers redemption coupons from purchases."
+    },
+    {
+      "hint": "Funkcja używa rekursji do analizowania kodu w zasięgu.",
+      "answer": "The function uses recursion to analyze the code in scope."
+    },
+    {
+      "hint": "Używamy shimu, aby upewnić się, że komponenty są dostarczone.",
+      "answer": "We use a shim to ensure the components are supplied."
+    },
+    {
+      "hint": "Chcemy, aby wiersze w tabeli były w paski, bez pochylenia.",
+      "answer": "We want the table rows to be striped, without skew."
+    },
+    {
+      "hint": "Spróbuj szybko zrobić zrzut ekranu ze spadzistym dachem.",
+      "answer": "Try to take a screen snap quickly with the slope roof."
+    },
+    {
+      "hint": "To była przebiegła próba obejścia zabezpieczeń.",
+      "answer": "It was a sneaky attempt to bypass security."
+    },
+    {
+      "hint": "Powinniśmy użyć shimu, aby zapewnić kompatybilność.",
+      "answer": "We should use a shim to ensure compatibility."
+    },
+    {
+      "hint": "Zagnieżdżony kod jest obowiązkowy.",
+      "answer": "The nested code is mandatory."
+    },
+    {
+      "hint": "Zastosowaliśmy pochylenie do tytułu dla efektu wizualnego.",
+      "answer": "We applied a skew transformation to the title."
+    },
+    {
+      "hint": "Musimy zastosować wcięcie.",
+      "answer": "We need to apply an indent."
+    },
+    {
+      "hint": "Użyj elementu otaczającego, aby ostylować zawartość.",
+      "answer": "Use a wrapper element to style the content."
+    },
+    {
+      "hint": "Zawinięto pakiet w jeden pakiet.",
+      "answer": "The package was wraped into a single bundle."
+    },
+    {
+      "hint": "Światło emitowało delikatną, niebieską poświatę.",
+      "answer": "The light emitted a gentle blue glow."
+    },
+    {
+      "hint": "Używamy biblioteki narzędziowej do obsługi dat.",
+      "answer": "We use a utility library to handle dates."
+    },
+    {
+      "hint": "Trzeba udoskonalić te pomiary.",
+      "answer": "We need to refine these measurements."
+    },
+    {
+      "hint": "Musisz zadeklarować wszystkie przedmioty celnikowi.",
+      "answer": "You must declare all items to the border control officer."
+    },
+    {
+      "hint": "To miasto ma wspaniałą atmosferę.",
+      "answer": "This city has a great atmosphere."
+    },
+    {
+      "hint": "Musimy uzgodnić harmonogram. Jest już za późno.",
+      "answer": "We must agree on the schedule. It is already late."
+    },
+    {
+      "hint": "Czy mogę zapłacić gotówką?",
+      "answer": "Can I pay with cash?"
+    },
+    {
+      "hint": "Toalety znajdują się na dole.",
+      "answer": "The restrooms are downstairs."
+    },
+    {
+      "hint": "Proszę, zawieź mnie do tego adresu.",
+      "answer": "Please take me to this address."
+    },
+    {
+      "hint": "Musimy kupić świeże warzywa.",
+      "answer": "We need to buy fresh vegetables."
+    },
+    {
+      "hint": "Mój lot został opóźniony.",
+      "answer": "My flight has been delayed."
+    },
+    {
+      "hint": "Muszę wymienić trochę pieniędzy.",
+      "answer": "I need to exchange some money."
+    },
+    {
+      "hint": "Nie czuję się dobrze.",
+      "answer": "I don't feel well."
+    }
+  ],
+  "count": 81
+}

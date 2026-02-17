@@ -1,0 +1,540 @@
+{
+  "name": "Zdania z kartki w kratkę",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Musisz dołączyć plik do wiadomości.",
+      "answer": "You need to attach the file to the message."
+    },
+    {
+      "hint": "Możesz dopisać nowy element do listy.",
+      "answer": "You can append a new item to the list."
+    },
+    {
+      "hint": "Ten dokument jest powiązany z poprzednim raportem.",
+      "answer": "This document is associated with the previous report."
+    },
+    {
+      "hint": "Musimy przypisać zadania członkom zespołu.",
+      "answer": "We need to assign tasks to team members."
+    },
+    {
+      "hint": "Zmiana klimatu może wpływać na zdrowie ludzi.",
+      "answer": "Climate change can affect people's health."
+    },
+    {
+      "hint": "Mój pradziadek był znanym przodkiem w naszej rodzinie.",
+      "answer": "My great-grandfather was a well-known ancestor in our family."
+    },
+    {
+      "hint": "Jego podejście do nauki jest bardzo praktyczne.",
+      "answer": "His approach to learning is very practical."
+    },
+    {
+      "hint": "To była nasza ostatnia próba rozwiązania problemu.",
+      "answer": "That was our final attempt to solve the problem."
+    },
+    {
+      "hint": "Użyj komponentu typu akordeon, aby ukryć treść.",
+      "answer": "Use an accordion component to hide the content."
+    },
+    {
+      "hint": "Ten obrazek jest cennym zasobem projektu.",
+      "answer": "This image is a valuable asset for the project."
+    },
+    {
+      "hint": "Zakładamy, że serwer działa poprawnie.",
+      "answer": "We assume the server is working correctly."
+    },
+    {
+      "hint": "Udało nam się osiągnąć wszystkie cele.",
+      "answer": "We managed to accomplish all our goals."
+    },
+    {
+      "hint": "Możesz dostosować ustawienia jasności.",
+      "answer": "You can adjust the brightness settings."
+    },
+    {
+      "hint": "Aplikacja pozwala na edycję profilu.",
+      "answer": "The app allows profile editing."
+    },
+    {
+      "hint": "Dodaj kotwicę, aby przewinąć do sekcji.",
+      "answer": "Add an anchor to scroll to the section."
+    },
+    {
+      "hint": "Ten interfejs jest bardzo elastyczny.",
+      "answer": "This interface is very adaptable."
+    },
+    {
+      "hint": "Musisz powiązać funkcję z kliknięciem przycisku.",
+      "answer": "You need to bind the function to the button click."
+    },
+    {
+      "hint": "Uważaj na fałszywe wiadomości e-mail.",
+      "answer": "Beware of fake emails."
+    },
+    {
+      "hint": "Ten pakiet zawiera wszystkie potrzebne pliki.",
+      "answer": "This bundle includes all necessary files."
+    },
+    {
+      "hint": "Krótko wyjaśnię, jak działa ten algorytm.",
+      "answer": "I'll briefly explain how this algorithm works."
+    },
+    {
+      "hint": "Zbootstrapowaliśmy aplikację za pomocą CLI.",
+      "answer": "We bootstrapped the app using a CLI."
+    },
+    {
+      "hint": "Naszyjnik był ozdobiony kolorowymi koralikami.",
+      "answer": "The necklace was decorated with colorful beads."
+    },
+    {
+      "hint": "Możesz wezwać administratora w razie potrzeby.",
+      "answer": "You can call on the administrator if needed."
+    },
+    {
+      "hint": "Domknięcie pozwala funkcji zachować dostęp do zmiennych.",
+      "answer": "A closure allows a function to retain access to variables."
+    },
+    {
+      "hint": "Powinniśmy rozważyć wszystkie możliwości.",
+      "answer": "We should consider all possibilities."
+    },
+    {
+      "hint": "Lustro ma wklęsłą powierzchnię.",
+      "answer": "The mirror has a concave surface."
+    },
+    {
+      "hint": "Soczewka jest wypukła i powiększa obraz.",
+      "answer": "The lens is convex and magnifies the image."
+    },
+    {
+      "hint": "Czuł się pewny siebie przed prezentacją.",
+      "answer": "He felt confident before the presentation."
+    },
+    {
+      "hint": "Tworzymy meble ręcznie z drewna.",
+      "answer": "We craft furniture by hand from wood."
+    },
+    {
+      "hint": "Jest wyraźna różnica między tymi metodami.",
+      "answer": "There is a clear distinction between these methods."
+    },
+    {
+      "hint": "Trudno rozróżnić te dwa kolory.",
+      "answer": "It's hard to distinguish between these two colors."
+    },
+    {
+      "hint": "Opóźnienie było spowodowane awarią sieci.",
+      "answer": "The delay was caused by a network failure."
+    },
+    {
+      "hint": "Musimy zrobić zrzut bazy danych.",
+      "answer": "We need to dump the database."
+    },
+    {
+      "hint": "Czas trwania filmu to około 2 godziny.",
+      "answer": "The duration of the movie is about 2 hours."
+    },
+    {
+      "hint": "Cukier szybko się rozpuszcza w wodzie.",
+      "answer": "Sugar dissolves quickly in water."
+    },
+    {
+      "hint": "System wysyła zamówienie w ciągu 24 godzin.",
+      "answer": "The system dispatches the order within 24 hours."
+    },
+    {
+      "hint": "Pozbądź się starych baterii w odpowiednim miejscu.",
+      "answer": "Dispose of old batteries at the proper location."
+    },
+    {
+      "hint": "Musimy zapewnić bezpieczeństwo danych.",
+      "answer": "We must ensure data security."
+    },
+    {
+      "hint": "Skrypt został wykonany bez błędów.",
+      "answer": "The script was executed without errors."
+    },
+    {
+      "hint": "Raport ujawnił poważne problemy.",
+      "answer": "The report exposed serious issues."
+    },
+    {
+      "hint": "Możesz wykluczyć te pliki z kopii zapasowej.",
+      "answer": "You can exclude these files from the backup."
+    },
+    {
+      "hint": "Hakerzy wykorzystują luki w zabezpieczeniach.",
+      "answer": "Hackers exploit security vulnerabilities."
+    },
+    {
+      "hint": "Maszyna może wytłaczać plastik w różne kształty.",
+      "answer": "The machine can extrude plastic into various shapes."
+    },
+    {
+      "hint": "Zaczniemy od podstaw, zanim przejdziemy dalej.",
+      "answer": "We'll start with the essentials before moving on."
+    },
+    {
+      "hint": "Musimy pobrać dane z serwera.",
+      "answer": "We need to fetch the data from the server."
+    },
+    {
+      "hint": "Opłata za usługę wynosi 20 zł.",
+      "answer": "The fee for the service is 20 PLN."
+    },
+    {
+      "hint": "Prognoza pogody zapowiada deszcz.",
+      "answer": "The weather forecast predicts rain."
+    },
+    {
+      "hint": "Kolory zaczęły zanikać po kilku dniach.",
+      "answer": "The colors began to fade after a few days."
+    },
+    {
+      "hint": "Ten napój ma owocowy smak.",
+      "answer": "This drink has a fruity flavour."
+    },
+    {
+      "hint": "Musisz karmić kota dwa razy dziennie.",
+      "answer": "You need to feed the cat twice a day."
+    },
+    {
+      "hint": "Fidelity oznacza dokładność odwzorowania dźwięku.",
+      "answer": "Fidelity refers to the accuracy of sound reproduction."
+    },
+    {
+      "hint": "Spróbuj chwycić ten obiekt myszką.",
+      "answer": "Try to grab the object with the mouse."
+    },
+    {
+      "hint": "Ekran emituje delikatny blask.",
+      "answer": "The screen emits a soft glow."
+    },
+    {
+      "hint": "Złamał biodro podczas jazdy na rowerze.",
+      "answer": "He broke his hip while cycling."
+    },
+    {
+      "hint": "Dzielenie wyrazów jest ważne w typografii.",
+      "answer": "Hyphenation is important in typography."
+    },
+    {
+      "hint": "Możesz wywołać funkcję klikając przycisk.",
+      "answer": "You can invoke the function by clicking the button."
+    },
+    {
+      "hint": "To jest poważny problem wymagający uwagi.",
+      "answer": "This is a serious issue that needs attention."
+    },
+    {
+      "hint": "Klasa może dziedziczyć właściwości po innej klasie.",
+      "answer": "A class can inherit properties from another class."
+    },
+    {
+      "hint": "Pracuję w branży technologicznej.",
+      "answer": "I work in the tech industry."
+    },
+    {
+      "hint": "Dodaj wcięcie na początku akapitu.",
+      "answer": "Add an indent at the beginning of the paragraph."
+    },
+    {
+      "hint": "Te linie przecinają się pod kątem prostym.",
+      "answer": "These lines intersect at a right angle."
+    },
+    {
+      "hint": "Co ciekawe, nikt nie zauważył błędu.",
+      "answer": "Interestingly, no one noticed the mistake."
+    },
+    {
+      "hint": "Obraz jest przeplatany dla lepszej jakości.",
+      "answer": "The image is interlaced for better quality."
+    },
+    {
+      "hint": "To jest system oparty na dziedzictwie.",
+      "answer": "This is a legacy-based system."
+    },
+    {
+      "hint": "To był zaledwie drobny błąd.",
+      "answer": "It was merely a minor error."
+    },
+    {
+      "hint": "Hasło jest obowiązkowe.",
+      "answer": "The password is mandatory."
+    },
+    {
+      "hint": "Ten dokument zawiera znaczniki HTML.",
+      "answer": "This document contains HTML markup."
+    },
+    {
+      "hint": "Dzieci patrzyły z zachwytem na fajerwerki.",
+      "answer": "The children watched the fireworks with marvel."
+    },
+    {
+      "hint": "Funkcja działa w zagnieżdżonym kontekście.",
+      "answer": "The function operates in a nested context."
+    },
+    {
+      "hint": "W skrócie, projekt zakończył się sukcesem.",
+      "answer": "In a nutshell, the project was a success."
+    },
+    {
+      "hint": "Nałożono nakładkę na obraz.",
+      "answer": "An overlay was applied to the image."
+    },
+    {
+      "hint": "Musisz przestrzegać zasad.",
+      "answer": "You must obey the rules."
+    },
+    {
+      "hint": "Od tego momentu idziemy naprzód.",
+      "answer": "From this point onward, we move forward."
+    },
+    {
+      "hint": "Musimy uzyskać dostęp do danych.",
+      "answer": "We need to obtain access to the data."
+    },
+    {
+      "hint": "Parametr jest przekazywany do funkcji.",
+      "answer": "The parameter is passed to the function."
+    },
+    {
+      "hint": "Musisz mieć wcześniejsze doświadczenie.",
+      "answer": "You must have prior experience."
+    },
+    {
+      "hint": "To była głęboka refleksja.",
+      "answer": "It was a profound reflection."
+    },
+    {
+      "hint": "Nagłówek powinien poprzedzać treść.",
+      "answer": "The header should precede the content."
+    },
+    {
+      "hint": "Dodaj tekst przed istniejącym ciągiem.",
+      "answer": "Prepend the text to the existing string."
+    },
+    {
+      "hint": "Uszczypnij ekran, aby powiększyć obraz.",
+      "answer": "Pinch the screen to zoom the image."
+    },
+    {
+      "hint": "Każdy obiekt ma swoje właściwości.",
+      "answer": "Each object has its own properties."
+    },
+    {
+      "hint": "Wykres wygląda na szczytowy w tym miejscu.",
+      "answer": "The chart looks peaky at this point."
+    },
+    {
+      "hint": "Jaki jest cel tego projektu?",
+      "answer": "What is the purpose of this project?"
+    },
+    {
+      "hint": "Ten błąd jest bardzo trwały.",
+      "answer": "This error is very persistent."
+    },
+    {
+      "hint": "Podnieś telefon, gdy zadzwoni.",
+      "answer": "Pick up the phone when it rings."
+    },
+    {
+      "hint": "Wystawili dom na sprzedaż.",
+      "answer": "They put up the house for sale."
+    },
+    {
+      "hint": "Zadaj zapytanie do bazy danych.",
+      "answer": "Submit a query to the database."
+    },
+    {
+      "hint": "Strona jest responsywna na różnych urządzeniach.",
+      "answer": "The site is responsive across devices."
+    },
+    {
+      "hint": "Na koniec zróbmy krótkie podsumowanie.",
+      "answer": "Let’s do a quick recap at the end."
+    },
+    {
+      "hint": "Proces udoskonalania trwa.",
+      "answer": "The refining process is ongoing."
+    },
+    {
+      "hint": "Możesz przywrócić poprzednią wersję.",
+      "answer": "You can restore the previous version."
+    },
+    {
+      "hint": "System może odzyskać dane z kopii.",
+      "answer": "The system can retrieve data from the backup."
+    },
+    {
+      "hint": "Odwróć kolejność elementów.",
+      "answer": "Reverse the order of the items."
+    },
+    {
+      "hint": "Musimy rozwiązać ten konflikt.",
+      "answer": "We need to resolve this conflict."
+    },
+    {
+      "hint": "Nowa wersja została wydana wczoraj.",
+      "answer": "The new release came out yesterday."
+    },
+    {
+      "hint": "Musimy udoskonalić ten algorytm.",
+      "answer": "We need to refine this algorithm."
+    },
+    {
+      "hint": "To bardzo niezawodne rozwiązanie.",
+      "answer": "This is a very reliable solution."
+    },
+    {
+      "hint": "Raport ujawnił nowe fakty.",
+      "answer": "The report revealed new facts."
+    },
+    {
+      "hint": "Pracuję w handlu detalicznym.",
+      "answer": "I work in retail."
+    },
+    {
+      "hint": "To jest solidna konstrukcja.",
+      "answer": "This is a robust structure."
+    },
+    {
+      "hint": "To była jego chwila odkupienia.",
+      "answer": "It was his moment of redemption."
+    },
+    {
+      "hint": "Rekurencja może być trudna do zrozumienia.",
+      "answer": "Recursion can be hard to understand."
+    },
+    {
+      "hint": "Zakres tej funkcji jest ograniczony.",
+      "answer": "The scope of this function is limited."
+    },
+    {
+      "hint": "Dane zostały dostarczone przez użytkownika.",
+      "answer": "The data was supplied by the user."
+    },
+    {
+      "hint": "Dodaj podkładkę, aby uniknąć błędów.",
+      "answer": "Add a shim to avoid errors."
+    },
+    {
+      "hint": "Ten fragment kodu jest kluczowy.",
+      "answer": "This snippet of code is crucial."
+    },
+    {
+      "hint": "Tło ma paskowany wzór.",
+      "answer": "The background has a striped pattern."
+    },
+    {
+      "hint": "Zaczęliśmy projekt od zera.",
+      "answer": "We started the project from scratch."
+    },
+    {
+      "hint": "Na ekranie pojawił się plusk.",
+      "answer": "A splash appeared on the screen."
+    },
+    {
+      "hint": "Zatrzaśnij pokrywę, aby ją zamknąć.",
+      "answer": "Snap the lid to close it."
+    },
+    {
+      "hint": "To był bardzo podstępny ruch.",
+      "answer": "That was a very sneaky move."
+    },
+    {
+      "hint": "Stos rośnie z każdym wywołaniem funkcji.",
+      "answer": "The stack grows with each function call."
+    },
+    {
+      "hint": "Wybierz próbki kolorów z palety.",
+      "answer": "Pick swatches from the palette."
+    },
+    {
+      "hint": "Nachylenie wzgórza było strome.",
+      "answer": "The slope of the hill was steep."
+    },
+    {
+      "hint": "Obraz został lekko pochylony.",
+      "answer": "The image was slightly skewed."
+    },
+    {
+      "hint": "Kliknij przełącznik, aby zmienić tryb.",
+      "answer": "Click the toggle to switch modes."
+    },
+    {
+      "hint": "Przejście między scenami było płynne.",
+      "answer": "The transition between scenes was smooth."
+    },
+    {
+      "hint": "Ten przycisk działa jako wyzwalacz animacji.",
+      "answer": "This button acts as a trigger for the animation."
+    },
+    {
+      "hint": "Musimy wprowadzić drobną zmianę w kodzie.",
+      "answer": "We need to apply a small tweak to the code."
+    },
+    {
+      "hint": "Ten element jest związany z poprzednim.",
+      "answer": "This item is tied to the previous one."
+    },
+    {
+      "hint": "Byłem skuszony, żeby zignorować ostrzeżenie.",
+      "answer": "I was tempted to ignore the warning."
+    },
+    {
+      "hint": "To narzędzie jest bardzo przydatne dla programistów.",
+      "answer": "This utility is very useful for developers."
+    },
+    {
+      "hint": "Możesz rozpakować dane przed ich użyciem.",
+      "answer": "You can unwrap the data before using it."
+    },
+    {
+      "hint": "Cena akcji poszła w górę.",
+      "answer": "The stock price moved upward."
+    },
+    {
+      "hint": "To była jego ostateczna decyzja.",
+      "answer": "It was his ultimate decision."
+    },
+    {
+      "hint": "Wyniki mogą się różnić w zależności od warunków.",
+      "answer": "Results may vary depending on conditions."
+    },
+    {
+      "hint": "Sprzedawca dostarczył produkt na czas.",
+      "answer": "The vendor delivered the product on time."
+    },
+    {
+      "hint": "Użyj wrappera, aby opakować komponent.",
+      "answer": "Use a wrapper to enclose the component."
+    },
+    {
+      "hint": "Musisz owinąć prezent papierem.",
+      "answer": "You need to wrap the gift in paper."
+    },
+    {
+      "hint": "To była mądra decyzja.",
+      "answer": "That was a wise decision."
+    },
+    {
+      "hint": "Musimy usunąć chwasty z ogrodu.",
+      "answer": "We need to remove weeds from the garden."
+    },
+    {
+      "hint": "Ten sklep sprzedaje różne towary.",
+      "answer": "This shop sells various wares."
+    },
+    {
+      "hint": "Rolnik zebrał duży plon w tym roku.",
+      "answer": "The farmer yielded a large harvest this year."
+    }
+  ],
+  "count": 133
+}

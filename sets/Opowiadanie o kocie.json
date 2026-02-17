@@ -1,0 +1,244 @@
+{
+  "name": "Opowiadanie o kocie",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Pewnego ranka obudziłem się bardzo wcześnie.",
+      "answer": "One morning I woke up very early."
+    },
+    {
+      "hint": "Za oknem świeciło słońce.",
+      "answer": "The sun was shining outside the window."
+    },
+    {
+      "hint": "Poczułem, że to będzie niezwykły dzień.",
+      "answer": "I felt it would be an unusual day."
+    },
+    {
+      "hint": "Zjadłem szybkie śniadanie.",
+      "answer": "I ate a quick breakfast."
+    },
+    {
+      "hint": "Usłyszałem miauczenie za drzwiami.",
+      "answer": "I heard meowing at the door."
+    },
+    {
+      "hint": "Otworzyłem drzwi i zobaczyłem kota.",
+      "answer": "I opened the door and saw a cat."
+    },
+    {
+      "hint": "Kot miał białą łatkę na ogonie.",
+      "answer": "The cat had a white spot on its tail."
+    },
+    {
+      "hint": "Był bardzo przyjacielski.",
+      "answer": "He was very friendly."
+    },
+    {
+      "hint": "Podrapał się łapką za uchem.",
+      "answer": "He scratched behind his ear with his paw."
+    },
+    {
+      "hint": "Spojrzał na mnie dużymi oczami.",
+      "answer": "He looked at me with big eyes."
+    },
+    {
+      "hint": "Postanowiłem go nakarmić.",
+      "answer": "I decided to feed him."
+    },
+    {
+      "hint": "Miałem w domu mleko.",
+      "answer": "I had some milk at home."
+    },
+    {
+      "hint": "Wlałem mleko do miski.",
+      "answer": "I poured the milk into a bowl."
+    },
+    {
+      "hint": "Kot wypił mleko bardzo szybko.",
+      "answer": "The cat drank the milk very quickly."
+    },
+    {
+      "hint": "Wyglądał na zadowolonego.",
+      "answer": "He looked satisfied."
+    },
+    {
+      "hint": "Nagle wskoczył na parapet.",
+      "answer": "Suddenly, he jumped onto the windowsill."
+    },
+    {
+      "hint": "Rozejrzał się dookoła.",
+      "answer": "He looked around."
+    },
+    {
+      "hint": "Mruknął cicho pod nosem.",
+      "answer": "He purred quietly."
+    },
+    {
+      "hint": "Spojrzałem na zegarek.",
+      "answer": "I looked at my watch."
+    },
+    {
+      "hint": "Było jeszcze wcześnie.",
+      "answer": "It was still early."
+    },
+    {
+      "hint": "Postanowiłem wyjść na spacer.",
+      "answer": "I decided to go for a walk."
+    },
+    {
+      "hint": "Kot postanowił pójść ze mną.",
+      "answer": "The cat decided to go with me."
+    },
+    {
+      "hint": "Szliśmy razem przez park.",
+      "answer": "We walked through the park together."
+    },
+    {
+      "hint": "Spotkaliśmy psa na smyczy.",
+      "answer": "We met a dog on a leash."
+    },
+    {
+      "hint": "Pies zaszczekał przyjaźnie.",
+      "answer": "The dog barked in a friendly way."
+    },
+    {
+      "hint": "Kot nie uciekł, tylko zamiauczał.",
+      "answer": "The cat didn’t run away, he just meowed."
+    },
+    {
+      "hint": "Na ławce siedział starszy pan.",
+      "answer": "An elderly man was sitting on a bench."
+    },
+    {
+      "hint": "Starszy pan uśmiechnął się do mnie.",
+      "answer": "The elderly man smiled at me."
+    },
+    {
+      "hint": "Zapytał, czy kot jest mój.",
+      "answer": "He asked if the cat was mine."
+    },
+    {
+      "hint": "Odpowiedziałem, że nie jestem pewien.",
+      "answer": "I answered that I wasn’t sure."
+    },
+    {
+      "hint": "Kot usiadł na ławce obok pana.",
+      "answer": "The cat sat on the bench next to the man."
+    },
+    {
+      "hint": "Wyglądali jak starzy przyjaciele.",
+      "answer": "They looked like old friends."
+    },
+    {
+      "hint": "Pan wyjął z kieszeni smakołyka.",
+      "answer": "The man took a treat from his pocket."
+    },
+    {
+      "hint": "Kot zjadał smakołyk z zadowoleniem.",
+      "answer": "The cat ate the treat with pleasure."
+    },
+    {
+      "hint": "Spojrzałem na drzewa w parku.",
+      "answer": "I looked at the trees in the park."
+    },
+    {
+      "hint": "Ptaki śpiewały wysoko na gałęziach.",
+      "answer": "Birds were singing high up in the branches."
+    },
+    {
+      "hint": "Na trawie rosły stokrotki.",
+      "answer": "Daisies were growing in the grass."
+    },
+    {
+      "hint": "Zatrzymałem się przy fontannie.",
+      "answer": "I stopped by the fountain."
+    },
+    {
+      "hint": "Kot wskoczył na brzeg fontanny.",
+      "answer": "The cat jumped onto the edge of the fountain."
+    },
+    {
+      "hint": "Na wodzie unosiły się liście.",
+      "answer": "Leaves were floating on the water."
+    },
+    {
+      "hint": "Nagle kot kichnął głośno.",
+      "answer": "Suddenly, the cat sneezed loudly."
+    },
+    {
+      "hint": "Uśmiałem się z tego kichnięcia.",
+      "answer": "I laughed at the sneeze."
+    },
+    {
+      "hint": "Przechodnie spojrzeli na nas zdziwieni.",
+      "answer": "Passersby looked at us in surprise."
+    },
+    {
+      "hint": "Kot spojrzał na mnie urażony.",
+      "answer": "The cat looked at me offended."
+    },
+    {
+      "hint": "Pogłaskałem go przepraszająco.",
+      "answer": "I patted him apologetically."
+    },
+    {
+      "hint": "Uspokoił się i zamruczał.",
+      "answer": "He calmed down and purred."
+    },
+    {
+      "hint": "Usiedliśmy razem na ławce.",
+      "answer": "We sat on the bench together."
+    },
+    {
+      "hint": "Opowiedziałem kotu o swoich planach.",
+      "answer": "I told the cat about my plans."
+    },
+    {
+      "hint": "Kot udawał, że słucha.",
+      "answer": "The cat pretended to listen."
+    },
+    {
+      "hint": "Słońce zaczęło zachodzić.",
+      "answer": "The sun began to set."
+    },
+    {
+      "hint": "Kot zeskoczył z ławki.",
+      "answer": "The cat jumped off the bench."
+    },
+    {
+      "hint": "Spojrzał na mnie po raz ostatni.",
+      "answer": "He looked at me one last time."
+    },
+    {
+      "hint": "Machnął ogonem i pobiegł w krzaki.",
+      "answer": "He swished his tail and ran into the bushes."
+    },
+    {
+      "hint": "Poczułem lekki smutek.",
+      "answer": "I felt a little sad."
+    },
+    {
+      "hint": "Wiedziałem jednak, że wróci.",
+      "answer": "But I knew he would come back."
+    },
+    {
+      "hint": "Wróciłem do domu z uśmiechem.",
+      "answer": "I returned home with a smile."
+    },
+    {
+      "hint": "To był naprawdę niezwykły dzień.",
+      "answer": "It was truly an unusual day."
+    },
+    {
+      "hint": "Zrozumiałem, że czasem przyjaźń przychodzi niespodziewanie.",
+      "answer": "I realized that sometimes friendship comes unexpectedly."
+    },
+    {
+      "hint": "Czasami kot wybiera człowieka, a nie odwrotnie.",
+      "answer": "Sometimes, a cat chooses a person, not the other way around."
+    }
+  ],
+  "count": 59
+}

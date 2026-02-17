@@ -1,0 +1,300 @@
+{
+  "name": "PODR 501-576",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Etykieta na paczce wyraźnie wskazywała zawartość.",
+      "answer": "The label on the package clearly indicated the contents."
+    },
+    {
+      "hint": "Tak zwany ekspert wcale nie miał dużo doświadczenia.",
+      "answer": "The so-called expert didn’t really have much experience."
+    },
+    {
+      "hint": "Odczuwaliśmy letarg po długiej podróży samochodem.",
+      "answer": "We felt languor after a long car journey."
+    },
+    {
+      "hint": "Ekstrakt roślinny był używany do przygotowania leku.",
+      "answer": "The plant extract was used to prepare the medicine."
+    },
+    {
+      "hint": "Od początku wiedziałem, że coś jest nie tak.",
+      "answer": "I knew all along that something was wrong."
+    },
+    {
+      "hint": "Rzucił okiem na dokument, zanim go podpisał.",
+      "answer": "He glanced at the document before signing it."
+    },
+    {
+      "hint": "Oprowadzili gościa, aby bezpiecznie dotarł do sali konferencyjnej.",
+      "answer": "They escorted the guest safely to the conference room."
+    },
+    {
+      "hint": "Obraz na ścianie przedstawiał stare miasto o zachodzie słońca.",
+      "answer": "The image on the wall showed an old town at sunset."
+    },
+    {
+      "hint": "O świcie ptaki zaczęły śpiewać na całe gardło.",
+      "answer": "At daybreak, the birds began to sing loudly."
+    },
+    {
+      "hint": "Spakował swoje rzeczy do walizki przed wyjazdem.",
+      "answer": "He packed his belongings into the suitcase before leaving."
+    },
+    {
+      "hint": "Nie ma znaczenia, kto wygra – ważne, że wszyscy spróbowali.",
+      "answer": "It doesn’t matter who wins – the important thing is everyone tried."
+    },
+    {
+      "hint": "Był nieefektywny w wykonywaniu prostych zadań.",
+      "answer": "He was inefficient at performing simple tasks."
+    },
+    {
+      "hint": "Wpadł na świetny pomysł, jak rozwiązać problem.",
+      "answer": "He came up with a great idea to solve the problem."
+    },
+    {
+      "hint": "Uśmiechnął się szeroko, gdy usłyszał dobre wieści.",
+      "answer": "He grinned widely when he heard the good news."
+    },
+    {
+      "hint": "Miałem na myśli coś zupełnie innego.",
+      "answer": "I had something else in mind."
+    },
+    {
+      "hint": "Kłócili się o drobiazgi, zamiast znaleźć kompromis.",
+      "answer": "They argued about small details instead of finding a compromise."
+    },
+    {
+      "hint": "Jesteśmy gotowi do wyjścia, wszystko jest przygotowane.",
+      "answer": "We are all set to leave, everything is ready."
+    },
+    {
+      "hint": "Radośnie przywitał wszystkich gości na przyjęciu.",
+      "answer": "He greeted all the guests cheerfully at the party."
+    },
+    {
+      "hint": "Sklep przechowywał produkty w starannie oznaczonych regałach.",
+      "answer": "The store kept products on carefully labeled shelves."
+    },
+    {
+      "hint": "Udawał, że nie widzi niczego dziwnego.",
+      "answer": "He pretended not to notice anything unusual."
+    },
+    {
+      "hint": "Był nieuprzejmy wobec personelu hotelowego.",
+      "answer": "He was rude to the hotel staff."
+    },
+    {
+      "hint": "Ten facet zawsze pomaga sąsiadom w potrzebie.",
+      "answer": "That fellow always helps neighbors in need."
+    },
+    {
+      "hint": "Został w więzieniu za swoje przestępstwo.",
+      "answer": "He ended up in jail for his crime."
+    },
+    {
+      "hint": "Przyznał się do błędu i przeprosił wszystkich.",
+      "answer": "He admitted his mistake and apologized to everyone."
+    },
+    {
+      "hint": "Książka była oprawiona w skórzaną okładkę.",
+      "answer": "The book was leather-bound."
+    },
+    {
+      "hint": "Księga zamówień była starannie prowadzona.",
+      "answer": "The order book was kept carefully."
+    },
+    {
+      "hint": "Szczerze mówiąc, nie spodziewałem się takiego wyniku.",
+      "answer": "To be honest, I didn’t expect such a result."
+    },
+    {
+      "hint": "Wszystkie informacje były istotne dla śledztwa.",
+      "answer": "All the information was relevant to the investigation."
+    },
+    {
+      "hint": "Przekazał dokumenty ręcznie swojemu przełożonemu.",
+      "answer": "He handed the documents to his supervisor."
+    },
+    {
+      "hint": "Przejrzał wszystkie dokumenty, aby upewnić się, że niczego nie pominął.",
+      "answer": "He went through all the documents to make sure nothing was missed."
+    },
+    {
+      "hint": "Każdy szczegół był dokładnie zapisany w raporcie.",
+      "answer": "Every detail was carefully recorded in the report."
+    },
+    {
+      "hint": "Było wiele elementów do sprawdzenia w magazynie.",
+      "answer": "There were numerous items to check in the warehouse."
+    },
+    {
+      "hint": "Domowe artykuły były ułożone w porządku alfabetycznym.",
+      "answer": "Household items were arranged in alphabetical order."
+    },
+    {
+      "hint": "Musiał kupić codzienne artykuły spożywcze w sklepie.",
+      "answer": "He had to buy daily groceries at the store."
+    },
+    {
+      "hint": "Nagłówek artykułu przyciągnął uwagę czytelników.",
+      "answer": "The heading of the article caught the readers’ attention."
+    },
+    {
+      "hint": "Dobrze wykonana praca zasługiwała na pochwałę.",
+      "answer": "Well done work deserved praise."
+    },
+    {
+      "hint": "Skarżył się na opóźnienia w dostawie.",
+      "answer": "He complained about the delays in delivery."
+    },
+    {
+      "hint": "Zgadł prawidłowo odpowiedź na pytanie.",
+      "answer": "He made a correct guess."
+    },
+    {
+      "hint": "Uszkodzenie było poważne, ale naprawa była możliwa.",
+      "answer": "The damage was serious, but repair was possible."
+    },
+    {
+      "hint": "Praca wymagała dużo cierpliwości i zaangażowania.",
+      "answer": "The work required a lot of patience and commitment."
+    },
+    {
+      "hint": "W końcu udało im się znaleźć rozwiązanie.",
+      "answer": "After all, they managed to find a solution."
+    },
+    {
+      "hint": "Zdobył fortunę dzięki swojej przedsiębiorczości.",
+      "answer": "He made a fortune through his entrepreneurship."
+    },
+    {
+      "hint": "To jest zrozumiałe, że czujesz się zmęczony.",
+      "answer": "It is understandable that you feel tired."
+    },
+    {
+      "hint": "Szczerze dziękuję za pomoc przy projekcie.",
+      "answer": "I sincerely thank you for your help with the project."
+    },
+    {
+      "hint": "Odcisk stopy na piasku wskazywał kierunek, w którym szedł.",
+      "answer": "The footprint in the sand showed the direction he walked."
+    },
+    {
+      "hint": "Szlochał cicho, gdy wspominał utratę przyjaciela.",
+      "answer": "He sobbed quietly while recalling the loss of a friend."
+    },
+    {
+      "hint": "Śledczy postanowili dokładnie zbadać sprawę.",
+      "answer": "The investigators decided to investigate the case thoroughly."
+    },
+    {
+      "hint": "Jego nagłe pojawienie się wywołało strach wśród ludzi.",
+      "answer": "His sudden appearance caused fright among the people."
+    },
+    {
+      "hint": "Fartuch kuchenny chronił ubranie przed zabrudzeniem.",
+      "answer": "The apron protected his clothes from getting dirty."
+    },
+    {
+      "hint": "Trochę się spóźnił, ale wszystko było w porządku.",
+      "answer": "He was slightly late, but everything was fine."
+    },
+    {
+      "hint": "Była pulchna, ale bardzo energiczna i radosna.",
+      "answer": "She was plump but very energetic and cheerful."
+    },
+    {
+      "hint": "Kontynuowali podróż mimo zmęczenia.",
+      "answer": "They proceeded with the journey despite being tired."
+    },
+    {
+      "hint": "Był zmieszany i nie wiedział, co powiedzieć.",
+      "answer": "He was confused and didn’t know what to say."
+    },
+    {
+      "hint": "Śledzili ślady stóp w lesie.",
+      "answer": "They followed the trail of footprints in the forest."
+    },
+    {
+      "hint": "Siedzieli w milczeniu, nie rozmawiając ze sobą.",
+      "answer": "They sat in silence, not speaking to each other."
+    },
+    {
+      "hint": "Na ziemi znaleziono niedopałek papierosa.",
+      "answer": "A cigarette butt was found on the ground."
+    },
+    {
+      "hint": "Węszył w powietrzu, czując zapach tytoniu.",
+      "answer": "He sniffed the air, smelling the tobacco."
+    },
+    {
+      "hint": "Potwierdził swoje uczestnictwo na spotkaniu.",
+      "answer": "He confirmed his attendance at the meeting."
+    },
+    {
+      "hint": "Nie należy wtrącać się w cudze sprawy.",
+      "answer": "Do not intrude into other people’s matters."
+    },
+    {
+      "hint": "Przedstawił swoją tożsamość przed wejściem do budynku.",
+      "answer": "He declared his identity before entering the building."
+    },
+    {
+      "hint": "Dokładne szczegóły projektu były zapisane w dokumentacji.",
+      "answer": "The exact details of the project were recorded in the documentation."
+    },
+    {
+      "hint": "Marka była dobrze znana w całym kraju.",
+      "answer": "The brand was well known across the country."
+    },
+    {
+      "hint": "Postanowił wziąć wolne od pracy w tym tygodniu.",
+      "answer": "He decided to take time off work this week."
+    },
+    {
+      "hint": "Poradził sobie z trudnym zadaniem samodzielnie.",
+      "answer": "He handled the difficult task on his own."
+    },
+    {
+      "hint": "Był zadowolony z efektów swojej pracy.",
+      "answer": "He was satisfied with the results of his work."
+    },
+    {
+      "hint": "Nie poddawaj się, nawet jeśli jest trudno.",
+      "answer": "Do not give up, even if it is difficult."
+    },
+    {
+      "hint": "Rzeczywiście, to była najlepsza decyzja, jaką mogli podjąć.",
+      "answer": "Indeed, it was the best decision they could make."
+    },
+    {
+      "hint": "Spotkanie jest zaplanowane na piątek po południu.",
+      "answer": "The meeting is scheduled for Friday afternoon."
+    },
+    {
+      "hint": "Poprosił o pomoc w wypełnieniu formularza.",
+      "answer": "He requested help to fill out the form."
+    },
+    {
+      "hint": "Odegrał istotną rolę w całym projekcie.",
+      "answer": "He played a part in the entire project."
+    },
+    {
+      "hint": "Ustawili pułapkę, aby złapać złodzieja.",
+      "answer": "They set a trap to catch the thief."
+    },
+    {
+      "hint": "Ukrył dokumenty w szufladzie, żeby nikt ich nie znalazł.",
+      "answer": "He hid the documents in the drawer so no one could find them."
+    },
+    {
+      "hint": "Nie wydawaj żadnego dźwięku, kiedy wchodzisz do pokoju.",
+      "answer": "Don’t make a sound when entering the room."
+    }
+  ],
+  "count": 73
+}

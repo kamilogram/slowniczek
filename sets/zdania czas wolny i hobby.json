@@ -1,0 +1,292 @@
+{
+  "name": "zdania czas wolny i hobby",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "W weekend lubimy chodzić na długie spacery po lesie.",
+      "answer": "On weekends we like to go for long walks in the forest."
+    },
+    {
+      "hint": "Kupiłem nową gitarę i uczę się grać swoje ulubione piosenki.",
+      "answer": "I bought a new guitar and I’m learning to play my favorite songs."
+    },
+    {
+      "hint": "Wieczorem obejrzymy razem film komediowy.",
+      "answer": "In the evening we will watch a comedy movie together."
+    },
+    {
+      "hint": "Uwielbiam czytać książki fantasy przed snem.",
+      "answer": "I love reading fantasy books before going to sleep."
+    },
+    {
+      "hint": "W sobotę idziemy zagrać w tenisa.",
+      "answer": "We are going to play tennis on Saturday."
+    },
+    {
+      "hint": "Chciałbym nauczyć się malować akwarelami.",
+      "answer": "I’d like to learn how to paint with watercolors."
+    },
+    {
+      "hint": "W niedzielę upiekliśmy razem ciasto dla znajomych.",
+      "answer": "On Sunday we baked a cake together for our friends."
+    },
+    {
+      "hint": "Lubię rozwiązywać krzyżówki w wolnym czasie.",
+      "answer": "I like solving crosswords in my free time."
+    },
+    {
+      "hint": "Spotykamy się co tydzień, żeby pograć w planszówki.",
+      "answer": "We meet every week to play board games."
+    },
+    {
+      "hint": "Uwielbiam podróżować i odkrywać nowe miejsca.",
+      "answer": "I love traveling and discovering new places."
+    },
+    {
+      "hint": "Chciałbym zapisać się na kurs fotografii.",
+      "answer": "I’d like to sign up for a photography course."
+    },
+    {
+      "hint": "Ostatnio dużo ćwiczę jogę w domu.",
+      "answer": "Lately I’ve been practicing yoga a lot at home."
+    },
+    {
+      "hint": "Mój brat uczy mnie grać w szachy.",
+      "answer": "My brother is teaching me how to play chess."
+    },
+    {
+      "hint": "W wolne wieczory lubimy słuchać muzyki jazzowej.",
+      "answer": "In free evenings we like to listen to jazz music."
+    },
+    {
+      "hint": "Mam kolekcję znaczków z różnych krajów.",
+      "answer": "I have a collection of stamps from different countries."
+    },
+    {
+      "hint": "Uwielbiamy chodzić do muzeów i galerii sztuki.",
+      "answer": "We love going to museums and art galleries."
+    },
+    {
+      "hint": "W weekend spróbuję nowego przepisu na makaron.",
+      "answer": "This weekend I’ll try a new pasta recipe."
+    },
+    {
+      "hint": "Każdego lata jeździmy na rowerze nad jezioro.",
+      "answer": "Every summer we ride bikes to the lake."
+    },
+    {
+      "hint": "Chciałbym nauczyć się tańczyć salsę.",
+      "answer": "I’d like to learn how to dance salsa."
+    },
+    {
+      "hint": "Uwielbiam grać w gry komputerowe z przyjaciółmi.",
+      "answer": "I love playing computer games with my friends."
+    },
+    {
+      "hint": "W wolnej chwili piszę krótkie opowiadania.",
+      "answer": "In my free time I write short stories."
+    },
+    {
+      "hint": "Moja żona piecze chleb jako hobby.",
+      "answer": "My wife bakes bread as a hobby."
+    },
+    {
+      "hint": "Chciałbym spróbować wspinaczki na ściance.",
+      "answer": "I’d like to try indoor climbing."
+    },
+    {
+      "hint": "Zaczęłam uczyć się gry na pianinie.",
+      "answer": "I’ve started learning to play the piano."
+    },
+    {
+      "hint": "W wakacje nauczyłem się pływać.",
+      "answer": "I learned to swim during the holidays."
+    },
+    {
+      "hint": "W każdą sobotę chodzimy na basen.",
+      "answer": "We go to the swimming pool every Saturday."
+    },
+    {
+      "hint": "Uwielbiam grać w siatkówkę na plaży.",
+      "answer": "I love playing volleyball on the beach."
+    },
+    {
+      "hint": "Często gramy w karty wieczorami.",
+      "answer": "We often play cards in the evenings."
+    },
+    {
+      "hint": "Chciałbym zacząć biegać regularnie.",
+      "answer": "I’d like to start running regularly."
+    },
+    {
+      "hint": "Uwielbiam robić zdjęcia przyrody.",
+      "answer": "I love taking pictures of nature."
+    },
+    {
+      "hint": "W niedzielę poszliśmy na koncert rockowy.",
+      "answer": "On Sunday we went to a rock concert."
+    },
+    {
+      "hint": "Zbieram muszle, kiedy jestem nad morzem.",
+      "answer": "I collect shells when I’m at the seaside."
+    },
+    {
+      "hint": "Moim hobby jest gotowanie dla przyjaciół.",
+      "answer": "My hobby is cooking for friends."
+    },
+    {
+      "hint": "Lubię majsterkować w garażu.",
+      "answer": "I like doing DIY projects in the garage."
+    },
+    {
+      "hint": "Wczoraj zagrałem pierwszy raz w golfa.",
+      "answer": "Yesterday I played golf for the first time."
+    },
+    {
+      "hint": "Moja siostra uczy się rysować portrety.",
+      "answer": "My sister is learning to draw portraits."
+    },
+    {
+      "hint": "Uwielbiam jeździć na nartach zimą.",
+      "answer": "I love skiing in the winter."
+    },
+    {
+      "hint": "Gram w drużynie amatorskiej w koszykówkę.",
+      "answer": "I play in an amateur basketball team."
+    },
+    {
+      "hint": "Co tydzień uczę się nowych przepisów.",
+      "answer": "Every week I learn new recipes."
+    },
+    {
+      "hint": "Lubię spędzać czas w ogrodzie, sadząc kwiaty.",
+      "answer": "I like spending time in the garden planting flowers."
+    },
+    {
+      "hint": "Zacząłem pisać bloga o podróżach.",
+      "answer": "I’ve started writing a travel blog."
+    },
+    {
+      "hint": "Uwielbiam słuchać muzyki klasycznej.",
+      "answer": "I love listening to classical music."
+    },
+    {
+      "hint": "W sobotę spotykamy się na meczu piłki nożnej.",
+      "answer": "On Saturday we are meeting for a football match."
+    },
+    {
+      "hint": "Moim hobby jest szydełkowanie.",
+      "answer": "My hobby is crocheting."
+    },
+    {
+      "hint": "Uczę się programować gry komputerowe.",
+      "answer": "I’m learning to program computer games."
+    },
+    {
+      "hint": "W wolnym czasie gram na ukulele.",
+      "answer": "In my free time I play the ukulele."
+    },
+    {
+      "hint": "Uwielbiam piec ciasteczka dla znajomych.",
+      "answer": "I love baking cookies for my friends."
+    },
+    {
+      "hint": "Chciałbym nauczyć się jeździć konno.",
+      "answer": "I’d like to learn to ride a horse."
+    },
+    {
+      "hint": "W każdą środę chodzę na lekcje tańca.",
+      "answer": "Every Wednesday I go to dance lessons."
+    },
+    {
+      "hint": "Zaczęłam kolekcjonować rośliny doniczkowe.",
+      "answer": "I’ve started collecting houseplants."
+    },
+    {
+      "hint": "Lubię grać w badmintona z sąsiadami.",
+      "answer": "I like playing badminton with my neighbors."
+    },
+    {
+      "hint": "Moim hobby jest pisanie poezji.",
+      "answer": "My hobby is writing poetry."
+    },
+    {
+      "hint": "Uwielbiam podróżować pociągiem.",
+      "answer": "I love traveling by train."
+    },
+    {
+      "hint": "W sobotę upiekliśmy pizzę w domu.",
+      "answer": "On Saturday we baked pizza at home."
+    },
+    {
+      "hint": "Moim hobby jest zbieranie monet.",
+      "answer": "My hobby is collecting coins."
+    },
+    {
+      "hint": "Lubię malować krajobrazy akrylem.",
+      "answer": "I like painting landscapes with acrylics."
+    },
+    {
+      "hint": "Uwielbiam spędzać czas na łódce.",
+      "answer": "I love spending time on a boat."
+    },
+    {
+      "hint": "Zaczęliśmy uczyć się gry w brydża.",
+      "answer": "We’ve started learning to play bridge."
+    },
+    {
+      "hint": "Moim hobby jest bieganie w maratonach.",
+      "answer": "My hobby is running marathons."
+    },
+    {
+      "hint": "Chciałbym nauczyć się piec chleb na zakwasie.",
+      "answer": "I’d like to learn to bake sourdough bread."
+    },
+    {
+      "hint": "Uwielbiam grać w gry strategiczne.",
+      "answer": "I love playing strategy games."
+    },
+    {
+      "hint": "Wolę spędzać czas na świeżym powietrzu niż w domu.",
+      "answer": "I prefer spending time outdoors rather than at home."
+    },
+    {
+      "hint": "Moim hobby jest fotografia uliczna.",
+      "answer": "My hobby is street photography."
+    },
+    {
+      "hint": "Uwielbiam jeździć na rolkach po parku.",
+      "answer": "I love rollerblading in the park."
+    },
+    {
+      "hint": "Zbieram książki kucharskie z różnych krajów.",
+      "answer": "I collect cookbooks from different countries."
+    },
+    {
+      "hint": "Lubię chodzić na przedstawienia teatralne.",
+      "answer": "I like going to theatre performances."
+    },
+    {
+      "hint": "Moim hobby jest gra na perkusji.",
+      "answer": "My hobby is playing the drums."
+    },
+    {
+      "hint": "Uwielbiam jeździć na snowboardzie zimą.",
+      "answer": "I love snowboarding in the winter."
+    },
+    {
+      "hint": "Chciałbym nauczyć się origami.",
+      "answer": "I’d like to learn origami."
+    },
+    {
+      "hint": "Moim hobby jest gotowanie kuchni azjatyckiej.",
+      "answer": "My hobby is cooking Asian cuisine."
+    },
+    {
+      "hint": "Uwielbiam grać w gry RPG z przyjaciółmi.",
+      "answer": "I love playing RPG games with my friends."
+    }
+  ],
+  "count": 71
+}

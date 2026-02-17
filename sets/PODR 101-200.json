@@ -1,0 +1,408 @@
+{
+  "name": "PODR 101-200",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Kot schował się pod stołem, gdy usłyszał głośny hałas.",
+      "answer": "The cat hid beneath the table when it heard a loud noise."
+    },
+    {
+      "hint": "Z pękniętej rury z wodą kapała woda na podłogę.",
+      "answer": "Water was dripping from the broken water pipe onto the floor."
+    },
+    {
+      "hint": "Wydawało się niemożliwe, aby ukończyć to zadanie na czas.",
+      "answer": "It seemed impossible to finish the task on time."
+    },
+    {
+      "hint": "Zatrzymał się, by uważnie obserwować zachowanie ludzi.",
+      "answer": "He stopped to observe the behaviour of the people."
+    },
+    {
+      "hint": "Słońce powoli zachodziło za horyzont.",
+      "answer": "The sun was slowly going down behind the horizon."
+    },
+    {
+      "hint": "Wszystko wróciło do normy po krótkim zamieszaniu.",
+      "answer": "Everything returned to normal after the brief confusion."
+    },
+    {
+      "hint": "Rzuć okiem na ten dokument, zanim go wyślemy.",
+      "answer": "Take a look at this document before we send it."
+    },
+    {
+      "hint": "Sprawdził pocztę zaraz po powrocie do domu.",
+      "answer": "He checked his mail as soon as he got home."
+    },
+    {
+      "hint": "Jej pomocna rada bardzo ułatwiła sytuację.",
+      "answer": "Her helpful advice made the situation much easier."
+    },
+    {
+      "hint": "W międzyczasie postanowili przygotować plan awaryjny.",
+      "answer": "In the meantime, they decided to prepare a backup plan."
+    },
+    {
+      "hint": "Firma stanęła w obliczu poważnego kryzysu finansowego.",
+      "answer": "The company faced a serious financial crisis."
+    },
+    {
+      "hint": "Miał dziwne uczucie, że coś jest nie tak.",
+      "answer": "He had a strange feeling that something was wrong."
+    },
+    {
+      "hint": "Dostała aktualizację dotyczącą stanu projektu.",
+      "answer": "She received an update about the status of the project."
+    },
+    {
+      "hint": "Jeśli nie zdąży, może mieć poważne kłopoty.",
+      "answer": "If he does not make it in time, he may be in trouble."
+    },
+    {
+      "hint": "Byli już w drodze, gdy zadzwonił telefon.",
+      "answer": "They were already on the way when the phone rang."
+    },
+    {
+      "hint": "Telegram dotarł późnym wieczorem.",
+      "answer": "The telegram arrived late in the evening."
+    },
+    {
+      "hint": "Postanowili zjeść kolację w spokojnej restauracji.",
+      "answer": "They decided to dine in a quiet restaurant."
+    },
+    {
+      "hint": "Jest właścicielem małej firmy od wielu lat.",
+      "answer": "He has owned a small business for many years."
+    },
+    {
+      "hint": "Kupili podstawowe produkty w lokalnym sklepie ogólnym.",
+      "answer": "They bought basic supplies at the local general store."
+    },
+    {
+      "hint": "Zachowywał się tak, jakby nic się nie stało.",
+      "answer": "He acted as if nothing had happened."
+    },
+    {
+      "hint": "To był naprawdę genialny pomysł.",
+      "answer": "That was a brilliant idea."
+    },
+    {
+      "hint": "Czuła się pełna energii po porannym spacerze.",
+      "answer": "She felt energetic after the morning walk."
+    },
+    {
+      "hint": "Występował pewnie i bez wahania.",
+      "answer": "He spoke in a confident manner."
+    },
+    {
+      "hint": "Postanowili wyjaśnić sprawę jeszcze tego samego dnia.",
+      "answer": "They decided to clear the matter on the same day."
+    },
+    {
+      "hint": "Daj mi znać, gdy tylko dotrzesz na miejsce.",
+      "answer": "Let me know as soon as you arrive."
+    },
+    {
+      "hint": "Krótko potem wydarzyło się coś nieoczekiwanego.",
+      "answer": "Shortly afterwards, something unexpected happened."
+    },
+    {
+      "hint": "Regularna praktyka pomogła mu się poprawić.",
+      "answer": "Regular practice helped him improve."
+    },
+    {
+      "hint": "Wieczór był spokojny i bez zakłóceń.",
+      "answer": "The evening was peaceful and quiet."
+    },
+    {
+      "hint": "Starał się zachować racjonalne podejście do problemu.",
+      "answer": "He tried to take a rational approach to the problem."
+    },
+    {
+      "hint": "Musiał zmierzyć się ze swoim prawdziwym ja.",
+      "answer": "He had to confront his true self."
+    },
+    {
+      "hint": "Paczka dotarła wcześniej niż się spodziewano.",
+      "answer": "The package arrived earlier than expected."
+    },
+    {
+      "hint": "Dał znak ręką, żeby zaczęli.",
+      "answer": "He motioned for them to begin."
+    },
+    {
+      "hint": "Powiedział to cichym głosem, żeby nikt nie usłyszał.",
+      "answer": "He said it in a low voice so no one would hear."
+    },
+    {
+      "hint": "Podejrzany był stale obserwowany.",
+      "answer": "The suspect was kept under watch."
+    },
+    {
+      "hint": "Zrobiła to dyskretnie, nie zwracając na siebie uwagi.",
+      "answer": "She did it discreetly, without drawing attention."
+    },
+    {
+      "hint": "Weź parasol na wypadek, gdyby zaczęło padać.",
+      "answer": "Take an umbrella in case it starts raining."
+    },
+    {
+      "hint": "Zbladł, gdy usłyszał tę wiadomość.",
+      "answer": "He turned pale when he heard the news."
+    },
+    {
+      "hint": "Wzruszył ramionami, nie wiedząc, co odpowiedzieć.",
+      "answer": "He shrugged, not knowing what to say."
+    },
+    {
+      "hint": "A tak przy okazji, jutro mnie nie będzie.",
+      "answer": "By the way, I will not be here tomorrow."
+    },
+    {
+      "hint": "Ciężki łańcuch wisiał na bramie.",
+      "answer": "A heavy chain hung on the gate."
+    },
+    {
+      "hint": "Policja podejrzewała go o udział w zdarzeniu.",
+      "answer": "The police suspected him of being involved."
+    },
+    {
+      "hint": "Pudełko zawierało stare dokumenty.",
+      "answer": "The box contained old documents."
+    },
+    {
+      "hint": "Pracownik podpisał umowę pierwszego dnia pracy.",
+      "answer": "The employee signed the contract on the first day."
+    },
+    {
+      "hint": "Woźnica zatrzymał konie przed domem.",
+      "answer": "The coachman stopped the horses in front of the house."
+    },
+    {
+      "hint": "Przyznał się do popełnionego błędu.",
+      "answer": "He admitted that he had made a mistake."
+    },
+    {
+      "hint": "Pozostał w pozycji klęczącej przez kilka minut.",
+      "answer": "He remained in a kneeling position for several minutes."
+    },
+    {
+      "hint": "Poruszał się niezdarnie po śliskiej podłodze.",
+      "answer": "He moved clumsily across the slippery floor."
+    },
+    {
+      "hint": "Postać nagle zniknęła w tłumie.",
+      "answer": "The figure suddenly disappeared into the crowd."
+    },
+    {
+      "hint": "Ciemność utrudniała dostrzeżenie szczegółów.",
+      "answer": "The darkness made it hard to see any details."
+    },
+    {
+      "hint": "Szybko opuścił budynek bocznym wyjściem.",
+      "answer": "He quickly exited the building through the side door."
+    },
+    {
+      "hint": "W tym miejscu czuli się bezpiecznie.",
+      "answer": "They felt safe in that place."
+    },
+    {
+      "hint": "Dzielił ich spory dystans.",
+      "answer": "There was a considerable distance between them."
+    },
+    {
+      "hint": "Powoli ruszył w stronę domu.",
+      "answer": "He began to make his way towards the house."
+    },
+    {
+      "hint": "Wybrała najlepszą opcję z dostępnych.",
+      "answer": "She selected the best option available."
+    },
+    {
+      "hint": "Znalazł dobrą kryjówkę w lesie.",
+      "answer": "He found a good hiding place in the forest."
+    },
+    {
+      "hint": "Samochód poruszał się z dużą prędkością.",
+      "answer": "The car was moving at high speed."
+    },
+    {
+      "hint": "Ten widok zapadł mu w pamięć.",
+      "answer": "The sight stayed in his memory."
+    },
+    {
+      "hint": "Co do licha tu się dzieje?",
+      "answer": "What on earth is going on here?"
+    },
+    {
+      "hint": "Był jak zahipnotyzowany tym przedstawieniem.",
+      "answer": "He seemed hypnotised by the performance."
+    },
+    {
+      "hint": "Gałąź złamała się pod ciężarem śniegu.",
+      "answer": "The branch broke under the weight of the snow."
+    },
+    {
+      "hint": "Jej entuzjazm był zaraźliwy.",
+      "answer": "Her enthusiasm was contagious."
+    },
+    {
+      "hint": "Szybko nudził się rutynowymi zadaniami.",
+      "answer": "He got bored with routine tasks quickly."
+    },
+    {
+      "hint": "Upadł na ziemię poślizgnąwszy się.",
+      "answer": "He slipped and fell to the ground."
+    },
+    {
+      "hint": "Konie stały spokojnie w stajni.",
+      "answer": "The horses stood calmly in the stable."
+    },
+    {
+      "hint": "Związał drzwi łańcuchem.",
+      "answer": "He chained the door shut."
+    },
+    {
+      "hint": "Na środku placu stał wysoki słup.",
+      "answer": "A tall pole stood in the middle of the square."
+    },
+    {
+      "hint": "Był mistrzem w swoim fachu.",
+      "answer": "He was a master of his craft."
+    },
+    {
+      "hint": "Powoli zbliżył się do drzwi.",
+      "answer": "He approached the door slowly."
+    },
+    {
+      "hint": "Pozostał obojętny na jej słowa.",
+      "answer": "He remained indifferent to her words."
+    },
+    {
+      "hint": "Dzieci krążyły wokół ogniska.",
+      "answer": "The children circled around the campfire."
+    },
+    {
+      "hint": "Chwycił ją za rękę, zanim upadła.",
+      "answer": "He grabbed her hand before she fell."
+    },
+    {
+      "hint": "Wziął garść piasku i puścił ją wolno.",
+      "answer": "He took a handful of sand and let it fall."
+    },
+    {
+      "hint": "Rzucił kamień w stronę rzeki.",
+      "answer": "He threw a stone towards the river."
+    },
+    {
+      "hint": "Niestety, było już za późno.",
+      "answer": "Unfortunately, it was already too late."
+    },
+    {
+      "hint": "Zaczął wariować pod wpływem stresu.",
+      "answer": "He began to go mad under the pressure."
+    },
+    {
+      "hint": "Pies zawarczał ostrzegawczo.",
+      "answer": "The dog growled in warning."
+    },
+    {
+      "hint": "Jego głos był szorstki i nieprzyjemny.",
+      "answer": "His voice sounded coarse and unpleasant."
+    },
+    {
+      "hint": "Czekała nerwowo na odpowiedź.",
+      "answer": "She waited anxiously for a response."
+    },
+    {
+      "hint": "Zachłysnął się powietrzem z zaskoczenia.",
+      "answer": "He gasped in surprise."
+    },
+    {
+      "hint": "Wyglądał jak ktoś, kogo już wcześniej widziała.",
+      "answer": "He looked like someone she had seen before."
+    },
+    {
+      "hint": "Musiał dokładnie to przemyśleć, żeby znaleźć rozwiązanie.",
+      "answer": "He had to work it out carefully to find a solution."
+    },
+    {
+      "hint": "Jego szczęka opadła ze zdumienia.",
+      "answer": "His jaw dropped in amazement."
+    },
+    {
+      "hint": "Lekarz potwierdził diagnozę.",
+      "answer": "The doctor confirmed the diagnosis."
+    },
+    {
+      "hint": "Położyła książkę na stoliku nocnym.",
+      "answer": "She placed the book on the nightstand."
+    },
+    {
+      "hint": "Powoli dochodził do siebie po chorobie.",
+      "answer": "He was slowly recovering from the illness."
+    },
+    {
+      "hint": "Uraz wymagał długiego leczenia.",
+      "answer": "The injury required long-term treatment."
+    },
+    {
+      "hint": "Czuł głęboki niepokój po tym zdarzeniu.",
+      "answer": "He felt deep distress after the incident."
+    },
+    {
+      "hint": "Błagał ją, by dała mu jeszcze jedną szansę.",
+      "answer": "He begged her to give him another chance."
+    },
+    {
+      "hint": "Jej reputacja została nienaruszona.",
+      "answer": "Her reputation remained intact."
+    },
+    {
+      "hint": "Skandal zrujnował jego karierę.",
+      "answer": "The scandal ruined his career."
+    },
+    {
+      "hint": "Sprawa była bardziej skomplikowana, niż się wydawało.",
+      "answer": "The case was more complicated than it seemed."
+    },
+    {
+      "hint": "Strajk sparaliżował miasto na kilka dni.",
+      "answer": "The strike paralysed the city for several days."
+    },
+    {
+      "hint": "Czekał cierpliwie na swoją kolej.",
+      "answer": "He waited patiently for his turn."
+    },
+    {
+      "hint": "Przeszukali budynek w poszukiwaniu dowodów.",
+      "answer": "They searched the building for evidence."
+    },
+    {
+      "hint": "Stary stół był wykonany z drewna.",
+      "answer": "The old table was made of wooden material."
+    },
+    {
+      "hint": "Mocno trzymał linę, żeby nie spaść.",
+      "answer": "He held the rope tightly to avoid falling."
+    },
+    {
+      "hint": "Wsunęła klucz do zamka.",
+      "answer": "She inserted the key into the lock."
+    },
+    {
+      "hint": "Na stole leżała malutka śrubka.",
+      "answer": "A tiny screw lay on the table."
+    },
+    {
+      "hint": "Drzwi były zamknięte na zamek.",
+      "answer": "The door was secured with a lock."
+    },
+    {
+      "hint": "Przelał płyn do szklanki.",
+      "answer": "He poured the liquid into the glass."
+    }
+  ],
+  "count": 100
+}

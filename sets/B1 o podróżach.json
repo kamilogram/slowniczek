@@ -1,0 +1,308 @@
+{
+  "name": "B1 o podróżach",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Muszę zarezerwować bilet na pociąg do Gdańska.",
+      "answer": "I need to book a ticket for the train to Gdańsk."
+    },
+    {
+      "hint": "Pociąg ma odjechać o 9:00 rano.",
+      "answer": "The train is scheduled to depart at 9:00 AM."
+    },
+    {
+      "hint": "Znaleźliśmy wolny przedział do siedzenia.",
+      "answer": "We found an empty compartment to sit in."
+    },
+    {
+      "hint": "Zawsze sprawdzaj peron przed wejściem do pociągu.",
+      "answer": "Always check the train platform before boarding."
+    },
+    {
+      "hint": "Ten pociąg oferuje pasażerom darmowe Wi-Fi.",
+      "answer": "This train offers free Wi-Fi for passengers."
+    },
+    {
+      "hint": "Konduktor sprawdził bilety wszystkim pasażerom.",
+      "answer": "The ticket inspector checked everyone's passes."
+    },
+    {
+      "hint": "Jak długa jest podróż stąd do Krakowa?",
+      "answer": "How long is the journey from here to Kraków?"
+    },
+    {
+      "hint": "Wolę miejsce przy oknie, aby oglądać krajobrazy.",
+      "answer": "I prefer the window seat to see the landscape."
+    },
+    {
+      "hint": "Pociąg wkrótce przyjedzie na stację główną.",
+      "answer": "The train will arrive at the main station soon."
+    },
+    {
+      "hint": "Wiesz, gdzie znajduje się wagon restauracyjny?",
+      "answer": "Do you know where the dining car is located?"
+    },
+    {
+      "hint": "Mieliśmy niewielkie opóźnienie z powodu złej pogody.",
+      "answer": "We had a small delay due to bad weather."
+    },
+    {
+      "hint": "Kupiłem bilet powrotny dla wygody.",
+      "answer": "I bought a return ticket for convenience."
+    },
+    {
+      "hint": "Zawsze trzymaj bagaż blisko siebie.",
+      "answer": "Always keep your luggage close to you."
+    },
+    {
+      "hint": "Komunikat na stacji był trudny do usłyszenia.",
+      "answer": "The station announcement was difficult to hear."
+    },
+    {
+      "hint": "Musimy przesiąść się w Poznaniu.",
+      "answer": "We must change trains in Poznań."
+    },
+    {
+      "hint": "Rozkład jazdy pociągów jest dostępny online.",
+      "answer": "The train schedule is available online."
+    },
+    {
+      "hint": "Lubię czytać książkę podczas długiej podróży.",
+      "answer": "I like to read a book during a long commute."
+    },
+    {
+      "hint": "Wagon pierwszej klasy jest bardziej komfortowy.",
+      "answer": "The first-class carriage is more comfortable."
+    },
+    {
+      "hint": "Proszę czekać za żółtą linią na peronie.",
+      "answer": "Please wait behind the yellow line on the platform."
+    },
+    {
+      "hint": "Pociąg ekspresowy jest znacznie szybszy niż lokalny.",
+      "answer": "The express train is much faster than the local one."
+    },
+    {
+      "hint": "Spóźniłem się na pociąg przesiadkowy o dwie minuty.",
+      "answer": "I missed my connecting train by two minutes."
+    },
+    {
+      "hint": "Pociąg był w pełni zarezerwowany na weekend.",
+      "answer": "The train was fully booked for the weekend."
+    },
+    {
+      "hint": "Pamiętaj, aby skasować bilet przed podróżą.",
+      "answer": "Make sure to validate your ticket before travelling."
+    },
+    {
+      "hint": "Zdecydowaliśmy się na nocny pociąg sypialny.",
+      "answer": "We decided to take the sleeper train overnight."
+    },
+    {
+      "hint": "Czy mogę zostawić rower w przedziale bagażowym?",
+      "answer": "Can I leave my bike in the luggage compartment?"
+    },
+    {
+      "hint": "Musimy odprawić się na lotnisku dwie godziny wcześniej.",
+      "answer": "We need to check in at the airport two hours early."
+    },
+    {
+      "hint": "Muszę pokazać paszport i kartę pokładową.",
+      "answer": "I have to show my passport and boarding pass."
+    },
+    {
+      "hint": "Numer lotu jest wyświetlany na ekranie.",
+      "answer": "The flight number is displayed on the screen."
+    },
+    {
+      "hint": "Czy moja torba jest za ciężka na bagaż rejestrowany?",
+      "answer": "Is my bag too heavy for checked baggage?"
+    },
+    {
+      "hint": "Mam przy sobie tylko małą torbę podręczną.",
+      "answer": "I only have a small carry-on bag with me."
+    },
+    {
+      "hint": "Samolot wystartuje za piętnaście minut.",
+      "answer": "The plane will take off in fifteen minutes."
+    },
+    {
+      "hint": "Mam nadzieję, że nie doświadczymy zbyt dużych turbulencji.",
+      "answer": "I hope we don't experience too much turbulence."
+    },
+    {
+      "hint": "Gdzie jest strefa kontroli bezpieczeństwa?",
+      "answer": "Where is the security check area?"
+    },
+    {
+      "hint": "Mój numer miejsca to 14A, blisko skrzydła.",
+      "answer": "My seat number is 14A, near the wing."
+    },
+    {
+      "hint": "Poproszono nas o zapięcie pasów bezpieczeństwa.",
+      "answer": "We were asked to fasten our seat belts."
+    },
+    {
+      "hint": "Stewardessa podała nam posiłek.",
+      "answer": "The flight attendant served us a meal."
+    },
+    {
+      "hint": "Mieliśmy trzygodzinną przesiadkę we Frankfurcie.",
+      "answer": "We had a three-hour stopover in Frankfurt."
+    },
+    {
+      "hint": "Kiedy samolot wyląduje w Nowym Jorku?",
+      "answer": "When will the plane land in New York?"
+    },
+    {
+      "hint": "Bramka odlotu zmieniła się w ostatniej chwili.",
+      "answer": "The departure gate changed at the last minute."
+    },
+    {
+      "hint": "Nie zapomnij odwiedzić sklepu bezcłowego.",
+      "answer": "Don't forget to visit the duty-free shop."
+    },
+    {
+      "hint": "Ważne jest, aby pozostać nawodnionym podczas lotu.",
+      "answer": "It is important to stay hydrated during the flight."
+    },
+    {
+      "hint": "Po przylocie musisz przejść przez odprawę celną.",
+      "answer": "You must go through customs after arriving."
+    },
+    {
+      "hint": "Mój przyjaciel odebrał mnie w hali przylotów.",
+      "answer": "My friend picked me up at the arrivals hall."
+    },
+    {
+      "hint": "Samolot szybko osiągnął dużą wysokość.",
+      "answer": "The plane reached a high altitude quickly."
+    },
+    {
+      "hint": "Proszę wyłączyć wszystkie urządzenia elektroniczne.",
+      "answer": "Please switch off all electronic devices."
+    },
+    {
+      "hint": "Pilot ogłosił, że lecimy stabilnie.",
+      "answer": "The pilot announced that we were cruising smoothly."
+    },
+    {
+      "hint": "Musieliśmy długo czekać na odbiór bagażu.",
+      "answer": "We had to wait a long time at the baggage claim."
+    },
+    {
+      "hint": "Zaproponowano nam bezpłatny posiłek na pokładzie.",
+      "answer": "They offered us a complimentary in-flight meal."
+    },
+    {
+      "hint": "Czy pamiętałeś, aby wydrukować bilet elektroniczny?",
+      "answer": "Did you remember to print your e-ticket?"
+    },
+    {
+      "hint": "Musisz zadeklarować wszystkie przedmioty celnikowi.",
+      "answer": "You must declare all items to the border control officer."
+    },
+    {
+      "hint": "Musimy zatankować przed odjazdem.",
+      "answer": "We need to fill up the tank before we leave."
+    },
+    {
+      "hint": "Sprawdź ciśnienie w oponach przed długą jazdą.",
+      "answer": "Check the tyre pressure before a long drive."
+    },
+    {
+      "hint": "Zawsze miej przy sobie prawo jazdy.",
+      "answer": "Always keep your driving license with you."
+    },
+    {
+      "hint": "Użyliśmy GPS, aby znaleźć właściwą trasę.",
+      "answer": "We used a GPS to find the correct route."
+    },
+    {
+      "hint": "Autostrada była bardzo zatłoczona tego ranka.",
+      "answer": "The motorway was very busy this morning."
+    },
+    {
+      "hint": "Zróbmy przerwę na następnej stacji obsługi.",
+      "answer": "Let's take a break at the next service station."
+    },
+    {
+      "hint": "Mam nadzieję, że nie utknęliśmy w korku.",
+      "answer": "I hope we don't get stuck in a traffic jam."
+    },
+    {
+      "hint": "Ograniczenie prędkości wynosi tu 120 km/h.",
+      "answer": "The limit on the speed limit here is 120 km/h."
+    },
+    {
+      "hint": "Potrzebujemy mapy drogowej na wypadek awarii GPS.",
+      "answer": "We need a road map in case the GPS fails."
+    },
+    {
+      "hint": "Mój samochód ma bardzo wygodne tylne siedzenia.",
+      "answer": "My car has very comfortable back seats."
+    },
+    {
+      "hint": "Zatrzymaliśmy się, by podziwiać widoki po drodze.",
+      "answer": "We stopped to admire the scenery along the way."
+    },
+    {
+      "hint": "Ile wynosi opłata za przejazd tą drogą?",
+      "answer": "How much is the toll on this road?"
+    },
+    {
+      "hint": "Bądź ostrożny podczas jazdy po oblodzonych drogach.",
+      "answer": "Be careful when driving on icy roads."
+    },
+    {
+      "hint": "Zdecydowaliśmy się wypożyczyć samochód na weekendowy wyjazd.",
+      "answer": "We decided to rent a car for the weekend trip."
+    },
+    {
+      "hint": "Upewnij się, że ubezpieczenie samochodu jest aktualne.",
+      "answer": "Make sure the car insurance is up to date."
+    },
+    {
+      "hint": "Musimy znaleźć miejsce do zaparkowania samochodu.",
+      "answer": "We need to find a place to park the car."
+    },
+    {
+      "hint": "Światła właśnie zmieniły się na zielone.",
+      "answer": "The traffic lights just turned green."
+    },
+    {
+      "hint": "Zawsze przestrzegaj znaków drogowych dla bezpieczeństwa.",
+      "answer": "Always obey the road signs for safety."
+    },
+    {
+      "hint": "Niebezpiecznie jest wyprzedzać na zakręcie.",
+      "answer": "It is dangerous to overtake on a bend."
+    },
+    {
+      "hint": "Moja siostra jest bardzo dobrym kierowcą.",
+      "answer": "My sister is a very good driver."
+    },
+    {
+      "hint": "Stacja benzynowa jest tuż za rogiem.",
+      "answer": "The petrol station is just around the corner."
+    },
+    {
+      "hint": "Przez godzinę jechaliśmy drogą wzdłuż wybrzeża.",
+      "answer": "We followed the coastal road for an hour."
+    },
+    {
+      "hint": "Nie zapomnij zabrać apteczki pierwszej pomocy.",
+      "answer": "Don't forget to bring a first-aid kit."
+    },
+    {
+      "hint": "Znaleźliśmy świetne miejsce parkingowe w pobliżu plaży.",
+      "answer": "We found a great parking spot near the beach."
+    },
+    {
+      "hint": "Całkowity przebieg trasy wyniósł 500 km.",
+      "answer": "The total mileage for the trip was 500 km."
+    }
+  ],
+  "count": 75
+}

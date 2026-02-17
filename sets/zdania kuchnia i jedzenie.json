@@ -1,0 +1,300 @@
+{
+  "name": "zdania kuchnia i jedzenie",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Czy zrobiłeś dziś kawę?",
+      "answer": "Did you make coffee today?"
+    },
+    {
+      "hint": "Zapomniałam kupić mleko do płatków.",
+      "answer": "I forgot to buy milk for the cereal."
+    },
+    {
+      "hint": "Możesz obrać ziemniaki na obiad?",
+      "answer": "Can you peel the potatoes for dinner?"
+    },
+    {
+      "hint": "Ta zupa potrzebuje więcej soli.",
+      "answer": "This soup needs more salt."
+    },
+    {
+      "hint": "Który nóż jest najlepszy do krojenia chleba?",
+      "answer": "Which knife is best for cutting bread?"
+    },
+    {
+      "hint": "Czy włożyłeś ciasto do piekarnika?",
+      "answer": "Did you put the cake in the oven?"
+    },
+    {
+      "hint": "To mięso jest jeszcze surowe.",
+      "answer": "This meat is still raw."
+    },
+    {
+      "hint": "Kupiłam świeże pomidory na sałatkę.",
+      "answer": "I bought fresh tomatoes for the salad."
+    },
+    {
+      "hint": "Nie zapomnij umyć warzyw przed gotowaniem.",
+      "answer": "Don't forget to wash the vegetables before cooking."
+    },
+    {
+      "hint": "Czy lubisz makaron al dente?",
+      "answer": "Do you like pasta al dente?"
+    },
+    {
+      "hint": "Potrzebujemy więcej oliwy z oliwek.",
+      "answer": "We need more olive oil."
+    },
+    {
+      "hint": "Chcesz spróbować mojego nowego przepisu na naleśniki?",
+      "answer": "Do you want to try my new pancake recipe?"
+    },
+    {
+      "hint": "Ten ser pachnie naprawdę intensywnie.",
+      "answer": "This cheese smells really strong."
+    },
+    {
+      "hint": "Czy mamy jeszcze jajka w lodówce?",
+      "answer": "Do we still have eggs in the fridge?"
+    },
+    {
+      "hint": "Ugotowałem ryż na dzisiejszy obiad.",
+      "answer": "I cooked rice for today's dinner."
+    },
+    {
+      "hint": "Nie dodawaj tyle cukru do herbaty.",
+      "answer": "Don't add so much sugar to the tea."
+    },
+    {
+      "hint": "Możesz nakryć stół?",
+      "answer": "Can you set the table?"
+    },
+    {
+      "hint": "Ta kawa jest za gorzka.",
+      "answer": "This coffee is too bitter."
+    },
+    {
+      "hint": "Podaj mi proszę łyżkę.",
+      "answer": "Please pass me a spoon."
+    },
+    {
+      "hint": "Kupiłeś pieczywo na śniadanie?",
+      "answer": "Did you buy bread for breakfast?"
+    },
+    {
+      "hint": "Woda na makaron już się gotuje.",
+      "answer": "The water for the pasta is already boiling."
+    },
+    {
+      "hint": "Ten nóż jest zbyt tępy.",
+      "answer": "This knife is too dull."
+    },
+    {
+      "hint": "Dodałem za dużo pieprzu.",
+      "answer": "I added too much pepper."
+    },
+    {
+      "hint": "Czy chcesz spróbować tej zupy?",
+      "answer": "Do you want to try this soup?"
+    },
+    {
+      "hint": "Zupa jest za gorąca, żeby ją teraz jeść.",
+      "answer": "The soup is too hot to eat right now."
+    },
+    {
+      "hint": "Możesz otworzyć butelkę wina?",
+      "answer": "Can you open the bottle of wine?"
+    },
+    {
+      "hint": "Nie mamy już cebuli.",
+      "answer": "We don't have any onions left."
+    },
+    {
+      "hint": "Ten deser jest naprawdę słodki.",
+      "answer": "This dessert is really sweet."
+    },
+    {
+      "hint": "Kup świeżą rybę na kolację.",
+      "answer": "Buy fresh fish for dinner."
+    },
+    {
+      "hint": "Podgrzej zupę jeszcze raz.",
+      "answer": "Heat up the soup again."
+    },
+    {
+      "hint": "Przynieś widelec z szuflady.",
+      "answer": "Bring a fork from the drawer."
+    },
+    {
+      "hint": "Ta pizza smakuje jak we Włoszech.",
+      "answer": "This pizza tastes like in Italy."
+    },
+    {
+      "hint": "Umyj jabłka przed jedzeniem.",
+      "answer": "Wash the apples before eating."
+    },
+    {
+      "hint": "Chcesz kawałek ciasta czekoladowego?",
+      "answer": "Do you want a piece of chocolate cake?"
+    },
+    {
+      "hint": "Nie przypal naleśników!",
+      "answer": "Don't burn the pancakes!"
+    },
+    {
+      "hint": "Możesz podać mi sól i pieprz?",
+      "answer": "Can you pass me the salt and pepper?"
+    },
+    {
+      "hint": "Kupmy dziś coś na wynos.",
+      "answer": "Let's buy something takeaway today."
+    },
+    {
+      "hint": "Kto zmywa naczynia po kolacji?",
+      "answer": "Who washes the dishes after dinner?"
+    },
+    {
+      "hint": "Zamówiłam sushi na wieczór.",
+      "answer": "I ordered sushi for the evening."
+    },
+    {
+      "hint": "Nie jedz tyle słodyczy przed obiadem.",
+      "answer": "Don't eat so many sweets before dinner."
+    },
+    {
+      "hint": "Zróbmy sałatkę z ogórkiem i pomidorem.",
+      "answer": "Let's make a salad with cucumber and tomato."
+    },
+    {
+      "hint": "Możesz pokroić chleb?",
+      "answer": "Can you slice the bread?"
+    },
+    {
+      "hint": "Uwielbiam zapach świeżo upieczonego chleba.",
+      "answer": "I love the smell of freshly baked bread."
+    },
+    {
+      "hint": "Ta herbata pachnie cytryną.",
+      "answer": "This tea smells like lemon."
+    },
+    {
+      "hint": "Kupiłem ci czekoladę, którą lubisz.",
+      "answer": "I bought you the chocolate you like."
+    },
+    {
+      "hint": "Czy chcesz jeszcze kawałek sera?",
+      "answer": "Do you want another piece of cheese?"
+    },
+    {
+      "hint": "Pamiętaj, żeby wyłączyć piekarnik.",
+      "answer": "Remember to turn off the oven."
+    },
+    {
+      "hint": "Nie mam ochoty gotować dzisiaj.",
+      "answer": "I don't feel like cooking today."
+    },
+    {
+      "hint": "Możemy zjeść kolację na balkonie.",
+      "answer": "We can have dinner on the balcony."
+    },
+    {
+      "hint": "Czy przygotowałaś śniadanie?",
+      "answer": "Did you prepare breakfast?"
+    },
+    {
+      "hint": "Zróbmy herbatę z miodem i cytryną.",
+      "answer": "Let's make tea with honey and lemon."
+    },
+    {
+      "hint": "Nie mam siły zmywać dzisiaj naczyń.",
+      "answer": "I don't have the energy to wash the dishes today."
+    },
+    {
+      "hint": "Możesz mi podać tarkę do sera?",
+      "answer": "Can you hand me the cheese grater?"
+    },
+    {
+      "hint": "Nie jedz tak szybko, bo się zakrztusisz.",
+      "answer": "Don't eat so fast, or you'll choke."
+    },
+    {
+      "hint": "Uwielbiam naleśniki z dżemem.",
+      "answer": "I love pancakes with jam."
+    },
+    {
+      "hint": "Możesz zrobić herbatę, proszę?",
+      "answer": "Can you make tea, please?"
+    },
+    {
+      "hint": "Kupiliśmy dziś świeże truskawki.",
+      "answer": "We bought fresh strawberries today."
+    },
+    {
+      "hint": "Zostawiłeś garnek na ogniu.",
+      "answer": "You left the pot on the stove."
+    },
+    {
+      "hint": "Podaj mi kubek z półki.",
+      "answer": "Pass me a mug from the shelf."
+    },
+    {
+      "hint": "Nie zapomnij kupić masła.",
+      "answer": "Don't forget to buy butter."
+    },
+    {
+      "hint": "Ta kawa jest zbyt mocna.",
+      "answer": "This coffee is too strong."
+    },
+    {
+      "hint": "Kupię dziś chleb w piekarni.",
+      "answer": "I'll buy bread at the bakery today."
+    },
+    {
+      "hint": "Chcesz spróbować tego sosu?",
+      "answer": "Do you want to try this sauce?"
+    },
+    {
+      "hint": "Czy mamy jeszcze mąkę do ciasta?",
+      "answer": "Do we still have flour for the cake?"
+    },
+    {
+      "hint": "Dodałem trochę miodu do owsianki.",
+      "answer": "I added some honey to the oatmeal."
+    },
+    {
+      "hint": "Możesz otworzyć słoik ogórków?",
+      "answer": "Can you open the jar of pickles?"
+    },
+    {
+      "hint": "Zupa jest za słona.",
+      "answer": "The soup is too salty."
+    },
+    {
+      "hint": "Podaj mi łyżeczkę, proszę.",
+      "answer": "Pass me a teaspoon, please."
+    },
+    {
+      "hint": "Uwielbiam zapach świeżych ziół.",
+      "answer": "I love the smell of fresh herbs."
+    },
+    {
+      "hint": "Czy mamy coś na szybką kolację?",
+      "answer": "Do we have something for a quick dinner?"
+    },
+    {
+      "hint": "Nie jedz wszystkiego, zostaw trochę dla mnie.",
+      "answer": "Don't eat everything, leave some for me."
+    },
+    {
+      "hint": "Ta pizza jest naprawdę pyszna.",
+      "answer": "This pizza is really delicious."
+    },
+    {
+      "hint": "Możesz nalać mi trochę soku?",
+      "answer": "Can you pour me some juice?"
+    }
+  ],
+  "count": 73
+}

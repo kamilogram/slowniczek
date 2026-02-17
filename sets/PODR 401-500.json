@@ -1,0 +1,376 @@
+{
+  "name": "PODR 401-500",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Szpital miał wystarczające zaopatrzenie, aby leczyć wszystkich pacjentów.",
+      "answer": "The hospital had enough supply to treat all patients."
+    },
+    {
+      "hint": "Przypomnij mu o spotkaniu jutro rano.",
+      "answer": "Remind him about the meeting tomorrow morning."
+    },
+    {
+      "hint": "Wydaje się, że ma nadludzką siłę i wytrzymałość.",
+      "answer": "He seems to have superhuman strength and endurance."
+    },
+    {
+      "hint": "Jego zdolność do szybkiego uczenia się była imponująca.",
+      "answer": "His ability to learn quickly was impressive."
+    },
+    {
+      "hint": "Lekarz medycyny zdecydował, że pacjent potrzebuje operacji.",
+      "answer": "The medical doctor decided that the patient needed surgery."
+    },
+    {
+      "hint": "Pozytywne nastawienie pomaga w szybkim powrocie do zdrowia.",
+      "answer": "A positive attitude helps in a quick recovery."
+    },
+    {
+      "hint": "Niektóre formy życia naprawdę istnieją tylko w bardzo specyficznych warunkach.",
+      "answer": "Some forms of life truly exist only in very specific conditions."
+    },
+    {
+      "hint": "W głębi serca wiedział, że wszystko będzie dobrze.",
+      "answer": "Deep down, he knew that everything would be fine."
+    },
+    {
+      "hint": "Najnowsze wyniki badań zostały opublikowane w czasopiśmie naukowym.",
+      "answer": "The latest research results were published in a scientific journal."
+    },
+    {
+      "hint": "Nie można przewidzieć dokładnie, co się stanie.",
+      "answer": "It is impossible to predict exactly what will happen."
+    },
+    {
+      "hint": "Oskarżyli go o kradzież, ale nie było wystarczających dowodów.",
+      "answer": "They accused him of theft, but there was not enough evidence."
+    },
+    {
+      "hint": "Odrzucił wszystkie zarzuty i twierdził, że jest niewinny.",
+      "answer": "He denied all accusations and claimed he was innocent."
+    },
+    {
+      "hint": "Jego udział w sprawie był większy, niż początkowo sądzono.",
+      "answer": "His involvement in the case was bigger than initially thought."
+    },
+    {
+      "hint": "Musiał uciekać, gdy zobaczył nadchodzące niebezpieczeństwo.",
+      "answer": "He had to run when he saw the approaching danger."
+    },
+    {
+      "hint": "Ukrył się w krzakach, obserwując wszystko ostrożnie.",
+      "answer": "He hid in the bush, watching everything carefully."
+    },
+    {
+      "hint": "Źródło informacji pochodziło od zaufanej osoby.",
+      "answer": "The source of information came from a trusted person."
+    },
+    {
+      "hint": "Półksiężyc świecił jasno na nocnym niebie.",
+      "answer": "The half moon shone brightly in the night sky."
+    },
+    {
+      "hint": "Jest chłodno, więc ubierz się ciepło.",
+      "answer": "It is chilly, so dress warmly."
+    },
+    {
+      "hint": "Pociągnął linę mocno, aby podnieść ciężki przedmiot.",
+      "answer": "He pulled the rope tightly to lift the heavy object."
+    },
+    {
+      "hint": "Trzymał dokumenty bardzo mocno, żeby ich nie zgubić.",
+      "answer": "He held the documents tightly to avoid losing them."
+    },
+    {
+      "hint": "Wygląd pacjenta wskazywał, że potrzebuje natychmiastowej pomocy.",
+      "answer": "The patient’s appearance indicated that he needed immediate help."
+    },
+    {
+      "hint": "Musimy dojść do sedna problemu, żeby znaleźć rozwiązanie.",
+      "answer": "We need to get to the bottom of the problem to find a solution."
+    },
+    {
+      "hint": "Objawy choroby były wyraźnie widoczne i wymagały leczenia.",
+      "answer": "The symptoms of the disease were clearly visible and required treatment."
+    },
+    {
+      "hint": "Plan działania był oparty na najnowszych badaniach naukowych.",
+      "answer": "The plan was based on the latest scientific research."
+    },
+    {
+      "hint": "Lekarz przepisał odpowiednią dawkę leku.",
+      "answer": "The doctor prescribed the correct dose of the medicine."
+    },
+    {
+      "hint": "Niepożądany efekt uboczny pojawił się u niektórych pacjentów.",
+      "answer": "A side-effect appeared in some patients."
+    },
+    {
+      "hint": "Uderzył pięścią w staw, sprawiając, że poczuł ból.",
+      "answer": "He hit his knuckle, causing pain."
+    },
+    {
+      "hint": "Skóra była szorstka i sucha od długiego przebywania na słońcu.",
+      "answer": "The skin was rough and dry from long exposure to the sun."
+    },
+    {
+      "hint": "Nietypowe zachowanie zwierzęcia wzbudziło zainteresowanie naukowców.",
+      "answer": "The animal behaved unusually, attracting scientists’ attention."
+    },
+    {
+      "hint": "Książka była gruba i ciężka do przenoszenia.",
+      "answer": "The book was thick and hard to carry."
+    },
+    {
+      "hint": "Dłoń była szorstka w dotyku, ale mocno ściskała linę.",
+      "answer": "The hand was rough to the touch but held the rope tightly."
+    },
+    {
+      "hint": "Oklaskali artystę na scenie, wyrażając uznanie.",
+      "answer": "They clapped for the performer on the stage, showing appreciation."
+    },
+    {
+      "hint": "Zmarszczył czoło, myśląc nad rozwiązaniem trudnego zadania.",
+      "answer": "He frowned, thinking about the solution to the difficult task."
+    },
+    {
+      "hint": "Był zmieszany i nie wiedział, co zrobić dalej.",
+      "answer": "He was confused and didn’t know what to do next."
+    },
+    {
+      "hint": "Czuł się jak głupiec, gdy popełnił tak prosty błąd.",
+      "answer": "He felt like a fool when he made such a simple mistake."
+    },
+    {
+      "hint": "To było oczywiste, że decyzja była najlepsza dla wszystkich.",
+      "answer": "It was obvious that the decision was the best for everyone."
+    },
+    {
+      "hint": "W słabo oświetlonym korytarzu trudno było zobaczyć szczegóły.",
+      "answer": "In the dimly-lit corridor, it was hard to see the details."
+    },
+    {
+      "hint": "Stał w wejściu, patrząc na gości wchodzących do domu.",
+      "answer": "He stood in the doorway, watching the guests enter the house."
+    },
+    {
+      "hint": "Ubrał się w szlafrok i usiadł wygodnie przy oknie.",
+      "answer": "He wore a dressing gown and sat comfortably by the window."
+    },
+    {
+      "hint": "Płaszcz wisiał na wieszaku w przedpokoju.",
+      "answer": "The coat hung on the hook in the hallway."
+    },
+    {
+      "hint": "Oparł się o ścianę, próbując złapać oddech.",
+      "answer": "He leaned against the wall, trying to catch his breath."
+    },
+    {
+      "hint": "Luźno zawiązał sznurówkę, żeby móc szybciej zdjąć buty.",
+      "answer": "He tied the shoelace loosely to remove the shoes quickly."
+    },
+    {
+      "hint": "Szeptał cicho, żeby nikt go nie usłyszał.",
+      "answer": "He whispered quietly so that no one could hear him."
+    },
+    {
+      "hint": "Przyklej kij do powierzchni, aby coś przytrzymać na miejscu.",
+      "answer": "Stick the rod to the surface to hold something in place."
+    },
+    {
+      "hint": "Dźgnął kilka razy, próbując zwrócić na siebie uwagę.",
+      "answer": "He poked repeatedly, trying to get attention."
+    },
+    {
+      "hint": "Uderzył gwałtownie w drzwi, wywołując hałas w całym domu.",
+      "answer": "He struck violently at the door, causing noise throughout the house."
+    },
+    {
+      "hint": "Zachowywał się brutalnie wobec przeciwników.",
+      "answer": "He behaved viciously toward his opponents."
+    },
+    {
+      "hint": "Krzyczał głośno, wyrażając swoje niezadowolenie.",
+      "answer": "He yelled loudly, expressing his displeasure."
+    },
+    {
+      "hint": "Zareagował natychmiast na nagłą sytuację.",
+      "answer": "He reacted immediately to the sudden situation."
+    },
+    {
+      "hint": "Obrócił się na boki, próbując znaleźć wygodną pozycję.",
+      "answer": "He rolled on his side, trying to find a comfortable position."
+    },
+    {
+      "hint": "Bezwładnie leżał na ziemi, nie mogąc się poruszyć.",
+      "answer": "He lay helplessly on the ground, unable to move."
+    },
+    {
+      "hint": "Krzyk był przeraźliwy i pełen bólu.",
+      "answer": "The scream was terrifying and full of pain."
+    },
+    {
+      "hint": "Krzyczał w agonii, gdy złamał nogę.",
+      "answer": "He screamed in agony when he broke his leg."
+    },
+    {
+      "hint": "Na szczęście lekarz przybył na czas i udzielił pomocy.",
+      "answer": "Fortunately, the doctor arrived on time and provided help."
+    },
+    {
+      "hint": "Jego głos miał uspokajający efekt na dzieci.",
+      "answer": "His voice had a calming effect on the children."
+    },
+    {
+      "hint": "Puść linę natychmiast, zanim coś się stanie.",
+      "answer": "Let go of the rope instantly before something happens."
+    },
+    {
+      "hint": "Natychmiast pobiegł w dół schodów, żeby sprawdzić co się stało.",
+      "answer": "He raced down the stairs instantly to see what happened."
+    },
+    {
+      "hint": "Ranny pacjent wymagał natychmiastowej opieki medycznej.",
+      "answer": "The wounded patient needed immediate medical attention."
+    },
+    {
+      "hint": "Związał ręce pacjenta, aby uniemożliwić mu poruszanie się.",
+      "answer": "He tied up the patient to prevent movement."
+    },
+    {
+      "hint": "Instrukcje były jasne i każdy wiedział, co ma robić.",
+      "answer": "The instructions were clear and everyone knew what to do."
+    },
+    {
+      "hint": "Biegł w górę schodów, próbując dogonić uciekającego złodzieja.",
+      "answer": "He ran up the staircase, trying to catch the fleeing thief."
+    },
+    {
+      "hint": "Nie prowokuj go, bo może zareagować agresywnie.",
+      "answer": "Do not provoke him, or he may react aggressively."
+    },
+    {
+      "hint": "Jęczał cicho, gdy próbował poruszyć złamaną rękę.",
+      "answer": "He moaned softly while trying to move his broken arm."
+    },
+    {
+      "hint": "Stan pacjenta wymagał natychmiastowej interwencji.",
+      "answer": "The state of the patient required immediate intervention."
+    },
+    {
+      "hint": "Położył się, aby odpocząć po długim dniu.",
+      "answer": "He lay down to rest after a long day."
+    },
+    {
+      "hint": "Rana była poważna i wymagała natychmiastowego opatrywania.",
+      "answer": "The wound was serious and needed immediate dressing."
+    },
+    {
+      "hint": "Lekarz wykonał zastrzyk, aby złagodzić ból pacjenta.",
+      "answer": "The doctor gave an injection to ease the patient’s pain."
+    },
+    {
+      "hint": "Podano morfinę, aby zmniejszyć cierpienie.",
+      "answer": "They administered morphine to reduce suffering."
+    },
+    {
+      "hint": "Ułatwił pacjentowi wstanie, podnosząc go delikatnie.",
+      "answer": "He lifted the patient gently to help him stand."
+    },
+    {
+      "hint": "List był ostemplowany, zanim został wysłany.",
+      "answer": "The letter was postmarked before being sent."
+    },
+    {
+      "hint": "Rozwinął mapę, żeby pokazać drogę do domu.",
+      "answer": "He unfolded the map to show the way to the house."
+    },
+    {
+      "hint": "Przeczytał instrukcje na głos, aby wszyscy je usłyszeli.",
+      "answer": "He read the instructions aloud so everyone could hear them."
+    },
+    {
+      "hint": "Przejrzał wszystkie raporty przed podjęciem decyzji.",
+      "answer": "He reviewed all the reports before making a decision."
+    },
+    {
+      "hint": "Kurs obejmował wszystkie podstawowe zagadnienia medycyny.",
+      "answer": "The course covered all the basic medical topics."
+    },
+    {
+      "hint": "Serum zostało podane pacjentowi w celu poprawy zdrowia.",
+      "answer": "The serum was administered to the patient to improve health."
+    },
+    {
+      "hint": "Rozwinęli nową metodę leczenia w laboratorium.",
+      "answer": "They developed a new treatment method in the laboratory."
+    },
+    {
+      "hint": "Napój pobudzający energię pomógł mu przetrwać cały dzień.",
+      "answer": "The energy-boosting drink helped him survive the whole day."
+    },
+    {
+      "hint": "Zioło miało właściwości lecznicze i uspokajające.",
+      "answer": "The herb had healing and calming properties."
+    },
+    {
+      "hint": "Esencja kwiatowa poprawiła jego samopoczucie.",
+      "answer": "The flower essence improved his mood."
+    },
+    {
+      "hint": "Odzyskał witalność po kilku dniach odpoczynku.",
+      "answer": "He regained vitality after a few days of rest."
+    },
+    {
+      "hint": "W krótkim czasie wrócił do pełnej sprawności.",
+      "answer": "He recovered fully in no time."
+    },
+    {
+      "hint": "Pacjent cierpliwie czekał na wyniki badań.",
+      "answer": "The patient waited patiently for the test results."
+    },
+    {
+      "hint": "Feedback od pacjentów był bardzo pozytywny.",
+      "answer": "The feedback from the patients was very positive."
+    },
+    {
+      "hint": "Złożyli zamówienie na potrzebne leki.",
+      "answer": "They placed an order for the necessary medicines."
+    },
+    {
+      "hint": "Dystrybutor dostarczył produkty w wyznaczonym terminie.",
+      "answer": "The distributor delivered the products on time."
+    },
+    {
+      "hint": "Nie mógł uwierzyć w to, co się wydarzyło.",
+      "answer": "He was in disbelief about what had happened."
+    },
+    {
+      "hint": "Mieszanka była magicznym eliksirem poprawiającym samopoczucie.",
+      "answer": "The mixture was a potion that improved well-being."
+    },
+    {
+      "hint": "Młodość i energia wypełniały jego dni.",
+      "answer": "Youth and energy filled his days."
+    },
+    {
+      "hint": "Szaleństwo ogarnęło miasto po nagłych wydarzeniach.",
+      "answer": "Madness spread through the city after the sudden events."
+    },
+    {
+      "hint": "Trzeba położyć temu kres, zanim sytuacja wymknie się spod kontroli.",
+      "answer": "We must put a stop to it before the situation gets out of control."
+    },
+    {
+      "hint": "Negatywnie wpływało to na morale zespołu.",
+      "answer": "It affected the team negatively."
+    },
+    {
+      "hint": "Użył lupy, aby przyjrzeć się szczegółom dokumentu.",
+      "answer": "He used a magnifying glass to examine the details of the document."
+    }
+  ],
+  "count": 92
+}

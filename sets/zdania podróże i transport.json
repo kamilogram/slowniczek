@@ -1,0 +1,280 @@
+{
+  "name": "zdania podróże i transport",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "O której godzinie odjeżdża pociąg do Warszawy?",
+      "answer": "What time does the train to Warsaw leave?"
+    },
+    {
+      "hint": "Musimy zamówić taksówkę na lotnisko.",
+      "answer": "We need to order a taxi to the airport."
+    },
+    {
+      "hint": "Czy masz paszport w torbie?",
+      "answer": "Do you have your passport in the bag?"
+    },
+    {
+      "hint": "Lot został opóźniony o dwie godziny.",
+      "answer": "The flight has been delayed by two hours."
+    },
+    {
+      "hint": "Musimy być na lotnisku dwie godziny wcześniej.",
+      "answer": "We need to be at the airport two hours earlier."
+    },
+    {
+      "hint": "Czy autobus jedzie do centrum?",
+      "answer": "Does this bus go to the city center?"
+    },
+    {
+      "hint": "Zapomniałem biletu kolejowego w hotelu.",
+      "answer": "I forgot the train ticket at the hotel."
+    },
+    {
+      "hint": "Który peron jest dla pociągu do Berlina?",
+      "answer": "Which platform is for the train to Berlin?"
+    },
+    {
+      "hint": "Gdzie mogę kupić bilet na metro?",
+      "answer": "Where can I buy a metro ticket?"
+    },
+    {
+      "hint": "Musimy znaleźć miejsce parkingowe.",
+      "answer": "We need to find a parking spot."
+    },
+    {
+      "hint": "Czy ten autobus zatrzymuje się przy dworcu?",
+      "answer": "Does this bus stop at the station?"
+    },
+    {
+      "hint": "Samolot wyląduje za trzydzieści minut.",
+      "answer": "The plane will land in thirty minutes."
+    },
+    {
+      "hint": "Wziąłeś walizkę z bagażnika?",
+      "answer": "Did you take the suitcase from the trunk?"
+    },
+    {
+      "hint": "Gdzie znajduje się punkt informacji turystycznej?",
+      "answer": "Where is the tourist information point?"
+    },
+    {
+      "hint": "Zgubiliśmy się na lotnisku.",
+      "answer": "We got lost at the airport."
+    },
+    {
+      "hint": "Muszę wymienić pieniądze na euro.",
+      "answer": "I need to exchange money for euros."
+    },
+    {
+      "hint": "Zarezerwowałem bilety lotnicze online.",
+      "answer": "I booked the plane tickets online."
+    },
+    {
+      "hint": "Czy możesz sprawdzić rozkład jazdy?",
+      "answer": "Can you check the timetable?"
+    },
+    {
+      "hint": "Autobus jest dziś przepełniony.",
+      "answer": "The bus is overcrowded today."
+    },
+    {
+      "hint": "Czy jest bezpośredni pociąg do Krakowa?",
+      "answer": "Is there a direct train to Krakow?"
+    },
+    {
+      "hint": "Musimy nadać bagaż przed odprawą.",
+      "answer": "We need to check in the luggage before boarding."
+    },
+    {
+      "hint": "Ten bilet jest tylko w jedną stronę.",
+      "answer": "This ticket is one-way only."
+    },
+    {
+      "hint": "Gdzie znajdę postój taksówek?",
+      "answer": "Where can I find a taxi stand?"
+    },
+    {
+      "hint": "Na jakim dworcu wysiadamy?",
+      "answer": "At which station are we getting off?"
+    },
+    {
+      "hint": "Pociąg jedzie za szybko, nie mogę patrzeć za okno.",
+      "answer": "The train goes too fast, I can't look out the window."
+    },
+    {
+      "hint": "Czy chcesz miejsce przy oknie czy przy przejściu?",
+      "answer": "Do you want a window seat or an aisle seat?"
+    },
+    {
+      "hint": "Zgubiłem się w metrze.",
+      "answer": "I got lost in the subway."
+    },
+    {
+      "hint": "Czy masz prawo jazdy przy sobie?",
+      "answer": "Do you have your driving license with you?"
+    },
+    {
+      "hint": "Musimy zatankować samochód.",
+      "answer": "We need to refuel the car."
+    },
+    {
+      "hint": "Na autostradzie był ogromny korek.",
+      "answer": "There was a huge traffic jam on the highway."
+    },
+    {
+      "hint": "Czy możemy wynająć rowery na cały dzień?",
+      "answer": "Can we rent bikes for the whole day?"
+    },
+    {
+      "hint": "Musimy jeszcze wydrukować bilety.",
+      "answer": "We still need to print the tickets."
+    },
+    {
+      "hint": "Samolot startuje za chwilę.",
+      "answer": "The plane is taking off in a moment."
+    },
+    {
+      "hint": "Ten lot jest bezpośredni czy z przesiadką?",
+      "answer": "Is this flight direct or with a stopover?"
+    },
+    {
+      "hint": "Zarezerwowałam hotel blisko dworca.",
+      "answer": "I booked a hotel near the station."
+    },
+    {
+      "hint": "Musimy przejść przez kontrolę paszportową.",
+      "answer": "We need to go through passport control."
+    },
+    {
+      "hint": "Nie zapomnij kart pokładowych.",
+      "answer": "Don't forget the boarding passes."
+    },
+    {
+      "hint": "Którędy idzie się do hali odlotów?",
+      "answer": "Which way is the departure hall?"
+    },
+    {
+      "hint": "Samochód jest zaparkowany na drugim piętrze.",
+      "answer": "The car is parked on the second floor."
+    },
+    {
+      "hint": "Czy musimy płacić za dodatkowy bagaż?",
+      "answer": "Do we have to pay for extra luggage?"
+    },
+    {
+      "hint": "Podaj mi adres hotelu, wpiszę go do nawigacji.",
+      "answer": "Give me the hotel address, I'll put it in the GPS."
+    },
+    {
+      "hint": "Gdzie jest najbliższa stacja benzynowa?",
+      "answer": "Where is the nearest gas station?"
+    },
+    {
+      "hint": "Czy masz mapę miasta?",
+      "answer": "Do you have a map of the city?"
+    },
+    {
+      "hint": "Musimy wysiąść na następnym przystanku.",
+      "answer": "We need to get off at the next stop."
+    },
+    {
+      "hint": "Zamówiłem bilet powrotny.",
+      "answer": "I ordered a return ticket."
+    },
+    {
+      "hint": "Czy autobus zatrzymuje się przy muzeum?",
+      "answer": "Does the bus stop at the museum?"
+    },
+    {
+      "hint": "Lot trwa ponad trzy godziny.",
+      "answer": "The flight lasts over three hours."
+    },
+    {
+      "hint": "Samolot ląduje w innym terminalu.",
+      "answer": "The plane lands at a different terminal."
+    },
+    {
+      "hint": "Czy możemy wymienić miejsca w samolocie?",
+      "answer": "Can we change seats on the plane?"
+    },
+    {
+      "hint": "Gdzie jest wyjście awaryjne?",
+      "answer": "Where is the emergency exit?"
+    },
+    {
+      "hint": "Muszę znaleźć przechowalnię bagażu.",
+      "answer": "I need to find the luggage storage."
+    },
+    {
+      "hint": "Czy masz przy sobie bilety autobusowe?",
+      "answer": "Do you have the bus tickets with you?"
+    },
+    {
+      "hint": "Kupmy kartę miejską na tydzień.",
+      "answer": "Let's buy a city card for a week."
+    },
+    {
+      "hint": "Zarezerwowałem miejsce parkingowe online.",
+      "answer": "I booked a parking spot online."
+    },
+    {
+      "hint": "Na którym przystanku mamy wysiąść?",
+      "answer": "At which stop should we get off?"
+    },
+    {
+      "hint": "Zgubiłem walizkę podczas lotu.",
+      "answer": "I lost my suitcase during the flight."
+    },
+    {
+      "hint": "Czy masz numer lotu zapisany?",
+      "answer": "Do you have the flight number written down?"
+    },
+    {
+      "hint": "Autobus przyjeżdża co piętnaście minut.",
+      "answer": "The bus arrives every fifteen minutes."
+    },
+    {
+      "hint": "Musimy być na dworcu wcześniej, bo są kontrole.",
+      "answer": "We need to be at the station earlier because there are checks."
+    },
+    {
+      "hint": "Którędy idzie się do hali przylotów?",
+      "answer": "Which way is the arrivals hall?"
+    },
+    {
+      "hint": "Bilet obejmuje także przejazdy metrem.",
+      "answer": "The ticket also includes metro rides."
+    },
+    {
+      "hint": "Nie wiem, gdzie jest nasz peron.",
+      "answer": "I don't know where our platform is."
+    },
+    {
+      "hint": "Musimy się odprawić online.",
+      "answer": "We need to check in online."
+    },
+    {
+      "hint": "Czy ten pociąg ma wagon restauracyjny?",
+      "answer": "Does this train have a dining car?"
+    },
+    {
+      "hint": "Pamiętaj, żeby spakować ładowarkę do telefonu.",
+      "answer": "Remember to pack the phone charger."
+    },
+    {
+      "hint": "Lot został odwołany z powodu pogody.",
+      "answer": "The flight was canceled due to the weather."
+    },
+    {
+      "hint": "Czy musimy płacić za autostradę?",
+      "answer": "Do we have to pay for the highway?"
+    },
+    {
+      "hint": "Kupmy bilety wcześniej, bo mogą być drogie.",
+      "answer": "Let's buy tickets earlier because they might be expensive."
+    }
+  ],
+  "count": 68
+}

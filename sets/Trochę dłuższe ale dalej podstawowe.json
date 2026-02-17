@@ -1,0 +1,288 @@
+{
+  "name": "Trochę dłuższe ale dalej podstawowe",
+  "language": "fr",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Mam czerwony samochód.",
+      "answer": "J'ai une voiture rouge."
+    },
+    {
+      "hint": "Ona lubi pić herbatę.",
+      "answer": "Elle aime boire du thé."
+    },
+    {
+      "hint": "Mój brat czyta książkę.",
+      "answer": "Mon frère lit un livre."
+    },
+    {
+      "hint": "Twój dom jest bardzo duży.",
+      "answer": "Ta maison est très grande."
+    },
+    {
+      "hint": "Moi rodzice pracują razem.",
+      "answer": "Mes parents travaillent ensemble."
+    },
+    {
+      "hint": "Dzisiaj pada deszcz.",
+      "answer": "Il pleut aujourd'hui."
+    },
+    {
+      "hint": "Idziemy do kina wieczorem.",
+      "answer": "Nous allons au cinéma ce soir."
+    },
+    {
+      "hint": "On ma dwa psy i kota.",
+      "answer": "Il a deux chiens et un chat."
+    },
+    {
+      "hint": "Lubię chodzić na spacery po mieście.",
+      "answer": "J'aime me promener en ville."
+    },
+    {
+      "hint": "Nie mam czasu w poniedziałek.",
+      "answer": "Je n'ai pas de temps lundi."
+    },
+    {
+      "hint": "Często jem owoce na śniadanie.",
+      "answer": "Je mange souvent des fruits au petit-déjeuner."
+    },
+    {
+      "hint": "Mój ojciec gotuje bardzo dobrze.",
+      "answer": "Mon père cuisine très bien."
+    },
+    {
+      "hint": "Twoja siostra gra na gitarze.",
+      "answer": "Ta sœur joue de la guitare."
+    },
+    {
+      "hint": "Kocham podróżować pociągiem.",
+      "answer": "J'adore voyager en train."
+    },
+    {
+      "hint": "Chcę kupić nowy telefon.",
+      "answer": "Je veux acheter un nouveau téléphone."
+    },
+    {
+      "hint": "On mieszka w Paryżu od roku.",
+      "answer": "Il habite à Paris depuis un an."
+    },
+    {
+      "hint": "Każdego dnia piję dużo wody.",
+      "answer": "Je bois beaucoup d'eau chaque jour."
+    },
+    {
+      "hint": "Gdzie znajduje się najbliższy sklep?",
+      "answer": "Où se trouve le magasin le plus proche ?"
+    },
+    {
+      "hint": "Dzieci lubią bawić się w parku.",
+      "answer": "Les enfants aiment jouer au parc."
+    },
+    {
+      "hint": "Lubię oglądać filmy wieczorem.",
+      "answer": "J'aime regarder des films le soir."
+    },
+    {
+      "hint": "Czy masz jakieś rodzeństwo?",
+      "answer": "As-tu des frères ou sœurs ?"
+    },
+    {
+      "hint": "Moja mama pracuje w szpitalu.",
+      "answer": "Ma mère travaille à l'hôpital."
+    },
+    {
+      "hint": "Potrzebuję pomocy z zadaniem domowym.",
+      "answer": "J'ai besoin d'aide pour mes devoirs."
+    },
+    {
+      "hint": "On nie lubi kawy bez cukru.",
+      "answer": "Il n'aime pas le café sans sucre."
+    },
+    {
+      "hint": "Czy możesz powtórzyć pytanie?",
+      "answer": "Peux-tu répéter la question ?"
+    },
+    {
+      "hint": "Obiad jest gotowy na stole.",
+      "answer": "Le dîner est prêt sur la table."
+    },
+    {
+      "hint": "Mój dziadek codziennie czyta gazetę.",
+      "answer": "Mon grand-père lit le journal tous les jours."
+    },
+    {
+      "hint": "Lubimy spacerować nad rzeką.",
+      "answer": "Nous aimons nous promener au bord de la rivière."
+    },
+    {
+      "hint": "Twoje włosy są bardzo długie.",
+      "answer": "Tes cheveux sont très longs."
+    },
+    {
+      "hint": "On uczy się hiszpańskiego w szkole.",
+      "answer": "Il apprend l'espagnol à l'école."
+    },
+    {
+      "hint": "Nie lubię chodzić spać późno.",
+      "answer": "Je n'aime pas me coucher tard."
+    },
+    {
+      "hint": "Jestem zmęczony po pracy.",
+      "answer": "Je suis fatigué après le travail."
+    },
+    {
+      "hint": "Moja siostra pracuje w sklepie.",
+      "answer": "Ma sœur travaille dans un magasin."
+    },
+    {
+      "hint": "Kupuję świeże warzywa na targu.",
+      "answer": "J'achète des légumes frais au marché."
+    },
+    {
+      "hint": "Jutro mamy ważny egzamin.",
+      "answer": "Nous avons un examen important demain."
+    },
+    {
+      "hint": "Czy pies jest w ogrodzie?",
+      "answer": "Le chien est-il dans le jardin ?"
+    },
+    {
+      "hint": "On pisze list do swojej babci.",
+      "answer": "Il écrit une lettre à sa grand-mère."
+    },
+    {
+      "hint": "Mieszkamy blisko szkoły.",
+      "answer": "Nous habitons près de l'école."
+    },
+    {
+      "hint": "Wasz rower jest w garażu.",
+      "answer": "Votre vélo est dans le garage."
+    },
+    {
+      "hint": "Dzieci idą spać o dziewiątej.",
+      "answer": "Les enfants vont dormir à neuf heures."
+    },
+    {
+      "hint": "Potrzebuję nowych butów na zimę.",
+      "answer": "J'ai besoin de nouvelles chaussures pour l'hiver."
+    },
+    {
+      "hint": "Twój komputer jest bardzo szybki.",
+      "answer": "Ton ordinateur est très rapide."
+    },
+    {
+      "hint": "Spotykamy się w kawiarni.",
+      "answer": "Nous nous retrouvons au café."
+    },
+    {
+      "hint": "Lubię słuchać muzyki rano.",
+      "answer": "J'aime écouter de la musique le matin."
+    },
+    {
+      "hint": "Czy to jest twoja siostra?",
+      "answer": "Est-ce ta sœur ?"
+    },
+    {
+      "hint": "On pomaga swojej mamie w kuchni.",
+      "answer": "Il aide sa mère dans la cuisine."
+    },
+    {
+      "hint": "Dziewczynka rysuje obrazek.",
+      "answer": "La fille dessine un dessin."
+    },
+    {
+      "hint": "Dzisiaj mamy w szkole test.",
+      "answer": "Nous avons un test à l'école aujourd'hui."
+    },
+    {
+      "hint": "Oni grają w piłkę na podwórku.",
+      "answer": "Ils jouent au ballon dans la cour."
+    },
+    {
+      "hint": "Moja babcia gotuje pyszną zupę.",
+      "answer": "Ma grand-mère prépare une délicieuse soupe."
+    },
+    {
+      "hint": "Robię zakupy w supermarkecie.",
+      "answer": "Je fais des courses au supermarché."
+    },
+    {
+      "hint": "Moja siostra lubi czytać komiksy.",
+      "answer": "Ma sœur aime lire des bandes dessinées."
+    },
+    {
+      "hint": "Jego pokój jest zawsze czysty.",
+      "answer": "Sa chambre est toujours propre."
+    },
+    {
+      "hint": "Idziemy razem na zakupy.",
+      "answer": "Nous allons faire du shopping ensemble."
+    },
+    {
+      "hint": "Kto otworzył drzwi?",
+      "answer": "Qui a ouvert la porte ?"
+    },
+    {
+      "hint": "Czy możesz zamknąć okno?",
+      "answer": "Peux-tu fermer la fenêtre ?"
+    },
+    {
+      "hint": "Lubię grać w szachy z tatą.",
+      "answer": "J'aime jouer aux échecs avec mon père."
+    },
+    {
+      "hint": "Mama piecze ciasto w kuchni.",
+      "answer": "Maman fait un gâteau dans la cuisine."
+    },
+    {
+      "hint": "Lubię pływać w jeziorze latem.",
+      "answer": "J'aime nager dans le lac en été."
+    },
+    {
+      "hint": "Nauczyciel pisze na tablicy.",
+      "answer": "Le professeur écrit au tableau."
+    },
+    {
+      "hint": "Twój kot śpi na kanapie.",
+      "answer": "Ton chat dort sur le canapé."
+    },
+    {
+      "hint": "On woli chodzić pieszo do pracy.",
+      "answer": "Il préfère aller au travail à pied."
+    },
+    {
+      "hint": "Dobrze mówię po francusku.",
+      "answer": "Je parle bien français."
+    },
+    {
+      "hint": "Chciałbym wypić szklankę wody.",
+      "answer": "Je voudrais boire un verre d'eau."
+    },
+    {
+      "hint": "Zawsze sprzątam swój pokój.",
+      "answer": "Je range toujours ma chambre."
+    },
+    {
+      "hint": "Oni spotykają się codziennie rano.",
+      "answer": "Ils se rencontrent chaque matin."
+    },
+    {
+      "hint": "Twój zeszyt leży na stole.",
+      "answer": "Ton cahier est sur la table."
+    },
+    {
+      "hint": "Czy często oglądasz telewizję?",
+      "answer": "Regardes-tu souvent la télévision ?"
+    },
+    {
+      "hint": "Lubię rozmawiać z przyjaciółmi.",
+      "answer": "J'aime parler avec des amis."
+    },
+    {
+      "hint": "Piję herbatę bez cukru.",
+      "answer": "Je bois du thé sans sucre."
+    }
+  ],
+  "count": 70
+}

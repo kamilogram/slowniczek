@@ -1,0 +1,272 @@
+{
+  "name": "Zdania rozmowa w pracy",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Jak Ci minął dzień w pracy?",
+      "answer": "How was your day at work?"
+    },
+    {
+      "hint": "Masz dużo dzisiaj zadań?",
+      "answer": "Do you have a lot of tasks today?"
+    },
+    {
+      "hint": "Czy jest coś, w czym mogę Ci pomóc?",
+      "answer": "Is there anything I can help you with?"
+    },
+    {
+      "hint": "Jakie plany na przerwę obiadową?",
+      "answer": "What are your plans for the lunch break?"
+    },
+    {
+      "hint": "Czy wiesz, kto zastąpi naszego szefa na urlopie?",
+      "answer": "Do you know who will cover for our boss during the vacation?"
+    },
+    {
+      "hint": "Muszę skończyć ten raport do końca dnia.",
+      "answer": "I have to finish this report by the end of the day."
+    },
+    {
+      "hint": "Czy mamy dzisiaj jakieś spotkanie?",
+      "answer": "Do we have any meetings today?"
+    },
+    {
+      "hint": "Jak sobie radzisz z nowym projektem?",
+      "answer": "How are you managing the new project?"
+    },
+    {
+      "hint": "Potrzebujesz pomocy z tym dokumentem?",
+      "answer": "Do you need help with this document?"
+    },
+    {
+      "hint": "Czy już złożyłaś swoje podsumowanie?",
+      "answer": "Have you submitted your summary yet?"
+    },
+    {
+      "hint": "Pracujesz dziś do późna?",
+      "answer": "Are you working late today?"
+    },
+    {
+      "hint": "Czy wiesz, kiedy będą wyniki audytu?",
+      "answer": "Do you know when the audit results will be ready?"
+    },
+    {
+      "hint": "Musimy zorganizować zebranie zespołu.",
+      "answer": "We need to organize a team meeting."
+    },
+    {
+      "hint": "Czy byłeś na szkoleniu w zeszłym tygodniu?",
+      "answer": "Were you at the training last week?"
+    },
+    {
+      "hint": "Czy masz chwilę, żeby omówić ten projekt?",
+      "answer": "Do you have a moment to discuss this project?"
+    },
+    {
+      "hint": "Jaki masz plan na jutro?",
+      "answer": "What is your plan for tomorrow?"
+    },
+    {
+      "hint": "Czy mamy już nowe wytyczne od menedżera?",
+      "answer": "Do we have new guidelines from the manager yet?"
+    },
+    {
+      "hint": "Czy możesz mi wysłać ten plik?",
+      "answer": "Can you send me that file?"
+    },
+    {
+      "hint": "Dzisiaj kawa jest naprawdę dobra!",
+      "answer": "The coffee is really good today!"
+    },
+    {
+      "hint": "Jakie są Twoje sugestie do tego projektu?",
+      "answer": "What are your suggestions for this project?"
+    },
+    {
+      "hint": "Czy pamiętasz, kiedy kończy się ten termin?",
+      "answer": "Do you remember when the deadline is?"
+    },
+    {
+      "hint": "Muszę zrobić przerwę, czuję się zmęczona.",
+      "answer": "I need to take a break, I feel tired."
+    },
+    {
+      "hint": "Czy możemy porozmawiać na temat podziału obowiązków?",
+      "answer": "Can we talk about dividing the tasks?"
+    },
+    {
+      "hint": "Lubię Twoje pomysły na spotkaniach.",
+      "answer": "I like your ideas in the meetings."
+    },
+    {
+      "hint": "Jakie są najważniejsze zadania na dziś?",
+      "answer": "What are the most important tasks for today?"
+    },
+    {
+      "hint": "Czy jutro jest planowane spotkanie z klientem?",
+      "answer": "Is there a client meeting planned for tomorrow?"
+    },
+    {
+      "hint": "Potrzebujesz przerwy na świeżym powietrzu?",
+      "answer": "Do you need a break outside?"
+    },
+    {
+      "hint": "Czy masz już wstępne wyniki swojej pracy?",
+      "answer": "Do you have preliminary results of your work?"
+    },
+    {
+      "hint": "Kto chce dołączyć do projektu dodatkowego?",
+      "answer": "Who wants to join the additional project?"
+    },
+    {
+      "hint": "Dzisiaj jest naprawdę gorąco w biurze.",
+      "answer": "It is really hot in the office today."
+    },
+    {
+      "hint": "Czy mogę na chwilę zająć Twoją uwagę?",
+      "answer": "Can I have your attention for a moment?"
+    },
+    {
+      "hint": "Jak radzisz sobie z nowym systemem?",
+      "answer": "How are you managing with the new system?"
+    },
+    {
+      "hint": "Czy mieliście już zebranie zespołu?",
+      "answer": "Have you had the team meeting yet?"
+    },
+    {
+      "hint": "Czy znasz plan spotkań na ten tydzień?",
+      "answer": "Do you know the meeting schedule for this week?"
+    },
+    {
+      "hint": "Czy mogłabyś sprawdzić ten dokument?",
+      "answer": "Could you check this document?"
+    },
+    {
+      "hint": "Musimy skończyć ten projekt do piątku.",
+      "answer": "We need to finish this project by Friday."
+    },
+    {
+      "hint": "Jakie masz pomysły na ułatwienie pracy?",
+      "answer": "What ideas do you have to make work easier?"
+    },
+    {
+      "hint": "Czy znasz kogoś, kto zna się na marketingu?",
+      "answer": "Do you know anyone experienced in marketing?"
+    },
+    {
+      "hint": "Dzisiaj zaczęłam wcześniej pracę, żeby zdążyć.",
+      "answer": "I started work earlier today to make it on time."
+    },
+    {
+      "hint": "Czy wiesz, gdzie jest sala konferencyjna?",
+      "answer": "Do you know where the conference room is?"
+    },
+    {
+      "hint": "Czy masz ochotę na kawę?",
+      "answer": "Would you like a coffee?"
+    },
+    {
+      "hint": "Jak często korzystasz z tego programu?",
+      "answer": "How often do you use this program?"
+    },
+    {
+      "hint": "Czy możemy się spotkać, żeby omówić projekt?",
+      "answer": "Can we meet to discuss the project?"
+    },
+    {
+      "hint": "Jakie masz plany po pracy?",
+      "answer": "What are your plans after work?"
+    },
+    {
+      "hint": "Czy możesz mi pomóc z problemem technicznym?",
+      "answer": "Can you help me with a technical problem?"
+    },
+    {
+      "hint": "Dziękuję za pomoc z tym raportem.",
+      "answer": "Thank you for helping with this report."
+    },
+    {
+      "hint": "Czy wiesz, kto zastępuje naszego menedżera?",
+      "answer": "Do you know who is substituting our manager?"
+    },
+    {
+      "hint": "Muszę wysłać e-mail do klienta, czy chcesz go przeczytać?",
+      "answer": "I have to send an email to the client, do you want to read it?"
+    },
+    {
+      "hint": "Czy godzisz się z tym, jak podzieliliśmy zadania?",
+      "answer": "Do you agree with how we divided the tasks?"
+    },
+    {
+      "hint": "Czy planujesz wziąć udział w spotkaniu firmowym?",
+      "answer": "Are you planning to attend the company meeting?"
+    },
+    {
+      "hint": "Jak często masz zebrania z zespołem?",
+      "answer": "How often do you have team meetings?"
+    },
+    {
+      "hint": "Czy znasz kogoś, kto może pomóc z tym problemem?",
+      "answer": "Do you know anyone who can help with this problem?"
+    },
+    {
+      "hint": "Dzisiaj dostałam bardzo pozytywną opinię od klienta.",
+      "answer": "I received very positive feedback from a client today."
+    },
+    {
+      "hint": "Czy znasz hasło do sieci Wi-Fi?",
+      "answer": "Do you know the Wi-Fi password?"
+    },
+    {
+      "hint": "Muszę przygotować prezentację na jutrzejsze spotkanie.",
+      "answer": "I have to prepare a presentation for tomorrow's meeting."
+    },
+    {
+      "hint": "Czy pamiętasz, gdzie zostawiłam mój długopis?",
+      "answer": "Do you remember where I left my pen?"
+    },
+    {
+      "hint": "Czy lubisz pracować w tym dziale?",
+      "answer": "Do you enjoy working in this department?"
+    },
+    {
+      "hint": "Dzisiaj mieliśmy burzę mózgów na temat nowych pomysłów.",
+      "answer": "We had a brainstorming session today about new ideas."
+    },
+    {
+      "hint": "Czy wiesz, kto jest odpowiedzialny za ten projekt?",
+      "answer": "Do you know who is responsible for this project?"
+    },
+    {
+      "hint": "Jak długo pracujesz w tej firmie?",
+      "answer": "How long have you been working in this company?"
+    },
+    {
+      "hint": "Czy mamy już wyniki z ostatniego projektu?",
+      "answer": "Do we have the results from the last project yet?"
+    },
+    {
+      "hint": "Czy możesz przekazać tę wiadomość reszcie zespołu?",
+      "answer": "Can you forward this message to the rest of the team?"
+    },
+    {
+      "hint": "Dziękuję, że zawsze na mnie mogę liczyć.",
+      "answer": "Thank you for always being someone I can count on."
+    },
+    {
+      "hint": "Czy masz ochotę na lunch na mieście?",
+      "answer": "Do you feel like having lunch outside?"
+    },
+    {
+      "hint": "Współpraca z Tobą to czysta przyjemność.",
+      "answer": "Working with you is a pure pleasure."
+    },
+    {
+      "hint": "Czy dzisiaj ktoś ma urodziny w biurze?",
+      "answer": "Is it someone's birthday in the office today?"
+    }
+  ],
+  "count": 66
+}

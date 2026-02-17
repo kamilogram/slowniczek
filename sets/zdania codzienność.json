@@ -1,0 +1,204 @@
+{
+  "name": "zdania codzienność",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Czy pamiętasz, gdzie odłożyłaś klucze od samochodu?",
+      "answer": "Do you remember where you put the car keys?"
+    },
+    {
+      "hint": "Może obejrzymy dziś wieczorem jakiś film, którego jeszcze nie widzieliśmy?",
+      "answer": "Maybe we could watch a movie tonight that we haven't seen yet?"
+    },
+    {
+      "hint": "Chcesz, żebym zrobił herbatę czy kawę?",
+      "answer": "Do you want me to make tea or coffee?"
+    },
+    {
+      "hint": "Zapomniałem kupić mleko, możesz zajrzeć jutro do sklepu?",
+      "answer": "I forgot to buy milk, could you stop by the store tomorrow?"
+    },
+    {
+      "hint": "Czy możesz mi pomóc znaleźć mój portfel, bo nie mogę go nigdzie znaleźć?",
+      "answer": "Can you help me find my wallet, because I can’t find it anywhere?"
+    },
+    {
+      "hint": "Mam wrażenie, że ta kanapa jest trochę za mała do naszego salonu.",
+      "answer": "I feel like this couch is a bit too small for our living room."
+    },
+    {
+      "hint": "Chciałbym, żebyśmy w weekend poszli na spacer do lasu.",
+      "answer": "I’d like us to go for a walk in the forest this weekend."
+    },
+    {
+      "hint": "Może zamówimy coś na obiad, zamiast gotować?",
+      "answer": "How about ordering something for dinner instead of cooking?"
+    },
+    {
+      "hint": "Czy mogłabyś sprawdzić, czy drzwi są zamknięte na klucz?",
+      "answer": "Could you check if the door is locked?"
+    },
+    {
+      "hint": "Musimy ustalić, gdzie pojedziemy w wakacje.",
+      "answer": "We need to decide where we’re going for the holidays."
+    },
+    {
+      "hint": "Nie mogę się skupić, kiedy telewizor gra tak głośno.",
+      "answer": "I can’t concentrate when the TV is so loud."
+    },
+    {
+      "hint": "Może zrobimy listę zakupów, żeby o niczym nie zapomnieć?",
+      "answer": "Maybe we should make a shopping list so we don’t forget anything?"
+    },
+    {
+      "hint": "Czy pamiętasz, o której jutro mamy spotkanie z lekarzem?",
+      "answer": "Do you remember what time we have the doctor’s appointment tomorrow?"
+    },
+    {
+      "hint": "Dzisiaj wyjątkowo dobrze pachnie w kuchni, co przygotowujesz?",
+      "answer": "It smells really good in the kitchen today, what are you making?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy spędzili więcej czasu razem w weekendy.",
+      "answer": "I’d like us to spend more time together on weekends."
+    },
+    {
+      "hint": "Zapomniałem wyłączyć światła w samochodzie, zaraz wrócę.",
+      "answer": "I forgot to turn off the car lights, I’ll be right back."
+    },
+    {
+      "hint": "Czy mogłabyś mi podać sól, jest na półce za tobą?",
+      "answer": "Could you pass me the salt, it’s on the shelf behind you?"
+    },
+    {
+      "hint": "Myślisz, że powinniśmy wymienić zasłony na jaśniejsze?",
+      "answer": "Do you think we should change the curtains to something lighter?"
+    },
+    {
+      "hint": "Chyba czas pomyśleć o nowych butach, te są już zużyte.",
+      "answer": "I think it’s time to consider new shoes, these are already worn out."
+    },
+    {
+      "hint": "Może wybierzemy się jutro na kolację do naszej ulubionej restauracji?",
+      "answer": "Shall we go out to our favorite restaurant for dinner tomorrow?"
+    },
+    {
+      "hint": "Czy mogłabyś zadzwonić do mamy i zapytać, jak się czuje?",
+      "answer": "Could you call your mom and ask how she’s feeling?"
+    },
+    {
+      "hint": "Chyba zostawiłem telefon w samochodzie, sprawdzę zaraz.",
+      "answer": "I think I left my phone in the car, I’ll check in a moment."
+    },
+    {
+      "hint": "Nie zapomnij proszę podlewać kwiatów, kiedy mnie nie będzie.",
+      "answer": "Please don’t forget to water the flowers while I’m away."
+    },
+    {
+      "hint": "Zastanawiam się, czy nie powinniśmy kupić nowego czajnika.",
+      "answer": "I’m wondering if we should buy a new kettle."
+    },
+    {
+      "hint": "Czy masz ochotę wybrać się w sobotę do kina?",
+      "answer": "Do you feel like going to the cinema on Saturday?"
+    },
+    {
+      "hint": "Twoja zupa smakuje dzisiaj wyjątkowo dobrze.",
+      "answer": "Your soup tastes especially good today."
+    },
+    {
+      "hint": "Może po obiedzie pójdziemy na krótki spacer?",
+      "answer": "Maybe we could go for a short walk after dinner?"
+    },
+    {
+      "hint": "Zrobiłem dzisiaj zdjęcie zachodu słońca, chcesz zobaczyć?",
+      "answer": "I took a picture of the sunset today, do you want to see it?"
+    },
+    {
+      "hint": "Czy mogłabyś mi przypomnieć, żebym jutro zadzwonił do banku?",
+      "answer": "Could you remind me to call the bank tomorrow?"
+    },
+    {
+      "hint": "Zastanawiam się, czy nie lepiej byłoby wyjechać wcześniej.",
+      "answer": "I’m wondering if it wouldn’t be better to leave earlier."
+    },
+    {
+      "hint": "Mam ochotę jutro zrobić naleśniki na śniadanie.",
+      "answer": "I feel like making pancakes for breakfast tomorrow."
+    },
+    {
+      "hint": "Czy pamiętasz, gdzie odłożyłaś rachunek za prąd?",
+      "answer": "Do you remember where you put the electricity bill?"
+    },
+    {
+      "hint": "Może posłuchamy dziś wieczorem trochę muzyki?",
+      "answer": "Shall we listen to some music tonight?"
+    },
+    {
+      "hint": "Chyba zostawiłem okulary w kuchni.",
+      "answer": "I think I left my glasses in the kitchen."
+    },
+    {
+      "hint": "Czy chciałabyś jutro wybrać się na rower?",
+      "answer": "Would you like to go cycling tomorrow?"
+    },
+    {
+      "hint": "Podoba mi się ten obraz, myślisz że pasowałby do salonu?",
+      "answer": "I like this painting, do you think it would fit in the living room?"
+    },
+    {
+      "hint": "Może jutro zrobimy zakupy razem?",
+      "answer": "Shall we do the shopping together tomorrow?"
+    },
+    {
+      "hint": "Nie mogę znaleźć ładowarki do telefonu, widziałaś ją?",
+      "answer": "I can’t find the phone charger, have you seen it?"
+    },
+    {
+      "hint": "W weekend moglibyśmy w końcu posprzątać garaż.",
+      "answer": "We could finally clean the garage this weekend."
+    },
+    {
+      "hint": "Czy mogłabyś mi podać pilot do telewizora?",
+      "answer": "Could you hand me the TV remote?"
+    },
+    {
+      "hint": "Zastanawiam się, czy nie powinniśmy kupić nowej lodówki.",
+      "answer": "I’m wondering if we should buy a new fridge."
+    },
+    {
+      "hint": "Może w przyszłym tygodniu odwiedzimy twoich rodziców?",
+      "answer": "Maybe we could visit your parents next week?"
+    },
+    {
+      "hint": "Zostawiłem list w skrzynce, przypomnij mi go zabrać.",
+      "answer": "I left a letter in the mailbox, remind me to take it."
+    },
+    {
+      "hint": "Nie mam dziś ochoty gotować, może zjemy coś na mieście?",
+      "answer": "I don’t feel like cooking today, maybe we could eat out?"
+    },
+    {
+      "hint": "Czy mogłabyś sprawdzić, czy pranie już się skończyło?",
+      "answer": "Could you check if the laundry is done?"
+    },
+    {
+      "hint": "Zapomniałem wyrzucić śmieci, zaraz to zrobię.",
+      "answer": "I forgot to take out the trash, I’ll do it in a moment."
+    },
+    {
+      "hint": "Twoje ciasto naprawdę świetnie się udało.",
+      "answer": "Your cake turned out really well."
+    },
+    {
+      "hint": "Może zrobimy sobie wspólne zdjęcie w ogrodzie?",
+      "answer": "How about taking a picture together in the garden?"
+    },
+    {
+      "hint": "Chciałbym, żebyśmy mieli więcej takich spokojnych wieczorów.",
+      "answer": "I wish we had more evenings like this."
+    }
+  ],
+  "count": 49
+}

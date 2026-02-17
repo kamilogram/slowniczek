@@ -1,0 +1,408 @@
+{
+  "name": "Copilot 3 poziom B2",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Gdyby tylko posłuchał mojej rady, uniknąłby całej tej nieprzyjemnej sytuacji.",
+      "answer": "If only he had listened to my advice, he would have avoided this unpleasant situation."
+    },
+    {
+      "hint": "Pomimo początkowych trudności, projekt ukończono na czas.",
+      "answer": "Despite initial difficulties, the project was completed on time."
+    },
+    {
+      "hint": "Nie ma sensu odkładać tego; im szybciej, tym lepiej.",
+      "answer": "There is no point in putting it off; the sooner, the better."
+    },
+    {
+      "hint": "Zarząd zadecydował, że nowe przepisy muszą zostać wdrożone natychmiast.",
+      "answer": "The management decided that new regulations must be implemented immediately."
+    },
+    {
+      "hint": "Właśnie miałem do Ciebie zadzwonić, kiedy przyszedł ten e-mail.",
+      "answer": "I was just about to call you when that email came through."
+    },
+    {
+      "hint": "O ile mi wiadomo, konferencja została odwołana z powodu strajku.",
+      "answer": "As far as I know, the conference has been called off due to a strike."
+    },
+    {
+      "hint": "Musiałeś to wiedzieć; przecież wszystkie dowody na to wskazywały.",
+      "answer": "You must have known it; all the evidence pointed to it."
+    },
+    {
+      "hint": "W przeciwieństwie do moich oczekiwań, osiągnęliśmy konsensus.",
+      "answer": "Contrary to my expectations, we reached a consensus."
+    },
+    {
+      "hint": "Nie mogę się doczekać, aż będę mógł ubiegać się o awans.",
+      "answer": "I'm looking forward to being able to apply for the promotion."
+    },
+    {
+      "hint": "Gdyby nie jego szybka interwencja, to skończyłoby się katastrofą.",
+      "answer": "Had it not been for his quick intervention, it would have ended in disaster."
+    },
+    {
+      "hint": "Czy mógłbyś mi wyjaśnić, dlaczego nigdy nie dotrzymujesz terminu?",
+      "answer": "Could you explain to me why you never meet the deadline?"
+    },
+    {
+      "hint": "Zaczął szukać rozwiązania, kiedy plan okazał się wadliwy.",
+      "answer": "He set about looking for a solution when the plan turned out to be flawed."
+    },
+    {
+      "hint": "Musimy wziąć pod uwagę wszystkie implikacje tej decyzji.",
+      "answer": "We need to take into account all the implications of this decision."
+    },
+    {
+      "hint": "Żałuję, że nie miałem wtedy wystarczającej odwagi.",
+      "answer": "I wish I had had enough courage then."
+    },
+    {
+      "hint": "Najwyższy czas, byśmy podjęli konkretne działania.",
+      "answer": "It is high time we took concrete action."
+    },
+    {
+      "hint": "Musiał być bardzo zdesperowany, żeby to w ogóle zrobić.",
+      "answer": "He must have been very desperate to do it at all."
+    },
+    {
+      "hint": "Niewiele brakowało, a stracilibyśmy całą inwestycję.",
+      "answer": "We were very close to losing the entire investment."
+    },
+    {
+      "hint": "Czy wiesz, jak odróżnić fakt od fikcji?",
+      "answer": "Do you know how to distinguish fact from fiction?"
+    },
+    {
+      "hint": "Odmówił, ponieważ nie chciał się angażować.",
+      "answer": "He declined because he did not want to get involved."
+    },
+    {
+      "hint": "Mimo wszystko, musimy trzymać się naszych zasad.",
+      "answer": "Regardless of everything, we must stick to our principles."
+    },
+    {
+      "hint": "Czy to spotkanie zostało przeniesione na przyszły tydzień?",
+      "answer": "Has this meeting been put off until next week?"
+    },
+    {
+      "hint": "Uprzedzając fakty, nasza firma nie poniesie kosztów.",
+      "answer": "To anticipate events, our company will not bear the costs."
+    },
+    {
+      "hint": "Bez względu na pogodę, wycieczka odbędzie się zgodnie z planem.",
+      "answer": "Regardless of the weather, the trip will go ahead as planned."
+    },
+    {
+      "hint": "Gdyby nie prąd, nie moglibyśmy teraz pracować.",
+      "answer": "If it weren't for electricity, we wouldn't be able to work now."
+    },
+    {
+      "hint": "Cała sprawa została całkowicie przeinaczona przez media.",
+      "answer": "The whole issue was entirely misrepresented by the media."
+    },
+    {
+      "hint": "Jesteś odpowiedzialny za nadzorowanie postępu prac.",
+      "answer": "You are responsible for overseeing the work progress."
+    },
+    {
+      "hint": "Musimy przestać to ignorować i stawić czoła prawdzie.",
+      "answer": "We must stop ignoring this and face up to the truth."
+    },
+    {
+      "hint": "Ostatecznie, nie ma znaczenia, kto wygrał wybory.",
+      "answer": "Ultimately, it doesn't matter who won the election."
+    },
+    {
+      "hint": "To coś, co łatwo przeoczyć w pośpiechu.",
+      "answer": "It's something that is easy to overlook in a hurry."
+    },
+    {
+      "hint": "Mam zamiar ubiegać się o to stanowisko w przyszłym miesiącu.",
+      "answer": "I intend to apply for this position next month."
+    },
+    {
+      "hint": "Wymaga się od nas, abyśmy byli punktualni i dokładni.",
+      "answer": "We are required to be punctual and accurate."
+    },
+    {
+      "hint": "Mógłbyś mi to wytłumaczyć bardziej szczegółowo?",
+      "answer": "Could you elaborate on this for me?"
+    },
+    {
+      "hint": "Po spotkaniu musimy omówić kluczowe wnioski.",
+      "answer": "Following the meeting, we must discuss the key takeaways."
+    },
+    {
+      "hint": "Ponoć nowa polityka wejdzie w życie w marcu.",
+      "answer": "Allegedly, the new policy will come into effect in March."
+    },
+    {
+      "hint": "Warto poświęcić czas na przeczytanie umowy przed podpisaniem.",
+      "answer": "It is worth taking the time to read the contract before signing."
+    },
+    {
+      "hint": "Przypuszczam, że nie ma innego wyjścia niż negocjacje.",
+      "answer": "I presume there is no alternative but to negotiate."
+    },
+    {
+      "hint": "Nie mogę znieść tego hałasu o tak wczesnej porze.",
+      "answer": "I cannot put up with this noise at such an early hour."
+    },
+    {
+      "hint": "Jestem przekonany, że zdam ten egzamin śpiewająco.",
+      "answer": "I am convinced I will pass this exam with flying colours."
+    },
+    {
+      "hint": "To nie jest kwestia, którą można łatwo zignorować.",
+      "answer": "This is not an issue that can be easily disregarded."
+    },
+    {
+      "hint": "Żałuję, że nie spędziłem więcej czasu na studiowaniu.",
+      "answer": "I regret not having spent more time studying."
+    },
+    {
+      "hint": "Powinniśmy się pospieszyć, żeby nie przegapić pociągu.",
+      "answer": "We should hurry up so as not to miss the train."
+    },
+    {
+      "hint": "Rząd rozważa wprowadzenie nowych regulacji podatkowych.",
+      "answer": "The government is contemplating introducing new tax regulations."
+    },
+    {
+      "hint": "Najlepiej byłoby, gdybyśmy zaczekali na jego odpowiedź.",
+      "answer": "It would be best if we waited for his response."
+    },
+    {
+      "hint": "Czy możesz odróżnić te dwa, niemal identyczne, dokumenty?",
+      "answer": "Can you tell the difference between these two almost identical documents?"
+    },
+    {
+      "hint": "Jestem zdania, że powinniśmy to odrzucić.",
+      "answer": "I am of the opinion that we should turn it down."
+    },
+    {
+      "hint": "Ustaliliśmy, że spotkamy się w najbliższy poniedziałek.",
+      "answer": "We arranged to get together next Monday."
+    },
+    {
+      "hint": "Choć jest drogi, ten samochód jest warty swojej ceny.",
+      "answer": "Although it is expensive, this car is worth the money."
+    },
+    {
+      "hint": "Mogliśmy to zrobić o wiele lepiej, szczerze mówiąc.",
+      "answer": "We could have done it much better, to be honest."
+    },
+    {
+      "hint": "Nikt nie spodziewał się tak nagłego obrotu spraw.",
+      "answer": "No one anticipated such a sudden turn of events."
+    },
+    {
+      "hint": "Czy masz coś przeciwko, żebym otworzył okno?",
+      "answer": "Do you mind me opening the window?"
+    },
+    {
+      "hint": "Musimy działać natychmiast, sytuacja tego wymaga.",
+      "answer": "We must act instantly; the situation demands it."
+    },
+    {
+      "hint": "Właśnie się dowiedziałem, że zmieniono zasady.",
+      "answer": "I have just found out that the rules have been changed."
+    },
+    {
+      "hint": "O ile mi wiadomo, nie ma żadnych przeciwwskazań.",
+      "answer": "As far as I know, there are no contraindications."
+    },
+    {
+      "hint": "Nie chcę cię zwodzić, powiem prawdę prosto z mostu.",
+      "answer": "I don't want to mislead you; I will tell the truth straight out."
+    },
+    {
+      "hint": "Nie ma sensu się denerwować, to niczego nie zmieni.",
+      "answer": "There is no point in getting nervous; it won't change anything."
+    },
+    {
+      "hint": "W tej branży należy być na bieżąco z trendami.",
+      "answer": "In this industry, you must keep up with the trends."
+    },
+    {
+      "hint": "Podejrzewam, że on kłamał w tej sprawie.",
+      "answer": "I suspect he was lying about the matter."
+    },
+    {
+      "hint": "Musisz być bardziej asertywny i bronić swojego zdania.",
+      "answer": "You have to be more assertive and stand up for your opinion."
+    },
+    {
+      "hint": "Cały budynek został poddany gruntownej renowacji.",
+      "answer": "The whole building has undergone a thorough renovation."
+    },
+    {
+      "hint": "Zastanawiam się, dlaczego nie zadzwonił wcześniej.",
+      "answer": "I wonder why he did not call beforehand."
+    },
+    {
+      "hint": "Został on nominowany na stanowisko prezesa zarządu.",
+      "answer": "He was nominated to the position of CEO."
+    },
+    {
+      "hint": "Mimo kiepskich wyników, zdołali utrzymać pozycję.",
+      "answer": "Despite the poor results, they managed to hold their position."
+    },
+    {
+      "hint": "Zazwyczaj unikam konfrontacji, ale tym razem się wtrąciłem.",
+      "answer": "I usually avoid confrontation, but I stepped in this time."
+    },
+    {
+      "hint": "Bezpieczeństwo pracowników jest sprawą nadrzędną.",
+      "answer": "Employee safety is a paramount concern."
+    },
+    {
+      "hint": "Przypuszczam, że nie ma już nic do stracenia.",
+      "answer": "I assume there is nothing left to lose."
+    },
+    {
+      "hint": "Wolałbym, żebyś nie poruszał tego tematu.",
+      "answer": "I would rather you didn't bring up that topic."
+    },
+    {
+      "hint": "To, co mówisz, wydaje się być wewnętrznie sprzeczne.",
+      "answer": "What you are saying appears to be inherently contradictory."
+    },
+    {
+      "hint": "Czy to jest jedyne rozsądne wyjście z tej sytuacji?",
+      "answer": "Is this the only sensible way out of this situation?"
+    },
+    {
+      "hint": "Cieszę się, że doszło do pojednania między nimi.",
+      "answer": "I am glad a reconciliation took place between them."
+    },
+    {
+      "hint": "Wszelkie roszczenia muszą być zgłoszone na piśmie.",
+      "answer": "Any claims must be submitted in writing."
+    },
+    {
+      "hint": "Spróbuję się z tym uporać przed końcem dnia.",
+      "answer": "I will try to tackle it before the end of the day."
+    },
+    {
+      "hint": "Właśnie miałem wyjść, kiedy się pojawiłeś.",
+      "answer": "I was just about to leave when you showed up."
+    },
+    {
+      "hint": "Potrzebuję, abyś złożył sprawozdanie do wtorku.",
+      "answer": "I require you to submit the report by Tuesday."
+    },
+    {
+      "hint": "Jak dotąd, wszystko przebiega zgodnie z planem.",
+      "answer": "So far, everything is proceeding according to plan."
+    },
+    {
+      "hint": "Pod żadnym pozorem nie wolno ci tego ujawnić.",
+      "answer": "Under no circumstances are you allowed to disclose this."
+    },
+    {
+      "hint": "Wziął się do pracy z niespotykaną energią.",
+      "answer": "He set to work with unparalleled energy."
+    },
+    {
+      "hint": "Musimy upewnić się, że to się nie powtórzy.",
+      "answer": "We need to make sure this does not recur."
+    },
+    {
+      "hint": "Nie mogę się powstrzymać od myślenia o tym błędzie.",
+      "answer": "I can't help thinking about that mistake."
+    },
+    {
+      "hint": "Kto pierwszy raz podniósł tę kwestię na spotkaniu?",
+      "answer": "Who first brought up this issue at the meeting?"
+    },
+    {
+      "hint": "Jestem wdzięczny za Twoją bezcenną pomoc.",
+      "answer": "I am grateful for your invaluable assistance."
+    },
+    {
+      "hint": "Po zastanowieniu, postanowiłem się wycofać.",
+      "answer": "On reflection, I decided to back out."
+    },
+    {
+      "hint": "Jego kandydatura została odrzucona bez podania przyczyny.",
+      "answer": "His application was turned down without stating a reason."
+    },
+    {
+      "hint": "Czy wiesz, jak radzić sobie z presją terminów?",
+      "answer": "Do you know how to cope with deadline pressure?"
+    },
+    {
+      "hint": "O ile wiem, nikt nie został ranny w wypadku.",
+      "answer": "To my knowledge, nobody was injured in the accident."
+    },
+    {
+      "hint": "To jest coś, czego nigdy nie byłem świadomy.",
+      "answer": "This is something I had never been aware of."
+    },
+    {
+      "hint": "Nie chcę, żebyś się tym przejmował.",
+      "answer": "I don't want you to be bothered by it."
+    },
+    {
+      "hint": "Wszelkie opóźnienia będą miały poważne konsekwencje.",
+      "answer": "Any delays will have serious repercussions."
+    },
+    {
+      "hint": "Postanowił zrezygnować z pracy ze względów osobistych.",
+      "answer": "He chose to step down from the job for personal reasons."
+    },
+    {
+      "hint": "Musimy w końcu dojść do sedna problemu.",
+      "answer": "We need to finally get to the root of the problem."
+    },
+    {
+      "hint": "Został zmuszony do przyznania się do błędu.",
+      "answer": "He was compelled to admit his mistake."
+    },
+    {
+      "hint": "Byłoby lepiej, gdybyś został w domu.",
+      "answer": "You would be better off staying home."
+    },
+    {
+      "hint": "Nasze fundusze zostały przekazane na cele charytatywne.",
+      "answer": "Our funds were handed over to charity."
+    },
+    {
+      "hint": "Obawiam się, że nie mam już nic do dodania.",
+      "answer": "I am afraid I have nothing further to add."
+    },
+    {
+      "hint": "Upewnij się, że nie przegapisz tego ważnego punktu.",
+      "answer": "Make sure you don't miss out on this important point."
+    },
+    {
+      "hint": "W tym dokumencie brakuje kluczowych informacji.",
+      "answer": "Crucial information is missing from this document."
+    },
+    {
+      "hint": "Nie rozumiem, dlaczego tak to przeinaczyłeś.",
+      "answer": "I don't understand why you twisted it like that."
+    },
+    {
+      "hint": "O ile mi wiadomo, nic nie jest jeszcze przesądzone.",
+      "answer": "To the best of my knowledge, nothing is set in stone yet."
+    },
+    {
+      "hint": "Poczyniliśmy znaczne postępy w tym projekcie.",
+      "answer": "We have made considerable progress on this project."
+    },
+    {
+      "hint": "Będziemy musieli pogodzić się z tym wynikiem.",
+      "answer": "We will have to reconcile ourselves to this outcome."
+    },
+    {
+      "hint": "Nie mogę uwierzyć, że tak długo z tym zwlekałeś.",
+      "answer": "I can't believe you put it off for so long."
+    }
+  ],
+  "count": 100
+}

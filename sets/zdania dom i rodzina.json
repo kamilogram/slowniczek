@@ -1,0 +1,288 @@
+{
+  "name": "zdania dom i rodzina",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Czy mógłbyś wyrzucić śmieci zanim pójdziemy spać?",
+      "answer": "Could you take out the trash before we go to sleep?"
+    },
+    {
+      "hint": "Musimy dzisiaj zmienić pościel w sypialni.",
+      "answer": "We need to change the bedding in the bedroom today."
+    },
+    {
+      "hint": "Czy sprawdziłeś, czy drzwi są zamknięte?",
+      "answer": "Did you check if the door is locked?"
+    },
+    {
+      "hint": "Możesz podlać kwiaty w salonie?",
+      "answer": "Can you water the plants in the living room?"
+    },
+    {
+      "hint": "Zgaszę światło w kuchni, bo już tam nie będziemy.",
+      "answer": "I’ll turn off the light in the kitchen since we won’t be there anymore."
+    },
+    {
+      "hint": "Przypomnij mi, żebym jutro zabrał pranie z suszarki.",
+      "answer": "Remind me to take the laundry out of the dryer tomorrow."
+    },
+    {
+      "hint": "Kto dzisiaj wynosi psa na spacer?",
+      "answer": "Who is taking the dog for a walk today?"
+    },
+    {
+      "hint": "Możesz mi pomóc posprzątać po kolacji?",
+      "answer": "Can you help me clean up after dinner?"
+    },
+    {
+      "hint": "Zostawiłem pilot na stole w jadalni.",
+      "answer": "I left the remote control on the dining table."
+    },
+    {
+      "hint": "Musimy naprawić kran, bo kapie od kilku dni.",
+      "answer": "We need to fix the faucet because it’s been dripping for a few days."
+    },
+    {
+      "hint": "Czy zamknęłaś okna w sypialni?",
+      "answer": "Did you close the windows in the bedroom?"
+    },
+    {
+      "hint": "Odkurzmy dziś wieczorem, bo jutro przychodzą goście.",
+      "answer": "Let’s vacuum tonight because guests are coming tomorrow."
+    },
+    {
+      "hint": "Muszę jutro wyprasować koszulę do pracy.",
+      "answer": "I need to iron my shirt for work tomorrow."
+    },
+    {
+      "hint": "Czy wstawiłeś naczynia do zmywarki?",
+      "answer": "Did you put the dishes in the dishwasher?"
+    },
+    {
+      "hint": "Telewizor zostawiłeś włączony w salonie.",
+      "answer": "You left the TV on in the living room."
+    },
+    {
+      "hint": "Połóż proszę ubrania do szafy, a nie na krzesło.",
+      "answer": "Please put the clothes in the closet, not on the chair."
+    },
+    {
+      "hint": "Czy pies już dostał jedzenie?",
+      "answer": "Has the dog been fed yet?"
+    },
+    {
+      "hint": "Przypilnuj dzieci, kiedy będę gotować.",
+      "answer": "Watch the kids while I cook."
+    },
+    {
+      "hint": "Musimy kupić nową żarówkę do łazienki.",
+      "answer": "We need to buy a new light bulb for the bathroom."
+    },
+    {
+      "hint": "Podaj mi proszę ręcznik z szafki.",
+      "answer": "Please hand me a towel from the cabinet."
+    },
+    {
+      "hint": "Czy wyłączyłaś żelazko?",
+      "answer": "Did you turn off the iron?"
+    },
+    {
+      "hint": "Muszę dziś umyć okna w kuchni.",
+      "answer": "I need to wash the kitchen windows today."
+    },
+    {
+      "hint": "Nie zapomnij zabrać kluczy, gdy wychodzisz.",
+      "answer": "Don’t forget to take the keys when you leave."
+    },
+    {
+      "hint": "Kto wyrzucił resztki do kosza?",
+      "answer": "Who threw the leftovers into the bin?"
+    },
+    {
+      "hint": "Wynieśmy dywan na balkon i go wytrzepmy.",
+      "answer": "Let’s take the carpet to the balcony and shake it out."
+    },
+    {
+      "hint": "Możesz ustawić stół na kolację?",
+      "answer": "Can you set the table for dinner?"
+    },
+    {
+      "hint": "Łóżko nie zostało pościelone.",
+      "answer": "The bed hasn’t been made."
+    },
+    {
+      "hint": "Włącz proszę pralkę na szybki program.",
+      "answer": "Please run the washing machine on a quick cycle."
+    },
+    {
+      "hint": "Musimy posortować pranie według kolorów.",
+      "answer": "We need to sort the laundry by colors."
+    },
+    {
+      "hint": "Czy odkurzysz dywan w pokoju dziecięcym?",
+      "answer": "Can you vacuum the carpet in the kids’ room?"
+    },
+    {
+      "hint": "Możesz wytrzeć kurz z półek?",
+      "answer": "Can you dust the shelves?"
+    },
+    {
+      "hint": "Pamiętaj, żeby wynieść butelki do recyklingu.",
+      "answer": "Remember to take the bottles out for recycling."
+    },
+    {
+      "hint": "Ktoś musi podlać ogródek jutro rano.",
+      "answer": "Someone needs to water the garden tomorrow morning."
+    },
+    {
+      "hint": "Czy nalałeś wodę do czajnika?",
+      "answer": "Did you pour water into the kettle?"
+    },
+    {
+      "hint": "Muszę zmienić baterie w pilocie.",
+      "answer": "I need to change the batteries in the remote control."
+    },
+    {
+      "hint": "Podaj mi nożyczki z szuflady.",
+      "answer": "Pass me the scissors from the drawer."
+    },
+    {
+      "hint": "Zgubiłem ładowarkę do telefonu.",
+      "answer": "I lost my phone charger."
+    },
+    {
+      "hint": "Piekarnik jeszcze się nagrzewa.",
+      "answer": "The oven is still heating up."
+    },
+    {
+      "hint": "Kto otworzył okno w kuchni?",
+      "answer": "Who opened the window in the kitchen?"
+    },
+    {
+      "hint": "Zamknij drzwi, bo jest przeciąg.",
+      "answer": "Close the door, there’s a draft."
+    },
+    {
+      "hint": "Muszę dziś umyć podłogę w łazience.",
+      "answer": "I need to clean the bathroom floor today."
+    },
+    {
+      "hint": "Podaj mi pilot do klimatyzacji.",
+      "answer": "Hand me the remote for the air conditioner."
+    },
+    {
+      "hint": "Czy zostawiłaś światło w korytarzu?",
+      "answer": "Did you leave the light on in the hallway?"
+    },
+    {
+      "hint": "Pomyśl, gdzie moglibyśmy postawić nową szafkę.",
+      "answer": "Think about where we could put the new cabinet."
+    },
+    {
+      "hint": "Nie mogę znaleźć korkociągu.",
+      "answer": "I can’t find the corkscrew."
+    },
+    {
+      "hint": "Musimy kupić nowe poduszki do kanapy.",
+      "answer": "We need to buy new pillows for the couch."
+    },
+    {
+      "hint": "Czy powiesiłeś pranie na balkonie?",
+      "answer": "Did you hang the laundry on the balcony?"
+    },
+    {
+      "hint": "Kto zabrał ręczniki z łazienki?",
+      "answer": "Who took the towels from the bathroom?"
+    },
+    {
+      "hint": "Możesz nakarmić kota zanim wyjdziesz?",
+      "answer": "Can you feed the cat before you leave?"
+    },
+    {
+      "hint": "Dzieci bawią się zbyt głośno w salonie.",
+      "answer": "The kids are playing too loudly in the living room."
+    },
+    {
+      "hint": "Ktoś musi opróżnić zmywarkę.",
+      "answer": "Someone needs to empty the dishwasher."
+    },
+    {
+      "hint": "Wynieś proszę śmieci organiczne.",
+      "answer": "Please take out the organic waste."
+    },
+    {
+      "hint": "Czy zamówiłaś nowe firanki do sypialni?",
+      "answer": "Did you order new curtains for the bedroom?"
+    },
+    {
+      "hint": "Nie ma już mydła przy umywalce.",
+      "answer": "There’s no soap left by the sink."
+    },
+    {
+      "hint": "Muszę dzisiaj podlewać rośliny doniczkowe.",
+      "answer": "I need to water the potted plants today."
+    },
+    {
+      "hint": "Przysuń stół bliżej ściany.",
+      "answer": "Move the table closer to the wall."
+    },
+    {
+      "hint": "Kto zgasił światło w kuchni?",
+      "answer": "Who turned off the light in the kitchen?"
+    },
+    {
+      "hint": "Przetrzyj stół, bo jest brudny.",
+      "answer": "Wipe the table, it’s dirty."
+    },
+    {
+      "hint": "Zawieśmy obraz nad sofą.",
+      "answer": "Let’s hang the picture above the sofa."
+    },
+    {
+      "hint": "Czy włączyłaś zmywarkę?",
+      "answer": "Did you start the dishwasher?"
+    },
+    {
+      "hint": "Nie mogę znaleźć pilota do telewizora.",
+      "answer": "I can’t find the TV remote."
+    },
+    {
+      "hint": "Muszę kupić nowe żarówki do korytarza.",
+      "answer": "I need to buy new bulbs for the hallway."
+    },
+    {
+      "hint": "Czy odkurzysz schody?",
+      "answer": "Can you vacuum the stairs?"
+    },
+    {
+      "hint": "Kto posprząta stół po obiedzie?",
+      "answer": "Who will clear the table after lunch?"
+    },
+    {
+      "hint": "Wynieśmy dywan do pralni chemicznej.",
+      "answer": "Let’s take the carpet to the dry cleaner."
+    },
+    {
+      "hint": "Zamknij okna, bo zaczyna padać.",
+      "answer": "Close the windows, it’s starting to rain."
+    },
+    {
+      "hint": "Musimy posprzątać piwnicę w weekend.",
+      "answer": "We need to clean the basement this weekend."
+    },
+    {
+      "hint": "Czy mogę użyć twojego suszarki do włosów?",
+      "answer": "Can I use your hairdryer?"
+    },
+    {
+      "hint": "Nie zapomnij wyjąć ubrań z pralki.",
+      "answer": "Don’t forget to take the clothes out of the washing machine."
+    },
+    {
+      "hint": "Muszę naprawić drzwi od szafy.",
+      "answer": "I need to fix the wardrobe door."
+    }
+  ],
+  "count": 70
+}

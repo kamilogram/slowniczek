@@ -1,0 +1,396 @@
+{
+  "name": "PODR 1-100",
+  "language": "Angielski",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Nagłe przerwanie przerwało jego koncentrację, gdy próbował wyjaśnić swój pomysł.",
+      "answer": "The sudden interruption broke his concentration while he was trying to explain his idea."
+    },
+    {
+      "hint": "Zatrzymała się, żeby wziąć łyk wody, zanim kontynuowała rozmowę.",
+      "answer": "She paused to take a sip of water before continuing the conversation."
+    },
+    {
+      "hint": "Jego gardło było suche po tak długim mówieniu bez przerwy.",
+      "answer": "His throat felt dry after speaking for such a long time without a break."
+    },
+    {
+      "hint": "Dziennikarz chciał zweryfikować źródło informacji, zanim ją opublikował.",
+      "answer": "The journalist wanted to verify the source of the information before publishing it."
+    },
+    {
+      "hint": "Księżycowe światło nadawało ogrodowi tajemniczy i spokojny klimat.",
+      "answer": "The moonlight gave the garden a mysterious and calm atmosphere."
+    },
+    {
+      "hint": "Obiekt miał dziwny kształt, którego nie potrafił rozpoznać.",
+      "answer": "The object had a strange shape that he could not recognise."
+    },
+    {
+      "hint": "Nagle zdał sobie sprawę, że popełnił poważny błąd.",
+      "answer": "He suddenly realised that he had made a serious mistake."
+    },
+    {
+      "hint": "Dziecko zaczęło czołgać się po podłodze w stronę zabawki.",
+      "answer": "The child began to crawl across the floor towards the toy."
+    },
+    {
+      "hint": "Przysiągł, że nigdy więcej tam nie wróci.",
+      "answer": "He swore that he would never return there again."
+    },
+    {
+      "hint": "Była oszołomiona wiadomością i przez chwilę nie mogła nic powiedzieć.",
+      "answer": "She was stunned by the news and could not say anything for a moment."
+    },
+    {
+      "hint": "To było naprawdę niezwykłe doświadczenie, którego długo nie zapomni.",
+      "answer": "It was an extraordinary experience that he would not forget for a long time."
+    },
+    {
+      "hint": "Musiał się pospiesznie oddalić, żeby nie spóźnić się na pociąg.",
+      "answer": "He had to hurry off so that he would not miss the train."
+    },
+    {
+      "hint": "Zeszła na dół, żeby sprawdzić, czy drzwi są zamknięte.",
+      "answer": "She went downstairs to check whether the door was locked."
+    },
+    {
+      "hint": "O świcie miasto było ciche i niemal puste.",
+      "answer": "At daybreak, the city was quiet and almost empty."
+    },
+    {
+      "hint": "Nie potrafiłem zrozumieć, co właściwie mam z tego wywnioskować.",
+      "answer": "I could not make anything of what he was trying to tell me."
+    },
+    {
+      "hint": "Artysta spędził wiele lat, doskonaląc swój styl.",
+      "answer": "The artist spent many years perfecting his style."
+    },
+    {
+      "hint": "Jest bardzo prawdopodobne, że jutro będzie padać.",
+      "answer": "It is very likely that it will rain tomorrow."
+    },
+    {
+      "hint": "Jej wyjaśnienie było proste i łatwe do zrozumienia.",
+      "answer": "Her explanation was simple and easy to understand."
+    },
+    {
+      "hint": "To doświadczenie nauczyło go, jak radzić sobie z trudnymi sytuacjami.",
+      "answer": "This experience taught him how to deal with difficult situations."
+    },
+    {
+      "hint": "Ból był tak silny, że ledwo mógł się poruszać.",
+      "answer": "The pain was so intense that he could barely move."
+    },
+    {
+      "hint": "Jego nastrój wyraźnie się poprawił po dobrej wiadomości.",
+      "answer": "His mood clearly improved after the good news."
+    },
+    {
+      "hint": "Udało mu się ukończyć zadanie mimo wielu przeszkód.",
+      "answer": "He managed to complete the task despite many obstacles."
+    },
+    {
+      "hint": "Jest w stanie samodzielnie rozwiązać ten problem.",
+      "answer": "He is able to solve this problem on his own."
+    },
+    {
+      "hint": "Przypuszczam, że ona już zna prawdę.",
+      "answer": "I suppose that she already knows the truth."
+    },
+    {
+      "hint": "Zdecydował się odrzucić ofertę bez dłuższego zastanowienia.",
+      "answer": "He decided to reject the offer without much thought."
+    },
+    {
+      "hint": "Istnieje możliwość, że plan się nie powiedzie.",
+      "answer": "There is a possibility that the plan will fail."
+    },
+    {
+      "hint": "Zadrżała z zimna, gdy wyszła na zewnątrz.",
+      "answer": "She began to shake with cold as she stepped outside."
+    },
+    {
+      "hint": "Wszystko wydawało się idealne aż do tego momentu.",
+      "answer": "Everything seemed perfect until that moment."
+    },
+    {
+      "hint": "Pomimo trudności nie poddał się.",
+      "answer": "In spite of the difficulties, he did not give up."
+    },
+    {
+      "hint": "Był przekonany, że podjął właściwą decyzję.",
+      "answer": "He was convinced that he had made the right decision."
+    },
+    {
+      "hint": "Z pewnością pomożemy ci, jeśli zajdzie taka potrzeba.",
+      "answer": "We will certainly help you if it becomes necessary."
+    },
+    {
+      "hint": "Jej zachowanie było bardzo nietypowe jak na nią.",
+      "answer": "Her behaviour was very unusual for her."
+    },
+    {
+      "hint": "Zatrzymał się na chwilę, by zastanowić się nad sytuacją.",
+      "answer": "He paused to reflect on the situation."
+    },
+    {
+      "hint": "Twoje wyjaśnienie w końcu zaczęło mieć sens.",
+      "answer": "Your explanation finally began to make sense."
+    },
+    {
+      "hint": "Oparł się o ścianę, próbując złapać oddech.",
+      "answer": "He leaned against the wall, trying to catch his breath."
+    },
+    {
+      "hint": "Stał na krawędzi dachu, patrząc w dół.",
+      "answer": "He stood on the edge of the roof, looking down."
+    },
+    {
+      "hint": "Mimo zmęczenia postanowiła iść dalej.",
+      "answer": "Despite being tired, she decided to go on."
+    },
+    {
+      "hint": "Delikatnie zamknęła drzwi, żeby nikogo nie obudzić.",
+      "answer": "She gently closed the door so as not to wake anyone."
+    },
+    {
+      "hint": "Pies zaczął szczekać, gdy usłyszał hałas za drzwiami.",
+      "answer": "The dog began to bark when it heard a noise behind the door."
+    },
+    {
+      "hint": "Po przebudzeniu udało jej się szybko z powrotem zasnąć.",
+      "answer": "After waking up, she managed to get back to sleep quickly."
+    },
+    {
+      "hint": "Stał i wpatrywał się w niego bez słowa, co było bardzo niepokojące.",
+      "answer": "He stood there and stared at him without saying a word, which was very unsettling."
+    },
+    {
+      "hint": "Ogarnął ją strach, gdy zobaczyła, co się wydarzyło.",
+      "answer": "She felt horror when she saw what had happened."
+    },
+    {
+      "hint": "Na szczęście nikt nie odniósł poważnych obrażeń.",
+      "answer": "Thankfully, no one was seriously injured."
+    },
+    {
+      "hint": "Drzwi były zamknięte, więc nie mogli wejść do środka.",
+      "answer": "The door was locked, so they could not get inside."
+    },
+    {
+      "hint": "Postać nagle zniknęła w ciemności.",
+      "answer": "The figure suddenly vanished into the darkness."
+    },
+    {
+      "hint": "Na podłodze leżały rozrzucone kartki papieru.",
+      "answer": "Papers were scattered across the floor."
+    },
+    {
+      "hint": "Otarł pot z czoła rękawem koszuli.",
+      "answer": "He wiped the sweat from his forehead with his sleeve."
+    },
+    {
+      "hint": "Zamarł w bezruchu, nie wiedząc, co zrobić.",
+      "answer": "He stood frozen, unsure of what to do."
+    },
+    {
+      "hint": "Strach powstrzymał go przed podjęciem decyzji.",
+      "answer": "Fear prevented him from making a decision."
+    },
+    {
+      "hint": "Czuła się niespokojna przed ważnym spotkaniem.",
+      "answer": "She felt anxious before the important meeting."
+    },
+    {
+      "hint": "Starał się unikać kontaktu wzrokowego.",
+      "answer": "He tried to avoid eye contact."
+    },
+    {
+      "hint": "Zapisała wszystko w małym notesie.",
+      "answer": "She wrote everything down in a small notepad."
+    },
+    {
+      "hint": "Drabina stała oparta o ścianę budynku.",
+      "answer": "The ladder was leaning against the side of the building."
+    },
+    {
+      "hint": "W pobliżu nie było nikogo, kto mógłby pomóc.",
+      "answer": "There was no one nearby who could help."
+    },
+    {
+      "hint": "Jestem absolutnie pewien, że to była dobra decyzja.",
+      "answer": "I am absolutely sure that it was the right decision."
+    },
+    {
+      "hint": "Nie wiedział, w którą stronę iść.",
+      "answer": "He did not know which way to go."
+    },
+    {
+      "hint": "Zauważyła dziwny dźwięk dobiegający z piwnicy.",
+      "answer": "She noticed a strange sound coming from the basement."
+    },
+    {
+      "hint": "Jej twarz zrobiła się blada ze strachu.",
+      "answer": "Her face turned pale with fear."
+    },
+    {
+      "hint": "Oczywiście popełnił błąd, ale nikt mu tego nie wypomniał.",
+      "answer": "Obviously, he made a mistake, but no one blamed him for it."
+    },
+    {
+      "hint": "Ta sytuacja bardzo go zaniepokoiła.",
+      "answer": "The situation greatly distressed him."
+    },
+    {
+      "hint": "Bardzo zamierzał dokończyć to zadanie jeszcze dziś.",
+      "answer": "He fully intended to finish the task later that day."
+    },
+    {
+      "hint": "Przechodzień zatrzymał się, by zapytać, czy wszystko w porządku.",
+      "answer": "A passer-by stopped to ask if everything was all right."
+    },
+    {
+      "hint": "Zaczęli przygotowywać się do wyjazdu już dzień wcześniej.",
+      "answer": "They began to prepare for the trip a day in advance."
+    },
+    {
+      "hint": "Postanowił ukryć dokumenty w bezpiecznym miejscu.",
+      "answer": "He decided to hide the documents in a safe place."
+    },
+    {
+      "hint": "Pytanie całkowicie go zaskoczyło.",
+      "answer": "The question caught him off guard."
+    },
+    {
+      "hint": "Ulica była obsadzona drzewami po obu stronach.",
+      "answer": "The street was lined with trees on both sides."
+    },
+    {
+      "hint": "Budynek był ogromny i widoczny z daleka.",
+      "answer": "The building was huge and visible from far away."
+    },
+    {
+      "hint": "Za domem stało stare drzewo.",
+      "answer": "There was an old back tree behind the house."
+    },
+    {
+      "hint": "Samochód nagle się zatrzymał.",
+      "answer": "The car came to a halt suddenly."
+    },
+    {
+      "hint": "Widok z góry był naprawdę imponujący.",
+      "answer": "The view from the top was truly impressive."
+    },
+    {
+      "hint": "Dom był otoczony przez wysokie krzewy.",
+      "answer": "The house was surrounded by tall shrubs."
+    },
+    {
+      "hint": "Mały krzew rósł tuż obok płotu.",
+      "answer": "A small shrub was growing right next to the fence."
+    },
+    {
+      "hint": "Ściana była pokryta bluszczem.",
+      "answer": "The wall was covered with ivy."
+    },
+    {
+      "hint": "Podjazd prowadził prosto do garażu.",
+      "answer": "The driveway led straight to the garage."
+    },
+    {
+      "hint": "Na górze słychać było czyjeś kroki.",
+      "answer": "Footsteps could be heard upstairs."
+    },
+    {
+      "hint": "Ktoś zapukał do drzwi późno w nocy.",
+      "answer": "Someone knocked on the door late at night."
+    },
+    {
+      "hint": "Była bardzo pewna siebie podczas rozmowy.",
+      "answer": "She appeared self-confident during the conversation."
+    },
+    {
+      "hint": "Wszystko było ułożone schludnie i równo.",
+      "answer": "Everything was arranged neatly and in order."
+    },
+    {
+      "hint": "To zdarzenie było czymś zupełnie niezwykłym.",
+      "answer": "The event was completely out of the ordinary."
+    },
+    {
+      "hint": "Nie chciał jej przeszkadzać podczas pracy.",
+      "answer": "He did not want to disturb her while she was working."
+    },
+    {
+      "hint": "To była ważna sprawa, której nie można było zignorować.",
+      "answer": "It was an important matter that could not be ignored."
+    },
+    {
+      "hint": "Z ciekawością przyglądał się całej sytuacji.",
+      "answer": "He watched the situation curiously."
+    },
+    {
+      "hint": "Usługa była szybka i bardzo profesjonalna.",
+      "answer": "The service was fast and highly professional."
+    },
+    {
+      "hint": "Informacje miały charakter poufny.",
+      "answer": "The information was confidential."
+    },
+    {
+      "hint": "Dzwonek zadzwonił dokładnie w południe.",
+      "answer": "The bell rang exactly at noon."
+    },
+    {
+      "hint": "Krzyczał wściekle, tracąc nad sobą kontrolę.",
+      "answer": "He shouted furiously, completely losing control."
+    },
+    {
+      "hint": "Twierdził, że nie miał z tym nic wspólnego.",
+      "answer": "He claimed that he had nothing to do with it."
+    },
+    {
+      "hint": "Zrobiła się czerwona na twarzy ze wstydu.",
+      "answer": "She turned red with embarrassment."
+    },
+    {
+      "hint": "Biegał po pokoju w panice, próbując znaleźć klucze.",
+      "answer": "He was moving around the room frantically, trying to find his keys."
+    },
+    {
+      "hint": "Stracił panowanie nad sobą, gdy usłyszał tę wiadomość.",
+      "answer": "He lost his temper when he heard the news."
+    },
+    {
+      "hint": "Jej zrozumienie sytuacji bardzo pomogło w rozwiązaniu problemu.",
+      "answer": "Her understanding of the situation helped a lot in solving the problem."
+    },
+    {
+      "hint": "Musiała poradzić sobie z wieloma trudnościami jednocześnie.",
+      "answer": "She had to deal with many difficulties at the same time."
+    },
+    {
+      "hint": "Był zaniepokojony jej nagłym zachowaniem.",
+      "answer": "He was concerned about her sudden behaviour."
+    },
+    {
+      "hint": "Doświadczenie to doprowadziło go do ważnych wniosków.",
+      "answer": "This experience led him to important conclusions."
+    },
+    {
+      "hint": "Wskazał palcem na drzwi, nie mówiąc ani słowa.",
+      "answer": "He pointed at the door without saying a word."
+    },
+    {
+      "hint": "Spojrzał w górę, próbując zobaczyć, skąd dochodzi dźwięk.",
+      "answer": "He looked upwards, trying to see where the sound was coming from."
+    },
+    {
+      "hint": "Pnącze wspinało się po ścianie aż do dachu.",
+      "answer": "The creeper was climbing up the wall all the way to the roof."
+    }
+  ],
+  "count": 97
+}

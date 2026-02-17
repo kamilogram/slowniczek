@@ -1,0 +1,204 @@
+{
+  "name": "hiszpański - podstawowe zwroty: lotnisko i hotel",
+  "language": "es",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "gdzie jest lotnisko?",
+      "answer": "¿dónde está el aeropuerto?"
+    },
+    {
+      "hint": "mam bilet",
+      "answer": "tengo un billete"
+    },
+    {
+      "hint": "mam rezerwację",
+      "answer": "tengo una reserva"
+    },
+    {
+      "hint": "czy mogę się odprawić?",
+      "answer": "¿puedo hacer el check-in?"
+    },
+    {
+      "hint": "gdzie jest odprawa?",
+      "answer": "¿dónde está el mostrador de facturación?"
+    },
+    {
+      "hint": "gdzie jest bramka?",
+      "answer": "¿dónde está la puerta de embarque?"
+    },
+    {
+      "hint": "czy mogę zobaczyć paszport?",
+      "answer": "¿puedo ver su pasaporte?"
+    },
+    {
+      "hint": "czy to jest mój lot?",
+      "answer": "¿es este mi vuelo?"
+    },
+    {
+      "hint": "czy lot jest opóźniony?",
+      "answer": "¿el vuelo está retrasado?"
+    },
+    {
+      "hint": "czy lot został odwołany?",
+      "answer": "¿el vuelo ha sido cancelado?"
+    },
+    {
+      "hint": "gdzie jest kontrola bezpieczeństwa?",
+      "answer": "¿dónde está el control de seguridad?"
+    },
+    {
+      "hint": "czy mogę zabrać to do samolotu?",
+      "answer": "¿puedo llevar esto en el avión?"
+    },
+    {
+      "hint": "czy to jest bagaż podręczny?",
+      "answer": "¿es equipaje de mano?"
+    },
+    {
+      "hint": "czy muszę nadać bagaż?",
+      "answer": "¿tengo que facturar el equipaje?"
+    },
+    {
+      "hint": "gdzie odbieram bagaż?",
+      "answer": "¿dónde recojo mi equipaje?"
+    },
+    {
+      "hint": "zgubiłem bagaż",
+      "answer": "he perdido mi equipaje"
+    },
+    {
+      "hint": "czy mogę zmienić miejsce?",
+      "answer": "¿puedo cambiar de asiento?"
+    },
+    {
+      "hint": "czy to miejsce jest zajęte?",
+      "answer": "¿este asiento está ocupado?"
+    },
+    {
+      "hint": "czy mogę siedzieć przy oknie?",
+      "answer": "¿puedo sentarme junto a la ventana?"
+    },
+    {
+      "hint": "czy mogę siedzieć przy przejściu?",
+      "answer": "¿puedo sentarme en el pasillo?"
+    },
+    {
+      "hint": "czy mogę dostać wodę?",
+      "answer": "¿puedo tener agua?"
+    },
+    {
+      "hint": "czy mogę dostać koc?",
+      "answer": "¿puedo tener una manta?"
+    },
+    {
+      "hint": "czy mogę dostać słuchawki?",
+      "answer": "¿puedo tener auriculares?"
+    },
+    {
+      "hint": "czy mogę skorzystać z toalety?",
+      "answer": "¿puedo usar el baño?"
+    },
+    {
+      "hint": "gdzie jest hotel?",
+      "answer": "¿dónde está el hotel?"
+    },
+    {
+      "hint": "mam rezerwację na nazwisko...",
+      "answer": "tengo una reserva a nombre de..."
+    },
+    {
+      "hint": "czy mogę się zameldować?",
+      "answer": "¿puedo hacer el check-in?"
+    },
+    {
+      "hint": "czy mogę się wymeldować?",
+      "answer": "¿puedo hacer el check-out?"
+    },
+    {
+      "hint": "czy śniadanie jest w cenie?",
+      "answer": "¿el desayuno está incluido?"
+    },
+    {
+      "hint": "czy jest dostępne Wi-Fi?",
+      "answer": "¿hay Wi-Fi disponible?"
+    },
+    {
+      "hint": "jaki jest kod do Wi-Fi?",
+      "answer": "¿cuál es la contraseña del Wi-Fi?"
+    },
+    {
+      "hint": "czy jest winda?",
+      "answer": "¿hay ascensor?"
+    },
+    {
+      "hint": "czy jest klimatyzacja?",
+      "answer": "¿hay aire acondicionado?"
+    },
+    {
+      "hint": "czy mogę dostać dodatkowy ręcznik?",
+      "answer": "¿puedo tener una toalla extra?"
+    },
+    {
+      "hint": "czy mogę dostać dodatkową poduszkę?",
+      "answer": "¿puedo tener una almohada extra?"
+    },
+    {
+      "hint": "czy mogę zamówić budzenie?",
+      "answer": "¿puedo pedir una llamada de despertador?"
+    },
+    {
+      "hint": "czy mogę zamówić taksówkę?",
+      "answer": "¿puede pedir un taxi para mí?"
+    },
+    {
+      "hint": "czy mogę zostawić bagaż?",
+      "answer": "¿puedo dejar mi equipaje aquí?"
+    },
+    {
+      "hint": "czy jest sejf?",
+      "answer": "¿hay caja fuerte?"
+    },
+    {
+      "hint": "czy mogę zapłacić kartą?",
+      "answer": "¿puedo pagar con tarjeta?"
+    },
+    {
+      "hint": "czy mogę zapłacić gotówką?",
+      "answer": "¿puedo pagar en efectivo?"
+    },
+    {
+      "hint": "czy mogę przedłużyć pobyt?",
+      "answer": "¿puedo extender mi estancia?"
+    },
+    {
+      "hint": "czy mogę anulować rezerwację?",
+      "answer": "¿puedo cancelar la reserva?"
+    },
+    {
+      "hint": "czy mogę zmienić pokój?",
+      "answer": "¿puedo cambiar de habitación?"
+    },
+    {
+      "hint": "czy pokój jest gotowy?",
+      "answer": "¿la habitación está lista?"
+    },
+    {
+      "hint": "czy pokój jest czysty?",
+      "answer": "¿la habitación está limpia?"
+    },
+    {
+      "hint": "czy mogę dostać rachunek?",
+      "answer": "¿puedo tener la factura?"
+    },
+    {
+      "hint": "czy mogę zapłacić teraz?",
+      "answer": "¿puedo pagar ahora?"
+    },
+    {
+      "hint": "czy mogę zapłacić później?",
+      "answer": "¿puedo pagar más tarde?"
+    }
+  ],
+  "count": 49
+}

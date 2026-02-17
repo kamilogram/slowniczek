@@ -1,0 +1,288 @@
+{
+  "name": "zdania praca i biuro",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Muszę dziś skończyć ten raport.",
+      "answer": "I need to finish this report today."
+    },
+    {
+      "hint": "Czy możesz przesłać mi najnowszą wersję pliku?",
+      "answer": "Can you send me the latest version of the file?"
+    },
+    {
+      "hint": "Mamy spotkanie o dziesiątej rano.",
+      "answer": "We have a meeting at ten in the morning."
+    },
+    {
+      "hint": "Sprawdź proszę swoją skrzynkę mailową.",
+      "answer": "Please check your email inbox."
+    },
+    {
+      "hint": "Ten projekt wymaga jeszcze kilku poprawek.",
+      "answer": "This project still needs a few adjustments."
+    },
+    {
+      "hint": "Musimy omówić budżet na przyszły rok.",
+      "answer": "We need to discuss the budget for next year."
+    },
+    {
+      "hint": "Spóźnię się kilka minut na wideokonferencję.",
+      "answer": "I’ll be a few minutes late for the video conference."
+    },
+    {
+      "hint": "Gdzie zapisaliśmy wyniki ankiety?",
+      "answer": "Where did we save the survey results?"
+    },
+    {
+      "hint": "Wysłałem Ci zaproszenie do kalendarza.",
+      "answer": "I sent you a calendar invite."
+    },
+    {
+      "hint": "Muszę zadzwonić do klienta w sprawie umowy.",
+      "answer": "I need to call the client about the contract."
+    },
+    {
+      "hint": "Twoja prezentacja zrobiła dobre wrażenie.",
+      "answer": "Your presentation made a good impression."
+    },
+    {
+      "hint": "Laptop znów się zawiesił.",
+      "answer": "The laptop froze again."
+    },
+    {
+      "hint": "Czy mogę pożyczyć na chwilę drukarkę?",
+      "answer": "Can I use the printer for a moment?"
+    },
+    {
+      "hint": "Zapisz plik na wspólnym dysku.",
+      "answer": "Save the file on the shared drive."
+    },
+    {
+      "hint": "Kto dziś notuje podczas spotkania?",
+      "answer": "Who is taking notes during today’s meeting?"
+    },
+    {
+      "hint": "Chciałbym poprosić o dzień wolny w przyszłym tygodniu.",
+      "answer": "I’d like to ask for a day off next week."
+    },
+    {
+      "hint": "Potrzebujemy nowego oprogramowania do zarządzania zadaniami.",
+      "answer": "We need new software for task management."
+    },
+    {
+      "hint": "Przepraszam, ale mam konflikt w kalendarzu.",
+      "answer": "Sorry, but I have a scheduling conflict."
+    },
+    {
+      "hint": "Czy moglibyśmy przełożyć nasze spotkanie?",
+      "answer": "Could we reschedule our meeting?"
+    },
+    {
+      "hint": "Wysłałem fakturę do działu księgowości.",
+      "answer": "I sent the invoice to the accounting department."
+    },
+    {
+      "hint": "Musimy zrobić kopię zapasową tych danych.",
+      "answer": "We need to back up this data."
+    },
+    {
+      "hint": "Szef prosił o krótkie podsumowanie.",
+      "answer": "The boss asked for a short summary."
+    },
+    {
+      "hint": "Nie mogę znaleźć tego dokumentu w folderze.",
+      "answer": "I can’t find that document in the folder."
+    },
+    {
+      "hint": "Proszę, włącz projektor.",
+      "answer": "Please turn on the projector."
+    },
+    {
+      "hint": "O której godzinie zaczyna się szkolenie?",
+      "answer": "What time does the training start?"
+    },
+    {
+      "hint": "Mam za dużo maili do przeczytania.",
+      "answer": "I have too many emails to read."
+    },
+    {
+      "hint": "Czy możesz mi pomóc z tym arkuszem kalkulacyjnym?",
+      "answer": "Can you help me with this spreadsheet?"
+    },
+    {
+      "hint": "Zapomniałem dołączyć plik do maila.",
+      "answer": "I forgot to attach the file to the email."
+    },
+    {
+      "hint": "Potrzebuję więcej czasu na przygotowanie prezentacji.",
+      "answer": "I need more time to prepare the presentation."
+    },
+    {
+      "hint": "Zostało nam piętnaście minut na dyskusję.",
+      "answer": "We have fifteen minutes left for discussion."
+    },
+    {
+      "hint": "Czy drukarka działa?",
+      "answer": "Is the printer working?"
+    },
+    {
+      "hint": "Zaloguj się na wspólne konto.",
+      "answer": "Log in to the shared account."
+    },
+    {
+      "hint": "Mój komputer działa bardzo wolno.",
+      "answer": "My computer is running very slowly."
+    },
+    {
+      "hint": "Zamknij proszę drzwi od sali konferencyjnej.",
+      "answer": "Please close the conference room door."
+    },
+    {
+      "hint": "Czy ktoś przygotował agendę spotkania?",
+      "answer": "Has anyone prepared the meeting agenda?"
+    },
+    {
+      "hint": "Wysłałem Ci link do dokumentu.",
+      "answer": "I sent you a link to the document."
+    },
+    {
+      "hint": "Musimy skończyć ten projekt przed końcem tygodnia.",
+      "answer": "We need to finish this project by the end of the week."
+    },
+    {
+      "hint": "Kto będzie odpowiedzialny za ten dział?",
+      "answer": "Who will be responsible for this department?"
+    },
+    {
+      "hint": "Czy możesz zrobić kopię tego dokumentu?",
+      "answer": "Can you make a copy of this document?"
+    },
+    {
+      "hint": "Spotkanie potrwa około godziny.",
+      "answer": "The meeting will last about an hour."
+    },
+    {
+      "hint": "Potrzebuję dostępu do tego folderu.",
+      "answer": "I need access to that folder."
+    },
+    {
+      "hint": "Czy widziałeś już nowy harmonogram?",
+      "answer": "Have you seen the new schedule?"
+    },
+    {
+      "hint": "Musimy przygotować raport roczny.",
+      "answer": "We need to prepare the annual report."
+    },
+    {
+      "hint": "Proszę o chwilę cierpliwości.",
+      "answer": "Please be patient for a moment."
+    },
+    {
+      "hint": "To zadanie wymaga współpracy kilku osób.",
+      "answer": "This task requires the cooperation of several people."
+    },
+    {
+      "hint": "Czy możesz sprawdzić dane w tabeli?",
+      "answer": "Can you check the data in the table?"
+    },
+    {
+      "hint": "Właśnie zaczynam wideorozmowę.",
+      "answer": "I’m just starting a video call."
+    },
+    {
+      "hint": "Czy mogę przedstawić Ci nowego pracownika?",
+      "answer": "May I introduce you to the new employee?"
+    },
+    {
+      "hint": "Mam problem z zalogowaniem się do systemu.",
+      "answer": "I’m having trouble logging into the system."
+    },
+    {
+      "hint": "Wysłałem dokumenty kurierem.",
+      "answer": "I sent the documents by courier."
+    },
+    {
+      "hint": "Potrzebuję podpisać tę umowę.",
+      "answer": "I need to sign this contract."
+    },
+    {
+      "hint": "Proszę przygotować protokół ze spotkania.",
+      "answer": "Please prepare the meeting minutes."
+    },
+    {
+      "hint": "Wczoraj mieliśmy awarię systemu.",
+      "answer": "Yesterday we had a system failure."
+    },
+    {
+      "hint": "Czy możesz wysłać mi krótkie podsumowanie?",
+      "answer": "Can you send me a short summary?"
+    },
+    {
+      "hint": "Musimy ustalić nowy termin.",
+      "answer": "We need to set a new date."
+    },
+    {
+      "hint": "Drukarka skończyła tusz.",
+      "answer": "The printer ran out of ink."
+    },
+    {
+      "hint": "Czy masz chwilę na szybkie pytanie?",
+      "answer": "Do you have a moment for a quick question?"
+    },
+    {
+      "hint": "To zadanie jest bardziej skomplikowane niż myślałem.",
+      "answer": "This task is more complicated than I thought."
+    },
+    {
+      "hint": "Szef chce, żebyśmy pracowali nad tym razem.",
+      "answer": "The boss wants us to work on this together."
+    },
+    {
+      "hint": "Wysłałem Ci poprawioną wersję dokumentu.",
+      "answer": "I sent you the corrected version of the document."
+    },
+    {
+      "hint": "Musimy przeanalizować dane sprzedaży.",
+      "answer": "We need to analyze the sales data."
+    },
+    {
+      "hint": "Spotkanie zostało odwołane.",
+      "answer": "The meeting has been canceled."
+    },
+    {
+      "hint": "Proszę zanotuj to w kalendarzu.",
+      "answer": "Please note this in the calendar."
+    },
+    {
+      "hint": "Czy możesz przygotować listę zadań?",
+      "answer": "Can you prepare a task list?"
+    },
+    {
+      "hint": "Mam problem z otwarciem załącznika.",
+      "answer": "I have a problem opening the attachment."
+    },
+    {
+      "hint": "Zostało nam niewiele czasu.",
+      "answer": "We don’t have much time left."
+    },
+    {
+      "hint": "Czy ktoś może podać marker?",
+      "answer": "Can someone pass me the marker?"
+    },
+    {
+      "hint": "Chciałbym omówić ten pomysł na osobności.",
+      "answer": "I’d like to discuss this idea in private."
+    },
+    {
+      "hint": "Musimy zorganizować nowe szkolenie.",
+      "answer": "We need to organize new training."
+    },
+    {
+      "hint": "Proszę sprawdź poprawność liczb.",
+      "answer": "Please check the accuracy of the numbers."
+    }
+  ],
+  "count": 70
+}

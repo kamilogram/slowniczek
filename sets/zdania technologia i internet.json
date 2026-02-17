@@ -1,0 +1,284 @@
+{
+  "name": "zdania technologia i internet",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Muszę zmienić hasło, bo dostałem powiadomienie o podejrzanej aktywności.",
+      "answer": "I need to change my password because I got a notification about suspicious activity."
+    },
+    {
+      "hint": "Wczoraj internet działał bardzo wolno.",
+      "answer": "Yesterday the internet was very slow."
+    },
+    {
+      "hint": "Zainstalowałem aktualizację systemu i wszystko działa szybciej.",
+      "answer": "I installed a system update and everything works faster."
+    },
+    {
+      "hint": "Muszę kupić nowy router, bo ten często się zawiesza.",
+      "answer": "I need to buy a new router because this one often freezes."
+    },
+    {
+      "hint": "Czy widziałeś najnowszy model tego smartfona?",
+      "answer": "Have you seen the latest model of this smartphone?"
+    },
+    {
+      "hint": "Bateria w moim laptopie trzyma coraz krócej.",
+      "answer": "The battery in my laptop lasts shorter and shorter."
+    },
+    {
+      "hint": "Podłączyłem komputer do telewizora przez HDMI.",
+      "answer": "I connected the computer to the TV via HDMI."
+    },
+    {
+      "hint": "Muszę znaleźć kabel USB-C, bo ten się zepsuł.",
+      "answer": "I need to find a USB-C cable because this one broke."
+    },
+    {
+      "hint": "Kupiłem nową klawiaturę mechaniczną.",
+      "answer": "I bought a new mechanical keyboard."
+    },
+    {
+      "hint": "Pobieranie zajmuje dużo czasu, bo plik jest ogromny.",
+      "answer": "The download takes a long time because the file is huge."
+    },
+    {
+      "hint": "Czy masz konto na tej nowej platformie społecznościowej?",
+      "answer": "Do you have an account on this new social media platform?"
+    },
+    {
+      "hint": "Zrobiłem backup zdjęć w chmurze.",
+      "answer": "I made a backup of my photos in the cloud."
+    },
+    {
+      "hint": "Moja kamera internetowa nie działa w tej aplikacji.",
+      "answer": "My webcam doesn’t work in this app."
+    },
+    {
+      "hint": "Chciałbym przyspieszyć mój komputer, bo działa bardzo wolno.",
+      "answer": "I’d like to speed up my computer because it’s very slow."
+    },
+    {
+      "hint": "Zainstalowałem nową aplikację do zarządzania zadaniami.",
+      "answer": "I installed a new app for task management."
+    },
+    {
+      "hint": "Muszę wyczyścić pamięć podręczną w przeglądarce.",
+      "answer": "I need to clear the cache in my browser."
+    },
+    {
+      "hint": "Moje konto zostało zablokowane bez powodu.",
+      "answer": "My account was blocked for no reason."
+    },
+    {
+      "hint": "Czy korzystasz z menedżera haseł?",
+      "answer": "Do you use a password manager?"
+    },
+    {
+      "hint": "Ten serwis wymaga włączenia dwuetapowej weryfikacji.",
+      "answer": "This service requires two-factor authentication."
+    },
+    {
+      "hint": "Mój smartwatch przestał się synchronizować z telefonem.",
+      "answer": "My smartwatch stopped syncing with my phone."
+    },
+    {
+      "hint": "Muszę zaktualizować sterowniki karty graficznej.",
+      "answer": "I need to update my graphics card drivers."
+    },
+    {
+      "hint": "Wczoraj kupiłem nowy monitor ultrawide.",
+      "answer": "Yesterday I bought a new ultrawide monitor."
+    },
+    {
+      "hint": "Czy korzystasz z VPN, kiedy łączysz się z publicznym Wi-Fi?",
+      "answer": "Do you use a VPN when you connect to public Wi-Fi?"
+    },
+    {
+      "hint": "Dodałem nowe rozszerzenie do przeglądarki.",
+      "answer": "I added a new extension to my browser."
+    },
+    {
+      "hint": "Czy mogę udostępnić Ci ekran na wideokonferencji?",
+      "answer": "Can I share my screen on the video call?"
+    },
+    {
+      "hint": "Aplikacja ciągle się zawiesza na moim telefonie.",
+      "answer": "The app keeps crashing on my phone."
+    },
+    {
+      "hint": "Pobrałem program do edycji wideo.",
+      "answer": "I downloaded a video editing program."
+    },
+    {
+      "hint": "Moje słuchawki bezprzewodowe szybko się rozładowują.",
+      "answer": "My wireless headphones discharge quickly."
+    },
+    {
+      "hint": "Kupiłem nową kartę pamięci do aparatu.",
+      "answer": "I bought a new memory card for my camera."
+    },
+    {
+      "hint": "Czy masz konto premium na tej platformie?",
+      "answer": "Do you have a premium account on this platform?"
+    },
+    {
+      "hint": "Mój tablet nie chce się włączyć.",
+      "answer": "My tablet won’t turn on."
+    },
+    {
+      "hint": "Zainstalowałem nowy system operacyjny.",
+      "answer": "I installed a new operating system."
+    },
+    {
+      "hint": "Muszę zwiększyć miejsce w chmurze, bo brakuje mi pamięci.",
+      "answer": "I need to upgrade my cloud storage because I’m running out of space."
+    },
+    {
+      "hint": "Zgubiłem pendrive’a z ważnymi plikami.",
+      "answer": "I lost my USB stick with important files."
+    },
+    {
+      "hint": "Ten komputer nie ma wejścia na słuchawki.",
+      "answer": "This computer doesn’t have a headphone jack."
+    },
+    {
+      "hint": "Czy korzystasz z inteligentnych żarówek w domu?",
+      "answer": "Do you use smart bulbs at home?"
+    },
+    {
+      "hint": "Moja drukarka przestała działać po aktualizacji.",
+      "answer": "My printer stopped working after the update."
+    },
+    {
+      "hint": "Ten kabel HDMI jest za krótki.",
+      "answer": "This HDMI cable is too short."
+    },
+    {
+      "hint": "Czy mogę podłączyć się do twojego Wi-Fi?",
+      "answer": "Can I connect to your Wi-Fi?"
+    },
+    {
+      "hint": "Zainstalowałem antywirusa na komputerze.",
+      "answer": "I installed an antivirus on my computer."
+    },
+    {
+      "hint": "Kupiłem nową kartę graficzną do gier.",
+      "answer": "I bought a new graphics card for gaming."
+    },
+    {
+      "hint": "Czy korzystasz z aplikacji do monitorowania snu?",
+      "answer": "Do you use a sleep tracking app?"
+    },
+    {
+      "hint": "Muszę zresetować hasło do mojego konta e-mail.",
+      "answer": "I need to reset the password to my email account."
+    },
+    {
+      "hint": "Moje zdjęcia automatycznie zapisują się w chmurze.",
+      "answer": "My photos are automatically saved in the cloud."
+    },
+    {
+      "hint": "Ten laptop nie ma wystarczająco pamięci RAM.",
+      "answer": "This laptop doesn’t have enough RAM."
+    },
+    {
+      "hint": "Czy masz kamerę bezpieczeństwa w domu?",
+      "answer": "Do you have a security camera at home?"
+    },
+    {
+      "hint": "Muszę usunąć niepotrzebne aplikacje z telefonu.",
+      "answer": "I need to remove unnecessary apps from my phone."
+    },
+    {
+      "hint": "Czy korzystasz z płatności zbliżeniowych telefonem?",
+      "answer": "Do you use contactless payments with your phone?"
+    },
+    {
+      "hint": "Mój router często się restartuje.",
+      "answer": "My router keeps restarting."
+    },
+    {
+      "hint": "Kupiłem nowy smartwatch z funkcją EKG.",
+      "answer": "I bought a new smartwatch with an ECG function."
+    },
+    {
+      "hint": "Muszę sprawdzić prędkość mojego internetu.",
+      "answer": "I need to check my internet speed."
+    },
+    {
+      "hint": "Zainstalowałem system Linux na starym komputerze.",
+      "answer": "I installed Linux on an old computer."
+    },
+    {
+      "hint": "Moja konsola do gier nie czyta płyt.",
+      "answer": "My game console doesn’t read discs."
+    },
+    {
+      "hint": "Czy korzystasz z chatu GPT do pracy?",
+      "answer": "Do you use ChatGPT for work?"
+    },
+    {
+      "hint": "Ten plik jest za duży, żeby wysłać go mailem.",
+      "answer": "This file is too large to send by email."
+    },
+    {
+      "hint": "Muszę zsynchronizować notatki między telefonem a laptopem.",
+      "answer": "I need to sync my notes between my phone and my laptop."
+    },
+    {
+      "hint": "Czy masz konto na tej platformie streamingowej?",
+      "answer": "Do you have an account on this streaming platform?"
+    },
+    {
+      "hint": "Zainstalowałem aplikację do nauki języków.",
+      "answer": "I installed a language learning app."
+    },
+    {
+      "hint": "Moje słuchawki Bluetooth nie łączą się z telefonem.",
+      "answer": "My Bluetooth headphones won’t connect to my phone."
+    },
+    {
+      "hint": "Czy używasz dysku SSD czy HDD?",
+      "answer": "Do you use an SSD or an HDD?"
+    },
+    {
+      "hint": "Muszę zaktualizować aplikację bankową.",
+      "answer": "I need to update my banking app."
+    },
+    {
+      "hint": "Ten telefon nie obsługuje ładowania bezprzewodowego.",
+      "answer": "This phone doesn’t support wireless charging."
+    },
+    {
+      "hint": "Czy masz zainstalowanego Messengera na komputerze?",
+      "answer": "Do you have Messenger installed on your computer?"
+    },
+    {
+      "hint": "Mój smartwatch pokazuje powiadomienia z telefonu.",
+      "answer": "My smartwatch shows notifications from my phone."
+    },
+    {
+      "hint": "Muszę usunąć wirusa z laptopa.",
+      "answer": "I need to remove a virus from my laptop."
+    },
+    {
+      "hint": "Czy korzystasz z dysku zewnętrznego do backupów?",
+      "answer": "Do you use an external drive for backups?"
+    },
+    {
+      "hint": "Zainstalowałem aplikację do zarządzania finansami.",
+      "answer": "I installed a finance management app."
+    },
+    {
+      "hint": "Ten komputer obsługuje wirtualną rzeczywistość.",
+      "answer": "This computer supports virtual reality."
+    },
+    {
+      "hint": "Czy masz subskrypcję na Spotify?",
+      "answer": "Do you have a Spotify subscription?"
+    }
+  ],
+  "count": 69
+}

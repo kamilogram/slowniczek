@@ -1,0 +1,280 @@
+{
+  "name": "zdania na daily jako front-end",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Dzisiaj skończę implementację nowego widoku logowania.",
+      "answer": "Today I will finish implementing the new login view."
+    },
+    {
+      "hint": "Miałem problem z responsywnością na mniejszych ekranach, ale już go rozwiązałem.",
+      "answer": "I had an issue with responsiveness on smaller screens, but I’ve already fixed it."
+    },
+    {
+      "hint": "Muszę jeszcze dodać testy jednostkowe do nowego komponentu.",
+      "answer": "I still need to add unit tests for the new component."
+    },
+    {
+      "hint": "Backend jeszcze nie jest gotowy, więc korzystam z mocków.",
+      "answer": "The backend is not ready yet, so I’m using mocks."
+    },
+    {
+      "hint": "Kod przesłałem już na review, czekam na wasze uwagi.",
+      "answer": "I’ve already submitted the code for review, I’m waiting for your feedback."
+    },
+    {
+      "hint": "Wczoraj zająłem się poprawą błędów zgłoszonych przez QA.",
+      "answer": "Yesterday I worked on fixing the bugs reported by QA."
+    },
+    {
+      "hint": "Dzisiaj planuję dokończyć integrację z API.",
+      "answer": "Today I plan to finish the API integration."
+    },
+    {
+      "hint": "Potrzebuję wyjaśnienia w sprawie wymagań do tego zadania.",
+      "answer": "I need clarification regarding the requirements for this task."
+    },
+    {
+      "hint": "Czekam na design od UX, żeby móc ruszyć dalej.",
+      "answer": "I’m waiting for the design from UX so I can move forward."
+    },
+    {
+      "hint": "Wprowadziłem poprawki zgodnie z komentarzami w code review.",
+      "answer": "I made the changes according to the comments in the code review."
+    },
+    {
+      "hint": "Wczoraj trochę utknąłem, bo dokumentacja była niejasna.",
+      "answer": "Yesterday I got a bit stuck because the documentation was unclear."
+    },
+    {
+      "hint": "Dzisiaj chciałbym skupić się na refaktoryzacji starego kodu.",
+      "answer": "Today I’d like to focus on refactoring some old code."
+    },
+    {
+      "hint": "Naprawiłem błąd związany z walidacją formularza.",
+      "answer": "I fixed the bug related to form validation."
+    },
+    {
+      "hint": "Musimy uzgodnić format danych, które przychodzą z backendu.",
+      "answer": "We need to agree on the format of the data coming from the backend."
+    },
+    {
+      "hint": "Miałem konflikt przy mergowaniu, ale już go rozwiązałem.",
+      "answer": "I had a merge conflict, but I’ve already resolved it."
+    },
+    {
+      "hint": "Zajmę się optymalizacją ładowania obrazów.",
+      "answer": "I will work on optimizing image loading."
+    },
+    {
+      "hint": "Dzisiaj testuję aplikację w różnych przeglądarkach.",
+      "answer": "Today I’m testing the app in different browsers."
+    },
+    {
+      "hint": "Jutro planuję wdrożyć to na środowisko testowe.",
+      "answer": "Tomorrow I plan to deploy it to the test environment."
+    },
+    {
+      "hint": "Muszę skonsultować się z backendem w sprawie endpointów.",
+      "answer": "I need to consult with the backend team about the endpoints."
+    },
+    {
+      "hint": "Poprawiłem stylowanie, żeby było zgodne z design systemem.",
+      "answer": "I adjusted the styling to match the design system."
+    },
+    {
+      "hint": "Zostały mi do zrobienia tylko testy e2e.",
+      "answer": "I only have the end-to-end tests left to do."
+    },
+    {
+      "hint": "Naprawiłem błąd, przez który aplikacja zawieszała się w Safari.",
+      "answer": "I fixed the bug that caused the app to freeze in Safari."
+    },
+    {
+      "hint": "Wczoraj skupiłem się na integracji z Google Analytics.",
+      "answer": "Yesterday I focused on the integration with Google Analytics."
+    },
+    {
+      "hint": "Dzisiaj zrobię code review dla kilku pull requestów.",
+      "answer": "Today I’ll do code reviews for a few pull requests."
+    },
+    {
+      "hint": "Potrzebuję więcej czasu na ten task niż zakładałem.",
+      "answer": "I need more time for this task than I initially estimated."
+    },
+    {
+      "hint": "Zajmuję się migracją do nowej wersji Reacta.",
+      "answer": "I’m working on migrating to the new version of React."
+    },
+    {
+      "hint": "Naprawiłem problem z dostępnością w formularzach.",
+      "answer": "I fixed the accessibility issue in the forms."
+    },
+    {
+      "hint": "Wczoraj dużo czasu zajęły mi testy manualne.",
+      "answer": "Yesterday manual testing took me a lot of time."
+    },
+    {
+      "hint": "Zostały mi drobne poprawki w CSS.",
+      "answer": "I only have some minor fixes left in the CSS."
+    },
+    {
+      "hint": "Dzisiaj zamierzam zająć się performance’em aplikacji.",
+      "answer": "Today I plan to work on the app’s performance."
+    },
+    {
+      "hint": "Mam pytanie o priorytet tego zadania.",
+      "answer": "I have a question about the priority of this task."
+    },
+    {
+      "hint": "Udało mi się odtworzyć błąd zgłoszony przez użytkownika.",
+      "answer": "I managed to reproduce the bug reported by the user."
+    },
+    {
+      "hint": "Chciałbym zaproponować inny sposób rozwiązania tego problemu.",
+      "answer": "I’d like to suggest a different way to solve this issue."
+    },
+    {
+      "hint": "Wdrożenie się udało i nie było błędów krytycznych.",
+      "answer": "The deployment was successful and there were no critical errors."
+    },
+    {
+      "hint": "Sprawdziłem logi i nie ma tam żadnych błędów.",
+      "answer": "I checked the logs and there are no errors there."
+    },
+    {
+      "hint": "Zająłem się poprawą kompatybilności z mobilnymi przeglądarkami.",
+      "answer": "I worked on improving compatibility with mobile browsers."
+    },
+    {
+      "hint": "Dzisiaj muszę przygotować demo dla klienta.",
+      "answer": "Today I need to prepare a demo for the client."
+    },
+    {
+      "hint": "Został mi do zrobienia jeszcze jeden komponent.",
+      "answer": "I still have one more component left to build."
+    },
+    {
+      "hint": "Musimy ustalić standard dla nazw commitów.",
+      "answer": "We need to set a standard for commit messages."
+    },
+    {
+      "hint": "Miałem problem z CORS, ale udało się go obejść.",
+      "answer": "I had a CORS issue, but I managed to work around it."
+    },
+    {
+      "hint": "Refaktoruję teraz kod, który jest trudny w utrzymaniu.",
+      "answer": "I’m refactoring code that is hard to maintain."
+    },
+    {
+      "hint": "Wczoraj dodałem logowanie błędów do Sentry.",
+      "answer": "Yesterday I added error logging to Sentry."
+    },
+    {
+      "hint": "Dzisiaj chcę przygotować dokumentację do tego modułu.",
+      "answer": "Today I want to prepare documentation for this module."
+    },
+    {
+      "hint": "Wprowadziłem lazy loading dla cięższych komponentów.",
+      "answer": "I implemented lazy loading for heavier components."
+    },
+    {
+      "hint": "Potrzebuję pomocy przy konfiguracji webpacka.",
+      "answer": "I need help with configuring webpack."
+    },
+    {
+      "hint": "Dodałem obsługę trybu ciemnego w aplikacji.",
+      "answer": "I added dark mode support in the app."
+    },
+    {
+      "hint": "Wczoraj wdrożyłem nowy system powiadomień.",
+      "answer": "Yesterday I deployed the new notification system."
+    },
+    {
+      "hint": "Musimy zdecydować, czy używać Redux czy React Query.",
+      "answer": "We need to decide whether to use Redux or React Query."
+    },
+    {
+      "hint": "Naprawiłem problem z cache’owaniem w przeglądarce.",
+      "answer": "I fixed the caching issue in the browser."
+    },
+    {
+      "hint": "Dzisiaj robię code cleanup w module płatności.",
+      "answer": "Today I’m doing code cleanup in the payments module."
+    },
+    {
+      "hint": "Potrzebuję review dla pull requesta jeszcze dzisiaj.",
+      "answer": "I need a review for my pull request today."
+    },
+    {
+      "hint": "Sprawdzam teraz różnice między stagingiem a produkcją.",
+      "answer": "I’m checking the differences between staging and production now."
+    },
+    {
+      "hint": "Muszę napisać kilka testów snapshotowych.",
+      "answer": "I need to write a few snapshot tests."
+    },
+    {
+      "hint": "Zajmuję się teraz poprawą wydajności renderowania.",
+      "answer": "I’m working on improving rendering performance right now."
+    },
+    {
+      "hint": "Dodałem linting do całego projektu.",
+      "answer": "I added linting to the entire project."
+    },
+    {
+      "hint": "Jutro chcę wdrożyć feature flagi dla nowych funkcji.",
+      "answer": "Tomorrow I want to implement feature flags for new features."
+    },
+    {
+      "hint": "Miałem problem z hookami w React, ale już działa.",
+      "answer": "I had an issue with React hooks, but it’s working now."
+    },
+    {
+      "hint": "Muszę sprawdzić, czy aplikacja działa w trybie offline.",
+      "answer": "I need to check if the app works in offline mode."
+    },
+    {
+      "hint": "Dzisiaj dodam kilka animacji, żeby interfejs był płynniejszy.",
+      "answer": "Today I’ll add some animations to make the interface smoother."
+    },
+    {
+      "hint": "Muszę zsynchronizować się z backendem w sprawie logowania błędów.",
+      "answer": "I need to sync with the backend team about error logging."
+    },
+    {
+      "hint": "Wczoraj dodałem walidację po stronie klienta i serwera.",
+      "answer": "Yesterday I added validation on both the client and the server."
+    },
+    {
+      "hint": "Dzisiaj planuję zamknąć wszystkie otwarte taski.",
+      "answer": "Today I plan to close all open tasks."
+    },
+    {
+      "hint": "Dodałem obsługę wielu języków w aplikacji.",
+      "answer": "I added support for multiple languages in the app."
+    },
+    {
+      "hint": "Zostało mi przetestowanie edge case’ów.",
+      "answer": "I still need to test the edge cases."
+    },
+    {
+      "hint": "Muszę sprawdzić, czy wszystkie zależności są aktualne.",
+      "answer": "I need to check if all dependencies are up to date."
+    },
+    {
+      "hint": "Poprawiłem błędy zgłoszone po ostatnim deployu.",
+      "answer": "I fixed the bugs reported after the last deploy."
+    },
+    {
+      "hint": "Wdrożyłem automatyczne formatowanie kodu przy commitach.",
+      "answer": "I implemented automatic code formatting on commits."
+    },
+    {
+      "hint": "Muszę sprawdzić kompatybilność z najnowszą wersją Node.js.",
+      "answer": "I need to check compatibility with the latest Node.js version."
+    }
+  ],
+  "count": 68
+}

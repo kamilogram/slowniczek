@@ -1,0 +1,260 @@
+{
+  "name": "Zdania o sztucznej inteligencji",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Sztuczna inteligencja to dziedzina informatyki zajmująca się tworzeniem inteligentnych maszyn.",
+      "answer": "Artificial intelligence is a field of computer science focused on creating intelligent machines."
+    },
+    {
+      "hint": "AI pozwala komputerom na uczenie się i podejmowanie decyzji bez programowania każdej czynności.",
+      "answer": "AI enables computers to learn and make decisions without programming every task."
+    },
+    {
+      "hint": "Jednym z głównych celów AI jest automatyzacja zadań wykonywanych przez ludzi.",
+      "answer": "One of AI's main goals is automating tasks performed by humans."
+    },
+    {
+      "hint": "Uczenie maszynowe to technika, dzięki której systemy AI uczą się na podstawie danych.",
+      "answer": "Machine learning is a technique by which AI systems learn from data."
+    },
+    {
+      "hint": "Sieci neuronowe naśladują działanie ludzkiego mózgu w przetwarzaniu informacji.",
+      "answer": "Neural networks mimic the human brain's way of processing information."
+    },
+    {
+      "hint": "Przetwarzanie języka naturalnego umożliwia komputerom rozumienie i generowanie ludzkiego języka.",
+      "answer": "Natural language processing allows computers to understand and generate human language."
+    },
+    {
+      "hint": "AI znajduje zastosowanie w różnych dziedzinach, takich jak medycyna, finanse czy edukacja.",
+      "answer": "AI is applied in various fields, such as medicine, finance, and education."
+    },
+    {
+      "hint": "Systemy rekomendacyjne wykorzystują AI, aby dostosować zawartość do preferencji użytkownika.",
+      "answer": "Recommendation systems use AI to tailor content to user preferences."
+    },
+    {
+      "hint": "Sztuczna inteligencja może poprawić efektywność produkcji oraz zautomatyzować procesy.",
+      "answer": "Artificial intelligence can improve production efficiency and automate processes."
+    },
+    {
+      "hint": "Algorytmy AI analizują duże zbiory danych, aby znaleźć wzorce i wyciągnąć wnioski.",
+      "answer": "AI algorithms analyze big data sets to find patterns and draw conclusions."
+    },
+    {
+      "hint": "Rozwój AI wymaga ogromnych zasobów obliczeniowych i dużych zbiorów danych.",
+      "answer": "Developing AI requires huge computing resources and large data sets."
+    },
+    {
+      "hint": "Sztuczna inteligencja ma potencjał zmiany wielu aspektów naszego życia.",
+      "answer": "Artificial intelligence has the potential to change many aspects of our lives."
+    },
+    {
+      "hint": "Bezpieczeństwo i etyka AI to ważne zagadnienia do omówienia.",
+      "answer": "AI safety and ethics are important topics to discuss."
+    },
+    {
+      "hint": "Istnieją różne typy AI, w tym wąska AI i sztuczna ogólna inteligencja.",
+      "answer": "There are different types of AI, including narrow AI and artificial general intelligence."
+    },
+    {
+      "hint": "Wąska AI jest zaprojektowana do wykonania konkretnego zadania.",
+      "answer": "Narrow AI is designed to perform a specific task."
+    },
+    {
+      "hint": "Sztuczna ogólna inteligencja ma zdolność myślenia i rozumowania jak człowiek.",
+      "answer": "Artificial general intelligence has the ability to think and reason like a human."
+    },
+    {
+      "hint": "Jednym z wyzwań dla AI jest zrozumienie kontekstu i niuansów językowych.",
+      "answer": "One of the challenges for AI is understanding context and language nuances."
+    },
+    {
+      "hint": "Przykłady AI w codziennym życiu to asystenci głosowi i systemy rozpoznawania twarzy.",
+      "answer": "Examples of AI in daily life include voice assistants and facial recognition systems."
+    },
+    {
+      "hint": "Sztuczna inteligencja może również wspomagać procesy decyzyjne w biznesie.",
+      "answer": "Artificial intelligence can also support decision-making processes in business."
+    },
+    {
+      "hint": "Konferencje naukowe i publikacje są źródłem najnowszych badań nad AI.",
+      "answer": "Scientific conferences and publications are sources of the latest AI research."
+    },
+    {
+      "hint": "Rozwój AI wymaga współpracy między informatykami, matematykami i innymi specjalistami.",
+      "answer": "AI development requires collaboration among computer scientists, mathematicians, and other specialists."
+    },
+    {
+      "hint": "Laserowe systemy w pojazdach autonomicznych opierają się na AI.",
+      "answer": "Laser systems in autonomous vehicles are based on AI."
+    },
+    {
+      "hint": "AI pomaga w diagnozowaniu chorób i proponowaniu terapii w medycynie.",
+      "answer": "AI helps in diagnosing diseases and suggesting therapies in medicine."
+    },
+    {
+      "hint": "Automatyczne tłumaczenia językowe są możliwe dzięki algorytmom AI.",
+      "answer": "Automatic language translations are possible thanks to AI algorithms."
+    },
+    {
+      "hint": "Sztuczna inteligencja musi być trenowana na dużych, zróżnicowanych zestawach danych.",
+      "answer": "Artificial intelligence must be trained on large, diverse data sets."
+    },
+    {
+      "hint": "Algorytmy uczenia głębokiego to podzbiór uczenia maszynowego.",
+      "answer": "Deep learning algorithms are a subset of machine learning."
+    },
+    {
+      "hint": "AI może pomóc w przewidywaniu trendów rynkowych i zachowań konsumentów.",
+      "answer": "AI can help predict market trends and consumer behaviors."
+    },
+    {
+      "hint": "Automatyzacja procesów dzięki AI może zwiększyć produktywność firmy.",
+      "answer": "Automating processes with AI can increase company productivity."
+    },
+    {
+      "hint": "Sztuczna inteligencja może przetwarzać i analizować ogromne ilości danych szybciej niż człowiek.",
+      "answer": "Artificial intelligence can process and analyze huge amounts of data faster than humans."
+    },
+    {
+      "hint": "AI wykorzystywana jest również w grach komputerowych do sterowania postaciami.",
+      "answer": "AI is also used in computer games to control characters."
+    },
+    {
+      "hint": "Rozwój AI budzi pytania o przyszłość rynku pracy i zatrudnienia.",
+      "answer": "AI development raises questions about the future of the job market and employment."
+    },
+    {
+      "hint": "Algorytmy AI uczą się na podstawie przykładów i doświadczenia.",
+      "answer": "AI algorithms learn based on examples and experience."
+    },
+    {
+      "hint": "AI może wspierać systemy zarządzania energią i środowiskiem.",
+      "answer": "AI can support energy and environmental management systems."
+    },
+    {
+      "hint": "Istnieje wiele narzędzi i platform do tworzenia aplikacji AI.",
+      "answer": "There are many tools and platforms for creating AI applications."
+    },
+    {
+      "hint": "Ważne jest, aby AI była transparentna i jej działanie zrozumiałe dla użytkowników.",
+      "answer": "It is important that AI is transparent and its operation understandable to users."
+    },
+    {
+      "hint": "AI może współpracować z ludźmi, automatyzując powtarzalne czynności.",
+      "answer": "AI can collaborate with humans by automating repetitive tasks."
+    },
+    {
+      "hint": "Wyzwania techniczne obejmują interpretowalność i dokładność modeli AI.",
+      "answer": "Technical challenges include interpretability and accuracy of AI models."
+    },
+    {
+      "hint": "Sztuczna inteligencja może wspierać edukację poprzez personalizację nauki.",
+      "answer": "Artificial intelligence can support education through personalized learning."
+    },
+    {
+      "hint": "Rozwój AI wiąże się z koniecznością ochrony prywatności danych.",
+      "answer": "AI development involves the need to protect data privacy."
+    },
+    {
+      "hint": "Przykłady zastosowań AI to rozpoznawanie obrazów i analiza mowy.",
+      "answer": "Examples of AI applications include image recognition and speech analysis."
+    },
+    {
+      "hint": "W pracy z AI ważne są umiejętności programowania i analizy danych.",
+      "answer": "Programming and data analysis skills are important when working with AI."
+    },
+    {
+      "hint": "AI wpływa na wiele sektorów gospodarki, od zdrowia po finansów.",
+      "answer": "AI impacts many economic sectors, from health to finance."
+    },
+    {
+      "hint": "Ewolucja AI odbywa się dzięki szybkiemu rozwojowi technologii komputerowych.",
+      "answer": "AI evolution is driven by rapid development in computer technologies."
+    },
+    {
+      "hint": "Algorytmy AI są stale udoskonalane dzięki nowym badaniom naukowym.",
+      "answer": "AI algorithms are continuously improved through new scientific research."
+    },
+    {
+      "hint": "Sztuczna inteligencja może symulować ludzkie zachowania i emocje.",
+      "answer": "Artificial intelligence can simulate human behaviors and emotions."
+    },
+    {
+      "hint": "Technologie AI są wykorzystywane w systemach rekomendacji w sklepach internetowych.",
+      "answer": "AI technologies are used in recommendation systems in online stores."
+    },
+    {
+      "hint": "Ważne jest, aby użytkownicy mieli świadomość ograniczeń AI.",
+      "answer": "It is important for users to be aware of AI limitations."
+    },
+    {
+      "hint": "Rozpracowywanie algorytmów AI wymaga interdyscyplinarnej wiedzy.",
+      "answer": "Deciphering AI algorithms requires interdisciplinary knowledge."
+    },
+    {
+      "hint": "Sztuczna inteligencja może pomóc w rozwiązywaniu skomplikowanych problemów naukowych.",
+      "answer": "Artificial intelligence can help solve complex scientific problems."
+    },
+    {
+      "hint": "Wykorzystanie AI w medycynie prowadzi do szybszej i dokładniejszej diagnostyki.",
+      "answer": "Using AI in medicine leads to faster and more accurate diagnostics."
+    },
+    {
+      "hint": "AI może analizować dane z sensorów w systemach smart city.",
+      "answer": "AI can analyze sensor data in smart city systems."
+    },
+    {
+      "hint": "Rozwijające się dziedziny AI to robotyka i automatyzacja procesów.",
+      "answer": "Emerging AI fields include robotics and process automation."
+    },
+    {
+      "hint": "Algorytmy AI muszą być testowane pod kątem bezpieczeństwa i niezawodności.",
+      "answer": "AI algorithms must be tested for safety and reliability."
+    },
+    {
+      "hint": "Sztuczna inteligencja ułatwia analizowanie trendów i prognozowanie przyszłości.",
+      "answer": "Artificial intelligence facilitates trend analysis and future forecasting."
+    },
+    {
+      "hint": "Do tworzenia aplikacji AI wykorzystuje się języki programowania takie jak Python.",
+      "answer": "Programming languages like Python are used to create AI applications."
+    },
+    {
+      "hint": "Warto znać podstawy statystyki i matematyki przy pracy z AI.",
+      "answer": "Knowing basic statistics and mathematics is valuable when working with AI."
+    },
+    {
+      "hint": "Automatyczne systemy rozpoznawania twarzy oparte są na AI.",
+      "answer": "Automatic facial recognition systems are based on AI."
+    },
+    {
+      "hint": "Rozwój AI wymaga dużych zbiorów jakościowych danych do treningu.",
+      "answer": "AI development requires large sets of high-quality training data."
+    },
+    {
+      "hint": "Etyczne aspekty AI są coraz bardziej dyskutowane w środowisku naukowym.",
+      "answer": "Ethical aspects of AI are increasingly discussed in the scientific community."
+    },
+    {
+      "hint": "AI ma potencjał usprawnienia procesów przemysłowych i produkcyjnych.",
+      "answer": "AI has the potential to improve industrial and manufacturing processes."
+    },
+    {
+      "hint": "Automatyzacja dzięki AI może zmienić sposób pracy ludzi.",
+      "answer": "Automation through AI can change the way people work."
+    },
+    {
+      "hint": "Ważne jest ciągłe doskonalenie kompetencji w obszarze AI.",
+      "answer": "Continuous improvement of AI skills is important."
+    },
+    {
+      "hint": "Sztuczna inteligencja to ważny element rewolucji cyfrowej.",
+      "answer": "Artificial intelligence is an important part of the digital revolution."
+    }
+  ],
+  "count": 63
+}

@@ -1,0 +1,280 @@
+{
+  "name": "Opowiadanie o lesie",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Pewnego ranka Tomek wstał bardzo wcześnie.",
+      "answer": "One morning, Tomek woke up very early."
+    },
+    {
+      "hint": "Za oknem świeciło słońce.",
+      "answer": "The sun was shining outside the window."
+    },
+    {
+      "hint": "Tomek zjadł szybkie śniadanie.",
+      "answer": "Tomek ate a quick breakfast."
+    },
+    {
+      "hint": "Postanowił pójść na spacer do lasu.",
+      "answer": "He decided to take a walk in the forest."
+    },
+    {
+      "hint": "Założył sportowe buty i kurtkę.",
+      "answer": "He put on his sports shoes and a jacket."
+    },
+    {
+      "hint": "Na ścieżce spotkał swojego przyjaciela Marka.",
+      "answer": "On the path, he met his friend Marek."
+    },
+    {
+      "hint": "Razem postanowili poszukać małych zwierząt.",
+      "answer": "Together, they decided to look for small animals."
+    },
+    {
+      "hint": "Wkrótce zobaczyli wiewiórkę na drzewie.",
+      "answer": "Soon, they saw a squirrel in a tree."
+    },
+    {
+      "hint": "Wiewiórka trzymała orzeszek w łapkach.",
+      "answer": "The squirrel was holding a nut in its paws."
+    },
+    {
+      "hint": "Chłopcy uśmiechnęli się do siebie.",
+      "answer": "The boys smiled at each other."
+    },
+    {
+      "hint": "Szli dalej ścieżką, rozmawiając o szkole.",
+      "answer": "They walked further, talking about school."
+    },
+    {
+      "hint": "Marek opowiedział o nowym nauczycielu matematyki.",
+      "answer": "Marek told a story about the new math teacher."
+    },
+    {
+      "hint": "Tomek powiedział, że lubi lekcje matematyki.",
+      "answer": "Tomek said he likes math lessons."
+    },
+    {
+      "hint": "W pewnej chwili usłyszeli szelest liści.",
+      "answer": "Suddenly, they heard the rustling of leaves."
+    },
+    {
+      "hint": "Z krzaków wyskoczył mały zając.",
+      "answer": "A little hare jumped out from the bushes."
+    },
+    {
+      "hint": "Chłopcy byli zachwyceni widokiem.",
+      "answer": "The boys were delighted by the sight."
+    },
+    {
+      "hint": "Marek zrobił zdjęcie zająca telefonem.",
+      "answer": "Marek took a photo of the hare with his phone."
+    },
+    {
+      "hint": "Spacerowali dalej w głąb lasu.",
+      "answer": "They continued walking deeper into the forest."
+    },
+    {
+      "hint": "Las był cichy i spokojny.",
+      "answer": "The forest was quiet and peaceful."
+    },
+    {
+      "hint": "Na chwilę usiedli na pniu drzewa.",
+      "answer": "They sat for a while on a tree stump."
+    },
+    {
+      "hint": "Zjedli kanapki, które mieli w plecakach.",
+      "answer": "They ate the sandwiches they had in their backpacks."
+    },
+    {
+      "hint": "Popijali wodę ze swoich butelek.",
+      "answer": "They drank water from their bottles."
+    },
+    {
+      "hint": "Nagle zaczął padać lekki deszcz.",
+      "answer": "Suddenly, a light rain started to fall."
+    },
+    {
+      "hint": "Chłopcy schowali się pod wielkim drzewem.",
+      "answer": "The boys hid under a big tree."
+    },
+    {
+      "hint": "Deszcz szybko minął.",
+      "answer": "The rain quickly stopped."
+    },
+    {
+      "hint": "Na niebie pojawiła się tęcza.",
+      "answer": "A rainbow appeared in the sky."
+    },
+    {
+      "hint": "Tomek bardzo się ucieszył.",
+      "answer": "Tomek was very happy."
+    },
+    {
+      "hint": "Chłopcy wrócili na ścieżkę.",
+      "answer": "The boys returned to the path."
+    },
+    {
+      "hint": "Zauważyli dziwne ślady na ziemi.",
+      "answer": "They noticed strange tracks on the ground."
+    },
+    {
+      "hint": "Postanowili je śledzić.",
+      "answer": "They decided to follow them."
+    },
+    {
+      "hint": "Ślady prowadziły do starej chatki.",
+      "answer": "The tracks led to an old hut."
+    },
+    {
+      "hint": "Chatka wyglądała na opuszczoną.",
+      "answer": "The hut looked abandoned."
+    },
+    {
+      "hint": "Chłopcy zajrzeli przez okno.",
+      "answer": "The boys peeked through the window."
+    },
+    {
+      "hint": "W środku nie było nikogo.",
+      "answer": "There was no one inside."
+    },
+    {
+      "hint": "Nagle usłyszeli cichy głos.",
+      "answer": "Suddenly, they heard a soft voice."
+    },
+    {
+      "hint": "To był starszy pan, właściciel chatki.",
+      "answer": "It was an elderly man, the owner of the hut."
+    },
+    {
+      "hint": "Zaprosił chłopców do środka.",
+      "answer": "He invited the boys inside."
+    },
+    {
+      "hint": "Opowiedział im o zwierzętach żyjących w lesie.",
+      "answer": "He told them about the animals living in the forest."
+    },
+    {
+      "hint": "Pokazał kolekcję szyszek i liści.",
+      "answer": "He showed them his collection of cones and leaves."
+    },
+    {
+      "hint": "Chłopcy byli bardzo zaciekawieni.",
+      "answer": "The boys were very curious."
+    },
+    {
+      "hint": "Starszy pan poczęstował ich herbatą.",
+      "answer": "The elderly man treated them to tea."
+    },
+    {
+      "hint": "Opowiadali sobie ciekawe historie.",
+      "answer": "They told each other interesting stories."
+    },
+    {
+      "hint": "Po godzinie chłopcy musieli wracać.",
+      "answer": "After an hour, the boys had to go back."
+    },
+    {
+      "hint": "Podziękowali za gościnę.",
+      "answer": "They thanked him for his hospitality."
+    },
+    {
+      "hint": "Wyszli z chatki i wrócili na ścieżkę.",
+      "answer": "They left the hut and returned to the path."
+    },
+    {
+      "hint": "Powoli szli w kierunku domu.",
+      "answer": "They walked slowly towards home."
+    },
+    {
+      "hint": "Rozmawiali o przygodzie, którą przeżyli.",
+      "answer": "They talked about the adventure they had experienced."
+    },
+    {
+      "hint": "Tomek był szczęśliwy, że wyszedł z domu.",
+      "answer": "Tomek was glad he had left the house."
+    },
+    {
+      "hint": "Marek zaproponował kolejną wycieczkę za tydzień.",
+      "answer": "Marek suggested another trip next week."
+    },
+    {
+      "hint": "Chłopcy się zgodzili.",
+      "answer": "The boys agreed."
+    },
+    {
+      "hint": "W końcu dotarli do miasta.",
+      "answer": "They finally reached the town."
+    },
+    {
+      "hint": "Rozstali się przy rynku.",
+      "answer": "They parted at the market square."
+    },
+    {
+      "hint": "Tomek poszedł do swojego mieszkania.",
+      "answer": "Tomek went to his apartment."
+    },
+    {
+      "hint": "W domu opowiedział rodzicom o przygodzie.",
+      "answer": "At home, he told his parents about the adventure."
+    },
+    {
+      "hint": "Rodzice byli z niego dumni.",
+      "answer": "His parents were proud of him."
+    },
+    {
+      "hint": "Tomek był zmęczony, ale szczęśliwy.",
+      "answer": "Tomek was tired but happy."
+    },
+    {
+      "hint": "Położył się na łóżku i zamknął oczy.",
+      "answer": "He lay down on the bed and closed his eyes."
+    },
+    {
+      "hint": "Myślał o tym, co zobaczył w lesie.",
+      "answer": "He thought about what he had seen in the forest."
+    },
+    {
+      "hint": "Wyobrażał sobie spotkanie z lisem.",
+      "answer": "He imagined meeting a fox."
+    },
+    {
+      "hint": "Słyszał w wyobraźni śpiew ptaków.",
+      "answer": "He heard birds singing in his imagination."
+    },
+    {
+      "hint": "Był to bardzo udany dzień.",
+      "answer": "It was a very successful day."
+    },
+    {
+      "hint": "Tomek zasnął spokojnie.",
+      "answer": "Tomek fell asleep peacefully."
+    },
+    {
+      "hint": "Przyśnił mu się zając z lasu.",
+      "answer": "He dreamt of the hare from the forest."
+    },
+    {
+      "hint": "W jego śnie zając mówił ludzkim głosem.",
+      "answer": "In his dream, the hare spoke with a human voice."
+    },
+    {
+      "hint": "Zaproponował Tomkowi nową przygodę.",
+      "answer": "He suggested a new adventure to Tomek."
+    },
+    {
+      "hint": "Tomek zgodził się bez wahania.",
+      "answer": "Tomek agreed without hesitation."
+    },
+    {
+      "hint": "Obudził się rano z uśmiechem.",
+      "answer": "He woke up in the morning with a smile."
+    },
+    {
+      "hint": "Był gotowy na kolejny dzień pełen przygód.",
+      "answer": "He was ready for another day full of adventures."
+    }
+  ],
+  "count": 68
+}

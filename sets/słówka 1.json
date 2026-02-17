@@ -1,0 +1,372 @@
+{
+  "name": "słówka 1",
+  "language": "en",
+  "type": "word",
+  "words": [
+    {
+      "hint": "burczał mu (w brzuchu)",
+      "answer": "his stomach was growling"
+    },
+    {
+      "hint": "przetwarza (informacje)",
+      "answer": "processes"
+    },
+    {
+      "hint": "serce biło (mocno)",
+      "answer": "heart was pounding"
+    },
+    {
+      "hint": "ekscytacja",
+      "answer": "excitement"
+    },
+    {
+      "hint": "organ (ciała)",
+      "answer": "organ"
+    },
+    {
+      "hint": "organ (w znaczeniu instytucja)",
+      "answer": "authority"
+    },
+    {
+      "hint": "popękana (na przykład skóra)",
+      "answer": "cracked"
+    },
+    {
+      "hint": "zamyślił się",
+      "answer": "got lost in thought"
+    },
+    {
+      "hint": "zapięła (na przykład pasek)",
+      "answer": "fastened"
+    },
+    {
+      "hint": "pasek (ubrania)",
+      "answer": "belt"
+    },
+    {
+      "hint": "pasek (graficzny, na przykład narzędzi)",
+      "answer": "bar"
+    },
+    {
+      "hint": "wypełniły się (na przykład płuca)",
+      "answer": "filled"
+    },
+    {
+      "hint": "ze zmęczenia",
+      "answer": "from exhaustion"
+    },
+    {
+      "hint": "się kłóci",
+      "answer": "argues"
+    },
+    {
+      "hint": "wspiera",
+      "answer": "supports"
+    },
+    {
+      "hint": "przyszedł (na przykład na wydarzenie)",
+      "answer": "came to"
+    },
+    {
+      "hint": "uprzejmy",
+      "answer": "polite"
+    },
+    {
+      "hint": "medalik",
+      "answer": "medal"
+    },
+    {
+      "hint": "przygotowała",
+      "answer": "prepared"
+    },
+    {
+      "hint": "grzeczny (o dziecku)",
+      "answer": "well-behaved"
+    },
+    {
+      "hint": "przyniosła mi",
+      "answer": "brought me"
+    },
+    {
+      "hint": "piecze (na przykład ciasta)",
+      "answer": "bakes"
+    },
+    {
+      "hint": "ciasta",
+      "answer": "cakes"
+    },
+    {
+      "hint": "uczelnia",
+      "answer": "college"
+    },
+    {
+      "hint": "zaprosiła",
+      "answer": "invited"
+    },
+    {
+      "hint": "pewny (o osobie)",
+      "answer": "confident"
+    },
+    {
+      "hint": "pewny (o fakcie)",
+      "answer": "certain"
+    },
+    {
+      "hint": "obok czegoś",
+      "answer": "next to something"
+    },
+    {
+      "hint": "mieć znaczenie",
+      "answer": "matter"
+    },
+    {
+      "hint": "zauważył",
+      "answer": "noticed"
+    },
+    {
+      "hint": "wstał",
+      "answer": "stood up"
+    },
+    {
+      "hint": "ograniczony",
+      "answer": "limited"
+    },
+    {
+      "hint": "porządnie",
+      "answer": "properly"
+    },
+    {
+      "hint": "szczelnie zamknięty",
+      "answer": "sealed"
+    },
+    {
+      "hint": "cel podróży",
+      "answer": "destination"
+    },
+    {
+      "hint": "uporządkować",
+      "answer": "sort out"
+    },
+    {
+      "hint": "przeprowadzić kogoś przez coś",
+      "answer": "guide somebody through"
+    },
+    {
+      "hint": "poważny",
+      "answer": "serious"
+    },
+    {
+      "hint": "przypomnieć o",
+      "answer": "remind about"
+    },
+    {
+      "hint": "trzymał",
+      "answer": "kept"
+    },
+    {
+      "hint": "rozwiązać (na przykład problem)",
+      "answer": "work out"
+    },
+    {
+      "hint": "ćwiczyć (w znaczeniu fizycznie)",
+      "answer": "work out"
+    },
+    {
+      "hint": "zachować spokój",
+      "answer": "stay calm"
+    },
+    {
+      "hint": "dawny",
+      "answer": "former"
+    },
+    {
+      "hint": "rozmowa",
+      "answer": "conversation"
+    },
+    {
+      "hint": "nadepnąć",
+      "answer": "step on"
+    },
+    {
+      "hint": "zwrócić",
+      "answer": "return"
+    },
+    {
+      "hint": "wyczerpujący",
+      "answer": "exhausting"
+    },
+    {
+      "hint": "nieść",
+      "answer": "carry"
+    },
+    {
+      "hint": "wyjaśnił",
+      "answer": "explained"
+    },
+    {
+      "hint": "choć",
+      "answer": "though"
+    },
+    {
+      "hint": "ratusz",
+      "answer": "town hall"
+    },
+    {
+      "hint": "na głos",
+      "answer": "aloud"
+    },
+    {
+      "hint": "pozwolono mu",
+      "answer": "was allowed"
+    },
+    {
+      "hint": "wiszący",
+      "answer": "hanging on"
+    },
+    {
+      "hint": "dostępny",
+      "answer": "available"
+    },
+    {
+      "hint": "owoc",
+      "answer": "fruit"
+    },
+    {
+      "hint": "obok",
+      "answer": "next to"
+    },
+    {
+      "hint": "wyjaśnienie",
+      "answer": "explanation"
+    },
+    {
+      "hint": "złocony",
+      "answer": "gilded"
+    },
+    {
+      "hint": "wymagać",
+      "answer": "require"
+    },
+    {
+      "hint": "cierpliwość",
+      "answer": "patience"
+    },
+    {
+      "hint": "pochopny",
+      "answer": "hasty"
+    },
+    {
+      "hint": "przestraszony",
+      "answer": "frightened"
+    },
+    {
+      "hint": "dzwonek",
+      "answer": "bell"
+    },
+    {
+      "hint": "pojemnik",
+      "answer": "container"
+    },
+    {
+      "hint": "okres czasu",
+      "answer": "period"
+    },
+    {
+      "hint": "cel podróży",
+      "answer": "destination"
+    },
+    {
+      "hint": "wstać wcześnie",
+      "answer": "get up early"
+    },
+    {
+      "hint": "przeprowadzić",
+      "answer": "to guide"
+    },
+    {
+      "hint": "usłyszenie",
+      "answer": "hearing"
+    },
+    {
+      "hint": "prowadzić do",
+      "answer": "to lead to"
+    },
+    {
+      "hint": "przypomnieć",
+      "answer": "remind"
+    },
+    {
+      "hint": "etui",
+      "answer": "case"
+    },
+    {
+      "hint": "powiązany",
+      "answer": "connected"
+    },
+    {
+      "hint": "poradzić sobie z tym",
+      "answer": "to handle it"
+    },
+    {
+      "hint": "zgodnie z zasadami",
+      "answer": "by the book"
+    },
+    {
+      "hint": "doradzono",
+      "answer": "advised"
+    },
+    {
+      "hint": "jednak",
+      "answer": "however"
+    },
+    {
+      "hint": "dawny sposób",
+      "answer": "former way"
+    },
+    {
+      "hint": "zorganizowany",
+      "answer": "organized"
+    },
+    {
+      "hint": "odkryć",
+      "answer": "discover"
+    },
+    {
+      "hint": "przypadkowo",
+      "answer": "accidentally"
+    },
+    {
+      "hint": "puszka",
+      "answer": "can"
+    },
+    {
+      "hint": "natychmiast",
+      "answer": "immediately"
+    },
+    {
+      "hint": "rozdzielenie",
+      "answer": "separation"
+    },
+    {
+      "hint": "zbyt ciężki",
+      "answer": "overweight"
+    },
+    {
+      "hint": "nudny",
+      "answer": "dull"
+    },
+    {
+      "hint": "nieść coś",
+      "answer": "to carry something"
+    },
+    {
+      "hint": "w końcu",
+      "answer": "in the end"
+    },
+    {
+      "hint": "nieprędko",
+      "answer": "not soon"
+    }
+  ],
+  "count": 91
+}

@@ -1,0 +1,288 @@
+{
+  "name": "hiszpański - podstawowe zwroty: podróż",
+  "language": "es",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "dzień dobry",
+      "answer": "buenos días"
+    },
+    {
+      "hint": "dobry wieczór",
+      "answer": "buenas noches"
+    },
+    {
+      "hint": "cześć",
+      "answer": "hola"
+    },
+    {
+      "hint": "do widzenia",
+      "answer": "adiós"
+    },
+    {
+      "hint": "do zobaczenia",
+      "answer": "hasta luego"
+    },
+    {
+      "hint": "proszę",
+      "answer": "por favor"
+    },
+    {
+      "hint": "dziękuję",
+      "answer": "gracias"
+    },
+    {
+      "hint": "nie ma za co",
+      "answer": "de nada"
+    },
+    {
+      "hint": "przepraszam",
+      "answer": "perdón"
+    },
+    {
+      "hint": "czy mówisz po angielsku?",
+      "answer": "¿hablas inglés?"
+    },
+    {
+      "hint": "nie rozumiem",
+      "answer": "no entiendo"
+    },
+    {
+      "hint": "możesz powtórzyć?",
+      "answer": "¿puedes repetir?"
+    },
+    {
+      "hint": "jak się masz?",
+      "answer": "¿cómo estás?"
+    },
+    {
+      "hint": "dobrze, dziękuję",
+      "answer": "bien, gracias"
+    },
+    {
+      "hint": "gdzie jest toaleta?",
+      "answer": "¿dónde está el baño?"
+    },
+    {
+      "hint": "ile to kosztuje?",
+      "answer": "¿cuánto cuesta?"
+    },
+    {
+      "hint": "czy mogę zapłacić kartą?",
+      "answer": "¿puedo pagar con tarjeta?"
+    },
+    {
+      "hint": "czy macie wolne pokoje?",
+      "answer": "¿tienen habitaciones libres?"
+    },
+    {
+      "hint": "chciałbym zarezerwować pokój",
+      "answer": "quisiera reservar una habitación"
+    },
+    {
+      "hint": "na ile nocy?",
+      "answer": "¿por cuántas noches?"
+    },
+    {
+      "hint": "na jedną noc",
+      "answer": "por una noche"
+    },
+    {
+      "hint": "na trzy noce",
+      "answer": "por tres noches"
+    },
+    {
+      "hint": "czy śniadanie jest w cenie?",
+      "answer": "¿el desayuno está incluido?"
+    },
+    {
+      "hint": "czy to daleko?",
+      "answer": "¿está lejos?"
+    },
+    {
+      "hint": "to blisko",
+      "answer": "está cerca"
+    },
+    {
+      "hint": "potrzebuję pomocy",
+      "answer": "necesito ayuda"
+    },
+    {
+      "hint": "zgubiłem się",
+      "answer": "me he perdido"
+    },
+    {
+      "hint": "gdzie jest dworzec?",
+      "answer": "¿dónde está la estación?"
+    },
+    {
+      "hint": "gdzie jest przystanek autobusowy?",
+      "answer": "¿dónde está la parada de autobús?"
+    },
+    {
+      "hint": "czy to jedzie do centrum?",
+      "answer": "¿esto va al centro?"
+    },
+    {
+      "hint": "o której odjeżdża?",
+      "answer": "¿a qué hora sale?"
+    },
+    {
+      "hint": "czy to miejsce jest wolne?",
+      "answer": "¿este asiento está libre?"
+    },
+    {
+      "hint": "poproszę bilet",
+      "answer": "un billete, por favor"
+    },
+    {
+      "hint": "bilet w jedną stronę",
+      "answer": "billete de ida"
+    },
+    {
+      "hint": "bilet powrotny",
+      "answer": "billete de ida y vuelta"
+    },
+    {
+      "hint": "czy mogę dostać mapę?",
+      "answer": "¿puedo tener un mapa?"
+    },
+    {
+      "hint": "gdzie jest informacja turystyczna?",
+      "answer": "¿dónde está la oficina de turismo?"
+    },
+    {
+      "hint": "czy możesz polecić restaurację?",
+      "answer": "¿puedes recomendarme un restaurante?"
+    },
+    {
+      "hint": "jestem głodny",
+      "answer": "tengo hambre"
+    },
+    {
+      "hint": "jestem spragniony",
+      "answer": "tengo sed"
+    },
+    {
+      "hint": "poproszę wodę",
+      "answer": "agua, por favor"
+    },
+    {
+      "hint": "poproszę kawę",
+      "answer": "un café, por favor"
+    },
+    {
+      "hint": "poproszę rachunek",
+      "answer": "la cuenta, por favor"
+    },
+    {
+      "hint": "czy to jest pikantne?",
+      "answer": "¿es picante?"
+    },
+    {
+      "hint": "jestem uczulony na...",
+      "answer": "soy alérgico a..."
+    },
+    {
+      "hint": "nie jem mięsa",
+      "answer": "no como carne"
+    },
+    {
+      "hint": "czy mają coś wegetariańskiego?",
+      "answer": "¿tienen algo vegetariano?"
+    },
+    {
+      "hint": "czy mogę usiąść tutaj?",
+      "answer": "¿puedo sentarme aquí?"
+    },
+    {
+      "hint": "czy to jest otwarte?",
+      "answer": "¿está abierto?"
+    },
+    {
+      "hint": "czy to jest zamknięte?",
+      "answer": "¿está cerrado?"
+    },
+    {
+      "hint": "czy mogę zrobić zdjęcie?",
+      "answer": "¿puedo tomar una foto?"
+    },
+    {
+      "hint": "czy mogę spróbować?",
+      "answer": "¿puedo probar?"
+    },
+    {
+      "hint": "czy mogę dotknąć?",
+      "answer": "¿puedo tocar?"
+    },
+    {
+      "hint": "czy to jest bezpieczne?",
+      "answer": "¿es seguro?"
+    },
+    {
+      "hint": "potrzebuję lekarza",
+      "answer": "necesito un médico"
+    },
+    {
+      "hint": "gdzie jest apteka?",
+      "answer": "¿dónde está la farmacia?"
+    },
+    {
+      "hint": "mam rezerwację",
+      "answer": "tengo una reserva"
+    },
+    {
+      "hint": "czy mogę anulować?",
+      "answer": "¿puedo cancelar?"
+    },
+    {
+      "hint": "czy mogę zmienić termin?",
+      "answer": "¿puedo cambiar la fecha?"
+    },
+    {
+      "hint": "czy mogę wypożyczyć samochód?",
+      "answer": "¿puedo alquilar un coche?"
+    },
+    {
+      "hint": "czy jest parking?",
+      "answer": "¿hay aparcamiento?"
+    },
+    {
+      "hint": "czy mogę zaparkować tutaj?",
+      "answer": "¿puedo aparcar aquí?"
+    },
+    {
+      "hint": "czy to jest darmowe?",
+      "answer": "¿es gratis?"
+    },
+    {
+      "hint": "czy to jest płatne?",
+      "answer": "¿hay que pagar?"
+    },
+    {
+      "hint": "czy mogę wejść?",
+      "answer": "¿puedo entrar?"
+    },
+    {
+      "hint": "czy mogę wyjść?",
+      "answer": "¿puedo salir?"
+    },
+    {
+      "hint": "czy mogę to kupić?",
+      "answer": "¿puedo comprar esto?"
+    },
+    {
+      "hint": "czy mają to w innym rozmiarze?",
+      "answer": "¿lo tienen en otra talla?"
+    },
+    {
+      "hint": "czy mają to w innym kolorze?",
+      "answer": "¿lo tienen en otro color?"
+    },
+    {
+      "hint": "czy mogę przymierzyć?",
+      "answer": "¿puedo probarme esto?"
+    }
+  ],
+  "count": 70
+}

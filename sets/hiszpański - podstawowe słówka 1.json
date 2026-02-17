@@ -1,0 +1,208 @@
+{
+  "name": "hiszpański - podstawowe słówka 1",
+  "language": "es",
+  "type": "word",
+  "words": [
+    {
+      "hint": "tak",
+      "answer": "sí"
+    },
+    {
+      "hint": "nie",
+      "answer": "no"
+    },
+    {
+      "hint": "dzień",
+      "answer": "día"
+    },
+    {
+      "hint": "noc",
+      "answer": "noche"
+    },
+    {
+      "hint": "człowiek",
+      "answer": "persona"
+    },
+    {
+      "hint": "kobieta",
+      "answer": "mujer"
+    },
+    {
+      "hint": "mężczyzna",
+      "answer": "hombre"
+    },
+    {
+      "hint": "dziecko",
+      "answer": "niño"
+    },
+    {
+      "hint": "dom",
+      "answer": "casa"
+    },
+    {
+      "hint": "szkoła",
+      "answer": "escuela"
+    },
+    {
+      "hint": "miasto",
+      "answer": "ciudad"
+    },
+    {
+      "hint": "kraj",
+      "answer": "país"
+    },
+    {
+      "hint": "woda",
+      "answer": "agua"
+    },
+    {
+      "hint": "jedzenie",
+      "answer": "comida"
+    },
+    {
+      "hint": "chleb",
+      "answer": "pan"
+    },
+    {
+      "hint": "jabłko",
+      "answer": "manzana"
+    },
+    {
+      "hint": "pies",
+      "answer": "perro"
+    },
+    {
+      "hint": "kot",
+      "answer": "gato"
+    },
+    {
+      "hint": "samochód",
+      "answer": "coche"
+    },
+    {
+      "hint": "rower",
+      "answer": "bicicleta"
+    },
+    {
+      "hint": "dzień dobry",
+      "answer": "buenos días"
+    },
+    {
+      "hint": "dobry wieczór",
+      "answer": "buenas noches"
+    },
+    {
+      "hint": "do widzenia",
+      "answer": "adiós"
+    },
+    {
+      "hint": "proszę",
+      "answer": "por favor"
+    },
+    {
+      "hint": "dziękuję",
+      "answer": "gracias"
+    },
+    {
+      "hint": "przepraszam",
+      "answer": "perdón"
+    },
+    {
+      "hint": "jak się masz?",
+      "answer": "¿cómo estás?"
+    },
+    {
+      "hint": "dobrze",
+      "answer": "bien"
+    },
+    {
+      "hint": "źle",
+      "answer": "mal"
+    },
+    {
+      "hint": "może",
+      "answer": "quizás"
+    },
+    {
+      "hint": "zawsze",
+      "answer": "siempre"
+    },
+    {
+      "hint": "nigdy",
+      "answer": "nunca"
+    },
+    {
+      "hint": "teraz",
+      "answer": "ahora"
+    },
+    {
+      "hint": "później",
+      "answer": "después"
+    },
+    {
+      "hint": "wczoraj",
+      "answer": "ayer"
+    },
+    {
+      "hint": "dzisiaj",
+      "answer": "hoy"
+    },
+    {
+      "hint": "jutro",
+      "answer": "mañana"
+    },
+    {
+      "hint": "jeden",
+      "answer": "uno"
+    },
+    {
+      "hint": "dwa",
+      "answer": "dos"
+    },
+    {
+      "hint": "trzy",
+      "answer": "tres"
+    },
+    {
+      "hint": "duży",
+      "answer": "grande"
+    },
+    {
+      "hint": "mały",
+      "answer": "pequeño"
+    },
+    {
+      "hint": "gorący",
+      "answer": "caliente"
+    },
+    {
+      "hint": "zimny",
+      "answer": "frío"
+    },
+    {
+      "hint": "ładny",
+      "answer": "bonito"
+    },
+    {
+      "hint": "brzydki",
+      "answer": "feo"
+    },
+    {
+      "hint": "szybki",
+      "answer": "rápido"
+    },
+    {
+      "hint": "wolny",
+      "answer": "lento"
+    },
+    {
+      "hint": "otwarty",
+      "answer": "abierto"
+    },
+    {
+      "hint": "zamknięty",
+      "answer": "cerrado"
+    }
+  ],
+  "count": 50
+}

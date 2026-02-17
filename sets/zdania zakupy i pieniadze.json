@@ -1,0 +1,288 @@
+{
+  "name": "zdania zakupy i pieniadze",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Ile kosztuje ten sweter?",
+      "answer": "How much does this sweater cost?"
+    },
+    {
+      "hint": "Czy mogę zapłacić kartą?",
+      "answer": "Can I pay by card?"
+    },
+    {
+      "hint": "Potrzebuję paragonu do zwrotu.",
+      "answer": "I need a receipt for the return."
+    },
+    {
+      "hint": "Czy macie ten model w innym rozmiarze?",
+      "answer": "Do you have this model in another size?"
+    },
+    {
+      "hint": "Chciałbym wymienić ten produkt.",
+      "answer": "I would like to exchange this product."
+    },
+    {
+      "hint": "Czy są jakieś promocje na ten tydzień?",
+      "answer": "Are there any promotions this week?"
+    },
+    {
+      "hint": "Szukam prezentu dla żony.",
+      "answer": "I’m looking for a gift for my wife."
+    },
+    {
+      "hint": "Gdzie znajdę dział z elektroniką?",
+      "answer": "Where can I find the electronics section?"
+    },
+    {
+      "hint": "Chciałbym zapłacić gotówką.",
+      "answer": "I would like to pay in cash."
+    },
+    {
+      "hint": "Czy mogę zapłacić w ratach?",
+      "answer": "Can I pay in installments?"
+    },
+    {
+      "hint": "Nie działa mój kod rabatowy.",
+      "answer": "My discount code isn’t working."
+    },
+    {
+      "hint": "Czy dostawa jest darmowa?",
+      "answer": "Is the delivery free?"
+    },
+    {
+      "hint": "Ile kosztuje wysyłka za granicę?",
+      "answer": "How much is international shipping?"
+    },
+    {
+      "hint": "Chciałbym sprawdzić saldo mojego konta.",
+      "answer": "I’d like to check my account balance."
+    },
+    {
+      "hint": "Czy akceptujecie płatności telefonem?",
+      "answer": "Do you accept phone payments?"
+    },
+    {
+      "hint": "Kiedy mogę odebrać zamówienie?",
+      "answer": "When can I pick up the order?"
+    },
+    {
+      "hint": "Potrzebuję torby na zakupy.",
+      "answer": "I need a shopping bag."
+    },
+    {
+      "hint": "Czy macie świeże owoce?",
+      "answer": "Do you have fresh fruit?"
+    },
+    {
+      "hint": "Gdzie jest kasa samoobsługowa?",
+      "answer": "Where is the self-checkout?"
+    },
+    {
+      "hint": "Proszę rozmień mi banknot.",
+      "answer": "Please break this bill for me."
+    },
+    {
+      "hint": "Czy mogę zapłacić przelewem?",
+      "answer": "Can I pay by bank transfer?"
+    },
+    {
+      "hint": "Szukam tańszej alternatywy.",
+      "answer": "I’m looking for a cheaper alternative."
+    },
+    {
+      "hint": "Czy można tu negocjować cenę?",
+      "answer": "Can the price be negotiated here?"
+    },
+    {
+      "hint": "Chciałbym kupić bilet miesięczny.",
+      "answer": "I would like to buy a monthly ticket."
+    },
+    {
+      "hint": "Proszę podać mi resztę.",
+      "answer": "Please give me the change."
+    },
+    {
+      "hint": "Czy można zwrócić ten produkt bez paragonu?",
+      "answer": "Can I return this product without a receipt?"
+    },
+    {
+      "hint": "Gdzie mogę znaleźć tańsze produkty?",
+      "answer": "Where can I find cheaper products?"
+    },
+    {
+      "hint": "Potrzebuję pożyczki na nowy samochód.",
+      "answer": "I need a loan for a new car."
+    },
+    {
+      "hint": "Czy bankomat pobiera prowizję?",
+      "answer": "Does the ATM charge a fee?"
+    },
+    {
+      "hint": "Czy mogę wypłacić gotówkę?",
+      "answer": "Can I withdraw cash?"
+    },
+    {
+      "hint": "Chciałbym sprawdzić kurs wymiany walut.",
+      "answer": "I’d like to check the exchange rate."
+    },
+    {
+      "hint": "Czy macie kartę lojalnościową?",
+      "answer": "Do you have a loyalty card?"
+    },
+    {
+      "hint": "Gdzie jest najbliższy bank?",
+      "answer": "Where is the nearest bank?"
+    },
+    {
+      "hint": "Chciałbym zamówić zakupy online.",
+      "answer": "I’d like to order groceries online."
+    },
+    {
+      "hint": "Czy ta karta kredytowa ma opłatę roczną?",
+      "answer": "Does this credit card have an annual fee?"
+    },
+    {
+      "hint": "Moja karta została odrzucona.",
+      "answer": "My card was declined."
+    },
+    {
+      "hint": "Czy macie coś w podobnej cenie?",
+      "answer": "Do you have something at a similar price?"
+    },
+    {
+      "hint": "Potrzebuję faktury na firmę.",
+      "answer": "I need an invoice for my company."
+    },
+    {
+      "hint": "Czy mogę zapłacić później?",
+      "answer": "Can I pay later?"
+    },
+    {
+      "hint": "Która kasa jest otwarta?",
+      "answer": "Which checkout is open?"
+    },
+    {
+      "hint": "Chciałbym kupić ubezpieczenie podróżne.",
+      "answer": "I’d like to buy travel insurance."
+    },
+    {
+      "hint": "Czy akceptujecie płatności w euro?",
+      "answer": "Do you accept payments in euros?"
+    },
+    {
+      "hint": "Proszę zapakować to na prezent.",
+      "answer": "Please wrap this as a gift."
+    },
+    {
+      "hint": "Czy mogę zapłacić dwoma kartami?",
+      "answer": "Can I pay with two cards?"
+    },
+    {
+      "hint": "Chciałbym otworzyć nowe konto bankowe.",
+      "answer": "I’d like to open a new bank account."
+    },
+    {
+      "hint": "Czy macie darmowe próbki?",
+      "answer": "Do you have free samples?"
+    },
+    {
+      "hint": "Potrzebuję większego koszyka na zakupy.",
+      "answer": "I need a bigger shopping basket."
+    },
+    {
+      "hint": "Czy mogę zapłacić aplikacją mobilną?",
+      "answer": "Can I pay with a mobile app?"
+    },
+    {
+      "hint": "Chciałbym wymienić pieniądze na dolary.",
+      "answer": "I’d like to exchange money for dollars."
+    },
+    {
+      "hint": "Która karta ma najlepsze warunki?",
+      "answer": "Which card has the best terms?"
+    },
+    {
+      "hint": "Czy macie promocję dwa w cenie jednego?",
+      "answer": "Do you have a two-for-one promotion?"
+    },
+    {
+      "hint": "Proszę podać mi woreczek na warzywa.",
+      "answer": "Please give me a bag for the vegetables."
+    },
+    {
+      "hint": "Chciałbym kupić doładowanie telefonu.",
+      "answer": "I’d like to buy a phone top-up."
+    },
+    {
+      "hint": "Czy mogę zapłacić w kasie obok?",
+      "answer": "Can I pay at the next checkout?"
+    },
+    {
+      "hint": "Mam za mało drobnych.",
+      "answer": "I don’t have enough change."
+    },
+    {
+      "hint": "Czy ten produkt jest objęty gwarancją?",
+      "answer": "Is this product under warranty?"
+    },
+    {
+      "hint": "Chciałbym anulować zamówienie.",
+      "answer": "I’d like to cancel the order."
+    },
+    {
+      "hint": "Który bank oferuje niższe opłaty?",
+      "answer": "Which bank offers lower fees?"
+    },
+    {
+      "hint": "Proszę podać mi rachunek.",
+      "answer": "Please give me the bill."
+    },
+    {
+      "hint": "Czy można płacić w dolarach?",
+      "answer": "Can I pay in dollars?"
+    },
+    {
+      "hint": "Chciałbym sprawdzić status zamówienia.",
+      "answer": "I’d like to check the order status."
+    },
+    {
+      "hint": "Czy ten sklep oferuje zwroty pieniędzy?",
+      "answer": "Does this store offer refunds?"
+    },
+    {
+      "hint": "Proszę podać mi reklamówkę.",
+      "answer": "Please give me a shopping bag."
+    },
+    {
+      "hint": "Czy macie kody rabatowe dla studentów?",
+      "answer": "Do you have student discount codes?"
+    },
+    {
+      "hint": "Chciałbym zapłacić przelewem internetowym.",
+      "answer": "I’d like to pay via online transfer."
+    },
+    {
+      "hint": "Czy mogę dostać fakturę elektroniczną?",
+      "answer": "Can I get an electronic invoice?"
+    },
+    {
+      "hint": "Szukam sklepu z odzieżą sportową.",
+      "answer": "I’m looking for a sportswear store."
+    },
+    {
+      "hint": "Która kasa obsługuje płatności bezdotykowe?",
+      "answer": "Which checkout accepts contactless payments?"
+    },
+    {
+      "hint": "Chciałbym kupić kartę podarunkową.",
+      "answer": "I’d like to buy a gift card."
+    },
+    {
+      "hint": "Czy macie sklep internetowy?",
+      "answer": "Do you have an online store?"
+    }
+  ],
+  "count": 70
+}

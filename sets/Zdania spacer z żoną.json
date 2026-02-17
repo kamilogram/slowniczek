@@ -1,0 +1,316 @@
+{
+  "name": "Zdania spacer z żoną",
+  "language": "en",
+  "type": "sentence",
+  "words": [
+    {
+      "hint": "Jak się dziś czujesz?",
+      "answer": "How are you feeling today?"
+    },
+    {
+      "hint": "Możemy iść wolniej?",
+      "answer": "Can we walk slower?"
+    },
+    {
+      "hint": "Podoba mi się ten park.",
+      "answer": "I like this park."
+    },
+    {
+      "hint": "Czy chcesz usiąść na ławce?",
+      "answer": "Do you want to sit on the bench?"
+    },
+    {
+      "hint": "Jak minął twój dzień?",
+      "answer": "How was your day?"
+    },
+    {
+      "hint": "Jest piękna pogoda, prawda?",
+      "answer": "The weather is beautiful, isn’t it?"
+    },
+    {
+      "hint": "Masz ochotę na kawę po spacerze?",
+      "answer": "Do you want a coffee after the walk?"
+    },
+    {
+      "hint": "Gdzie chcesz dzisiaj pójść?",
+      "answer": "Where do you want to go today?"
+    },
+    {
+      "hint": "Zobacz, jak tu zielono!",
+      "answer": "Look how green it is here!"
+    },
+    {
+      "hint": "Może przejdziemy się tą ścieżką?",
+      "answer": "Maybe we’ll take this path?"
+    },
+    {
+      "hint": "Czy nie jest ci zimno?",
+      "answer": "Aren’t you cold?"
+    },
+    {
+      "hint": "Chyba zaczyna padać deszcz.",
+      "answer": "I think it’s starting to rain."
+    },
+    {
+      "hint": "Podoba mi się, jak spędzamy czas razem.",
+      "answer": "I like how we spend time together."
+    },
+    {
+      "hint": "Słyszałaś te ptaki?",
+      "answer": "Did you hear those birds?"
+    },
+    {
+      "hint": "Chciałbym częściej spacerować.",
+      "answer": "I’d like to walk more often."
+    },
+    {
+      "hint": "Czy zabierzemy następnym razem piknik?",
+      "answer": "Shall we take a picnic next time?"
+    },
+    {
+      "hint": "Jesteś szczęśliwa?",
+      "answer": "Are you happy?"
+    },
+    {
+      "hint": "Uwielbiam wspólne rozmowy.",
+      "answer": "I love talking together."
+    },
+    {
+      "hint": "Patrz, jakie ładne kwiaty!",
+      "answer": "Look at these beautiful flowers!"
+    },
+    {
+      "hint": "Masz ochotę pójść w innym kierunku?",
+      "answer": "Do you want to go in a different direction?"
+    },
+    {
+      "hint": "Przytul mnie.",
+      "answer": "Hug me."
+    },
+    {
+      "hint": "Dziękuję za ten spacer.",
+      "answer": "Thank you for this walk."
+    },
+    {
+      "hint": "Wyglądasz dziś pięknie.",
+      "answer": "You look beautiful today."
+    },
+    {
+      "hint": "Czy jesteś zmęczona?",
+      "answer": "Are you tired?"
+    },
+    {
+      "hint": "Podaj mi rękę.",
+      "answer": "Give me your hand."
+    },
+    {
+      "hint": "Za czym najbardziej tęsknisz?",
+      "answer": "What do you miss the most?"
+    },
+    {
+      "hint": "Co byś zjadła na kolację?",
+      "answer": "What would you like for dinner?"
+    },
+    {
+      "hint": "Jestem szczęśliwy, że cię mam.",
+      "answer": "I’m happy to have you."
+    },
+    {
+      "hint": "Patrz, dzieci się bawią.",
+      "answer": "Look, children are playing."
+    },
+    {
+      "hint": "Nie śpieszmy się.",
+      "answer": "Let’s not hurry."
+    },
+    {
+      "hint": "Wspólne spacery to świetny pomysł.",
+      "answer": "Walking together is a great idea."
+    },
+    {
+      "hint": "Chciałbym więcej takich chwil.",
+      "answer": "I’d like more moments like this."
+    },
+    {
+      "hint": "Możemy zrobić zdjęcie?",
+      "answer": "Can we take a photo?"
+    },
+    {
+      "hint": "Kocham cię.",
+      "answer": "I love you."
+    },
+    {
+      "hint": "Zobacz, jak pięknie świeci słońce.",
+      "answer": "Look how beautifully the sun is shining."
+    },
+    {
+      "hint": "Jakie są twoje plany na jutro?",
+      "answer": "What are your plans for tomorrow?"
+    },
+    {
+      "hint": "Podoba mi się twoja sukienka.",
+      "answer": "I like your dress."
+    },
+    {
+      "hint": "Chciałbym, żeby ten spacer trwał dłużej.",
+      "answer": "I’d like this walk to last longer."
+    },
+    {
+      "hint": "Słychać szum liści.",
+      "answer": "You can hear the rustling of leaves."
+    },
+    {
+      "hint": "Chcesz spróbować lodów po drodze?",
+      "answer": "Do you want to try some ice cream on the way?"
+    },
+    {
+      "hint": "Często tutaj spacerujesz?",
+      "answer": "Do you often walk here?"
+    },
+    {
+      "hint": "Jak wspominasz nasze pierwsze spotkanie?",
+      "answer": "How do you remember our first meeting?"
+    },
+    {
+      "hint": "Podziwiam twoją cierpliwość.",
+      "answer": "I admire your patience."
+    },
+    {
+      "hint": "Zabierzesz mnie kiedyś w swoje ulubione miejsce?",
+      "answer": "Will you take me to your favorite place someday?"
+    },
+    {
+      "hint": "Co najbardziej lubisz w spacerowaniu?",
+      "answer": "What do you like most about walking?"
+    },
+    {
+      "hint": "Masz ochotę obejrzeć dzisiaj film?",
+      "answer": "Do you want to watch a movie tonight?"
+    },
+    {
+      "hint": "Wspólne chwile są najcenniejsze.",
+      "answer": "Our moments together are most precious."
+    },
+    {
+      "hint": "Pamiętasz, kiedy ostatnio tu byliśmy?",
+      "answer": "Do you remember the last time we were here?"
+    },
+    {
+      "hint": "Jakie miejsce chciałabyś odwiedzić?",
+      "answer": "What place would you like to visit?"
+    },
+    {
+      "hint": "Czuję się dziś wyjątkowo dobrze.",
+      "answer": "I feel especially good today."
+    },
+    {
+      "hint": "Czy podoba ci się ten zapach kwiatów?",
+      "answer": "Do you like the smell of these flowers?"
+    },
+    {
+      "hint": "Zostańmy tu jeszcze chwilę.",
+      "answer": "Let’s stay here a bit longer."
+    },
+    {
+      "hint": "Dziękuję za twoje wsparcie.",
+      "answer": "Thank you for your support."
+    },
+    {
+      "hint": "Słońce powoli zachodzi.",
+      "answer": "The sun is slowly setting."
+    },
+    {
+      "hint": "Chciałbym pójść z tobą wszędzie.",
+      "answer": "I’d like to go everywhere with you."
+    },
+    {
+      "hint": "Czuję się przy tobie bezpiecznie.",
+      "answer": "I feel safe with you."
+    },
+    {
+      "hint": "Jakie książki ostatnio czytałaś?",
+      "answer": "What books have you read recently?"
+    },
+    {
+      "hint": "Uwielbiam twój uśmiech.",
+      "answer": "I love your smile."
+    },
+    {
+      "hint": "Dzisiaj jest tu wyjątkowo spokojnie.",
+      "answer": "It’s exceptionally peaceful here today."
+    },
+    {
+      "hint": "Masz ochotę na lody albo kawę?",
+      "answer": "Do you want some ice cream or coffee?"
+    },
+    {
+      "hint": "Chcesz odpocząć przez chwilę?",
+      "answer": "Do you want to rest for a while?"
+    },
+    {
+      "hint": "Zobacz, jaka ciekawa architektura.",
+      "answer": "Look at this interesting architecture."
+    },
+    {
+      "hint": "Czy nie jest ci za gorąco?",
+      "answer": "Aren’t you too hot?"
+    },
+    {
+      "hint": "Zawsze umiesz poprawić mi humor.",
+      "answer": "You always cheer me up."
+    },
+    {
+      "hint": "Zachwyca mnie twoja wrażliwość.",
+      "answer": "I’m amazed by your sensitivity."
+    },
+    {
+      "hint": "Chciałbym zatrzymać ten moment na dłużej.",
+      "answer": "I’d like to keep this moment longer."
+    },
+    {
+      "hint": "Jakie filmy lubisz najbardziej?",
+      "answer": "What kind of movies do you like most?"
+    },
+    {
+      "hint": "Często myślę o naszych wspólnych podróżach.",
+      "answer": "I often think about our travels together."
+    },
+    {
+      "hint": "Czy chciałabyś wrócić tu jutro?",
+      "answer": "Would you like to come back here tomorrow?"
+    },
+    {
+      "hint": "Masz ochotę posłuchać muzyki?",
+      "answer": "Do you want to listen to some music?"
+    },
+    {
+      "hint": "Nie wyobrażam sobie życia bez ciebie.",
+      "answer": "I can’t imagine my life without you."
+    },
+    {
+      "hint": "Jesień tu wygląda przepięknie.",
+      "answer": "Autumn looks wonderful here."
+    },
+    {
+      "hint": "Najlepiej czuję się z tobą.",
+      "answer": "I feel best with you."
+    },
+    {
+      "hint": "Chciałbym cię rozśmieszyć.",
+      "answer": "I’d like to make you laugh."
+    },
+    {
+      "hint": "Dziękuję za wspólne chwile.",
+      "answer": "Thank you for our time together."
+    },
+    {
+      "hint": "Czy wyobrażasz sobie mieszkać w tej okolicy?",
+      "answer": "Can you imagine living in this area?"
+    },
+    {
+      "hint": "Z tobą zawsze jest ciekawie.",
+      "answer": "It’s always interesting with you."
+    }
+  ],
+  "count": 77
+}
