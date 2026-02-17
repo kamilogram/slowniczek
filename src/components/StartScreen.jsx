@@ -212,6 +212,9 @@ export default function StartScreen({
 
   const handleStartQuiz = async (packageData) => {
     try {
+      // Save to localStorage in background
+      await saveSet(packageData.name, packageData.words, packageData.language, packageData.type);
+      
       // Convert AI package format to app format
       const words = packageData.words.map(w => ({
         hint: w.hint,
