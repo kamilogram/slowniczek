@@ -205,6 +205,8 @@ export default function AIPackageGenerator({ onAddPackage, onStartQuiz }) {
                 >
                   ▶ Zacznij
                 </button>
+              </div>
+              <div className="preview-actions-secondary">
                 <button
                   className="btn-add"
                   onClick={handleAddPackage}

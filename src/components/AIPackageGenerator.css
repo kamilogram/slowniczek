@@ -213,7 +213,14 @@
 
 .preview-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+
+.preview-actions-secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1em;
 }
 
