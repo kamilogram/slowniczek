@@ -11,10 +11,6 @@ let setsModules = null;
  * Uses dynamic import to get all JSON files
  */
 async function loadAllSets() {
-  if (setsCacheLoaded) {
-    return setsCache;
-  }
-
   try {
     // Try to import all JSON files from sets folder dynamically
     if (!setsModules) {
@@ -34,8 +30,6 @@ async function loadAllSets() {
       }
     }
 
-    setsCache = sets;
-    setsCacheLoaded = true;
     console.log(`✓ Loaded ${sets.length} local word sets`);
     return sets;
   } catch (error) {
@@ -56,10 +50,15 @@ export async function getSets() {
     language: s.language || 'Unknown',
     type: s.type || 'word',
     count: s.count || (s.words ? s.words.length : 0),
+    created_at: s.created_at,
     isCustom: true, // Flaga aby wiedzieć że to pakiet własny
   }));
 
-  return Promise.resolve({ sets: [...sets, ...customSetsMeta] });
+  // Remove duplicates - localStorage packages override file packages
+  const customNames = new Set(customSetsMeta.map(s => s.name));
+  const filteredSets = sets.filter(s => !customNames.has(s.name));
+
+  return Promise.resolve({ sets: [...filteredSets, ...customSetsMeta] });
 }
 
 export async function getSet(name) {
@@ -88,16 +87,18 @@ export async function getSet(name) {
 
 export function saveSet(name, words, language, type) {
   // Save custom set to localStorage only
+  const customSets = JSON.parse(localStorage.getItem('slowkaCustomSets') || '{}');
+  
   const setData = {
     name,
     language,
     type,
     words,
     count: words.length,
+    created_at: customSets[name]?.created_at || new Date().toISOString(),
   };
 
   // Save to localStorage for persistence
-  const customSets = JSON.parse(localStorage.getItem('slowkaCustomSets') || '{}');
   customSets[name] = setData;
   localStorage.setItem('slowkaCustomSets', JSON.stringify(customSets));
 

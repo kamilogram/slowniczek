@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { saveSet, deleteSet, getSet } from '../services/api';
-import { saveToStorage } from '../services/storage';
+import { saveToStorage, loadFromStorage } from '../services/storage';
 import PackageEditor from './PackageEditor';
+import AIPackageGenerator from './AIPackageGenerator';
 
 // Mapowanie kodów języków na pełne nazwy
 const LANGUAGE_MAP = {
@@ -209,6 +210,25 @@ export default function StartScreen({
     return acc;
   }, {});
 
+  const handleAddPackage = async (packageData) => {
+    try {
+      // Save to localStorage via api.js
+      await saveSet(packageData.name, packageData.words, packageData.language, packageData.type);
+      
+      // Refresh remote sets to show the new package
+      await refreshRemoteSets();
+      
+      // Set as only selected package
+      const newId = `remote-${packageData.name}`;
+      setSelectedPackages([newId]);
+      saveToStorage('slowkaSelectedPackages', [newId]);
+
+      alert(`✓ Pakiet "${packageData.name}" został dodany!`);
+    } catch (error) {
+      alert(`Błąd dodawania pakietu: ${error.message}`);
+    }
+  };
+
   const handleStart = async () => {
     // Separate local IDs and remote names
     const localIds = selectedPackages.filter(id => localPackagesConfig.some(p => p.id === id));
@@ -301,7 +321,8 @@ export default function StartScreen({
         await deleteSet(editingPackage.name);
       }
       await saveSet(newName, words, editingPackage.language, editingPackage.type);
-      refreshRemoteSets();
+      await refreshRemoteSets();
+      handleCloseEditor();
     } catch (e) {
       alert('Błąd zapisu: ' + e.message);
     }
@@ -413,6 +434,10 @@ export default function StartScreen({
               )}
             </div>
           ))}
+        </div>
+
+        <div className="custom-words-container" style={{ marginBottom: '16px' }}>
+          <AIPackageGenerator onAddPackage={handleAddPackage} />
         </div>
 
         <div className="custom-words-container" style={{ marginBottom: '16px' }}>
