@@ -210,6 +210,22 @@ export default function StartScreen({
     return acc;
   }, {});
 
+  const handleStartQuiz = async (packageData) => {
+    try {
+      // Convert AI package format to app format
+      const words = packageData.words.map(w => ({
+        hint: w.hint,
+        answer: w.answer
+      }));
+      
+      // Start quiz directly with these words
+      const customWordsJson = JSON.stringify(words);
+      await onStart([], customWordsJson, []);
+    } catch (error) {
+      alert(`Błąd uruchamiania quizu: ${error.message}`);
+    }
+  };
+
   const handleAddPackage = async (packageData) => {
     try {
       // Save to localStorage via api.js
@@ -437,7 +453,7 @@ export default function StartScreen({
         </div>
 
         <div className="custom-words-container" style={{ marginBottom: '16px' }}>
-          <AIPackageGenerator onAddPackage={handleAddPackage} />
+          <AIPackageGenerator onAddPackage={handleAddPackage} onStartQuiz={handleStartQuiz} />
         </div>
 
         <div className="custom-words-container" style={{ marginBottom: '16px' }}>

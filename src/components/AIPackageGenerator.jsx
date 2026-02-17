@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { generatePackage } from '../services/ai';
 import './AIPackageGenerator.css';
 
-export default function AIPackageGenerator({ onAddPackage }) {
+export default function AIPackageGenerator({ onAddPackage, onStartQuiz }) {
   const [description, setDescription] = useState('');
   const [language, setLanguage] = useState('angielski');
   const [wordCount, setWordCount] = useState('50');
@@ -65,6 +65,16 @@ export default function AIPackageGenerator({ onAddPackage }) {
 
     onAddPackage(preview);
     
+    // Reset form
+    setDescription('');
+    setPackageName('');
+    setPreview(null);
+    setShowGenerator(false);
+  };
+
+  const handleStartQuiz = () => {
+    if (!preview) return;
+    onStartQuiz(preview);
     // Reset form
     setDescription('');
     setPackageName('');
@@ -189,6 +199,12 @@ export default function AIPackageGenerator({ onAddPackage }) {
               </div>
 
               <div className="preview-actions">
+                <button
+                  className="btn-start"
+                  onClick={handleStartQuiz}
+                >
+                  ▶ Zacznij
+                </button>
                 <button
                   className="btn-add"
                   onClick={handleAddPackage}

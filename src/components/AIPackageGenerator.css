@@ -213,10 +213,11 @@
 
 .preview-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
 }
 
+.btn-start,
 .btn-add,
 .btn-cancel {
   padding: 0.8em;
@@ -226,6 +227,17 @@
   font-weight: 600;
   font-size: 0.95em;
   transition: all 0.2s;
+}
+
+.btn-start {
+  background-color: #667eea;
+  color: white;
+}
+
+.btn-start:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
 .btn-add {
