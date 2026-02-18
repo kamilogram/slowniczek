@@ -729,6 +729,39 @@ button:active {
   background: #e9ecef;
   padding: 0.3em 0.8em;
   border-radius: 20px;
+  margin-right: 0.5em;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  min-width: auto;
+  min-height: auto;
+  transition: transform 0.2s;
+  box-shadow: none;
+}
+
+.star-btn.starred {
+  color: #ffc107;
+}
+
+.star-btn.unstarred {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #999;
+  text-stroke: 1.5px #999;
+}
+
+.star-btn:hover {
+  transform: scale(1.2);
+  box-shadow: none;
+}
+
+.star-btn:active {
+  transform: scale(1.1);
 }
 
 .empty-category {
@@ -1529,4 +1562,18 @@ button:active {
   background: #2d3748;
   color: #e0e0e0;
   border-color: #4a5568;
+}
+
+.dark-mode .star-btn {
+  color: #ffc107;
+}
+
+.dark-mode .star-btn.starred {
+  color: #ffc107;
+}
+
+.dark-mode .star-btn.unstarred {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #666;
+  text-stroke: 1.5px #666;
 }

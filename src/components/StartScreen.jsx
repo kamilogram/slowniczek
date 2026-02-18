@@ -52,6 +52,7 @@ export default function StartScreen({
   const [remoteCounts, setRemoteCounts] = useState({});
   const [editingPackage, setEditingPackage] = useState(null);
   const [packageWords, setPackageWords] = useState(null);
+  const [starredPackages, setStarredPackages] = useState(() => loadFromStorage('slowkaStarredPackages') || []);
   const longPressTimer = useRef(null);
 
   // Remote Set Management State
@@ -198,6 +199,16 @@ export default function StartScreen({
       // Save to localStorage
       saveToStorage('slowkaSelectedPackages', newSelected);
       return newSelected;
+    });
+  };
+
+  const toggleStar = (pkgId, e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setStarredPackages(prev => {
+      const newStarred = prev.includes(pkgId) ? prev.filter(id => id !== pkgId) : [...prev, pkgId];
+      saveToStorage('slowkaStarredPackages', newStarred);
+      return newStarred;
     });
   };
 
@@ -407,6 +418,16 @@ export default function StartScreen({
                           <div className="package-list">
                             {[...grouped[lang][type]].sort((a, b) => {
                               const sort = sortBy[`${lang}-${type}`] || 'date-desc';
+                              const aId = a.isLocal ? a.id : `remote-${a.name}`;
+                              const bId = b.isLocal ? b.id : `remote-${b.name}`;
+                              const aStarred = starredPackages.includes(aId);
+                              const bStarred = starredPackages.includes(bId);
+                              
+                              // Starred packages first
+                              if (aStarred && !bStarred) return -1;
+                              if (!aStarred && bStarred) return 1;
+                              
+                              // Then sort by selected criteria
                               if (sort === 'alpha-asc') return a.name.localeCompare(b.name);
                               if (sort === 'alpha-desc') return b.name.localeCompare(a.name);
                               if (sort === 'date-asc') {
@@ -424,6 +445,7 @@ export default function StartScreen({
                               return 0;
                             }).map(pkg => {
                               const id = pkg.isLocal ? pkg.id : `remote-${pkg.name}`;
+                              const isStarred = starredPackages.includes(id);
                               return (
                                 <label 
                                   key={id} 
@@ -441,6 +463,13 @@ export default function StartScreen({
                                   />
                                   <span className="package-name">{pkg.name}</span>
                                   <span className="package-count">{pkg.isLocal ? pkg.data.length : (pkg.count || 0)}</span>
+                                  <button 
+                                    className={`star-btn ${isStarred ? 'starred' : 'unstarred'}`}
+                                    onClick={(e) => toggleStar(id, e)}
+                                    title={isStarred ? 'Usuń gwiazdkę' : 'Dodaj gwiazdkę'}
+                                  >
+                                    ★
+                                  </button>
                                 </label>
                               );
                             })}
