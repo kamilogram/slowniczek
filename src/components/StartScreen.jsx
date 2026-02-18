@@ -34,6 +34,7 @@ export default function StartScreen({
   customWordsInput,
   setCustomWordsInput
 }) {
+  const [showAIGenerator, setShowAIGenerator] = useState(false);
   // Group Packages - normalizuj języki z backendu
   const allPackages = useMemo(() => [
     ...localPackagesConfig.map(p => ({ ...p, isLocal: true })),
@@ -485,7 +486,11 @@ export default function StartScreen({
         </div>
 
         <div className="custom-words-container" style={{ marginBottom: '16px' }}>
-          <AIPackageGenerator onAddPackage={handleAddPackage} onStartQuiz={handleStartQuiz} />
+          <AIPackageGenerator 
+            onAddPackage={handleAddPackage} 
+            onStartQuiz={handleStartQuiz}
+            onToggleGenerator={setShowAIGenerator}
+          />
         </div>
 
         <div className="custom-words-container" style={{ marginBottom: '16px' }}>
@@ -542,7 +547,7 @@ export default function StartScreen({
           </div>
         </div>
 
-        <div className="start-actions sticky-start-actions">
+        <div className={`start-actions sticky-start-actions ${showAIGenerator ? 'hidden' : ''}`}>
           <button
             className="start-btn"
             disabled={(selectedPackages.length === 0 && !customWordsInput) || isLoading}

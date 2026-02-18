@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { generatePackage } from '../services/ai';
 import './AIPackageGenerator.css';
 
-export default function AIPackageGenerator({ onAddPackage, onStartQuiz }) {
+export default function AIPackageGenerator({ onAddPackage, onStartQuiz, onToggleGenerator }) {
   const [description, setDescription] = useState('');
   const [language, setLanguage] = useState('angielski');
-  const [wordCount, setWordCount] = useState('50');
+  const [wordCount, setWordCount] = useState('30');
   const [type, setType] = useState('sentence');
+  const [level, setLevel] = useState('A1');
+  const [complexity, setComplexity] = useState('simple');
   const [packageName, setPackageName] = useState('');
   const [preview, setPreview] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -26,6 +28,7 @@ export default function AIPackageGenerator({ onAddPackage, onStartQuiz }) {
   ];
 
   const wordCounts = ['10', '20', '30', '50', '100'];
+  const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
   const handleGenerate = async () => {
     if (!description.trim()) {
@@ -48,12 +51,27 @@ export default function AIPackageGenerator({ onAddPackage, onStartQuiz }) {
         language,
         wordCount: parseInt(wordCount),
         type,
+        level,
+        complexity,
         packageName: packageName.trim(),
       });
 
       setPreview(generated);
     } catch (err) {
-      setError(`Błąd: ${err.message}`);
+      const errorMsg = err.message;
+      const parts = errorMsg.split('. Spróbuj zmniejszyć ilość słówek/zdań.');
+      if (parts.length > 1) {
+        setError(
+          <>
+            Błąd: {parts[0]}.<br />
+            <span style={{ fontStyle: 'italic', color: '#ff6b6b', fontWeight: '600' }}>
+              Spróbuj zmniejszyć ilość słówek/zdań.
+            </span>
+          </>
+        );
+      } else {
+        setError(`Błąd: ${errorMsg}`);
+      }
       console.error(err);
     } finally {
       setLoading(false);
@@ -82,11 +100,19 @@ export default function AIPackageGenerator({ onAddPackage, onStartQuiz }) {
     setShowGenerator(false);
   };
 
+  const handleToggle = () => {
+    const newState = !showGenerator;
+    setShowGenerator(newState);
+    if (onToggleGenerator) {
+      onToggleGenerator(newState);
+    }
+  };
+
   return (
     <div className="ai-generator">
       <button 
         className="btn-toggle-generator"
-        onClick={() => setShowGenerator(!showGenerator)}
+        onClick={handleToggle}
       >
         🤖 {showGenerator ? 'Ukryj' : 'Generuj pakiet z AI'}
       </button>
@@ -164,6 +190,39 @@ export default function AIPackageGenerator({ onAddPackage, onStartQuiz }) {
                 <option value="sentence">Zdania</option>
               </select>
             </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="level">Poziom:</label>
+              <select
+                id="level"
+                value={level}
+                onChange={(e) => setLevel(e.target.value)}
+                disabled={loading}
+              >
+                {levels.map((lvl) => (
+                  <option key={lvl} value={lvl}>
+                    {lvl}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {type === 'sentence' && (
+              <div className="form-group">
+                <label htmlFor="complexity">Złożoność zdań:</label>
+                <select
+                  id="complexity"
+                  value={complexity}
+                  onChange={(e) => setComplexity(e.target.value)}
+                  disabled={loading}
+                >
+                  <option value="simple">Proste</option>
+                  <option value="complex">Złożone</option>
+                </select>
+              </div>
+            )}
           </div>
 
           {error && <div className="error-message">{error}</div>}

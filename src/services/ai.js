@@ -11,6 +11,8 @@ export async function generatePackage({
   language,
   wordCount,
   type, // 'word' or 'sentence'
+  level, // 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'
+  complexity, // 'simple' or 'complex'
   packageName
 }) {
   if (!GROQ_API_KEY) {
@@ -38,6 +40,8 @@ export async function generatePackage({
     language,
     wordCount,
     type,
+    level,
+    complexity,
   });
 
   try {
@@ -80,13 +84,13 @@ export async function generatePackage({
     };
   } catch (error) {
     console.error('AI generation error:', error);
-    throw error;
+    throw new Error(`${error.message}. Spróbuj zmniejszyć ilość słówek/zdań.`);
   }
 }
 
-function buildPrompt({ description, language, wordCount, type }) {
+function buildPrompt({ description, language, wordCount, type, level, complexity }) {
   if (type === 'word') {
-    return `Generate exactly ${wordCount} vocabulary words in JSON format for learning ${language}.
+    return `Generate exactly ${wordCount} vocabulary words in JSON format for learning ${language} at ${level} level.
 Topic: ${description}
 
 You MUST respond with ONLY a valid JSON array (no markdown, no explanation), like this:
@@ -99,10 +103,15 @@ Requirements:
 - Each item must have "hint" and "answer" fields
 - Hint should be in Polish
 - Answer should be ${language} translation
+- Words should match ${level} difficulty level
 - Total items: ${wordCount}
 - Valid JSON only, no extra text`;
   } else {
-    return `Generate exactly ${wordCount} example sentences in JSON format for learning ${language}.
+    const complexityNote = complexity === 'complex' 
+      ? 'Use complex sentence structures with subordinate clauses, conjunctions, and varied grammar.' 
+      : 'Use simple, straightforward sentence structures.';
+    
+    return `Generate exactly ${wordCount} example sentences in JSON format for learning ${language} at ${level} level.
 Topic: ${description}
 
 You MUST respond with ONLY a valid JSON array (no markdown, no explanation), like this:
@@ -115,6 +124,8 @@ Requirements:
 - Each item must have "hint" and "answer" fields
 - Hint should be a sentence in Polish
 - Answer should be ${language} translation
+- Sentences should match ${level} difficulty level
+- ${complexityNote}
 - Sentences should be practical and useful for learning
 - Total items: ${wordCount}
 - Valid JSON only, no extra text`;

@@ -166,45 +166,47 @@ export default function MainApp({
                 {selectedTexts.length === 0 ? (
                   <p style={{ textAlign: 'center', color: '#666' }}>Brak zapisanych zaznaczeń.</p>
                 ) : (
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5em', marginBottom: '0.5em' }}>
-                    {selectedTexts.map((text, index) => (
-                      <span
-                        key={index}
-                        style={{
-                          display: 'inline-block',
-                          padding: '0.3em 0.6em',
-                          background: '#ffe0e0',
-                          borderRadius: '8px',
-                          fontSize: '0.9em',
-                          position: 'relative',
-                          paddingRight: '2em'
-                        }}
-                      >
-                        {text}
-                        <button
-                          onClick={() => handleRemoveSelectedText(index)}
+                  <>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5em', marginBottom: '0.5em' }}>
+                      {selectedTexts.map((text, index) => (
+                        <span
+                          key={index}
                           style={{
-                            position: 'absolute',
-                            right: '0.3em',
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            background: 'transparent',
-                            border: 'none',
-                            color: '#900',
-                            cursor: 'pointer',
-                            fontSize: '0.8em',
-                            padding: '0.2em 0.4em'
+                            display: 'inline-block',
+                            padding: '0.3em 0.6em',
+                            background: '#ffe0e0',
+                            borderRadius: '8px',
+                            fontSize: '0.9em',
+                            position: 'relative',
+                            paddingRight: '2em'
                           }}
                         >
-                          ×
-                        </button>
-                      </span>
-                    ))}
-                  </div>
+                          {text}
+                          <button
+                            onClick={() => handleRemoveSelectedText(index)}
+                            style={{
+                              position: 'absolute',
+                              right: '0.3em',
+                              top: '50%',
+                              transform: 'translateY(-50%)',
+                              background: 'transparent',
+                              border: 'none',
+                              color: '#900',
+                              cursor: 'pointer',
+                              fontSize: '0.8em',
+                              padding: '0.2em 0.4em'
+                            }}
+                          >
+                            ×
+                          </button>
+                        </span>
+                      ))}
+                    </div>
+                    <p style={{ fontSize: '0.9em', color: '#666', marginTop: '0.5em', marginBottom: 0 }}>
+                      {selectedTexts.join(', ')}
+                    </p>
+                  </>
                 )}
-                <p style={{ fontSize: '0.9em', color: '#666', marginTop: '0.5em', marginBottom: 0 }}>
-                  {selectedTexts.length > 0 && selectedTexts.join(', ')}
-                </p>
               </div>
             )}
           </>
