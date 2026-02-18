@@ -34,6 +34,26 @@ function App() {
     }
   }, [gameLogic.gameState]);
 
+  // Handle browser back button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (gameLogic.gameState === 'quiz') {
+        handleChangePackages();
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    
+    // Push state when entering quiz
+    if (gameLogic.gameState === 'quiz') {
+      window.history.pushState({ quiz: true }, '');
+    }
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [gameLogic.gameState]);
+
   const toggleDarkMode = () => {
     const isDark = document.body.classList.toggle('dark-mode');
     saveToStorage('slowkaDarkMode', isDark ? 'true' : 'false');
@@ -46,10 +66,7 @@ function App() {
 
   const handleChangePackages = () => {
     gameLogic.setGameState('start');
-    // Stop auto mode if active
-    if (gameLogic.autoMode) {
-      gameLogic.toggleAutoMode();
-    }
+    // Don't stop auto mode - let it persist
   };
 
   return (

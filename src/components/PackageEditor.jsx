@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const getDiff = (oldText, newText) => {
   const oldWords = oldText.split(' ');
@@ -51,7 +51,34 @@ export default function PackageEditor({ pkg, onSave, onClose }) {
   const [words, setWords] = useState((pkg.words || []).map((w, i) => ({...w, _id: i})));
   const [packageName, setPackageName] = useState(pkg.name || '');
   const [showConfirm, setShowConfirm] = useState(false);
+  const [showUnsavedConfirm, setShowUnsavedConfirm] = useState(false);
   const originalWords = (pkg.words || []).map((w, i) => ({...w, _id: i}));
+
+  const hasChanges = () => {
+    if (packageName !== pkg.name) return true;
+    if (words.length !== originalWords.length) return true;
+    return words.some((word, i) => {
+      const orig = originalWords.find(o => o._id === word._id);
+      return !orig || word.hint !== orig.hint || word.answer !== orig.answer;
+    });
+  };
+
+  useEffect(() => {
+    window.history.pushState({ editingPackage: true }, '');
+    
+    const handlePopState = (e) => {
+      if (hasChanges()) {
+        e.preventDefault();
+        window.history.pushState({ editingPackage: true }, '');
+        setShowUnsavedConfirm(true);
+      } else {
+        onClose();
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [words, packageName]);
 
   const handleEdit = (index, field, value) => {
     const newWords = [...words];
@@ -126,6 +153,19 @@ export default function PackageEditor({ pkg, onSave, onClose }) {
           <button onClick={handleSaveClick}>Zapisz zmiany</button>
           <button onClick={onClose}>Anuluj</button>
         </div>
+
+        {showUnsavedConfirm && (
+          <div className="confirm-overlay" onClick={() => setShowUnsavedConfirm(false)}>
+            <div className="confirm-dialog" onClick={(e) => e.stopPropagation()}>
+              <h3>Niezapisane zmiany</h3>
+              <p>Czy na pewno chcesz wrócić bez zapisania zmian?</p>
+              <div className="confirm-actions">
+                <button onClick={() => { window.history.back(); onClose(); }}>Wróć bez zapisywania</button>
+                <button onClick={() => { window.history.pushState({ editingPackage: true }, ''); setShowUnsavedConfirm(false); }}>Anuluj</button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {showConfirm && (
           <div className="confirm-overlay" onClick={() => setShowConfirm(false)}>
