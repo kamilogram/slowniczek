@@ -1584,3 +1584,26 @@ button:active {
   -webkit-text-stroke: 1.5px #666;
   text-stroke: 1.5px #666;
 }
+
+/* Selected texts list dark mode */
+.dark-mode .selected-texts-list {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+}
+
+.dark-mode .selected-texts-list h3 {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .selected-texts-list span {
+  background: #4a5568 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .selected-texts-list button {
+  color: #ff6b6b !important;
+}
+
+.dark-mode .selected-texts-list p {
+  color: #a0aec0 !important;
+}
